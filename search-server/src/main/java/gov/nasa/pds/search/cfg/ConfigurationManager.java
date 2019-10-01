@@ -31,6 +31,7 @@ public class ConfigurationManager
      */
     public static void init()
     {
+        if(instance != null) throw new RuntimeException("Already initialized.");
         instance = new ConfigurationManager();
     }
     

@@ -20,7 +20,7 @@ public class SearchServerConfiguration
      * Get Solr configuration 
      * @return
      */
-    public SolrConfiguration getSolrProperties()
+    public SolrConfiguration getSolrConfiguration()
     {
         return solrProps;
     }

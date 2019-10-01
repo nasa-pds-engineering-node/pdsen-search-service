@@ -88,7 +88,7 @@ public class ConfigurationLoader
     
     private static void setSolrProps(SearchServerConfiguration cfg, Properties props)
     {
-        SolrConfiguration solrProps = cfg.getSolrProperties();
+        SolrConfiguration solrProps = cfg.getSolrConfiguration();
         
         solrProps.searchUrl = props.getProperty("solr.search.url");
         if(solrProps.searchUrl == null)
