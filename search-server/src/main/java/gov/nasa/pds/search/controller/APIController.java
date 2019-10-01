@@ -4,13 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping(path = "/api")
-public class APIController 
+public class APIController
 {
-	@GetMapping(path="/search", produces = "application/json")
-    public String getEmployees()
+    @GetMapping(path = "/search", produces = "application/json")
+    public String getSearch()
     {
         return "{}";
     }
