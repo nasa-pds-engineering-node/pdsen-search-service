@@ -1,0 +1,2 @@
+solr.search.url=http://localhost:8983/solr/pds
+solr.search.handler=
