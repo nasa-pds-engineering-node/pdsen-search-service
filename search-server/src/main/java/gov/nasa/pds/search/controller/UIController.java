@@ -8,14 +8,16 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import gov.nasa.pds.search.cfg.ConfigurationManager;
+import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.cfg.SolrConfiguration;
 import gov.nasa.pds.search.solr.SolrManager;
+
 
 @RestController
 @RequestMapping(path = "/ui")
@@ -30,12 +32,16 @@ public class UIController
     }
     
     
+    @Autowired
+    private SearchServerConfiguration ssConfig;
+
+    
     @GetMapping(path = "/search", produces = "application/json")
     public List<Item> getSearch(@RequestParam(name = "q") String pQuery) throws Exception
     {
         List<Item> list = new ArrayList<>();
         
-        SolrConfiguration solrCfg = ConfigurationManager.getInstance().getSearchServerConfiguration().getSolrConfiguration();
+        SolrConfiguration solrCfg = ssConfig.getSolrConfiguration();
 
         // Create query
         SolrQuery query = new SolrQuery(pQuery);
