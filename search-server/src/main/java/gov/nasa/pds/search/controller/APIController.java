@@ -1,5 +1,9 @@
 package gov.nasa.pds.search.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -32,21 +36,22 @@ public class APIController
     public void getSearch(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
-        
+        SolrConfiguration solrConfig = ssConfig.getSolrConfiguration();
+
         // Use default JSON output format
         httpResp.setContentType("application/json");
-        JsonResponseWriter respWriter = new JsonResponseWriter();
+        List<String> fields = getFields(reqParams, solrConfig);
+        JsonResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream(), fields);
         
         // Build Solr query
-        SolrConfiguration solrConfig = ssConfig.getSolrConfiguration();
-        PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(solrConfig, reqParams);
+        PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(reqParams, fields, solrConfig);
         SolrQuery query = queryBuilder.build();
         
         // Invalid request
         if(query == null)
         {
             httpResp.setStatus(400);
-            respWriter.error(httpResp.getOutputStream(), "Missing query parameter(s)");
+            respWriter.error("Missing query parameter(s)");
             return;
         }
         
@@ -56,6 +61,30 @@ public class APIController
         SolrDocumentList docList = resp.getResults();
         
         // Write documents
-        respWriter.write(httpResp.getOutputStream(), docList);
+        respWriter.write(docList);
+    }
+    
+    
+    // Get a list of fields to return.
+    private List<String> getFields(RequestParameters reqParams, SolrConfiguration solrConfig)
+    {
+        String pFields = reqParams.getParameter("fields");
+        if(pFields != null && !pFields.isEmpty())
+        {
+            List<String> fields = new ArrayList<>();
+            StringTokenizer tkz = new StringTokenizer(pFields, ",; ");
+            while(tkz.hasMoreTokens())
+            {
+                String field = tkz.nextToken(); 
+                if(!field.isEmpty()) 
+                {
+                    fields.add(field);
+                }
+            }
+            
+            if(!fields.isEmpty()) return fields;
+        }
+        
+        return solrConfig.defaultFields;
     }
 }

@@ -3,6 +3,7 @@ package gov.nasa.pds.search.solr;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collection;
+import java.util.List;
 
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
@@ -12,20 +13,37 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 
 
+/**
+ * Writes Solr response in JSON format. 
+ * @author karpenko
+ */
 public class JsonResponseWriter
 {
-    private JsonFactory jFactory;
+    private JsonGenerator jgen;
+    private List<String> fields;
     
-    public JsonResponseWriter()
+    /**
+     * Constructor
+     * @param out Output Stream for JSON.
+     * @param fields A list of fields to write.
+     * @throws IOException
+     */
+    public JsonResponseWriter(OutputStream out, List<String> fields) throws IOException
     {
-        jFactory = new JsonFactory();
+        JsonFactory jFactory = new JsonFactory();
+        jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
+
+        this.fields = fields;
     }
 
     
-    public void error(OutputStream out, String msg) throws IOException
+    /**
+     * Write error message
+     * @param msg
+     * @throws IOException
+     */
+    public void error(String msg) throws IOException
     {
-        JsonGenerator jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
-        
         jgen.writeStartObject(); // Root
         
         jgen.writeFieldName("response");
@@ -42,21 +60,25 @@ public class JsonResponseWriter
     }
 
     
-    public void write(OutputStream out, SolrDocumentList docList) throws IOException
+    /**
+     * Write a list of Solr documents.
+     * @param docList
+     * @throws IOException
+     */
+    public void write(SolrDocumentList docList) throws IOException
     {
-        JsonGenerator jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
-        
         jgen.writeStartObject(); // Root
 
         jgen.writeFieldName("response");
         jgen.writeStartObject(); // Response
         {
+            // Header
             jgen.writeStringField("status", "ok");
             jgen.writeNumberField("numFound", docList.getNumFound());
             jgen.writeNumberField("start", docList.getStart());
             jgen.writeNumberField("rows", docList.size());
             // Docs
-            jgen.writeFieldName("docs"); writeDocs(jgen, docList);
+            jgen.writeFieldName("docs"); writeDocs(docList);
         }
         jgen.writeEndObject(); // Response
         
@@ -66,7 +88,7 @@ public class JsonResponseWriter
     }
     
     
-    private void writeDocs(JsonGenerator jgen, SolrDocumentList docList) throws IOException
+    private void writeDocs(SolrDocumentList docList) throws IOException
     {
         jgen.writeStartArray();
         
@@ -74,9 +96,11 @@ public class JsonResponseWriter
         {
             jgen.writeStartObject();
             
-            String fieldName = "title";
-            Object value = doc.getFieldValue(fieldName); 
-            writeField(jgen, fieldName, value);
+            for(String fieldName: fields)
+            {
+                Object value = doc.getFieldValue(fieldName); 
+                writeField(fieldName, value);
+            }
             
             jgen.writeEndObject();
         }
@@ -86,7 +110,7 @@ public class JsonResponseWriter
     
     
     @SuppressWarnings("unchecked")
-    private void writeField(JsonGenerator jgen, String name, Object value) throws IOException
+    private void writeField(String name, Object value) throws IOException
     {
         if(value == null) return;
         
@@ -95,15 +119,7 @@ public class JsonResponseWriter
         if(value instanceof Collection) 
         {
             Collection<Object> values = (Collection<Object>)value;
-            
-            jgen.writeStartArray();
-            
-            for(Object obj: values)
-            {
-                jgen.writeObject(obj);
-            }
-            
-            jgen.writeEndArray();
+            writeCollection(values);
         }
         else
         {
@@ -111,4 +127,24 @@ public class JsonResponseWriter
         }
     }
     
+    
+    private void writeCollection(Collection<Object> values) throws IOException
+    {
+        if(values == null || values.size() == 0) return;
+        
+        if(values.size() == 1)
+        {
+            jgen.writeObject(values.iterator().next());
+        }
+        else
+        {
+            jgen.writeStartArray();            
+            for(Object obj: values)
+            {
+                jgen.writeObject(obj);
+            }            
+            jgen.writeEndArray();
+        }
+        
+    }
 }

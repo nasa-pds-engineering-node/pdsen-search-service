@@ -2,6 +2,8 @@ package gov.nasa.pds.search.cfg;
 
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -38,7 +40,7 @@ public class ConfigurationLoader
         
         String path = getConfigFilePath();
         Properties props = readProperties(path);        
-        setSolrProps(cfg, props);
+        setSolrProps(cfg, props);        
         
         return cfg;
     }
@@ -88,14 +90,21 @@ public class ConfigurationLoader
     
     private static void setSolrProps(SearchServerConfiguration cfg, Properties props)
     {
-        SolrConfiguration solrProps = cfg.getSolrConfiguration();
+        SolrConfiguration solrCfg = cfg.getSolrConfiguration();
         
-        solrProps.searchUrl = props.getProperty("solr.search.url");
-        if(solrProps.searchUrl == null)
+        solrCfg.searchUrl = props.getProperty("solr.search.url");
+        if(solrCfg.searchUrl == null)
         {
             throw new RuntimeException("Missing property 'solr.search.url'");
         }
         
-        solrProps.searchHandler = props.getProperty("solr.search.handler");
+        solrCfg.searchHandler = props.getProperty("solr.search.handler");
+        
+        // Default fields
+        List<String> fields = new ArrayList<>();
+        fields.add("identifier");
+        fields.add("title");
+        fields.add("description");
+        solrCfg.defaultFields = fields;
     }
 }

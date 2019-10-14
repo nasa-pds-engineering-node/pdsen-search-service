@@ -1,16 +1,26 @@
 package gov.nasa.pds.search.solr;
 
+/**
+ * Builds a Solr query string in Lucene query format.
+ * @author karpenko
+ */
 public class SolrQueryStringBuilder
 {
     private StringBuilder bld; 
     
-    
+    /**
+     * Constructor.
+     */
     public SolrQueryStringBuilder()
     {
         bld = new StringBuilder();
     }
     
-    
+    /**
+     * Add query field.
+     * @param field
+     * @param values
+     */
     public void addField(String field, String[] values)
     {
         if(values == null) return;
@@ -53,7 +63,9 @@ public class SolrQueryStringBuilder
         bld.append("\"");
     }
     
-    
+    /**
+     * Returns a Solr query in Lucene query format.
+     */
     public String toString()
     {
         return (bld.length() > 0) ? bld.toString() : null;

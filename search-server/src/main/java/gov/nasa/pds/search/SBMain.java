@@ -12,7 +12,10 @@ import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.solr.SolrManager;
 
-
+/**
+ * Spring Boot application.
+ * @author karpenko
+ */
 @SpringBootApplication
 public class SBMain
 {
