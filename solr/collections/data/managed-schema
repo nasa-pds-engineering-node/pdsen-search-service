@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="data" version="1.0">
+
+    <!-- Fields -->
+    <field name="search_id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+    <uniqueKey>search_id</uniqueKey>
+
+    <field name="version" type="string" indexed="false" stored="true" multiValued="false" />
+    <field name="identifier" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="data_product_type" type="lowercase" indexed="true" stored="true" multiValued="false"/>
+
+    <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
+
+    <field name="start_time" type="pdate" indexed="true" stored="true" multiValued="true" />
+    <field name="stop_time" type="pdate" indexed="true" stored="true" multiValued="true" />
+
+    <field name="citation_description" type="text_general" indexed="false" stored="true" multiValued="false" />
+    <field name="description" type="text_general" indexed="false" stored="true" multiValued="false" />
+    <field name="long_description" type="text_general" indexed="false" stored="true" multiValued="false" />
+    <field name="abstract_text" type="text_general" indexed="false" stored="true" multiValued="false" />
+
+    <field name="investigation_name" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="investigation_type" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="instrument_host_name" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="instrument_host_type" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="instrument_name" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="instrument_type" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="target_name" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="target_type" type="text_general" indexed="true" stored="true" multiValued="true" />
+
+    <field name="facet_investigation" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="facet_instrument" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="facet_instrument_host" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="facet_target_type" type="string" indexed="true" stored="true" multiValued="true" />
+
+    <field name="resource_ref" type="string" indexed="false" stored="true" multiValued="true" />
+    <field name="external_reference_text" type="text_general" indexed="false" stored="true" multiValued="true" />
+
+    <field name="agency_name" type="lowercase" indexed="true" stored="true" multiValued="true" />
+
+    <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
+    <field name="timestamp" type="pdate" indexed="true" stored="true" default="NOW" multiValued="false"/>
+
+    <!-- Types -->
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true" />
+    <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+    <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
+    <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+    <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+    <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
+
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="lowercase" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+</schema>
