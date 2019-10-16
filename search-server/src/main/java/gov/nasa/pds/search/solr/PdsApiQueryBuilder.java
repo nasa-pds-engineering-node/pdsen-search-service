@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.search.cfg.SolrConfiguration;
+import gov.nasa.pds.search.util.NameMapper;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -14,35 +15,42 @@ import gov.nasa.pds.search.util.RequestParameters;
  */
 public class PdsApiQueryBuilder
 {
-    private SolrConfiguration solrConfig;
+    private NameMapper fieldNameMapper;
     private RequestParameters params;
-    List<String> returnFields;
+    private List<String> fields;
+    private SolrConfiguration solrConfig;
     
     
     /**
      * Constructor.
      * @param params Request parameters
-     * @param returnFields A list of fields to return
-     * @param solrConfig Solr configuration
      */
-    public PdsApiQueryBuilder(RequestParameters params, List<String> returnFields, SolrConfiguration solrConfig)
+    public PdsApiQueryBuilder(RequestParameters params, SolrConfiguration solrConfig)
     {
-        if(returnFields == null || returnFields.isEmpty()) 
-        {
-            throw new IllegalArgumentException("Return fields could not be null or empty");
-        }
-        
-        this.solrConfig = solrConfig;
         this.params = params;
-        this.returnFields = returnFields;
+        this.solrConfig = solrConfig;
     }
 
+
+    public void setFieldNameMapper(NameMapper mapper)
+    {
+        this.fieldNameMapper = mapper;
+    }
+    
+    
+    public void setFields(List<String> fields)
+    {
+        this.fields = fields;
+    }
+    
+    
     /**
      * Build Solr query.
      * @return solr query object.
      */
     public SolrQuery build()
     {
+        // Get / build Solr query string
         String queryString = getQueryString();
         if(queryString == null)
         {
@@ -50,8 +58,17 @@ public class PdsApiQueryBuilder
         }
         
         SolrQuery query = new SolrQuery(queryString);
-        setRequestHandler(query);
-        setFields(query);
+        
+        // Set request handler
+        if(solrConfig != null && solrConfig.requestHandler != null)
+        {
+            query.setRequestHandler(solrConfig.requestHandler);
+        }
+        
+        // Add fields
+        addFields(query);
+        
+        // TODO: Read from parameters
         query.setRows(10);
         
         return query;
@@ -71,21 +88,16 @@ public class PdsApiQueryBuilder
     }
     
     
-    private void setRequestHandler(SolrQuery query)
+    private void addFields(SolrQuery query)
     {
-        if(solrConfig.searchHandler != null)
-        {
-            query.setRequestHandler(solrConfig.searchHandler);
-        }
-    }
-    
-    
-    private void setFields(SolrQuery query)
-    {
-        String[] fieldArray = new String[returnFields.size()];
-        returnFields.toArray(fieldArray);
+        if(fields == null || fields.size() == 0) return;
         
-        query.setFields(fieldArray);
+        for(String fieldName: fields)
+        {
+            // Map public field name to internal Solr name
+            String solrFieldName = (fieldNameMapper == null) ? fieldName : fieldNameMapper.findInternalByPublic(fieldName);
+            query.addField(solrFieldName);
+        }
     }
     
     
@@ -95,13 +107,16 @@ public class PdsApiQueryBuilder
         
         for(String paramName: params.getParameterNames())
         {
-            switch(paramName)
+            // Map public parameter name to internal Solr field name
+            String solrFieldName = (fieldNameMapper == null) ? paramName : fieldNameMapper.findInternalByPublic(paramName);
+            
+            switch(solrFieldName)
             {
             case "investigation_name":
             case "instrument_name":
             case "instrument_host_name":
             case "target_name":
-                bld.addField(paramName, params.getParameterValues(paramName));
+                bld.addField(solrFieldName, params.getParameterValues(paramName));
                 break;
             }
         }

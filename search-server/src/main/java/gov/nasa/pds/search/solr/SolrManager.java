@@ -21,7 +21,7 @@ public class SolrManager
      */
     private SolrManager(SolrConfiguration cfg)
     {
-        solrClient = new HttpSolrClient.Builder(cfg.searchUrl).build();
+        solrClient = new HttpSolrClient.Builder(cfg.url).build();
     }
     
     /**

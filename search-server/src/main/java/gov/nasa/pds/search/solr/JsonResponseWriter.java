@@ -12,6 +12,8 @@ import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 
+import gov.nasa.pds.search.util.NameMapper;
+
 
 /**
  * Writes Solr response in JSON format. 
@@ -21,6 +23,7 @@ public class JsonResponseWriter
 {
     private JsonGenerator jgen;
     private List<String> fields;
+    private NameMapper nameMapper;
     
     /**
      * Constructor
@@ -28,12 +31,13 @@ public class JsonResponseWriter
      * @param fields A list of fields to write.
      * @throws IOException
      */
-    public JsonResponseWriter(OutputStream out, List<String> fields) throws IOException
+    public JsonResponseWriter(OutputStream out, List<String> fields, NameMapper nameMapper) throws IOException
     {
         JsonFactory jFactory = new JsonFactory();
         jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
 
         this.fields = fields;
+        this.nameMapper = nameMapper;
     }
 
     
@@ -114,7 +118,8 @@ public class JsonResponseWriter
     {
         if(value == null) return;
         
-        jgen.writeFieldName(name);
+        String publicName = (nameMapper == null) ? name : nameMapper.findPublicByInternal(name);        
+        jgen.writeFieldName(publicName);
         
         if(value instanceof Collection) 
         {

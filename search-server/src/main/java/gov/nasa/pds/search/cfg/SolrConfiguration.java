@@ -1,6 +1,5 @@
 package gov.nasa.pds.search.cfg;
 
-import java.util.List;
 
 /**
  * Solr configuration parameters.
@@ -8,7 +7,7 @@ import java.util.List;
  */
 public class SolrConfiguration
 {
-    public String searchUrl;
-    public String searchHandler;
-    public List<String> defaultFields;    
+    public String url;
+    public String collection;
+    public String requestHandler;
 }

@@ -16,11 +16,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.cfg.SolrConfiguration;
 import gov.nasa.pds.search.solr.JsonResponseWriter;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
 import gov.nasa.pds.search.solr.SolrManager;
+import gov.nasa.pds.search.util.NameMapper;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -37,14 +39,17 @@ public class APIController
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
         SolrConfiguration solrConfig = ssConfig.getSolrConfiguration();
+        FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();
 
         // Use default JSON output format
         httpResp.setContentType("application/json");
-        List<String> fields = getFields(reqParams, solrConfig);
-        JsonResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream(), fields);
+        List<String> fields = getFields(reqParams, fieldConfig);
+        JsonResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream(), fields, fieldConfig.nameMapper);
         
         // Build Solr query
-        PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(reqParams, fields, solrConfig);
+        PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(reqParams, solrConfig);
+        queryBuilder.setFieldNameMapper(fieldConfig.nameMapper);
+        queryBuilder.setFields(fields);        
         SolrQuery query = queryBuilder.build();
         
         // Invalid request
@@ -57,7 +62,7 @@ public class APIController
         
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(query);
+        QueryResponse resp = solrClient.query(solrConfig.collection, query);
         SolrDocumentList docList = resp.getResults();
         
         // Write documents
@@ -66,11 +71,13 @@ public class APIController
     
     
     // Get a list of fields to return.
-    private List<String> getFields(RequestParameters reqParams, SolrConfiguration solrConfig)
+    private List<String> getFields(RequestParameters reqParams, FieldConfiguration fieldConfig)
     {
         String pFields = reqParams.getParameter("fields");
         if(pFields != null && !pFields.isEmpty())
         {
+            NameMapper nameMapper = fieldConfig.nameMapper;
+            
             List<String> fields = new ArrayList<>();
             StringTokenizer tkz = new StringTokenizer(pFields, ",; ");
             while(tkz.hasMoreTokens())
@@ -78,13 +85,14 @@ public class APIController
                 String field = tkz.nextToken(); 
                 if(!field.isEmpty()) 
                 {
-                    fields.add(field);
+                    String solrFieldName = (nameMapper == null) ? field : nameMapper.findInternalByPublic(field);
+                    fields.add(solrFieldName);
                 }
             }
             
             if(!fields.isEmpty()) return fields;
         }
         
-        return solrConfig.defaultFields;
+        return fieldConfig.defaultFields;
     }
 }

@@ -46,7 +46,7 @@ public class SBMain
     }
     
     
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         // Load configuration
         SearchServerConfiguration ssCfg = ConfigurationLoader.load();

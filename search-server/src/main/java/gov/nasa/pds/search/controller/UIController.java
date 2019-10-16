@@ -45,9 +45,9 @@ public class UIController
 
         // Create query
         SolrQuery query = new SolrQuery(pQuery);
-        if(solrCfg.searchHandler != null)
+        if(solrCfg.requestHandler != null)
         {
-            query.setRequestHandler(solrCfg.searchHandler);
+            query.setRequestHandler(solrCfg.requestHandler);
         }
         query.add("fl", "identifier,title,product_class,data_class");
         query.add("rows", "10");

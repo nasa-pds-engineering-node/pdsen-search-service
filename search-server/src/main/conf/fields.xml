@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fields>
+  <fieldMap>
+    <field publicName="investigation" internalName="investigation_name" />
+    <field publicName="instrument" internalName="instrument_name" />
+    <field publicName="instrument_host" internalName="instrument_host_name" />
+    <field publicName="target" internalName="target_name" />
+  </fieldMap>
+  <defaultFields>
+    <field internalName="identifier" />
+    <field internalName="title" />
+    <field internalName="description" />
+  </defaultFields>
+</fields>
