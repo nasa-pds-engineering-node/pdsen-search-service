@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.cfg.SolrConfiguration;
+import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
 import gov.nasa.pds.search.solr.SolrManager;
 
 
@@ -41,7 +41,7 @@ public class UIController
     {
         List<Item> list = new ArrayList<>();
         
-        SolrConfiguration solrCfg = ssConfig.getSolrConfiguration();
+        SolrCollectionConfiguration solrCfg = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");
 
         // Create query
         SolrQuery query = new SolrQuery(pQuery);
@@ -54,7 +54,7 @@ public class UIController
         
         // Call Solr
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(query);
+        QueryResponse resp = solrClient.query(solrCfg.collectionName, query);
         SolrDocumentList res = resp.getResults();
         
         // Process search results

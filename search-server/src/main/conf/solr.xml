@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <solr>
-    <url>http://localhost:8983/solr/pds</url>
+    <url>http://localhost:8983/solr/</url>
+    <collections>
+      <collection publicName="data" internalName="pds" requestHandler="/archive-filter" />
+    </collections>
 </solr>

@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.cfg.SolrConfiguration;
+import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
+import gov.nasa.pds.search.solr.IResponseWriter;
 import gov.nasa.pds.search.solr.JsonResponseWriter;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
 import gov.nasa.pds.search.solr.SolrManager;
@@ -38,13 +39,19 @@ public class APIController
     public void getSearch(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
-        SolrConfiguration solrConfig = ssConfig.getSolrConfiguration();
-        FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();
-
+        
         // Use default JSON output format
         httpResp.setContentType("application/json");
+        IResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream());
+        
+        // TODO: Validate
+        SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");
+        FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();
+        
+        // Decide which fields to return
         List<String> fields = getFields(reqParams, fieldConfig);
-        JsonResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream(), fields, fieldConfig.nameMapper);
+        respWriter.setFields(fields);
+        respWriter.setNameMapper(fieldConfig.nameMapper);
         
         // Build Solr query
         PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(reqParams, solrConfig);
@@ -62,7 +69,7 @@ public class APIController
         
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(solrConfig.collection, query);
+        QueryResponse resp = solrClient.query(solrConfig.collectionName, query);
         SolrDocumentList docList = resp.getResults();
         
         // Write documents

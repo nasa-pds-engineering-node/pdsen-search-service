@@ -89,14 +89,43 @@ public class ConfigurationLoader
         
         Document doc = XmlDomUtils.readXml(solrCfgFile.getAbsolutePath());
         XPathExpression xpe = XPathUtils.compileXPath(xpf, "/solr/url");
-        solrCfg.url = XPathUtils.getStringValue(doc, xpe);
-        if(solrCfg.url == null)
+        solrCfg.setUrl(XPathUtils.getStringValue(doc, xpe));
+        if(solrCfg.getUrl() == null)
         {
-            throw new RuntimeException("Missing property 'solr.search.url'");
+            throw new RuntimeException("Missing Solr URL.");
         }
         
-        xpe = XPathUtils.compileXPath(xpf, "/solr/requestHandler");
-        solrCfg.requestHandler = XPathUtils.getStringValue(doc, xpe);
+        // Collections
+        xpe = XPathUtils.compileXPath(xpf, "/solr/collections/collection");
+        NodeList nodes = XPathUtils.getNodeList(doc, xpe);
+        if(nodes == null || nodes.getLength() == 0)
+        {
+            throw new RuntimeException("No collections are configured.");
+        }
+
+        for(int i = 0; i < nodes.getLength(); i++)
+        {
+            Node node = nodes.item(i);
+            
+            String publicName = node.getAttributes().getNamedItem("publicName").getTextContent();
+            if(publicName == null || publicName.isEmpty()) 
+            {
+                LOG.warn("Missing publicName attribute in /solr/collections/collection.");
+                continue;
+            }
+
+            SolrCollectionConfiguration cconf = new SolrCollectionConfiguration();
+            
+            cconf.collectionName = node.getAttributes().getNamedItem("internalName").getTextContent();
+            if(cconf.collectionName == null || cconf.collectionName.isEmpty())
+            {
+                cconf.collectionName = publicName;
+            }
+
+            cconf.requestHandler = node.getAttributes().getNamedItem("requestHandler").getTextContent();
+
+            solrCfg.addCollectionConfiguration(publicName, cconf);
+        }
     }
     
     

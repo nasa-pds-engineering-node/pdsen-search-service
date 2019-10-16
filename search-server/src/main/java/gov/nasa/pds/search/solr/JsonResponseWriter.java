@@ -19,7 +19,7 @@ import gov.nasa.pds.search.util.NameMapper;
  * Writes Solr response in JSON format. 
  * @author karpenko
  */
-public class JsonResponseWriter
+public class JsonResponseWriter implements IResponseWriter
 {
     private JsonGenerator jgen;
     private List<String> fields;
@@ -28,15 +28,31 @@ public class JsonResponseWriter
     /**
      * Constructor
      * @param out Output Stream for JSON.
-     * @param fields A list of fields to write.
      * @throws IOException
      */
-    public JsonResponseWriter(OutputStream out, List<String> fields, NameMapper nameMapper) throws IOException
+    public JsonResponseWriter(OutputStream out) throws IOException
     {
         JsonFactory jFactory = new JsonFactory();
         jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
+    }
 
+
+    /**
+     * Set a list of fields to write.
+     * @param fields A list of fields to write.
+     */
+    public void setFields(List<String> fields)
+    {
         this.fields = fields;
+    }
+    
+    
+    /**
+     * Set name mapper to map public and internal parameters.
+     * @param nameMapper
+     */
+    public void setNameMapper(NameMapper nameMapper)
+    {
         this.nameMapper = nameMapper;
     }
 
