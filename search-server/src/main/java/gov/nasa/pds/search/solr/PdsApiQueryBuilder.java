@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
-import gov.nasa.pds.search.cfg.SolrConfiguration;
 import gov.nasa.pds.search.util.NameMapper;
 import gov.nasa.pds.search.util.RequestParameters;
 
