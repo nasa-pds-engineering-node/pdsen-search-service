@@ -1,0 +1,18 @@
+MRO|spacecraft|mro
+Mars Reconnaissance Orbiter|spacecraft|mro
+CRISM|instrument|crism
+TRDR|data_type|trdr
+TRDRs|data_type|trdr
+
+Gale Crater|feature|gale_crater
+Mars|target|mars
+
+LRO|spacecraft|lro
+LROC|instrument|lric
+Moon|Target|moon
+
+MSL|mission|msl
+Mars Science Laboratory|mission|msl
+
+Messenger|spacecraft|mess
+MLA|instrument|mla
