@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Search Server">
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.8</version>
+  </skin>
+
+  <bannerLeft>
+    <src>images/pds4_logo.png</src>
+    <href>https://pds-engineering.jpl.nasa.gov/development/pds4/</href>
+  </bannerLeft>
+
+  <bannerRight>
+    <name>Search Server</name>
+  </bannerRight>
+
+  <version/>
+
+  <body>
+
+    <menu name="Software Documentation">
+      <item name="About Search Server" href="index.html"/>
+      <item name="Installation" href="install/index.html"/>
+      <item name="Operation" href="operate/index.html"/>
+    </menu>
+
+  </body>
+</project>
