@@ -1,5 +1,6 @@
 package gov.nasa.pds.nlp;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +15,14 @@ public class NamedEntityRecognizer
     }
     
     
-    private int processMultiWord(List<String> tokens, int currentTokenIndex, MultiWordTermInfo mwti)
+    private static class MWResult
+    {
+        public int lastTokenIndex;
+        public Token token;
+    }
+
+    
+    private MWResult processMultiWord(List<String> tokens, int currentTokenIndex, MultiWordTermInfo mwti)
     {
         int j = currentTokenIndex + 1;
         for(; j < tokens.size(); j++)
@@ -24,32 +32,38 @@ public class NamedEntityRecognizer
             mwti = mwti.getTermInfo(nextWord);
             if(mwti == null)
             {
-                if(prevMwti.type != null)
+                if(prevMwti.type != 0)
                 {
-                    System.out.println(prevMwti.id + "  -->  NNP: " + prevMwti.type);
-                    return j-1;
+                    MWResult res = new MWResult();                    
+                    res.lastTokenIndex = j-1;
+                    res.token = new Token(prevMwti.id, prevMwti.type);
+                    return res;
                 }
                 else
                 {
                     // Not found
-                    return -1;
+                    return null;
                 }
             }
         }
         
         // Last word in tokens list
-        if(mwti.type != null)
+        if(mwti.type != 0)
         {
-            System.out.println(mwti.id + "  -->  NNP: " + mwti.type);
-            return j;
+            MWResult res = new MWResult();
+            res.lastTokenIndex = j;
+            res.token = new Token(mwti.id, mwti.type);
+            return res;
         }
         
-        return -1;
+        return null;
     }
     
     
-    public void parse(String sentence)
+    public List<Token> parse(String sentence)
     {
+        List<Token> results = new ArrayList<>();
+        
         sentence = sentence.toLowerCase();
         String[] tmp = sentence.split(" ");
         List<String> tokens = Arrays.asList(tmp);
@@ -62,10 +76,11 @@ public class NamedEntityRecognizer
             // Process multi-word term
             if(mwti != null)
             {
-                int lastTokenIndex = processMultiWord(tokens, i, mwti);
-                if(lastTokenIndex > 0)
+                MWResult res = processMultiWord(tokens, i, mwti);
+                if(res != null)
                 {
-                    i = lastTokenIndex;
+                    results.add(res.token);
+                    i = res.lastTokenIndex;
                     continue;
                 }
             }
@@ -74,12 +89,14 @@ public class NamedEntityRecognizer
             // Process single word term
             if(swti != null)
             {
-                System.out.println(swti.id + "  -->  NNP: " + swti.type);
+                results.add(new Token(swti.id, swti.type));
             }
             else
             {
-                System.out.println(word + "  -->  " + "Unknown");
+                results.add(new Token(word, Token.TYPE_UNKNOWN));
             }            
         }
+        
+        return results;
     }
 }

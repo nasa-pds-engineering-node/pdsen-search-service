@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class MultiWordTermInfo
 {
     public String id;
-    public String type;
+    public byte type;
     private Map<String, MultiWordTermInfo> terms;
     
     
@@ -47,7 +47,7 @@ public class MultiWordTermInfo
     }
     
     
-    public void add(String token, String type, String id)
+    public void add(String token, byte type, String id)
     {
         MultiWordTermInfo term = getOrCreateTermInfo(token);
         
@@ -63,7 +63,7 @@ public class MultiWordTermInfo
     }
 
     
-    public void add(String[] tokens, String type, String id)
+    public void add(String[] tokens, byte type, String id)
     {
         if(tokens.length == 1)
         {
