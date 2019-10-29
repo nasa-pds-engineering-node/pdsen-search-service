@@ -1,6 +1,7 @@
 package gov.nasa.pds.nlp;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.util.Map;
 import java.util.TreeMap;
@@ -48,7 +49,7 @@ public class MultiWordDictionary
     }
     
     
-    public void load(String file) throws Exception
+    public void load(File file) throws Exception
     {
         BufferedReader rd = new BufferedReader(new FileReader(file));
         

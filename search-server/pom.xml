@@ -25,6 +25,11 @@
             <artifactId>solr-solrj</artifactId>
             <version>7.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>gov.nasa.pds</groupId>
+            <artifactId>pds-nlp</artifactId>
+            <version>0.1</version>
+        </dependency>
     </dependencies>
  
     <build>
