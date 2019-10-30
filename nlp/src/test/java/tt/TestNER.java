@@ -1,5 +1,6 @@
 package tt;
 
+import java.io.File;
 import java.util.List;
 
 import gov.nasa.pds.nlp.MultiWordDictionary;
@@ -13,7 +14,7 @@ public class TestNER
     public static void main(String[] args) throws Exception
     {
         MultiWordDictionary dic = new MultiWordDictionary();        
-        dic.load("src/test/data/ner-dic.txt");
+        dic.load(new File("src/test/data/ner-dic.txt"));
         
         NamedEntityRecognizer ner = new NamedEntityRecognizer(dic);
         
