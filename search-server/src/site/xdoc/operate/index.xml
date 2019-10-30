@@ -9,5 +9,59 @@
     <section name="Operation">
       <p>This document describes how to configure and run the Search Server.</p>
     </section>
+    
+    <section name="Running Search Server">
+      <p>Search Server is a Java application based on Spring Boot framework. 
+      It uses embedded Tomcat web server.
+      To start the application run the following command:</p>
+      <source> java [OPTIONS] -jar &lt;search server jar&gt;</source>
+      <p>Options:</p>
+      <p><i>-Dpds.search.server.conf</i> - path to a configuration directory (required).</p>
+      <p><i>-Dserver.port</i> - server port (optional). Default port is 8080.</p>
+      <p>For example, if you installed Search Server in <i>/opt/search-server</i> directory and 
+      server configuration files are located in <i>/opt/search-server/conf</i> directory and 
+      you want to run the server on port <i>8000</i>, execute the following command:</p> 
+      <source> java -Dpds.search.server.conf=/opt/search-server/conf \
+    -Dserver.port=8000 \
+    -jar /opt/search-server/pds-search-server-0.1.jar</source>
+      <p>NOTE: At the moment there are no startup and shutdown scripts. We plan to add them in the future.</p>
+    </section>
+    
+    <section name="Configuration">
+    <p>Search Server requires several configuration files and a dictionary for NLP 
+    (Natural Language Processing) component. Place the following files in the same directory, such as
+    <i>/opt/search-server/conf</i></p>
+    
+    <subsection name="Solr Server Configuration (solr.xml)">
+    <source>
+&lt;solr&gt;
+    &lt;url&gt;https://localhost/services/search&lt;/url&gt;
+    &lt;collections&gt;
+      &lt;collection publicName="data" internalName="pds" requestHandler="/archive-filter" /&gt;
+    &lt;/collections&gt;
+&lt;/solr&gt;</source>
+    </subsection>
+
+    <subsection name="Search Fields Mapping (fields.xml)">
+    <source>
+&lt;fields&gt;
+  &lt;fieldMap&gt;
+    &lt;field publicName="target" internalName="target_name" /&gt;
+  &lt;/fieldMap&gt;
+  &lt;defaultFields&gt;
+    &lt;field internalName="identifier" /&gt;
+    &lt;field internalName="title" /&gt;
+    &lt;field internalName="description" /&gt;
+  &lt;/defaultFields&gt;
+&lt;/fields&gt;</source>
+    </subsection>
+
+    <subsection name="NLP Dictionary">
+    <p>Natural Language Processing component needs a dictionary file, <i>ner.dic</i></p>
+    <p>TODO: Add more details.</p>
+    </subsection>
+        
+    </section>
+    
   </body>
 </document>
