@@ -20,11 +20,12 @@
 
   <body>
 
-    <menu name="Software Documentation">
-      <item name="About Search Server" href="index.html"/>
-      <item name="Installation" href="install/index.html"/>
-      <item name="Operation" href="operate/index.html"/>
-    </menu>
+  <menu name="Software Documentation">
+    <item name="About Search Server" href="index.html"/>
+    <item name="Installation" href="install/index.html"/>
+    <item name="Operation" href="operate/index.html"/>
+    <item name="API" href="api/index.html"/>
+  </menu>
 
   </body>
 </project>
