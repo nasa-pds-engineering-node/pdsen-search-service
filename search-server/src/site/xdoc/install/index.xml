@@ -7,7 +7,61 @@
 
   <body>
     <section name="Installation">
-      <p>Test</p>
+      <p>This document describes how to build Search Server from sources.</p>
     </section>
+
+    <section name="Prerequisites">
+      <subsection name="Git Client">
+        <p>Git client is required to checkout sources from GitHub.</p>
+      </subsection>    
+      <subsection name="Java Development Kit (JDK)">
+        <p>Java 1.8 or later is required to build the project. 
+        At the time of writing, the recommended version is Java 11 LTS (Long Term Support).
+        You can get either <a href="https://jdk.java.net/archive/">free OpenJDK</a>
+        or <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">commercial JDK</a>        
+        </p>
+      </subsection>
+      <subsection name="Apache Maven">
+      <p><a href="https://maven.apache.org/download.cgi">Apache Maven 3.x</a> is required to build the project.</p>
+      </subsection>
+    </section>
+
+    <section name="Getting the Sources">
+        <p>
+        Clone <a href="https://github.com/NASA-PDS-Incubator/pds-api-server">pds-api-server project</a> from GitHub to some folder.
+        <source> git clone https://github.com/NASA-PDS-Incubator/pds-api-server</source>
+        </p>
+        <p>
+        This project has few sub projects. Some of them may be moved to their own repositories in the future.
+        You will need <i>search-server</i> and <i>nlp</i> sub projects. 
+        </p>
+    </section>
+
+    <section name="Building NLP">
+    <p>
+    Search Server depends on NLP sub project. To build the NLP subproject, go to <i>pds-api-server/nlp</i> directory:
+    <source> cd pds-api-server/nlp</source>
+    Then use maven to build the jar:
+    <source> mvn package</source>
+    Finally install the pds-nlp jar in your local Maven repository.
+    <source> mvn install</source>     
+    </p>
+    </section>
+
+    <section name="Building Search Server">
+    <p>
+    Go to <i>pds-api-server/search-server</i> directory:
+    <source> cd pds-api-server/search-server</source>
+    Then use maven to build the jar:
+    <source> mvn package</source>
+    The <i>pds-api-server/search-server/target</i> directory will contain <i>pds-search-server-x.y.jar</i>
+    This is a Spring Boot application with all dependencies packaged in the jar.
+    </p>
+    </section>
+
+    <section name="Next Steps">
+    <p>Go to <a href="../operate/index.html">Operation Guide</a> for configuration and running instructions.</p>
+    </section>
+
   </body>
 </document>
