@@ -27,6 +27,7 @@ public class GeoRequestBuilder
     
     public GeoRequestBuilder(String baseUrl) throws Exception
     {
+        if(baseUrl == null) throw new IllegalArgumentException("Geo base URL is null");
         this.baseUrl = new URI(baseUrl);
     }
     

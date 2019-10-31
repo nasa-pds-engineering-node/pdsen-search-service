@@ -42,7 +42,7 @@ public class APIController
         
         // Use default JSON output format
         httpResp.setContentType("application/json");
-        IResponseWriter respWriter = new JsonResponseWriter(httpResp.getOutputStream());
+        IResponseWriter respWriter = new JsonResponseWriter(httpResp.getWriter());
         
         // TODO: Validate
         SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");

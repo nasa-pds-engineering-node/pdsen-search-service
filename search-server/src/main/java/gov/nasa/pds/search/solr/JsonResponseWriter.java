@@ -2,6 +2,7 @@ package gov.nasa.pds.search.solr;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 
@@ -30,10 +31,10 @@ public class JsonResponseWriter implements IResponseWriter
      * @param out Output Stream for JSON.
      * @throws IOException
      */
-    public JsonResponseWriter(OutputStream out) throws IOException
+    public JsonResponseWriter(Writer writer) throws IOException
     {
         JsonFactory jFactory = new JsonFactory();
-        jgen = jFactory.createGenerator(out, JsonEncoding.UTF8);
+        jgen = jFactory.createGenerator(writer);
     }
 
 
