@@ -53,6 +53,8 @@ public class ConfigurationLoader
         SearchServerConfiguration cfg = new SearchServerConfiguration(configDir);
         loadSolrConfiguration(cfg);
         loadFieldConfiguration(cfg);
+        loadGeoConfiguration(cfg);
+        
         return cfg;
     }
     
@@ -191,6 +193,57 @@ public class ConfigurationLoader
                 }
                 
                 fieldCfg.defaultFields.add(internalName);
+            }
+        }
+    }
+    
+    
+    private static void loadGeoConfiguration(SearchServerConfiguration cfg) throws Exception
+    {
+        File geoCfgFile = new File(cfg.getConfigDirectory(), "geo.xml");
+        if(!geoCfgFile.exists())
+        {
+            // Geo configuration is optional
+            return;
+        }
+
+        LOG.info("Reading configuration from " + geoCfgFile.getAbsolutePath());
+        Document doc = XmlDomUtils.readXml(geoCfgFile.getAbsolutePath());
+
+        GeoConfiguration geoCfg = cfg.getGeoConfiguration();
+
+        XPathFactory xpf = XPathFactory.newInstance();
+        
+        // URL
+        XPathExpression xpe = XPathUtils.compileXPath(xpf, "/geo/url");
+        geoCfg.url = XPathUtils.getStringValue(doc, xpe);
+        if(geoCfg.url == null)
+        {
+            throw new RuntimeException("Missing Geo URL.");
+        }
+        
+        // Timeout
+        xpe = XPathUtils.compileXPath(xpf, "/geo/timeoutSec");
+        String strVal = XPathUtils.getStringValue(doc, xpe);
+        if(strVal == null)
+        {
+            // Use default
+            geoCfg.timeoutSec = 5;
+        }
+        else
+        {
+            try
+            {
+                geoCfg.timeoutSec = Integer.parseInt(strVal);
+            }
+            catch(Exception ex)
+            {
+                throw new RuntimeException("Invalid '/geo/timeoutSec' value " + strVal);
+            }
+        
+            if(geoCfg.timeoutSec < 1)
+            {
+                throw new RuntimeException("Invalid '/geo/timeoutSec' value " + strVal);
             }
         }
     }

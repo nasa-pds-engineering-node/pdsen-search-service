@@ -2,7 +2,9 @@ package gov.nasa.pds.search.geo;
 
 import java.net.URI;
 
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
+
 
 public class GeoRequestBuilder
 {
@@ -59,7 +61,7 @@ public class GeoRequestBuilder
     }
 
         
-    public URI buildGet() throws Exception
+    public HttpGet buildGet() throws Exception
     {
         URIBuilder bld = new URIBuilder(baseUrl);
         
@@ -117,7 +119,10 @@ public class GeoRequestBuilder
             bld.addParameter("outputFormat", outputFormat);
         }
         
-        return bld.build();
+        URI uri = bld.build();
+        HttpGet req = new HttpGet(uri);
+        
+        return req;
     }
     
     
