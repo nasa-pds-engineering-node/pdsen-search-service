@@ -16,6 +16,8 @@ import gov.nasa.pds.search.util.RequestParameters;
  */
 public class PdsApiQueryBuilder
 {
+    private static final String[] data_fields = { "Product_Data_Set_PDS3", "Product_Collection" };
+    
     private NameMapper fieldNameMapper;
     private RequestParameters params;
     private Set<String> searchFields;
@@ -124,6 +126,10 @@ public class PdsApiQueryBuilder
             }
         }
         
+        // TODO: This is a temporary fix.
+        // TODO: Remove when we switch to a separate data collection.
+        bld.addField("objectType", data_fields);
+
         return bld.toString();
     }
 }
