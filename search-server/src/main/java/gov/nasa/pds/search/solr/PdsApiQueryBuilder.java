@@ -1,6 +1,7 @@
 package gov.nasa.pds.search.solr;
 
 import java.util.List;
+import java.util.Set;
 
 import org.apache.solr.client.solrj.SolrQuery;
 
@@ -17,7 +18,8 @@ public class PdsApiQueryBuilder
 {
     private NameMapper fieldNameMapper;
     private RequestParameters params;
-    private List<String> fields;
+    private Set<String> searchFields;
+    private List<String> outFields;
     private SolrCollectionConfiguration solrConfig;
     
     
@@ -38,11 +40,17 @@ public class PdsApiQueryBuilder
     }
     
     
-    public void setFields(List<String> fields)
+    public void setOutputFields(List<String> fields)
     {
-        this.fields = fields;
+        this.outFields = fields;
     }
     
+
+    public void setSearchFields(Set<String> fields)
+    {
+        this.searchFields = fields;
+    }
+
     
     /**
      * Build Solr query.
@@ -90,9 +98,9 @@ public class PdsApiQueryBuilder
     
     private void addFields(SolrQuery query)
     {
-        if(fields == null || fields.size() == 0) return;
+        if(outFields == null || outFields.size() == 0) return;
         
-        for(String fieldName: fields)
+        for(String fieldName: outFields)
         {
             // Map public field name to internal Solr name
             String solrFieldName = (fieldNameMapper == null) ? fieldName : fieldNameMapper.findInternalByPublic(fieldName);
@@ -109,15 +117,10 @@ public class PdsApiQueryBuilder
         {
             // Map public parameter name to internal Solr field name
             String solrFieldName = (fieldNameMapper == null) ? paramName : fieldNameMapper.findInternalByPublic(paramName);
-            
-            switch(solrFieldName)
+
+            if(searchFields.contains(solrFieldName))
             {
-            case "investigation_name":
-            case "instrument_name":
-            case "instrument_host_name":
-            case "target_name":
                 bld.addField(solrFieldName, params.getParameterValues(paramName));
-                break;
             }
         }
         

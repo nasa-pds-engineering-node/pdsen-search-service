@@ -12,4 +12,13 @@
     <field internalName="title" />
     <field internalName="description" />
   </defaultFields>
+  <searchFields>
+    <field internalName="identifier" />
+    <field internalName="title" />
+    <field internalName="target_name" />
+    <field internalName="investigation_name" />
+    <field internalName="instrument_host_name" />
+    <field internalName="instrument_host_id" />
+    <field internalName="instrument_name" />
+  </searchFields>
 </fields>

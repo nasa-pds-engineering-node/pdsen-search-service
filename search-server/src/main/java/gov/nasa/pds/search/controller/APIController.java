@@ -44,7 +44,6 @@ public class APIController
         httpResp.setContentType("application/json");
         IResponseWriter respWriter = new JsonResponseWriter(httpResp.getWriter());
         
-        // TODO: Validate
         SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");
         FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();
         
@@ -56,7 +55,8 @@ public class APIController
         // Build Solr query
         PdsApiQueryBuilder queryBuilder = new PdsApiQueryBuilder(reqParams, solrConfig);
         queryBuilder.setFieldNameMapper(fieldConfig.nameMapper);
-        queryBuilder.setFields(fields);        
+        queryBuilder.setSearchFields(fieldConfig.searchFields);
+        queryBuilder.setOutputFields(fields);
         SolrQuery query = queryBuilder.build();
         
         // Invalid request
