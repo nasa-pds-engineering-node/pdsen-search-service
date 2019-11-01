@@ -1,17 +1,15 @@
 package tt.geo;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.util.EntityUtils;
+import java.io.File;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import gov.nasa.pds.search.geo.GeoRequestBuilder;
-import gov.nasa.pds.search.util.CloseUtils;
-import gov.nasa.pds.search.util.HttpUtils;
+import gov.nasa.pds.nlp.MultiWordDictionary;
+import gov.nasa.pds.nlp.NamedEntityRecognizer;
+import gov.nasa.pds.search.cfg.ConfigurationLoader;
+import gov.nasa.pds.search.cfg.SearchServerConfiguration;
+import gov.nasa.pds.search.geo.GeoClient;
 
 
 public class TestGeo
@@ -19,59 +17,34 @@ public class TestGeo
     private static final Logger LOG = LoggerFactory.getLogger(TestGeo.class);
     
     
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
-        HttpRequestBase req = createGeoRequest();
-        
-        CloseableHttpClient httpClient = null;
-        CloseableHttpResponse httpResponse = null;
-        
         try
         {
-            httpClient = HttpUtils.createHttpClient(5);
-            httpResponse = httpClient.execute(req);
-
-            int status = httpResponse.getStatusLine().getStatusCode();
-            // Error
-            if(status != 200)
-            {
-                LOG.error(httpResponse.getStatusLine().getReasonPhrase());
-                return;
-            }
-            
-            HttpEntity entity = httpResponse.getEntity();
-            if(entity != null) 
-            {
-                String result = EntityUtils.toString(entity);
-                System.out.println(result);
-            }
+            test1();
         }
         catch(Exception ex)
         {
-            LOG.error(ex.toString());
-        }
-        finally
-        {
-            CloseUtils.safeClose(httpResponse);
-            CloseUtils.safeClose(httpClient);
+            ex.printStackTrace();
         }
     }
 
     
-    private static HttpRequestBase createGeoRequest() throws Exception
+    private static void test1() throws Exception
     {
-        String baseUrl = "https://pilot.rsl.wustl.edu/api/v1/search/products/metadata";
+        System.setProperty("pds.search.server.conf", "/ws/etc");
+        SearchServerConfiguration ssCfg = ConfigurationLoader.load();
         
-        GeoRequestBuilder bld = new GeoRequestBuilder(baseUrl);
-        bld.setTarget("mars");
-        bld.setMission("mro");
-        bld.setInstrument("crism");
-        bld.setProductType("trdr");
-        bld.setFeature("gale");
-        bld.setFeatureType("crater");
+        // Init NER        
+        MultiWordDictionary dic = new MultiWordDictionary();
+        File file = new File(ssCfg.getConfigDirectory(), "ner.dic");
+        dic.load(file);
+        NamedEntityRecognizer ner = new NamedEntityRecognizer(dic);
         
-        HttpGet req = bld.buildGet();        
-        return req;
+        GeoClient geoClient = new GeoClient(ssCfg.getGeoConfiguration());
+        String resp = geoClient.search(null);
+        
+        System.out.println(resp);
     }
 
 }

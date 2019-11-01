@@ -6,7 +6,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 
 
-public class GeoRequestBuilder
+public class MetadataRequestBuilder
 {
     private URI baseUrl;
     private String outputFormat = "json";
@@ -25,7 +25,7 @@ public class GeoRequestBuilder
     private String pageSize;
     
     
-    public GeoRequestBuilder(String baseUrl) throws Exception
+    public MetadataRequestBuilder(String baseUrl) throws Exception
     {
         if(baseUrl == null) throw new IllegalArgumentException("Geo base URL is null");
         this.baseUrl = new URI(baseUrl);
