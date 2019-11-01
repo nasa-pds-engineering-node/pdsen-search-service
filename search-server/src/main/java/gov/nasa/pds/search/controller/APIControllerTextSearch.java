@@ -63,14 +63,22 @@ public class APIControllerTextSearch
                 return;
             }
 
-            String geoResp = geoClient.search(query);
-            httpWriter.print(geoResp);
+            GeoClient.Response geoResp = geoClient.search(query);
+            if(geoResp.status == 200)
+            {
+                httpWriter.print(geoResp.data);
+            }
+            else
+            {
+                httpResp.setStatus(geoResp.status);
+                respWriter.error(geoResp.data);
+            }
         }
         catch(Exception ex)
         {
             LOG.error(ex.toString());
             httpResp.setStatus(400);
-            respWriter.error("Could not call Geo web service");
+            respWriter.error(ex.getMessage());
             return;
         }
     }

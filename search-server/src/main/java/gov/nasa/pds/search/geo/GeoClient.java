@@ -11,8 +11,16 @@ import gov.nasa.pds.search.cfg.GeoConfiguration;
 import gov.nasa.pds.search.util.CloseUtils;
 import gov.nasa.pds.search.util.HttpUtils;
 
+
 public class GeoClient
 {
+    public static class Response
+    {
+        public int status;
+        public String data;
+    }
+    
+    
     private GeoConfiguration geoConf;
     
     
@@ -22,7 +30,7 @@ public class GeoClient
     }
     
 
-    public String search(BaseGeoQuery query) throws Exception
+    public Response search(BaseGeoQuery query) throws Exception
     {
         if(query == null) return null;
         
@@ -38,15 +46,15 @@ public class GeoClient
     }
     
     
-    public String searchByLid(LidQuery query) throws Exception
+    public Response searchByLid(LidQuery query) throws Exception
     {
         return null;
     }
     
     
-    public String searchByMetadata(MetadataQuery query) throws Exception
+    public Response searchByMetadata(MetadataQuery query) throws Exception
     {
-        HttpRequestBase req = createGeoRequest(geoConf.url);
+        HttpRequestBase req = createGeoRequest(query);
         
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse httpResponse = null;
@@ -56,39 +64,46 @@ public class GeoClient
             httpClient = HttpUtils.createHttpClient(geoConf.timeoutSec);
             httpResponse = httpClient.execute(req);
 
-            int status = httpResponse.getStatusLine().getStatusCode();
-            // Error
-            if(status != 200)
+            Response resp = new Response();
+            resp.status = httpResponse.getStatusLine().getStatusCode();
+            
+            if(resp.status == 200)
             {
-                throw new Exception(httpResponse.getStatusLine().getReasonPhrase());
+                HttpEntity entity = httpResponse.getEntity();
+                if(entity == null)
+                {
+                    resp.data = "[]";
+                }
+                else
+                {
+                    resp.data = EntityUtils.toString(entity);
+                }
+            }
+            else
+            {
+                resp.data = httpResponse.getStatusLine().getReasonPhrase(); 
             }
             
-            HttpEntity entity = httpResponse.getEntity();
-            if(entity != null) 
-            {
-                String result = EntityUtils.toString(entity);
-                return result;
-            }
+            return resp;
         }
         finally
         {
             CloseUtils.safeClose(httpResponse);
             CloseUtils.safeClose(httpClient);
         }
-        
-        return "[]";
     }
     
     
-    private HttpRequestBase createGeoRequest(String baseUrl) throws Exception
+    private HttpRequestBase createGeoRequest(MetadataQuery query) throws Exception
     {
-        MetadataRequestBuilder bld = new MetadataRequestBuilder(baseUrl);
-        bld.setTarget("mars");
-        bld.setMission("mro");
-        bld.setInstrument("crism");
-        bld.setProductType("trdr");
-        bld.setFeature("gale");
-        bld.setFeatureType("crater");
+        MetadataRequestBuilder bld = new MetadataRequestBuilder(geoConf.url);
+        bld.setTarget(query.targetId);
+        bld.setMission(query.missionId);
+        bld.setInstrument(query.instrumentId);
+        bld.setProductType(query.productType);
+        
+        bld.setFeature(query.featureName);
+        bld.setFeatureType(query.featureType);
         
         HttpGet req = bld.buildGet();        
         return req;

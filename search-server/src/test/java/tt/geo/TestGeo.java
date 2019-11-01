@@ -9,7 +9,10 @@ import gov.nasa.pds.nlp.MultiWordDictionary;
 import gov.nasa.pds.nlp.NamedEntityRecognizer;
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
+import gov.nasa.pds.search.feature.FeatureRepo;
+import gov.nasa.pds.search.geo.BaseGeoQuery;
 import gov.nasa.pds.search.geo.GeoClient;
+import gov.nasa.pds.search.geo.GeoQueryParser;
 
 
 public class TestGeo
@@ -21,7 +24,10 @@ public class TestGeo
     {
         try
         {
-            test1();
+            FeatureRepo.init();
+            
+            //test1("MRO CRISM MRDRs over Gale Crater on Mars");
+            test1("LRO Moon");
         }
         catch(Exception ex)
         {
@@ -30,7 +36,7 @@ public class TestGeo
     }
 
     
-    private static void test1() throws Exception
+    private static void test1(String text) throws Exception
     {
         System.setProperty("pds.search.server.conf", "/ws/etc");
         SearchServerConfiguration ssCfg = ConfigurationLoader.load();
@@ -42,9 +48,13 @@ public class TestGeo
         NamedEntityRecognizer ner = new NamedEntityRecognizer(dic);
         
         GeoClient geoClient = new GeoClient(ssCfg.getGeoConfiguration());
-        String resp = geoClient.search(null);
+        GeoQueryParser queryParser = new GeoQueryParser(ner);
+        BaseGeoQuery query = queryParser.parse(text);
+
+        GeoClient.Response resp = geoClient.search(query);
         
-        System.out.println(resp);
+        System.out.println(resp.status);
+        System.out.println(resp.data);
     }
 
 }

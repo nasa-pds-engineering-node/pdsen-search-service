@@ -1,18 +1,28 @@
-MRO|3|mro
-Mars Reconnaissance Orbiter|3|mro
+MRO|5|mro
+Mars Reconnaissance Orbiter|5|mro
+
 CRISM|2|crism
+
+RDR|7|rdr
+RDRs|7|rdr
+EDR|7|edr
+EDRs|7|edr
+
+MRDR|7|mrdr
+MRDRs|7|mrdr
 TRDR|7|trdr
 TRDRs|7|trdr
 
-Gale Crater|9|gale_crater
+Gale Crater|9|1
+
 Mars|1|mars
 
-LRO|3|lro
+LRO|5|lro
 LROC|2|lric
 Moon|1|moon
 
-MSL|4|msl
-Mars Science Laboratory|4|msl
+MSL|5|msl
+Mars Science Laboratory|5|msl
 
 Messenger|3|mess
 MLA|2|mla
