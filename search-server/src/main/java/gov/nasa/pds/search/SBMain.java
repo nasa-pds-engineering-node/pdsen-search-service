@@ -14,6 +14,7 @@ import gov.nasa.pds.nlp.MultiWordDictionary;
 import gov.nasa.pds.nlp.NamedEntityRecognizer;
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
+import gov.nasa.pds.search.ctx.InvestigationRepo;
 import gov.nasa.pds.search.feature.FeatureRepo;
 import gov.nasa.pds.search.solr.SolrManager;
 
@@ -64,6 +65,7 @@ public class SBMain
         // Init features repository
         // TODO: Move data to Solr
         FeatureRepo.init();
+        InvestigationRepo.init();
         
         // Init NER        
         MultiWordDictionary dic = new MultiWordDictionary();

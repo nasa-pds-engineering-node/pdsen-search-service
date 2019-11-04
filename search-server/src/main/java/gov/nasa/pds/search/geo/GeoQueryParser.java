@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import gov.nasa.pds.nlp.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.Token;
+import gov.nasa.pds.search.ctx.InvestigationInfo;
+import gov.nasa.pds.search.ctx.InvestigationRepo;
 import gov.nasa.pds.search.feature.FeatureInfo;
 import gov.nasa.pds.search.feature.FeatureRepo;
 
@@ -87,8 +89,30 @@ public class GeoQueryParser
                 break;
             }
         }
-
+        
+        fixTarget(mq);
         return mq;
+    }
+    
+
+    private void fixTarget(MetadataQuery mq)
+    {
+        if(mq.targetId == null)
+        {
+            // Try getting target from mission
+            if(mq.missionId != null)
+            {
+                InvestigationInfo fi = InvestigationRepo.getInstance().findById(mq.missionId);
+                if(fi == null)
+                {
+                    LOG.warn("Could not find investigation with ID = " + mq.missionId);
+                }
+                else
+                {
+                    mq.targetId = fi.target;
+                }
+            }
+        }
     }
     
     

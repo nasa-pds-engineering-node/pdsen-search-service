@@ -9,6 +9,7 @@ import gov.nasa.pds.nlp.MultiWordDictionary;
 import gov.nasa.pds.nlp.NamedEntityRecognizer;
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
+import gov.nasa.pds.search.ctx.InvestigationRepo;
 import gov.nasa.pds.search.feature.FeatureRepo;
 import gov.nasa.pds.search.geo.BaseGeoQuery;
 import gov.nasa.pds.search.geo.GeoClient;
@@ -25,6 +26,7 @@ public class TestGeo
         try
         {
             FeatureRepo.init();
+            InvestigationRepo.init();
             
             //test1("MRO CRISM MRDRs over Gale Crater on Mars");
             //test1("LRO Moon");
