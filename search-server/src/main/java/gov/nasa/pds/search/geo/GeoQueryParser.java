@@ -21,10 +21,38 @@ public class GeoQueryParser
         this.ner = ner;
     }
     
+    
     public BaseGeoQuery parse(String text)
     {
         List<Token> tokens = ner.parse(text);
         
+        // LID query
+        int lidIdx = findLidIndex(tokens);
+        if(lidIdx >= 0)
+        {
+            LidQuery lq = new LidQuery(tokens.get(lidIdx).text);
+            
+            // LID is not the last token
+            if(lidIdx < tokens.size()-1)
+            {
+                Token nextToken = tokens.get(lidIdx + 1);
+                if(nextToken.text.equalsIgnoreCase("files"))
+                {
+                    lq.listFiles = true;
+                }
+            }
+            
+            return lq;
+        }
+        
+        // Metadata query
+        MetadataQuery mq = createMetadataQuery(tokens);
+        return mq;
+    }
+
+    
+    private MetadataQuery createMetadataQuery(List<Token> tokens)
+    {
         MetadataQuery mq = new MetadataQuery();
         
         for(Token token: tokens)
@@ -45,6 +73,7 @@ public class GeoQueryParser
                 mq.productType = token.text;
                 break;
             case Token.TYPE_FEATURE:                
+                // Lookup feature name and type by ID
                 FeatureInfo fi = FeatureRepo.getInstance().findById(token.text);
                 if(fi == null)
                 {
@@ -58,7 +87,19 @@ public class GeoQueryParser
                 break;
             }
         }
-        
+
         return mq;
+    }
+    
+    
+    private int findLidIndex(List<Token> tokens)
+    {
+        for(int i = 0; i < tokens.size(); i++)
+        {
+            Token token = tokens.get(i);
+            if(token.type == Token.TYPE_LID) return i;
+        }
+        
+        return -1;
     }
 }

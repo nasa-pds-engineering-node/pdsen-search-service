@@ -27,7 +27,9 @@ public class TestGeo
             FeatureRepo.init();
             
             //test1("MRO CRISM MRDRs over Gale Crater on Mars");
-            test1("LRO Moon");
+            //test1("LRO Moon");
+            
+            test1("urn:nasa:pds:mess_mla_calibrated:data_gdr:hdec_45n_500m");
         }
         catch(Exception ex)
         {

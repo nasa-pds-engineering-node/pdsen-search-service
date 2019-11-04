@@ -12,15 +12,6 @@ public class MetadataRequestBuilder
     private String outputFormat = "json";
     private String sortKey = "observationEndUtc";
     
-    private String target;
-    private String mission;
-    private String instrument;
-    
-    private String productType;
-    
-    private String featureType;
-    private String feature;
-    
     private String offset;
     private String pageSize;
     
@@ -31,73 +22,43 @@ public class MetadataRequestBuilder
         this.baseUrl = new URI(baseUrl);
     }
     
-    public void setTarget(String target)
-    {
-        this.target = target;
-    }
-    
-    public void setMission(String mission)
-    {
-        this.mission = mission;
-    }
-    
-    public void setInstrument(String instrument)
-    {
-        this.instrument = instrument;
-    }
-
-    public void setProductType(String productType)
-    {
-        this.productType = productType;
-    }
-
-    public void setFeatureType(String featureType)
-    {
-        this.featureType = featureType;
-    }
-
-    public void setFeature(String feature)
-    {
-        this.feature = feature;
-    }
-
         
-    public HttpGet buildGet() throws Exception
+    public HttpGet buildGet(MetadataQuery query) throws Exception
     {
         URIBuilder bld = new URIBuilder(baseUrl);
         
         // Set new path
-        String path = buildPath();
+        String path = buildPath(query);
         bld.setPath(path);
         
         // Add parameters
-        if(mission == null) 
+        if(query.missionId == null) 
         {
             throw new Exception("Mission is missing.");
         }
         else
         {
-            bld.addParameter("mission", mission);
+            bld.addParameter("mission", query.missionId);
         }
 
-        if(instrument != null)
+        if(query.instrumentId != null)
         {
-            bld.addParameter("instrument", instrument);
+            bld.addParameter("instrument", query.instrumentId);
         }
         
-        if(productType != null)
+        if(query.productType != null)
         {
-            bld.addParameter("prodType", productType);
+            bld.addParameter("prodType", query.productType);
         }
 
-        if(featureType != null)
+        if(query.featureType != null)
         {
-            bld.addParameter("featureType", featureType);
+            bld.addParameter("featureType", query.featureType);
         }
         
-        if(feature != null)
+        if(query.featureName != null)
         {
-            bld.addParameter("feature", feature);
+            bld.addParameter("feature", query.featureName);
         }
 
         if(sortKey != null)
@@ -127,9 +88,8 @@ public class MetadataRequestBuilder
     }
     
     
-    private String buildPath() throws Exception
+    private String buildPath(MetadataQuery query) throws Exception
     {
-        // Normalize base path
         String basePath = baseUrl.getPath();
         StringBuilder pathBuilder = new StringBuilder(basePath);
         if(!basePath.endsWith("/"))
@@ -137,10 +97,12 @@ public class MetadataRequestBuilder
             pathBuilder.append("/");
         }
 
-        // Append target to base path
-        if(target == null) throw new Exception("Target is missing.");
-        pathBuilder.append(target);
+        pathBuilder.append("products/metadata/");
         
+        // Append target to base path
+        if(query.targetId == null) throw new Exception("Target is missing.");
+        pathBuilder.append(query.targetId);
+
         return pathBuilder.toString();
     }
 }

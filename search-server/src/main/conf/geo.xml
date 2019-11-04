@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <geo>
-  <url>https://pilot.rsl.wustl.edu/api/v1/search/products/metadata</url>
+  <url>https://pilot.rsl.wustl.edu/api/v1/search/</url>
   <timeoutSec>25</timeoutSec>
 </geo>

@@ -1,5 +1,7 @@
 package gov.nasa.pds.search.geo;
 
+import java.awt.Component.BaselineResizeBehavior;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -31,28 +33,6 @@ public class GeoClient
     
 
     public Response search(BaseGeoQuery query) throws Exception
-    {
-        if(query == null) return null;
-        
-        switch(query.getType())
-        {
-        case METADATA:
-            return searchByMetadata((MetadataQuery)query);
-        case LID:
-            return searchByLid((LidQuery)query);
-        }
-        
-        return null;
-    }
-    
-    
-    public Response searchByLid(LidQuery query) throws Exception
-    {
-        return null;
-    }
-    
-    
-    public Response searchByMetadata(MetadataQuery query) throws Exception
     {
         HttpRequestBase req = createGeoRequest(query);
         
@@ -93,20 +73,25 @@ public class GeoClient
         }
     }
     
-    
-    private HttpRequestBase createGeoRequest(MetadataQuery query) throws Exception
+
+    private HttpRequestBase createGeoRequest(BaseGeoQuery query) throws Exception
     {
-        MetadataRequestBuilder bld = new MetadataRequestBuilder(geoConf.url);
-        bld.setTarget(query.targetId);
-        bld.setMission(query.missionId);
-        bld.setInstrument(query.instrumentId);
-        bld.setProductType(query.productType);
+        HttpGet req = null;
         
-        bld.setFeature(query.featureName);
-        bld.setFeatureType(query.featureType);
+        if(query.getType() == BaseGeoQuery.Type.LID)
+        {
+            LidQuery lq = (LidQuery)query;            
+            LidRequestBuilder bld = new LidRequestBuilder(geoConf.url);
+            req = bld.buildGet(lq);
+        }
+        else if(query.getType() == BaseGeoQuery.Type.METADATA)
+        {
+            MetadataQuery mq = (MetadataQuery)query;            
+            MetadataRequestBuilder bld = new MetadataRequestBuilder(geoConf.url);
+            req = bld.buildGet(mq);
+        }
         
-        HttpGet req = bld.buildGet();        
         return req;
     }
-
+    
 }

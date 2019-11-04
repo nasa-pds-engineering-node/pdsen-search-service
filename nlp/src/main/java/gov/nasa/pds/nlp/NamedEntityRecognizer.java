@@ -71,9 +71,16 @@ public class NamedEntityRecognizer
         for(int i = 0; i < tokens.size(); i++)
         {
             String word = tokens.get(i);
-            MultiWordTermInfo mwti = dic.findMultiWordTerm(word);
             
-            // Process multi-word term
+            // LID
+            if(word.startsWith("urn:nasa:pds:"))
+            {
+                results.add(new Token(word, Token.TYPE_LID));
+                continue;
+            }
+
+            // Multiword dictionary lookup
+            MultiWordTermInfo mwti = dic.findMultiWordTerm(word);            
             if(mwti != null)
             {
                 MWResult res = processMultiWord(tokens, i, mwti);
@@ -85,8 +92,8 @@ public class NamedEntityRecognizer
                 }
             }
             
+            // Single word dictionary lookup
             SingleWordTermInfo swti = dic.findSingleWordTerm(word);
-            // Process single word term
             if(swti != null)
             {
                 results.add(new Token(swti.id, swti.type));
