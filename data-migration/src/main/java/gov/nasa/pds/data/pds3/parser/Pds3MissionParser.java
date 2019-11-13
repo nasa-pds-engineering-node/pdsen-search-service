@@ -1,13 +1,13 @@
-package gov.nasa.pds.data.xml.parser;
+package gov.nasa.pds.data.pds3.parser;
 
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 
-import gov.nasa.pds.data.model.Pds3Mission;
-import gov.nasa.pds.data.xml.util.XPathUtils;
-import gov.nasa.pds.data.xml.util.XmlDomCrawler;
+import gov.nasa.pds.data.pds3.model.Pds3Mission;
+import gov.nasa.pds.data.util.xml.XPathUtils;
+import gov.nasa.pds.data.util.xml.XmlDomCrawler;
 
 
 public class Pds3MissionParser

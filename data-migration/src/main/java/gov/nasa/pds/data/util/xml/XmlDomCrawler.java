@@ -1,4 +1,4 @@
-package gov.nasa.pds.data.xml.util;
+package gov.nasa.pds.data.util.xml;
 
 import java.io.IOException;
 import java.nio.file.Files;

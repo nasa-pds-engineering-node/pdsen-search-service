@@ -1,4 +1,4 @@
-package gov.nasa.pds.data.model;
+package gov.nasa.pds.data.pds3.model;
 
 public class Pds3InstrumentHost
 {

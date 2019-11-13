@@ -1,4 +1,4 @@
-package gov.nasa.pds.data.xml.util;
+package gov.nasa.pds.data.util.xml;
 
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;

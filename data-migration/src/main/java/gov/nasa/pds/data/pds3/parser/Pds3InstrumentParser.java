@@ -1,14 +1,14 @@
-package gov.nasa.pds.data.xml.parser;
+package gov.nasa.pds.data.pds3.parser;
 
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 
-import gov.nasa.pds.data.model.Pds3InstrumentHost;
-import gov.nasa.pds.data.xml.util.XPathUtils;
+import gov.nasa.pds.data.pds3.model.Pds3Instrument;
+import gov.nasa.pds.data.util.xml.XPathUtils;
 
 
-public class Pds3InstrumentHostParser
+public class Pds3InstrumentParser
 {
     private XPathExpression xLid;
     private XPathExpression xTitle;
@@ -19,23 +19,23 @@ public class Pds3InstrumentHostParser
     private XPathExpression xDescr;
 
     
-    public Pds3InstrumentHostParser() throws Exception
+    public Pds3InstrumentParser() throws Exception
     {
         XPathFactory xpf = XPathFactory.newInstance();
 
         xLid = XPathUtils.compileXPath(xpf, "//Identification_Area/logical_identifier");
         xTitle = XPathUtils.compileXPath(xpf, "//Identification_Area/title");
 
-        xId = XPathUtils.compileXPath(xpf, "//Instrument_Host_PDS3/instrument_host_id");
-        xName = XPathUtils.compileXPath(xpf, "//Instrument_Host_PDS3/instrument_host_name");
-        xType = XPathUtils.compileXPath(xpf, "//Instrument_Host_PDS3/instrument_host_type");
-        xDescr = XPathUtils.compileXPath(xpf, "//Instrument_Host_PDS3/instrument_host_desc");
+        xId = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_id");
+        xName = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_name");
+        xType = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_type");
+        xDescr = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_description");
     }
 
     
-    public Pds3InstrumentHost parse(Document doc) throws Exception
+    public Pds3Instrument parse(Document doc) throws Exception
     {
-        Pds3InstrumentHost obj = new Pds3InstrumentHost();
+        Pds3Instrument obj = new Pds3Instrument();
 
         obj.lid = XPathUtils.getStringValue(doc, xLid);
         obj.title = XPathUtils.getStringValue(doc, xTitle);
