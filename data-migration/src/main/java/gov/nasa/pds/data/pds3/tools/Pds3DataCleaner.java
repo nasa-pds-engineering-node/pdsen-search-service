@@ -17,14 +17,16 @@ public class Pds3DataCleaner
     {
         private FieldMap fields;
         private Writer writer;
+
         private Set<String> ignoreFields;
+        private Set<String> doNotCleanText;
         
         public CleanCB(Writer writer)
         {
             this.writer = writer;
             
+            // Ignore fields
             ignoreFields = new HashSet<>();
-            ignoreFields.add("confidence_level_note");
             
             ignoreFields.add("objectType");
             ignoreFields.add("data_product_type");
@@ -41,6 +43,11 @@ public class Pds3DataCleaner
             ignoreFields.add("search_id");
             ignoreFields.add("timestamp");
             ignoreFields.add("score");
+            
+            // Text normalization
+            doNotCleanText = new HashSet<>();
+            doNotCleanText.add("data_set_description");
+            doNotCleanText.add("confidence_level_note");
         }
         
         @Override
@@ -68,6 +75,7 @@ public class Pds3DataCleaner
         @Override
         public void onField(String name, String value)
         {
+            // Ignore fields
             if(name.startsWith("form-")) return;
             if(ignoreFields.contains(name)) return;
             
@@ -75,14 +83,8 @@ public class Pds3DataCleaner
             if(value.equalsIgnoreCase("unknown")) return;
             if(value.equalsIgnoreCase("unk")) return;
             
-            if(name.equals("data_set_description"))
-            {
-                if(!value.contains("===="))
-                {
-                    value = StringUtils.normalizeSpace(value);
-                }
-            }
-            else
+            // Normalize spaces (remove end of lines and repeating spaces)
+            if(!doNotCleanText.contains(name))
             {
                 value = StringUtils.normalizeSpace(value);
             }

@@ -32,6 +32,13 @@ public class FieldMap
     }
     
     
+    public String getFirstValue(String fieldName)
+    {
+        Set<String> values = getValues(fieldName);
+        return (values == null || values.isEmpty()) ? null : values.iterator().next();
+    }
+
+
     public Set<String> getValues(String fieldName)
     {
         return fields.get(fieldName);
