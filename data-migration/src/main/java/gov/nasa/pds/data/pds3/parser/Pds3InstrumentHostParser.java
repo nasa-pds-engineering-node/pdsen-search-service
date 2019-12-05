@@ -61,7 +61,7 @@ public class Pds3InstrumentHostParser
         XmlDomCrawler crawler = new XmlDomCrawler(directory);
         Pds3InstrumentHostParser parser = new Pds3InstrumentHostParser();
         
-        crawler.crawl(doc -> 
+        crawler.crawl((doc, path) -> 
         {
             Pds3InstrumentHost ih = parser.parse(doc);
             cb.onInstrumentHost(ih);

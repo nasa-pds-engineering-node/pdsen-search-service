@@ -20,6 +20,13 @@ public class XPathUtils
 	}
 	
 	
+	public static boolean exists(Document doc, XPathExpression expr) throws Exception
+	{
+	    Object node = expr.evaluate(doc, XPathConstants.NODE);
+	    return node != null;
+	}
+	
+	
 	public static String getStringValue(Document doc, XPathExpression expr) throws Exception
 	{
         Object res = expr.evaluate(doc, XPathConstants.STRING);

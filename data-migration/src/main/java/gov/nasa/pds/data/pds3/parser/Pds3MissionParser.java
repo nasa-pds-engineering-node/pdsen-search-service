@@ -74,7 +74,7 @@ public class Pds3MissionParser
         XmlDomCrawler crawler = new XmlDomCrawler(directory);
         Pds3MissionParser parser = new Pds3MissionParser();
         
-        crawler.crawl(doc -> 
+        crawler.crawl((doc, path) -> 
         {
             Pds3Mission mission = parser.parse(doc);
             cb.onMission(mission);

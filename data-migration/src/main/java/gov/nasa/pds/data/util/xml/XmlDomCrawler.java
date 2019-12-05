@@ -15,7 +15,7 @@ public class XmlDomCrawler
 {
 	public static interface DomCallback
 	{
-		public void onDocument(Document doc) throws Exception;
+		public void onDocument(Document doc, Path path) throws Exception;
 	}
 	
 	private Path folder;
@@ -41,7 +41,7 @@ public class XmlDomCrawler
 			{
 				DocumentBuilder db = dbf.newDocumentBuilder();
 				Document doc = db.parse(p.toFile());
-				cb.onDocument(doc);
+				cb.onDocument(doc, p);
 			} 
 			catch(Exception ex) 
 			{
