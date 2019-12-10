@@ -4,7 +4,11 @@ public class Pds3Utils
 {
     public static String getShortLid(String lid)
     {
-        int idx;
+        if(lid == null) return null;
+        
+        // Remove version
+        int idx = lid.indexOf("::");
+        if(idx > 0) lid = lid.substring(0, idx);
 
         idx = lid.indexOf(":target:");
         if(idx > 0) return lid.substring(idx + 8);

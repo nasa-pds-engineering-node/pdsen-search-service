@@ -18,6 +18,8 @@ public class Pds3InstrumentParser
     private XPathExpression xType;
     private XPathExpression xDescr;
 
+    private XPathExpression xInstrumentHostRef;
+    
     
     public Pds3InstrumentParser() throws Exception
     {
@@ -30,6 +32,8 @@ public class Pds3InstrumentParser
         xName = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_name");
         xType = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_type");
         xDescr = XPathUtils.compileXPath(xpf, "//Instrument_PDS3/instrument_description");
+    
+        xInstrumentHostRef = XPathUtils.compileXPath(xpf, "//Reference_List/Internal_Reference[reference_type='has_instrument_host']/lidvid_reference");
     }
 
     
@@ -38,6 +42,7 @@ public class Pds3InstrumentParser
         Pds3Instrument obj = new Pds3Instrument();
 
         obj.lid = XPathUtils.getStringValue(doc, xLid);
+        obj.shortLid = Pds3Utils.getShortLid(obj.lid);
         obj.title = XPathUtils.getStringValue(doc, xTitle);
 
         obj.id = XPathUtils.getStringValue(doc, xId);
@@ -45,6 +50,8 @@ public class Pds3InstrumentParser
         obj.type = XPathUtils.getStringValue(doc, xType);
         obj.description = XPathUtils.getStringValue(doc, xDescr);
 
+        obj.instrumentHostRef = Pds3Utils.getShortLid(XPathUtils.getStringValue(doc, xInstrumentHostRef));
+        
         return obj;
     }
 }

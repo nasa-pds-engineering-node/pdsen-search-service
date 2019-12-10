@@ -17,6 +17,9 @@ public class XmlDomCrawler
 	{
 		public void onDocument(Document doc, Path path) throws Exception;
 	}
+
+	public static class StopException extends RuntimeException {}
+
 	
 	private Path folder;
 	
@@ -31,23 +34,34 @@ public class XmlDomCrawler
 	}
 	
 	
+	
 	public void crawl(DomCallback cb) throws IOException
 	{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
 		
-		Files.walk(folder).filter(p -> p.toString().endsWith(".xml")).forEach(p -> 
+		try
 		{
-			try 
-			{
-				DocumentBuilder db = dbf.newDocumentBuilder();
-				Document doc = db.parse(p.toFile());
-				cb.onDocument(doc, p);
-			} 
-			catch(Exception ex) 
-			{
-				ex.printStackTrace();
-			}
-		});		
+    		Files.walk(folder).filter(p -> p.toString().endsWith(".xml")).forEach(p -> 
+    		{
+    			try 
+    			{
+    				DocumentBuilder db = dbf.newDocumentBuilder();
+    				Document doc = db.parse(p.toFile());
+    				cb.onDocument(doc, p);
+    			}
+    			catch(StopException ex)
+    			{
+    			    throw ex;
+    			}
+    			catch(Exception ex) 
+    			{
+    				ex.printStackTrace();
+    			}
+    		});
+		}
+		catch(StopException ex)
+		{
+		}
 	}
 
 }
