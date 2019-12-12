@@ -39,7 +39,6 @@ public class ConfigurationLoader
         
         SolrConfigurationLoader.load(cfg);
         FieldConfigurationLoader.load(cfg);
-        GeoConfigurationLoader.load(cfg);
         
         return cfg;
     }

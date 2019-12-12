@@ -54,7 +54,8 @@ public class SolrConfigurationLoader
         {
             Node node = nodes.item(i);
             
-            String publicName = node.getAttributes().getNamedItem("publicName").getTextContent();
+            Node tmpNode = node.getAttributes().getNamedItem("publicName");
+            String publicName = (tmpNode == null) ? null : tmpNode.getTextContent();
             if(publicName == null || publicName.isEmpty()) 
             {
                 LOG.warn("Missing publicName attribute in /solr/collections/collection.");
@@ -63,13 +64,15 @@ public class SolrConfigurationLoader
 
             SolrCollectionConfiguration cconf = new SolrCollectionConfiguration();
             
-            cconf.collectionName = node.getAttributes().getNamedItem("internalName").getTextContent();
+            tmpNode = node.getAttributes().getNamedItem("internalName");
+            cconf.collectionName = (tmpNode == null) ? null : tmpNode.getTextContent();
             if(cconf.collectionName == null || cconf.collectionName.isEmpty())
             {
                 cconf.collectionName = publicName;
             }
-
-            cconf.requestHandler = node.getAttributes().getNamedItem("requestHandler").getTextContent();
+            
+            tmpNode = node.getAttributes().getNamedItem("requestHandler");
+            cconf.requestHandler = (tmpNode == null) ? null : tmpNode.getTextContent();
 
             solrCfg.addCollectionConfiguration(publicName, cconf);
         }

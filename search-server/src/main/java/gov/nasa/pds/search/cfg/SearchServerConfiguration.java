@@ -11,7 +11,6 @@ public class SearchServerConfiguration
     private File configDir;
     private SolrConfiguration solrConfig;
     private FieldConfiguration fieldConfig;
-    private GeoConfiguration geoConfig;
     
     
     /**
@@ -22,7 +21,6 @@ public class SearchServerConfiguration
         this.configDir = configDir;
         solrConfig = new SolrConfiguration();
         fieldConfig = new FieldConfiguration();
-        geoConfig = new GeoConfiguration();
     }
 
     
@@ -53,16 +51,6 @@ public class SearchServerConfiguration
     public FieldConfiguration getFieldConfiguration()
     {
         return fieldConfig;
-    }
-
-    
-    /**
-     * Get Geo configuration 
-     * @return
-     */
-    public GeoConfiguration getGeoConfiguration()
-    {
-        return geoConfig;
     }
 
 }

@@ -1,17 +1,20 @@
 package gov.nasa.pds.search.solr;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.Writer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 
-import com.fasterxml.jackson.core.JsonEncoding;
-import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import gov.nasa.pds.search.util.NameMapper;
 
@@ -23,7 +26,7 @@ import gov.nasa.pds.search.util.NameMapper;
 public class JsonResponseWriter implements IResponseWriter
 {
     private JsonGenerator jgen;
-    private List<String> fields;
+    private List<String> cfgFields;
     private NameMapper nameMapper;
     
     /**
@@ -33,8 +36,13 @@ public class JsonResponseWriter implements IResponseWriter
      */
     public JsonResponseWriter(Writer writer) throws IOException
     {
-        JsonFactory jFactory = new JsonFactory();
-        jgen = jFactory.createGenerator(writer);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setDateFormat(dateFormat);
+        //mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+
+        jgen = mapper.getFactory().createGenerator(writer);
     }
 
 
@@ -44,7 +52,7 @@ public class JsonResponseWriter implements IResponseWriter
      */
     public void setFields(List<String> fields)
     {
-        this.fields = fields;
+        this.cfgFields = fields;
     }
     
     
@@ -117,8 +125,20 @@ public class JsonResponseWriter implements IResponseWriter
         {
             jgen.writeStartObject();
             
+            // Use pre-configured field names if available.
+            // Otherwise, get a list of fields for each document.
+            List<String> fields = cfgFields;
+            if(fields == null)
+            {
+                fields = new ArrayList<>(doc.getFieldNames());
+                Collections.sort(fields);
+            }
+            
             for(String fieldName: fields)
             {
+                // Ignore system fields
+                if(cfgFields == null && fieldName.startsWith("_") && fieldName.endsWith("_")) continue;
+                
                 Object value = doc.getFieldValue(fieldName); 
                 writeField(fieldName, value);
             }

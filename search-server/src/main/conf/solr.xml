@@ -4,5 +4,6 @@
   <url>http://localhost:8983/solr/</url>
   <collections>
     <collection publicName="data" internalName="pds" requestHandler="/archive-filter" />
+    <collection publicName="names" internalName="names" />
   </collections>
 </solr>
