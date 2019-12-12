@@ -1,6 +1,5 @@
 package gov.nasa.pds.search.geo;
 
-import java.awt.Component.BaselineResizeBehavior;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
