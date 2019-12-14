@@ -1,0 +1,1589 @@
+<add>
+<doc>
+  <field name="id">satellite.jupiter.metis</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Inner</field>
+  <field name="roman_number">XVI</field>
+  <field name="roman_int">16</field>
+  <field name="name">Metis</field>
+  <field name="semi_major_axis">128000</field>
+  <field name="inclination">0.019</field>
+  <field name="eccentricity">0.001</field>
+  <field name="pariaphis">40.7</field>
+  <field name="node">138.1</field>
+  <field name="anomaly">181.6</field>
+  <field name="period">0.30</field>
+  <field name="optical_magnitude">17.5</field>
+  <field name="diameter">44</field>
+  <field name="year_discovered">1979</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.adrastea</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Inner</field>
+  <field name="roman_number">XV</field>
+  <field name="roman_int">15</field>
+  <field name="name">Adrastea</field>
+  <field name="semi_major_axis">129000</field>
+  <field name="inclination">0.054</field>
+  <field name="eccentricity">0.002</field>
+  <field name="pariaphis">21.2</field>
+  <field name="node">167.4</field>
+  <field name="anomaly">143.5</field>
+  <field name="period">0.30</field>
+  <field name="optical_magnitude">18.7</field>
+  <field name="diameter">16</field>
+  <field name="year_discovered">1979</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.amalthea</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Inner</field>
+  <field name="roman_number">V</field>
+  <field name="roman_int">5</field>
+  <field name="name">Amalthea</field>
+  <field name="semi_major_axis">181400</field>
+  <field name="inclination">0.380</field>
+  <field name="eccentricity">0.003</field>
+  <field name="pariaphis">147.8</field>
+  <field name="node">112.3</field>
+  <field name="anomaly">189.8</field>
+  <field name="period">0.50</field>
+  <field name="optical_magnitude">14.1</field>
+  <field name="diameter">168</field>
+  <field name="year_discovered">1892</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.thebe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Inner</field>
+  <field name="roman_number">XIV</field>
+  <field name="roman_int">14</field>
+  <field name="name">Thebe</field>
+  <field name="semi_major_axis">221900</field>
+  <field name="inclination">1.080</field>
+  <field name="eccentricity">0.018</field>
+  <field name="pariaphis">233.5</field>
+  <field name="node">235.9</field>
+  <field name="anomaly">136.4</field>
+  <field name="period">0.68</field>
+  <field name="optical_magnitude">16.0</field>
+  <field name="diameter">98</field>
+  <field name="year_discovered">1979</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.io</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Galilean</field>
+  <field name="roman_number">I</field>
+  <field name="roman_int">1</field>
+  <field name="name">Io</field>
+  <field name="semi_major_axis">421800</field>
+  <field name="inclination">0.036</field>
+  <field name="eccentricity">0.004</field>
+  <field name="pariaphis">268.7</field>
+  <field name="node">44.3</field>
+  <field name="anomaly">157.2</field>
+  <field name="period">1.77</field>
+  <field name="optical_magnitude">5.0</field>
+  <field name="diameter">3643</field>
+  <field name="year_discovered">1610</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.europa</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Galilean</field>
+  <field name="roman_number">II</field>
+  <field name="roman_int">2</field>
+  <field name="name">Europa</field>
+  <field name="semi_major_axis">671100</field>
+  <field name="inclination">0.466</field>
+  <field name="eccentricity">0.009</field>
+  <field name="pariaphis">225.8</field>
+  <field name="node">219.6</field>
+  <field name="anomaly">33.8</field>
+  <field name="period">3.55</field>
+  <field name="optical_magnitude">5.3</field>
+  <field name="diameter">3122</field>
+  <field name="year_discovered">1610</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.ganymede</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Galilean</field>
+  <field name="roman_number">III</field>
+  <field name="roman_int">3</field>
+  <field name="name">Ganymede</field>
+  <field name="semi_major_axis">1070400</field>
+  <field name="inclination">0.177</field>
+  <field name="eccentricity">0.001</field>
+  <field name="pariaphis">192.3</field>
+  <field name="node">65.7</field>
+  <field name="anomaly">315.5</field>
+  <field name="period">7.16</field>
+  <field name="optical_magnitude">4.6</field>
+  <field name="diameter">5262</field>
+  <field name="year_discovered">1610</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.callisto</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Galilean</field>
+  <field name="roman_number">IV</field>
+  <field name="roman_int">4</field>
+  <field name="name">Callisto</field>
+  <field name="semi_major_axis">1882700</field>
+  <field name="inclination">0.192</field>
+  <field name="eccentricity">0.007</field>
+  <field name="pariaphis">46.2</field>
+  <field name="node">305.3</field>
+  <field name="anomaly">181.2</field>
+  <field name="period">16.69</field>
+  <field name="optical_magnitude">5.7</field>
+  <field name="diameter">4821</field>
+  <field name="year_discovered">1610</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.themisto</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Themisto Prograde</field>
+  <field name="roman_number">XVIII</field>
+  <field name="roman_int">18</field>
+  <field name="name">Themisto</field>
+  <field name="designation">S/2000 J1</field>
+  <field name="semi_major_axis">7507000</field>
+  <field name="inclination">43.08</field>
+  <field name="eccentricity">0.242</field>
+  <field name="pariaphis">240.7</field>
+  <field name="node">201.5</field>
+  <field name="anomaly">134.2</field>
+  <field name="period">130.0</field>
+  <field name="optical_magnitude">21.0</field>
+  <field name="diameter">9</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.leda</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">XIII</field>
+  <field name="roman_int">13</field>
+  <field name="name">Leda</field>
+  <field name="semi_major_axis">11165000</field>
+  <field name="inclination">27.46</field>
+  <field name="eccentricity">0.164</field>
+  <field name="pariaphis">272.3</field>
+  <field name="node">217.1</field>
+  <field name="anomaly">228.1</field>
+  <field name="period">240.9</field>
+  <field name="optical_magnitude">20.2</field>
+  <field name="diameter">18</field>
+  <field name="year_discovered">1974</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.himalia</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">VI</field>
+  <field name="roman_int">6</field>
+  <field name="name">Himalia</field>
+  <field name="semi_major_axis">11461000</field>
+  <field name="inclination">27.50</field>
+  <field name="eccentricity">0.162</field>
+  <field name="pariaphis">332.0</field>
+  <field name="node">57.2</field>
+  <field name="anomaly">68.7</field>
+  <field name="period">250.6</field>
+  <field name="optical_magnitude">14.8</field>
+  <field name="diameter">160</field>
+  <field name="year_discovered">1904</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.ersa</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">LXXI</field>
+  <field name="roman_int">71</field>
+  <field name="name">Ersa</field>
+  <field name="designation">S/2018 J1</field>
+  <field name="semi_major_axis">11483000</field>
+  <field name="inclination">30.61</field>
+  <field name="eccentricity">0.094</field>
+  <field name="pariaphis">346.7</field>
+  <field name="node">93.3</field>
+  <field name="anomaly">356.6</field>
+  <field name="period">252.0</field>
+  <field name="optical_magnitude">22.9</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2018</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.pandia</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">LXV</field>
+  <field name="roman_int">65</field>
+  <field name="name">Pandia</field>
+  <field name="designation">S/2017 J4</field>
+  <field name="semi_major_axis">11525000</field>
+  <field name="inclination">28.15</field>
+  <field name="eccentricity">0.180</field>
+  <field name="pariaphis">238.8</field>
+  <field name="node">228.4</field>
+  <field name="anomaly">282.4</field>
+  <field name="period">252.1</field>
+  <field name="optical_magnitude">23.0</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.lysithea</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">X</field>
+  <field name="roman_int">10</field>
+  <field name="name">Lysithea</field>
+  <field name="semi_major_axis">11717000</field>
+  <field name="inclination">28.30</field>
+  <field name="eccentricity">0.112</field>
+  <field name="pariaphis">49.5</field>
+  <field name="node">5.5</field>
+  <field name="anomaly">329.1</field>
+  <field name="period">259.2</field>
+  <field name="optical_magnitude">18.2</field>
+  <field name="diameter">38</field>
+  <field name="year_discovered">1938</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.elara</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">VII</field>
+  <field name="roman_int">7</field>
+  <field name="name">Elara</field>
+  <field name="semi_major_axis">11741000</field>
+  <field name="inclination">26.63</field>
+  <field name="eccentricity">0.217</field>
+  <field name="pariaphis">143.6</field>
+  <field name="node">109.4</field>
+  <field name="anomaly">333.0</field>
+  <field name="period">259.6</field>
+  <field name="optical_magnitude">16.6</field>
+  <field name="diameter">78</field>
+  <field name="year_discovered">1905</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.dia</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Himalia Prograde</field>
+  <field name="roman_number">LIII</field>
+  <field name="roman_int">53</field>
+  <field name="name">Dia</field>
+  <field name="designation">S/2000 J11</field>
+  <field name="semi_major_axis">12118000</field>
+  <field name="inclination">28.23</field>
+  <field name="eccentricity">0.211</field>
+  <field name="pariaphis">178.0</field>
+  <field name="node">290.9</field>
+  <field name="anomaly">169.9</field>
+  <field name="period">287.0</field>
+  <field name="optical_magnitude">22.4</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.carpo</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carpo Prograde</field>
+  <field name="roman_number">XLVI</field>
+  <field name="roman_int">46</field>
+  <field name="name">Carpo</field>
+  <field name="designation">S/2003 J20</field>
+  <field name="semi_major_axis">16989000</field>
+  <field name="inclination">51.4</field>
+  <field name="eccentricity">0.430</field>
+  <field name="pariaphis">90.0</field>
+  <field name="node">60.9</field>
+  <field name="anomaly">242.8</field>
+  <field name="period">456.1</field>
+  <field name="optical_magnitude">23.0</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.valetudo</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Valetudo Prograde</field>
+  <field name="roman_number">LXII</field>
+  <field name="roman_int">62</field>
+  <field name="name">Valetudo</field>
+  <field name="designation">S/2016 J2</field>
+  <field name="semi_major_axis">18980000</field>
+  <field name="inclination">34.0</field>
+  <field name="eccentricity">0.222</field>
+  <field name="pariaphis">116.8</field>
+  <field name="node">240.3</field>
+  <field name="anomaly">160.3</field>
+  <field name="period">533.3</field>
+  <field name="optical_magnitude">24.0</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.euporie</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXXIV</field>
+  <field name="roman_int">34</field>
+  <field name="name">Euporie</field>
+  <field name="designation">S/2001 J10</field>
+  <field name="semi_major_axis">19302000</field>
+  <field name="inclination">145.8</field>
+  <field name="eccentricity">0.144</field>
+  <field name="pariaphis">74.6</field>
+  <field name="node">64.9</field>
+  <field name="anomaly">293.0</field>
+  <field name="period">550.7</field>
+  <field name="optical_magnitude">23.1</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j18</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LV</field>
+  <field name="roman_int">55</field>
+  <field name="designation">S/2003 J18</field>
+  <field name="semi_major_axis">20274000</field>
+  <field name="inclination">146.4</field>
+  <field name="eccentricity">0.105</field>
+  <field name="pariaphis">98.15</field>
+  <field name="node">215.5</field>
+  <field name="anomaly">220.7</field>
+  <field name="period">588.0</field>
+  <field name="optical_magnitude">23.4</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2010j2</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LII</field>
+  <field name="roman_int">52</field>
+  <field name="designation">S/2010 J2</field>
+  <field name="semi_major_axis">20307150</field>
+  <field name="inclination">150.4</field>
+  <field name="eccentricity">0.307</field>
+  <field name="period">588.1</field>
+  <field name="optical_magnitude">23.9</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2010</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j7</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LXVIII</field>
+  <field name="roman_int">68</field>
+  <field name="designation">S/2017 J7</field>
+  <field name="semi_major_axis">20627000</field>
+  <field name="inclination">143.4</field>
+  <field name="eccentricity">0.215</field>
+  <field name="pariaphis">323.5</field>
+  <field name="node">321.5</field>
+  <field name="anomaly">236.9</field>
+  <field name="period">602.6</field>
+  <field name="optical_magnitude">23.6</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2016j1</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LIV</field>
+  <field name="roman_int">54</field>
+  <field name="designation">S/2016 J1</field>
+  <field name="semi_major_axis">20650845</field>
+  <field name="inclination">139.8</field>
+  <field name="eccentricity">0.141</field>
+  <field name="pariaphis">328.2</field>
+  <field name="node">293.8</field>
+  <field name="anomaly">25.53</field>
+  <field name="period">602.7</field>
+  <field name="optical_magnitude">24.0</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2016</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j3</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LXIV</field>
+  <field name="roman_int">64</field>
+  <field name="designation">S/2017 J3</field>
+  <field name="semi_major_axis">20694000</field>
+  <field name="inclination">147.9</field>
+  <field name="eccentricity">0.148</field>
+  <field name="pariaphis">171.6</field>
+  <field name="node">82.5</field>
+  <field name="anomaly">91.2</field>
+  <field name="period">606.3</field>
+  <field name="optical_magnitude">23.4</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.euanthe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXXIII</field>
+  <field name="roman_int">33</field>
+  <field name="name">Euanthe</field>
+  <field name="designation">S/2001 J7</field>
+  <field name="semi_major_axis">20799000</field>
+  <field name="inclination">148.9</field>
+  <field name="eccentricity">0.232</field>
+  <field name="pariaphis">316.0</field>
+  <field name="node">271.0</field>
+  <field name="anomaly">130.5</field>
+  <field name="period">620.6</field>
+  <field name="optical_magnitude">22.8</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.orthosie</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXXV</field>
+  <field name="roman_int">35</field>
+  <field name="name">Orthosie</field>
+  <field name="designation">S/2001 J9</field>
+  <field name="semi_major_axis">20721000</field>
+  <field name="inclination">145.9</field>
+  <field name="eccentricity">0.281</field>
+  <field name="pariaphis">230.5</field>
+  <field name="node">223.6</field>
+  <field name="anomaly">326.8</field>
+  <field name="period">622.6</field>
+  <field name="optical_magnitude">23.1</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.thyone</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXIX</field>
+  <field name="roman_int">29</field>
+  <field name="name">Thyone</field>
+  <field name="designation">S/2001 J2</field>
+  <field name="semi_major_axis">20940000</field>
+  <field name="inclination">148.5</field>
+  <field name="eccentricity">0.229</field>
+  <field name="pariaphis">89.1</field>
+  <field name="node">243.0</field>
+  <field name="anomaly">26.6</field>
+  <field name="period">627.3</field>
+  <field name="optical_magnitude">22.3</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.mneme</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XL</field>
+  <field name="roman_int">40</field>
+  <field name="name">Mneme</field>
+  <field name="designation">S/2003 J21</field>
+  <field name="semi_major_axis">21069000</field>
+  <field name="inclination">148.6</field>
+  <field name="eccentricity">0.227</field>
+  <field name="pariaphis">041.7</field>
+  <field name="node">018.1</field>
+  <field name="anomaly">338.9</field>
+  <field name="period">620.0</field>
+  <field name="optical_magnitude">23.3</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.harpalyke</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXII</field>
+  <field name="roman_int">22</field>
+  <field name="name">Harpalyke</field>
+  <field name="designation">S/2000 J5</field>
+  <field name="semi_major_axis">21105000</field>
+  <field name="inclination">148.6</field>
+  <field name="eccentricity">0.226</field>
+  <field name="pariaphis">129.9</field>
+  <field name="node">40.0</field>
+  <field name="anomaly">120.4</field>
+  <field name="period">623.3</field>
+  <field name="optical_magnitude">22.2</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.hermippe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXX</field>
+  <field name="roman_int">30</field>
+  <field name="name">Hermippe</field>
+  <field name="designation">S/2001 J3</field>
+  <field name="semi_major_axis">21131000</field>
+  <field name="inclination">150.7</field>
+  <field name="eccentricity">0.210</field>
+  <field name="pariaphis">298.7</field>
+  <field name="node">347.2</field>
+  <field name="anomaly">276.4</field>
+  <field name="period">633.9</field>
+  <field name="optical_magnitude">22.1</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.praxidike</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXVII</field>
+  <field name="roman_int">27</field>
+  <field name="name">Praxidike</field>
+  <field name="designation">S/2000 J7</field>
+  <field name="semi_major_axis">21147000</field>
+  <field name="inclination">149.0</field>
+  <field name="eccentricity">0.230</field>
+  <field name="pariaphis">209.7</field>
+  <field name="node">285.2</field>
+  <field name="anomaly">21.8</field>
+  <field name="period">625.3</field>
+  <field name="optical_magnitude">21.2</field>
+  <field name="diameter">7</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.thelxinoe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XLII</field>
+  <field name="roman_int">42</field>
+  <field name="name">Thelxinoe</field>
+  <field name="designation">S/2003 J22</field>
+  <field name="semi_major_axis">21162000</field>
+  <field name="inclination">151.4</field>
+  <field name="eccentricity">0.221</field>
+  <field name="pariaphis">179.8</field>
+  <field name="node">206.2</field>
+  <field name="anomaly">194.0</field>
+  <field name="period">628.1</field>
+  <field name="optical_magnitude">23.5</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.eupheme</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LX</field>
+  <field name="roman_int">60</field>
+  <field name="name">Eupheme</field>
+  <field name="designation">S/2003 J3</field>
+  <field name="semi_major_axis">21199710</field>
+  <field name="inclination">148.0</field>
+  <field name="eccentricity">0.253</field>
+  <field name="pariaphis">109.0</field>
+  <field name="node">292.0</field>
+  <field name="anomaly">168.7</field>
+  <field name="period">627.8</field>
+  <field name="optical_magnitude">23.4</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.helike</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XLV</field>
+  <field name="roman_int">45</field>
+  <field name="name">Helike</field>
+  <field name="designation">S/2003 J6</field>
+  <field name="semi_major_axis">21263000</field>
+  <field name="inclination">154.8</field>
+  <field name="eccentricity">0.156</field>
+  <field name="pariaphis">314.7</field>
+  <field name="node">100.3</field>
+  <field name="anomaly">036.2</field>
+  <field name="period">634.8</field>
+  <field name="optical_magnitude">22.6</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.iocaste</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XXIV</field>
+  <field name="roman_int">24</field>
+  <field name="name">Iocaste</field>
+  <field name="designation">S/2000 J3</field>
+  <field name="semi_major_axis">21269000</field>
+  <field name="inclination">149.4</field>
+  <field name="eccentricity">0.216</field>
+  <field name="pariaphis">80.0</field>
+  <field name="node">271.3</field>
+  <field name="anomaly">129.8</field>
+  <field name="period">631.5</field>
+  <field name="optical_magnitude">21.8</field>
+  <field name="diameter">5</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.ananke</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">XII</field>
+  <field name="roman_int">12</field>
+  <field name="name">Ananke</field>
+  <field name="semi_major_axis">21276000</field>
+  <field name="inclination">148.9</field>
+  <field name="eccentricity">0.244</field>
+  <field name="pariaphis">100.6</field>
+  <field name="node">7.6</field>
+  <field name="anomaly">248.8</field>
+  <field name="period">610.5</field>
+  <field name="optical_magnitude">18.9</field>
+  <field name="diameter">28</field>
+  <field name="year_discovered">1951</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j9</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Ananke Retrograde</field>
+  <field name="roman_number">LXX</field>
+  <field name="roman_int">70</field>
+  <field name="designation">S/2017 J9</field>
+  <field name="semi_major_axis">21487000</field>
+  <field name="inclination">152.7</field>
+  <field name="eccentricity">0.229</field>
+  <field name="pariaphis">317.7</field>
+  <field name="node">306.4</field>
+  <field name="anomaly">259.5</field>
+  <field name="period">639.2</field>
+  <field name="optical_magnitude">22.8</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2011j1</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LXXII</field>
+  <field name="roman_int">72</field>
+  <field name="designation">S/2011 J1</field>
+  <field name="semi_major_axis">22462000</field>
+  <field name="inclination">163.3</field>
+  <field name="eccentricity">0.233</field>
+  <field name="pariaphis">127.2</field>
+  <field name="node">323.9</field>
+  <field name="anomaly">249.8</field>
+  <field name="period">686.6</field>
+  <field name="optical_magnitude">23.7</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2011</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j19</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LXI</field>
+  <field name="roman_int">61</field>
+  <field name="designation">S/2003 J19</field>
+  <field name="semi_major_axis">22757000</field>
+  <field name="inclination">166.7</field>
+  <field name="eccentricity">0.257</field>
+  <field name="pariaphis">284.1</field>
+  <field name="node">105.7</field>
+  <field name="anomaly">205.7</field>
+  <field name="period">697.6</field>
+  <field name="optical_magnitude">23.7</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.arche</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XLIII</field>
+  <field name="roman_int">43</field>
+  <field name="name">Arche</field>
+  <field name="designation">S/2002 J1</field>
+  <field name="semi_major_axis">22931000</field>
+  <field name="inclination">165.0</field>
+  <field name="eccentricity">0.259</field>
+  <field name="pariaphis">161.1</field>
+  <field name="node">350.7</field>
+  <field name="anomaly">126.7</field>
+  <field name="period">723.9</field>
+  <field name="optical_magnitude">22.8</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2002</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.pasithee</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXXVIII</field>
+  <field name="roman_int">38</field>
+  <field name="name">Pasithee</field>
+  <field name="designation">S/2001 J6</field>
+  <field name="semi_major_axis">23096000</field>
+  <field name="inclination">165.1</field>
+  <field name="eccentricity">0.267</field>
+  <field name="pariaphis">253.3</field>
+  <field name="node">338.7</field>
+  <field name="anomaly">272.7</field>
+  <field name="period">719.5</field>
+  <field name="optical_magnitude">23.2</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.herse</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">L</field>
+  <field name="roman_int">50</field>
+  <field name="name">Herse</field>
+  <field name="designation">S/2003 J17</field>
+  <field name="semi_major_axis">23097000</field>
+  <field name="inclination">164.2</field>
+  <field name="eccentricity">0.200</field>
+  <field name="pariaphis">355.7</field>
+  <field name="node">329.0</field>
+  <field name="anomaly">41.90</field>
+  <field name="period">715.4</field>
+  <field name="optical_magnitude">23.4</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.chaldene</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXI</field>
+  <field name="roman_int">21</field>
+  <field name="name">Chaldene</field>
+  <field name="designation">S/2000 J10</field>
+  <field name="semi_major_axis">23179000</field>
+  <field name="inclination">165.2</field>
+  <field name="eccentricity">0.251</field>
+  <field name="pariaphis">282.5</field>
+  <field name="node">148.7</field>
+  <field name="anomaly">131.6</field>
+  <field name="period">723.8</field>
+  <field name="optical_magnitude">22.5</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.kale</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXXVII</field>
+  <field name="roman_int">37</field>
+  <field name="name">Kale</field>
+  <field name="designation">S/2001 J8</field>
+  <field name="semi_major_axis">23217000</field>
+  <field name="inclination">165.0</field>
+  <field name="eccentricity">0.260</field>
+  <field name="pariaphis">44.4</field>
+  <field name="node">56.4</field>
+  <field name="anomaly">286.4</field>
+  <field name="period">729.5</field>
+  <field name="optical_magnitude">23.0</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.isonoe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXVI</field>
+  <field name="roman_int">26</field>
+  <field name="name">Isonoe</field>
+  <field name="designation">S/2000 J6</field>
+  <field name="semi_major_axis">23217000</field>
+  <field name="inclination">165.2</field>
+  <field name="eccentricity">0.246</field>
+  <field name="pariaphis">145.6</field>
+  <field name="node">149.8</field>
+  <field name="anomaly">345.4</field>
+  <field name="period">725.5</field>
+  <field name="optical_magnitude">22.5</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.aitne</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXXI</field>
+  <field name="roman_int">31</field>
+  <field name="name">Aitne</field>
+  <field name="designation">S/2001 J11</field>
+  <field name="semi_major_axis">23231000</field>
+  <field name="inclination">165.1</field>
+  <field name="eccentricity">0.264</field>
+  <field name="pariaphis">122.2</field>
+  <field name="node">24.5</field>
+  <field name="anomaly">153.9</field>
+  <field name="period">730.2</field>
+  <field name="optical_magnitude">22.7</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j5</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LXVI</field>
+  <field name="roman_int">66</field>
+  <field name="designation">S/2017 J5</field>
+  <field name="semi_major_axis">23232000</field>
+  <field name="inclination">164.3</field>
+  <field name="eccentricity">0.284</field>
+  <field name="pariaphis">11.9</field>
+  <field name="node">118.2</field>
+  <field name="anomaly">77.5</field>
+  <field name="period">719.5</field>
+  <field name="optical_magnitude">23.5</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j8</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LXIX</field>
+  <field name="roman_int">69</field>
+  <field name="designation">S/2017 J8</field>
+  <field name="semi_major_axis">23232700</field>
+  <field name="inclination">164.7</field>
+  <field name="eccentricity">0.312</field>
+  <field name="pariaphis">45.1</field>
+  <field name="node">160.3</field>
+  <field name="anomaly">70.8</field>
+  <field name="period">719.6</field>
+  <field name="optical_magnitude">24.0</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.erinome</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXV</field>
+  <field name="roman_int">25</field>
+  <field name="name">Erinome</field>
+  <field name="designation">S/2000 J4</field>
+  <field name="semi_major_axis">23279000</field>
+  <field name="inclination">164.9</field>
+  <field name="eccentricity">0.266</field>
+  <field name="pariaphis">356.0</field>
+  <field name="node">321.7</field>
+  <field name="anomaly">131.1</field>
+  <field name="period">728.3</field>
+  <field name="optical_magnitude">22.8</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j2</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LXIII</field>
+  <field name="roman_int">63</field>
+  <field name="designation">S/2017 J2</field>
+  <field name="semi_major_axis">23303000</field>
+  <field name="inclination">166.4</field>
+  <field name="eccentricity">0.236</field>
+  <field name="pariaphis">231.9</field>
+  <field name="node">74.7</field>
+  <field name="anomaly">344.4</field>
+  <field name="period">723.1</field>
+  <field name="optical_magnitude">23.5</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2010j1</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LI</field>
+  <field name="roman_int">51</field>
+  <field name="designation">S/2010 J1</field>
+  <field name="semi_major_axis">23314335</field>
+  <field name="inclination">163.2</field>
+  <field name="eccentricity">0.320</field>
+  <field name="period">723.2</field>
+  <field name="optical_magnitude">23.3</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2010</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.taygete</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XX</field>
+  <field name="roman_int">20</field>
+  <field name="name">Taygete</field>
+  <field name="designation">S/2000 J9</field>
+  <field name="semi_major_axis">23360000</field>
+  <field name="inclination">165.2</field>
+  <field name="eccentricity">0.252</field>
+  <field name="pariaphis">241.1</field>
+  <field name="node">313.3</field>
+  <field name="anomaly">317.9</field>
+  <field name="period">732.2</field>
+  <field name="optical_magnitude">21.9</field>
+  <field name="diameter">5</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.carme</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XI</field>
+  <field name="roman_int">11</field>
+  <field name="name">Carme</field>
+  <field name="semi_major_axis">23404000</field>
+  <field name="inclination">164.9</field>
+  <field name="eccentricity">0.253</field>
+  <field name="pariaphis">28.2</field>
+  <field name="node">113.7</field>
+  <field name="anomaly">234.0</field>
+  <field name="period">702.3</field>
+  <field name="optical_magnitude">17.9</field>
+  <field name="diameter">46</field>
+  <field name="year_discovered">1938</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.kalyke</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XXIII</field>
+  <field name="roman_int">23</field>
+  <field name="name">Kalyke</field>
+  <field name="designation">S/2000 J2</field>
+  <field name="semi_major_axis">23583000</field>
+  <field name="inclination">165.2</field>
+  <field name="eccentricity">0.245</field>
+  <field name="pariaphis">216.6</field>
+  <field name="node">38.7</field>
+  <field name="anomaly">116.3</field>
+  <field name="period">743.0</field>
+  <field name="optical_magnitude">21.8</field>
+  <field name="diameter">5</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.eukelade</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XLVII</field>
+  <field name="roman_int">47</field>
+  <field name="name">Eukelade</field>
+  <field name="designation">S/2003 J1</field>
+  <field name="semi_major_axis">23661000</field>
+  <field name="inclination">165.5</field>
+  <field name="eccentricity">0.272</field>
+  <field name="pariaphis">325.6</field>
+  <field name="node">206.3</field>
+  <field name="anomaly">098.4</field>
+  <field name="period">746.4</field>
+  <field name="optical_magnitude">22.6</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.eirene</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">LVII</field>
+  <field name="roman_int">57</field>
+  <field name="name">Eirene</field>
+  <field name="designation">S/2003 J5</field>
+  <field name="semi_major_axis">23731770</field>
+  <field name="inclination">163.1</field>
+  <field name="eccentricity">0.220</field>
+  <field name="pariaphis">160.0</field>
+  <field name="node">256.3</field>
+  <field name="anomaly">284.4</field>
+  <field name="period">759.7</field>
+  <field name="optical_magnitude">22.5</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.kallichore</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Carme Retrograde</field>
+  <field name="roman_number">XLIV</field>
+  <field name="roman_int">44</field>
+  <field name="name">Kallichore</field>
+  <field name="designation">S/2003 J11</field>
+  <field name="semi_major_axis">24043000</field>
+  <field name="inclination">165.5</field>
+  <field name="eccentricity">0.264</field>
+  <field name="pariaphis">018.5</field>
+  <field name="node">041.5</field>
+  <field name="anomaly">319.4</field>
+  <field name="period">764.7</field>
+  <field name="optical_magnitude">23.7</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j6</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">LXVII</field>
+  <field name="roman_int">67</field>
+  <field name="designation">S/2017 J6</field>
+  <field name="semi_major_axis">22455000</field>
+  <field name="inclination">155.2</field>
+  <field name="eccentricity">0.557</field>
+  <field name="pariaphis">77.3</field>
+  <field name="node">26.3</field>
+  <field name="anomaly">184.5</field>
+  <field name="period">683.0</field>
+  <field name="optical_magnitude">23.5</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.philophrosyne</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">LVIII</field>
+  <field name="roman_int">58</field>
+  <field name="name">Philophrosyne</field>
+  <field name="designation">S/2003 J15</field>
+  <field name="semi_major_axis">22819950</field>
+  <field name="inclination">143.6</field>
+  <field name="eccentricity">0.194</field>
+  <field name="pariaphis">52.08</field>
+  <field name="node">286.5</field>
+  <field name="anomaly">161.6</field>
+  <field name="period">701.3</field>
+  <field name="optical_magnitude">23.5</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.eurydome</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XXXII</field>
+  <field name="roman_int">32</field>
+  <field name="name">Eurydome</field>
+  <field name="designation">S/2001 J4</field>
+  <field name="semi_major_axis">22865000</field>
+  <field name="inclination">150.3</field>
+  <field name="eccentricity">0.276</field>
+  <field name="pariaphis">241.6</field>
+  <field name="node">307.4</field>
+  <field name="anomaly">340.7</field>
+  <field name="period">717.3</field>
+  <field name="optical_magnitude">22.7</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.autonoe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XXVIII</field>
+  <field name="roman_int">28</field>
+  <field name="name">Autonoe</field>
+  <field name="designation">S/2001 J1</field>
+  <field name="semi_major_axis">23039000</field>
+  <field name="inclination">152.9</field>
+  <field name="eccentricity">0.334</field>
+  <field name="pariaphis">60.2</field>
+  <field name="node">275.6</field>
+  <field name="anomaly">182.7</field>
+  <field name="period">762.7</field>
+  <field name="optical_magnitude">22.0</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2011j2</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">LVI</field>
+  <field name="roman_int">56</field>
+  <field name="designation">S/2011 J2</field>
+  <field name="semi_major_axis">23463885</field>
+  <field name="inclination">148.8</field>
+  <field name="eccentricity">0.332</field>
+  <field name="pariaphis">341.9</field>
+  <field name="node">105.2</field>
+  <field name="anomaly">292.5</field>
+  <field name="period">730.5</field>
+  <field name="optical_magnitude">23.6</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2011</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.sponde</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XXXVI</field>
+  <field name="roman_int">36</field>
+  <field name="name">Sponde</field>
+  <field name="designation">S/2001 J5</field>
+  <field name="semi_major_axis">23487000</field>
+  <field name="inclination">151.0</field>
+  <field name="eccentricity">0.312</field>
+  <field name="pariaphis">79.1</field>
+  <field name="node">129.1</field>
+  <field name="anomaly">216.8</field>
+  <field name="period">748.3</field>
+  <field name="optical_magnitude">23.0</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2001</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2017j1</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">LIX</field>
+  <field name="roman_int">59</field>
+  <field name="designation">S/2017 J1</field>
+  <field name="semi_major_axis">23547105</field>
+  <field name="inclination">149.2</field>
+  <field name="eccentricity">0.397</field>
+  <field name="pariaphis">79.73</field>
+  <field name="node">326.8</field>
+  <field name="anomaly">161.3</field>
+  <field name="period">734.2</field>
+  <field name="optical_magnitude">23.8</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2017</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.pasiphae</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">VIII</field>
+  <field name="roman_int">8</field>
+  <field name="name">Pasiphae</field>
+  <field name="semi_major_axis">23624000</field>
+  <field name="inclination">151.4</field>
+  <field name="eccentricity">0.409</field>
+  <field name="pariaphis">170.5</field>
+  <field name="node">313.0</field>
+  <field name="anomaly">280.2</field>
+  <field name="period">708.0</field>
+  <field name="optical_magnitude">16.9</field>
+  <field name="diameter">58</field>
+  <field name="year_discovered">1908</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.megaclite</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XIX</field>
+  <field name="roman_int">19</field>
+  <field name="name">Megaclite</field>
+  <field name="designation">S/2000 J8</field>
+  <field name="semi_major_axis">23806000</field>
+  <field name="inclination">152.8</field>
+  <field name="eccentricity">0.421</field>
+  <field name="pariaphis">302.3</field>
+  <field name="node">304.6</field>
+  <field name="anomaly">352.5</field>
+  <field name="period">752.8</field>
+  <field name="optical_magnitude">21.7</field>
+  <field name="diameter">6</field>
+  <field name="year_discovered">2000</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.sinope</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">IX</field>
+  <field name="roman_int">9</field>
+  <field name="name">Sinope</field>
+  <field name="semi_major_axis">23939000</field>
+  <field name="inclination">158.1</field>
+  <field name="eccentricity">0.250</field>
+  <field name="pariaphis">346.4</field>
+  <field name="node">303.1</field>
+  <field name="anomaly">168.4</field>
+  <field name="period">724.5</field>
+  <field name="optical_magnitude">18.3</field>
+  <field name="diameter">38</field>
+  <field name="year_discovered">1914</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.hegemone</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XXXIX</field>
+  <field name="roman_int">39</field>
+  <field name="name">Hegemone</field>
+  <field name="designation">S/2003 J8</field>
+  <field name="semi_major_axis">23947000</field>
+  <field name="inclination">155.2</field>
+  <field name="eccentricity">0.328</field>
+  <field name="pariaphis">235.4</field>
+  <field name="node">327.6</field>
+  <field name="anomaly">98.73</field>
+  <field name="period">739.6</field>
+  <field name="optical_magnitude">22.8</field>
+  <field name="diameter">3</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.aoede</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XLI</field>
+  <field name="roman_int">41</field>
+  <field name="name">Aoede</field>
+  <field name="designation">S/2003 J7</field>
+  <field name="semi_major_axis">23981000</field>
+  <field name="inclination">158.3</field>
+  <field name="eccentricity">0.432</field>
+  <field name="pariaphis">074.5</field>
+  <field name="node">187.1</field>
+  <field name="anomaly">074.0</field>
+  <field name="period">761.5</field>
+  <field name="optical_magnitude">22.5</field>
+  <field name="diameter">4</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.callirrhoe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XVII</field>
+  <field name="roman_int">17</field>
+  <field name="name">Callirrhoe</field>
+  <field name="designation">S/1999 J1</field>
+  <field name="semi_major_axis">24102000</field>
+  <field name="inclination">147.1</field>
+  <field name="eccentricity">0.283</field>
+  <field name="pariaphis">49.3</field>
+  <field name="node">281.1</field>
+  <field name="anomaly">321.7</field>
+  <field name="period">758.8</field>
+  <field name="optical_magnitude">20.8</field>
+  <field name="diameter">7</field>
+  <field name="year_discovered">1999</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.cyllene</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XLVIII</field>
+  <field name="roman_int">48</field>
+  <field name="name">Cyllene</field>
+  <field name="designation">S/2003 J13</field>
+  <field name="semi_major_axis">24349000</field>
+  <field name="inclination">149.3</field>
+  <field name="eccentricity">0.319</field>
+  <field name="pariaphis">214.0</field>
+  <field name="node">266.4</field>
+  <field name="anomaly">000.4</field>
+  <field name="period">737.8</field>
+  <field name="optical_magnitude">23.2</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.kore</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Pasiphae Retrograde</field>
+  <field name="roman_number">XLIX</field>
+  <field name="roman_int">49</field>
+  <field name="name">Kore</field>
+  <field name="designation">S/2003 J14</field>
+  <field name="semi_major_axis">24543000</field>
+  <field name="inclination">145.0</field>
+  <field name="eccentricity">0.325</field>
+  <field name="pariaphis">152.4</field>
+  <field name="node">324.7</field>
+  <field name="anomaly">247.1</field>
+  <field name="period">779.2</field>
+  <field name="optical_magnitude">23.6</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j2</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J2</field>
+  <field name="semi_major_axis">28570410</field>
+  <field name="inclination">151.8</field>
+  <field name="eccentricity">0.380</field>
+  <field name="period">982.5</field>
+  <field name="optical_magnitude">23.2</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j4</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J4</field>
+  <field name="semi_major_axis">23257920</field>
+  <field name="inclination">144.9</field>
+  <field name="eccentricity">0.204</field>
+  <field name="period">723.2</field>
+  <field name="optical_magnitude">23.0</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j9</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J9</field>
+  <field name="semi_major_axis">22441680</field>
+  <field name="inclination">164.5</field>
+  <field name="eccentricity">0.269</field>
+  <field name="period">683.0</field>
+  <field name="optical_magnitude">23.7</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j10</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J10</field>
+  <field name="semi_major_axis">24249600</field>
+  <field name="inclination">164.1</field>
+  <field name="eccentricity">0.214</field>
+  <field name="period">767.0</field>
+  <field name="optical_magnitude">23.6</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j12</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J12</field>
+  <field name="semi_major_axis">19002480</field>
+  <field name="inclination">145.8</field>
+  <field name="eccentricity">0.376</field>
+  <field name="period">533.3</field>
+  <field name="optical_magnitude">23.9</field>
+  <field name="diameter">1</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j16</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J16</field>
+  <field name="semi_major_axis">21000000</field>
+  <field name="inclination">148.5</field>
+  <field name="eccentricity">0.230</field>
+  <field name="period">595.4</field>
+  <field name="optical_magnitude">23.3</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+<doc>
+  <field name="id">satellite.jupiter.s2003j23</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">N/A</field>
+  <field name="roman_int">99999</field>
+  <field name="designation">S/2003 J23</field>
+  <field name="semi_major_axis">24055500</field>
+  <field name="inclination">149.2</field>
+  <field name="eccentricity">0.309</field>
+  <field name="period">759.7</field>
+  <field name="optical_magnitude">23.6</field>
+  <field name="diameter">2</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Jupiter</field>
+</doc>
+</add>
