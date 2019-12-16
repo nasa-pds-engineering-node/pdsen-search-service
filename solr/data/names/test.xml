@@ -1,0 +1,20 @@
+<add>
+<doc>
+  <field name="id">mro</field>
+  <field name="name">MRO</field>
+  <field name="name">Mars Reconnaissance Orbiter</field>
+  <field name="class">mission</field>
+  <field name="class">spacecraft</field>
+</doc>
+<doc>
+  <field name="id">mars</field>
+  <field name="name">Mars</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">feature.gale_crater</field>
+  <field name="name">Gale Crater</field>
+  <field name="class">feature</field>
+</doc>
+
+</add>

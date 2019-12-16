@@ -95,13 +95,6 @@
     <httpCaching never304="true" />
   </requestDispatcher>
 
-
-  <requestHandler name="/tag" class="solr.TaggerRequestHandler">
-    <lst name="defaults">
-      <str name="field">name_tagger</str>
-    </lst>
-  </requestHandler>
-
   <requestHandler name="/select" class="solr.SearchHandler">
     <lst name="defaults">
       <str name="echoParams">explicit</str>

@@ -2,16 +2,31 @@
 
 <schema name="names" version="1.0">
 
-    <!-- Unique Key -->
+    <!-- Fields -->
     <field name="id" type="string" indexed="true" stored="true" multiValued="false" />
     <uniqueKey>id</uniqueKey>
 
-    <!-- Name -->
-    <field name="name" type="text_general" indexed="true" stored="true" multiValued="true" />
-    <field name="name_tagger" type="tagger" indexed="true" stored="false" multiValued="true" />
-    <copyField source="name" dest="name_tagger" />
+    <field name="name" type="text_general" indexed="true" stored="true" multiValued="false" />
+    <field name="class" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="target_type" type="string" indexed="true" stored="true" multiValued="true" />
 
-    <field name="class" type="string" indexed="true" stored="true" multiValued="true" />
+    <!-- Target fields -->
+    <field name="group" type="text_general" indexed="true" stored="true" multiValued="false" />
+    <field name="roman_number" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="roman_int" type="pint" indexed="true" stored="true" multiValued="false" />
+    <field name="designation" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="name_of_primary" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="year_discovered" type="pint" indexed="true" stored="true" multiValued="false" />
+
+    <field name="semi_major_axis" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="inclination" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="eccentricity" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="pariaphis" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="node" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="anomaly" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="period" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="optical_magnitude" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="diameter" type="pfloat" indexed="true" stored="true" multiValued="false" />
 
     <!-- System fields -->
     <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
@@ -47,17 +62,4 @@
       </analyzer>
     </fieldType>
 
-    <fieldType name="tagger" class="solr.TextField" postingsFormat="FST50" omitNorms="true" omitTermFreqAndPositions="true">
-      <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.ConcatenateGraphFilterFactory" preservePositionIncrements="false"/>
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-      </analyzer>
-    </fieldType>
-
 </schema>
-
