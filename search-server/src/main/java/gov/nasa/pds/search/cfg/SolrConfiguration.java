@@ -25,9 +25,9 @@ public class SolrConfiguration
     }
     
     
-    public SolrCollectionConfiguration getCollectionConfiguration(String name)
+    public SolrCollectionConfiguration getCollectionConfiguration(String id)
     {
-        return collectionMap.get(name);
+        return collectionMap.get(id);
     }
     
     
@@ -37,8 +37,8 @@ public class SolrConfiguration
     }
 
     
-    public void addCollectionConfiguration(String name, SolrCollectionConfiguration cfg)
+    public void addCollectionConfiguration(String id, SolrCollectionConfiguration cfg)
     {
-        collectionMap.put(name, cfg);
+        collectionMap.put(id, cfg);
     }
 }

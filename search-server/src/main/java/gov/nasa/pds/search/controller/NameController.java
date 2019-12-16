@@ -4,8 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.solr.client.solrj.SolrClient;
-import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocumentList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +17,8 @@ import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
 import gov.nasa.pds.search.solr.IResponseWriter;
 import gov.nasa.pds.search.solr.JsonResponseWriter;
 import gov.nasa.pds.search.solr.SolrManager;
+import gov.nasa.pds.search.solr.TaggerRequest;
+import gov.nasa.pds.search.solr.TaggerResponse;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -39,6 +39,7 @@ public class NameController
 
         httpResp.setContentType("application/json");
         IResponseWriter respWriter = new JsonResponseWriter(httpResp.getWriter());
+        respWriter.excludeFields("id", "timestamp");
 
         String qParam = reqParams.getParameter("q");
         
@@ -50,7 +51,7 @@ public class NameController
             return;
         }
         
-        SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("names");
+        SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("tagger");
         if(solrConfig == null)
         {
             httpResp.setStatus(500);
@@ -59,16 +60,16 @@ public class NameController
             return;
         }
         
-        //TODO: Parse and process the text
-        SolrQuery query = new SolrQuery("name:" + qParam);
+        // Create Solr request
+        TaggerRequest query = new TaggerRequest(qParam);
         if(solrConfig.requestHandler != null)
         {
-            query.setRequestHandler(solrConfig.requestHandler);
+            query.setPath(solrConfig.requestHandler);
         }
         
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(solrConfig.collectionName, query);
+        TaggerResponse resp = query.process(solrClient, solrConfig.collectionName);
         SolrDocumentList docList = resp.getResults();
         
         // Write documents

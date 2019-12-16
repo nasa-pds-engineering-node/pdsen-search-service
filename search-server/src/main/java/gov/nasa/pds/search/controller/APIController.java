@@ -49,7 +49,7 @@ public class APIController
         
         // Decide which fields to return
         List<String> fields = getFields(reqParams, fieldConfig);
-        respWriter.setFields(fields);
+        respWriter.includeFields(fields);
         respWriter.setNameMapper(fieldConfig.nameMapper);
         
         // Build Solr query

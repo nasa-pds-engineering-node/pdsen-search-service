@@ -54,27 +54,26 @@ public class SolrConfigurationLoader
         {
             Node node = nodes.item(i);
             
-            Node tmpNode = node.getAttributes().getNamedItem("publicName");
-            String publicName = (tmpNode == null) ? null : tmpNode.getTextContent();
-            if(publicName == null || publicName.isEmpty()) 
+            Node tmpNode = node.getAttributes().getNamedItem("id");
+            String id = (tmpNode == null) ? null : tmpNode.getTextContent();
+            if(id == null || id.isEmpty()) 
             {
-                LOG.warn("Missing publicName attribute in /solr/collections/collection.");
-                continue;
+                throw new RuntimeException("Missing 'id' attribute in /solr/collections/collection tag.");
             }
 
             SolrCollectionConfiguration cconf = new SolrCollectionConfiguration();
             
-            tmpNode = node.getAttributes().getNamedItem("internalName");
+            tmpNode = node.getAttributes().getNamedItem("name");
             cconf.collectionName = (tmpNode == null) ? null : tmpNode.getTextContent();
             if(cconf.collectionName == null || cconf.collectionName.isEmpty())
             {
-                cconf.collectionName = publicName;
+                throw new RuntimeException("Missing 'name' attribute in /solr/collections/collection tag.");
             }
             
             tmpNode = node.getAttributes().getNamedItem("requestHandler");
             cconf.requestHandler = (tmpNode == null) ? null : tmpNode.getTextContent();
 
-            solrCfg.addCollectionConfiguration(publicName, cconf);
+            solrCfg.addCollectionConfiguration(id, cconf);
         }
     }
 

@@ -9,7 +9,9 @@ import gov.nasa.pds.search.util.NameMapper;
 
 public interface IResponseWriter
 {
-    public void setFields(List<String> fields);
+    public void includeFields(List<String> fields);
+    public void excludeFields(String...fields);
+    
     public void setNameMapper(NameMapper nameMapper);
     
     public void error(String msg) throws IOException;

@@ -7,14 +7,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 
 import gov.nasa.pds.search.util.NameMapper;
 
@@ -26,7 +27,8 @@ import gov.nasa.pds.search.util.NameMapper;
 public class JsonResponseWriter implements IResponseWriter
 {
     private JsonGenerator jgen;
-    private List<String> cfgFields;
+    private List<String> includeFields;
+    private Set<String> excludeFields = new HashSet<>();
     private NameMapper nameMapper;
     
     /**
@@ -50,11 +52,25 @@ public class JsonResponseWriter implements IResponseWriter
      * Set a list of fields to write.
      * @param fields A list of fields to write.
      */
-    public void setFields(List<String> fields)
+    public void includeFields(List<String> fields)
     {
-        this.cfgFields = fields;
+        this.includeFields = fields;
     }
     
+    
+    /**
+     * Exclude these fields from the response.
+     * @param fields
+     */
+    public void excludeFields(String... fields)
+    {
+        if(fields == null) return;
+        
+        for(String field: fields)
+        {
+            excludeFields.add(field);
+        }
+    }
     
     /**
      * Set name mapper to map public and internal parameters.
@@ -127,7 +143,7 @@ public class JsonResponseWriter implements IResponseWriter
             
             // Use pre-configured field names if available.
             // Otherwise, get a list of fields for each document.
-            List<String> fields = cfgFields;
+            List<String> fields = includeFields;
             if(fields == null)
             {
                 fields = new ArrayList<>(doc.getFieldNames());
@@ -136,9 +152,6 @@ public class JsonResponseWriter implements IResponseWriter
             
             for(String fieldName: fields)
             {
-                // Ignore system fields
-                if(cfgFields == null && fieldName.startsWith("_") && fieldName.endsWith("_")) continue;
-                
                 Object value = doc.getFieldValue(fieldName); 
                 writeField(fieldName, value);
             }
@@ -154,7 +167,12 @@ public class JsonResponseWriter implements IResponseWriter
     private void writeField(String name, Object value) throws IOException
     {
         if(value == null) return;
-        
+
+        // Exclude fields
+        if(includeFields == null && name.startsWith("_") && name.endsWith("_")) return;
+        if(excludeFields.contains(name)) return;
+
+        // Map field names
         String publicName = (nameMapper == null) ? name : nameMapper.findPublicByInternal(name);        
         jgen.writeFieldName(publicName);
         
