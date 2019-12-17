@@ -1,0 +1,42 @@
+<add>
+<doc>
+  <field name="id">planet.mercury</field>
+  <field name="name">Mercury</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.venus</field>
+  <field name="name">Venus</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.earth</field>
+  <field name="name">Earth</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.mars</field>
+  <field name="name">Mars</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.jupiter</field>
+  <field name="name">Jupiter</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.saturn</field>
+  <field name="name">Saturn</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.uranus</field>
+  <field name="name">Uranus</field>
+  <field name="class">target</field>
+</doc>
+<doc>
+  <field name="id">planet.neptune</field>
+  <field name="name">Neptune</field>
+  <field name="class">target</field>
+</doc>
+</add>
