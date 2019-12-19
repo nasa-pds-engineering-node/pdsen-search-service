@@ -1,0 +1,293 @@
+<add>
+<doc>
+  <field name="id">satellite.neptune.naiad</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">III</field>
+  <field name="roman_int">3</field>
+  <field name="name">Naiad</field>
+  <field name="designation">S/1989 N6</field>
+  <field name="semi_major_axis">48200</field>
+  <field name="inclination">4.74</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">36.7</field>
+  <field name="node">49.0</field>
+  <field name="anomaly">334.9</field>
+  <field name="period">0.294</field>
+  <field name="optical_magnitude">24.1</field>
+  <field name="diameter">58</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.thalassa</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">IV</field>
+  <field name="roman_int">4</field>
+  <field name="name">Thalassa</field>
+  <field name="designation">S/1989 N5</field>
+  <field name="semi_major_axis">50100</field>
+  <field name="inclination">0.205</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">316.3</field>
+  <field name="node">90.2</field>
+  <field name="anomaly">193.6</field>
+  <field name="period">0.311</field>
+  <field name="optical_magnitude">23.4</field>
+  <field name="diameter">80</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.despina</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">V</field>
+  <field name="roman_int">5</field>
+  <field name="name">Despina</field>
+  <field name="designation">S/1989 N3</field>
+  <field name="semi_major_axis">52500</field>
+  <field name="inclination">0.065</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">331.1</field>
+  <field name="node">154.9</field>
+  <field name="anomaly">319.6</field>
+  <field name="period">0.335</field>
+  <field name="optical_magnitude">22.0</field>
+  <field name="diameter">148</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.galatea</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">VI</field>
+  <field name="roman_int">6</field>
+  <field name="name">Galatea</field>
+  <field name="designation">S/1989 N4</field>
+  <field name="semi_major_axis">62000</field>
+  <field name="inclination">0.054</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">107.4</field>
+  <field name="node">112.5</field>
+  <field name="anomaly">187.1</field>
+  <field name="period">0.429</field>
+  <field name="optical_magnitude">22.0</field>
+  <field name="diameter">158</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.larissa</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">VII</field>
+  <field name="roman_int">7</field>
+  <field name="name">Larissa</field>
+  <field name="designation">S/1989 N2</field>
+  <field name="semi_major_axis">73500</field>
+  <field name="inclination">0.201</field>
+  <field name="eccentricity">0.001</field>
+  <field name="pariaphis">139.9</field>
+  <field name="node">10.3</field>
+  <field name="anomaly">34.9</field>
+  <field name="period">0.555</field>
+  <field name="optical_magnitude">21.5</field>
+  <field name="diameter">192</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.hippocamp</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">XIV</field>
+  <field name="roman_int">14</field>
+  <field name="name">Hippocamp</field>
+  <field name="designation">S/2004 N1</field>
+  <field name="semi_major_axis">105300</field>
+  <field name="inclination">0.000</field>
+  <field name="eccentricity">0.000</field>
+  <field name="node">00.0</field>
+  <field name="anomaly">00.0</field>
+  <field name="period">0.950</field>
+  <field name="optical_magnitude">26.5</field>
+  <field name="diameter">18</field>
+  <field name="year_discovered">2013</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.proteus</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Regular</field>
+  <field name="roman_number">VIII</field>
+  <field name="roman_int">8</field>
+  <field name="name">Proteus</field>
+  <field name="designation">S/1989 N1</field>
+  <field name="semi_major_axis">117600</field>
+  <field name="inclination">0.039</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">309.5</field>
+  <field name="node">150.3</field>
+  <field name="anomaly">114.2</field>
+  <field name="period">1.122</field>
+  <field name="optical_magnitude">20.0</field>
+  <field name="diameter">416</field>
+  <field name="year_discovered">1989</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.triton</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">I</field>
+  <field name="roman_int">1</field>
+  <field name="name">Triton</field>
+  <field name="semi_major_axis">354800</field>
+  <field name="inclination">156.8</field>
+  <field name="eccentricity">0.000</field>
+  <field name="pariaphis">344.0</field>
+  <field name="node">172.4</field>
+  <field name="anomaly">264.8</field>
+  <field name="period">5.88</field>
+  <field name="optical_magnitude">13.0</field>
+  <field name="diameter">2706</field>
+  <field name="year_discovered">1846</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.nereid</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">II</field>
+  <field name="roman_int">2</field>
+  <field name="name">Nereid</field>
+  <field name="semi_major_axis">5513400</field>
+  <field name="inclination">7.23</field>
+  <field name="eccentricity">0.751</field>
+  <field name="pariaphis">280.8</field>
+  <field name="node">334.8</field>
+  <field name="anomaly">359.3</field>
+  <field name="period">360.1</field>
+  <field name="optical_magnitude">19.2</field>
+  <field name="diameter">340</field>
+  <field name="year_discovered">1949</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.halimede</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">IX</field>
+  <field name="roman_int">9</field>
+  <field name="name">Halimede</field>
+  <field name="designation">S/2002 N1</field>
+  <field name="semi_major_axis">15728000</field>
+  <field name="inclination">134.1</field>
+  <field name="eccentricity">0.571</field>
+  <field name="pariaphis">159.5</field>
+  <field name="node">202.7</field>
+  <field name="anomaly">96.8</field>
+  <field name="period">1879.7</field>
+  <field name="optical_magnitude">24.5</field>
+  <field name="diameter">61</field>
+  <field name="year_discovered">2002</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.sao</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">XI</field>
+  <field name="roman_int">11</field>
+  <field name="name">Sao</field>
+  <field name="designation">S/2002 N2</field>
+  <field name="semi_major_axis">22422000</field>
+  <field name="inclination">48.51</field>
+  <field name="eccentricity">0.293</field>
+  <field name="pariaphis">19.5</field>
+  <field name="node">58.9</field>
+  <field name="anomaly">129.4</field>
+  <field name="period">2914.1</field>
+  <field name="optical_magnitude">25.4</field>
+  <field name="diameter">40</field>
+  <field name="year_discovered">2002</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.laomedeia</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">XII</field>
+  <field name="roman_int">12</field>
+  <field name="name">Laomedeia</field>
+  <field name="designation">S/2002 N3</field>
+  <field name="semi_major_axis">23571000</field>
+  <field name="inclination">34.74</field>
+  <field name="eccentricity">0.424</field>
+  <field name="pariaphis">138.0</field>
+  <field name="node">53.5</field>
+  <field name="anomaly">321.1</field>
+  <field name="period">3167.9</field>
+  <field name="optical_magnitude">25.4</field>
+  <field name="diameter">40</field>
+  <field name="year_discovered">2002</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.psamathe</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">X</field>
+  <field name="roman_int">10</field>
+  <field name="name">Psamathe</field>
+  <field name="designation">S/2003 N1</field>
+  <field name="semi_major_axis">46695000</field>
+  <field name="inclination">137.4</field>
+  <field name="eccentricity">0.450</field>
+  <field name="pariaphis">145.9</field>
+  <field name="node">301.0</field>
+  <field name="anomaly">206.2</field>
+  <field name="period">9115.9</field>
+  <field name="optical_magnitude">25.6</field>
+  <field name="diameter">38</field>
+  <field name="year_discovered">2003</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+<doc>
+  <field name="id">satellite.neptune.neso</field>
+  <field name="class">target</field>
+  <field name="target_type">satellite</field>
+  <field name="group">Irregular Outer</field>
+  <field name="roman_number">XIII</field>
+  <field name="roman_int">13</field>
+  <field name="name">Neso</field>
+  <field name="designation">S/2002 N4</field>
+  <field name="semi_major_axis">48387000</field>
+  <field name="inclination">132.6</field>
+  <field name="eccentricity">0.495</field>
+  <field name="pariaphis">89.3</field>
+  <field name="node">49.9</field>
+  <field name="anomaly">269.8</field>
+  <field name="period">9374.0</field>
+  <field name="optical_magnitude">24.6</field>
+  <field name="diameter">60</field>
+  <field name="year_discovered">2002</field>
+  <field name="name_of_primary">Neptune</field>
+</doc>
+</add>
