@@ -1,0 +1,12 @@
+mars->N=1|T=1
+
+mars reconnaissance->N=1
+mars reconnaissance orbiter->T=5|ID=mro
+
+2001->N=1
+2001 mars->N=1
+2001 mars odyssey->T=5|ID=ody
+mars odyssey->T=5|ID=ody
+        
+mars science-->N=1
+mars science laboratory->T=5|ID=msl

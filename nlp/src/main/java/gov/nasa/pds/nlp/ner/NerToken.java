@@ -1,6 +1,6 @@
-package gov.nasa.pds.nlp;
+package gov.nasa.pds.nlp.ner;
 
-public class Token
+public class NerToken
 {
     public static final byte TYPE_UNKNOWN = 0;
     
@@ -16,13 +16,23 @@ public class Token
 
     public static final byte TYPE_LID = 20;
     
-    public String text;
-    public byte type;
+    public String key;
+    public String id;
+    public int type;
+    public boolean hasNext;
     
     
-    public Token(String text, byte type)
+    public NerToken(String key)
     {
-        this.text = text;
-        this.type = type;
+        this(key, 0);
     }
+
+    
+    public NerToken(String key, int type)
+    {
+        this.key = key;
+        this.type = type;
+        hasNext = false;
+    }
+
 }
