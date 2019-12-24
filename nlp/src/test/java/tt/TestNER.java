@@ -34,7 +34,7 @@ public class TestNER
         List<NerToken> nerTokens = ner.parse(lexTokens);
         for(NerToken token: nerTokens)
         {
-            System.out.println(token.key + " --> " + token.type + " (" + token.id + ")");
+            System.out.println(token.getKey() + " --> " + token.getType() + " (" + token.getId() + ")");
         }
     }
     

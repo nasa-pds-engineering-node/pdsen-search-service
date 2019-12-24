@@ -34,7 +34,7 @@ public class NamedEntityRecognizer
     {
         NerToken lastKnownToken = token;
         int lastKnownTokenIndex = currentTokenIndex;
-        String currentKey = token.key;
+        String currentKey = token.getKey();
         
         int j = currentTokenIndex + 1;
         for(; j < tokens.size(); j++)
@@ -49,13 +49,13 @@ public class NamedEntityRecognizer
             }
             else
             {
-                if(token.type != 0)
+                if(token.getType() != 0)
                 {
                     lastKnownToken = token;
                     lastKnownTokenIndex = j;
                 }
                 
-                if(!token.hasNext) break;
+                if(!token.hasNext()) break;
             }
         }
         
@@ -87,7 +87,7 @@ public class NamedEntityRecognizer
             else
             {
                 // Multiple word
-                if(token.hasNext)
+                if(token.hasNext())
                 {
                     MWResult res = processMultiWord(tokens, i, token);
                     if(res != null)

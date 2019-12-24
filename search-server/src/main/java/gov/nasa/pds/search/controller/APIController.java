@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
-import gov.nasa.pds.search.solr.IResponseWriter;
-import gov.nasa.pds.search.solr.JsonResponseWriter;
+import gov.nasa.pds.search.solr.SolrDocJsonWriter;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
 import gov.nasa.pds.search.solr.SolrManager;
 import gov.nasa.pds.search.util.NameMapper;
@@ -42,7 +41,7 @@ public class APIController
         
         // Use default JSON output format
         httpResp.setContentType("application/json");
-        IResponseWriter respWriter = new JsonResponseWriter(httpResp.getWriter());
+        SolrDocJsonWriter respWriter = new SolrDocJsonWriter(httpResp.getWriter());
         
         SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");
         FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();

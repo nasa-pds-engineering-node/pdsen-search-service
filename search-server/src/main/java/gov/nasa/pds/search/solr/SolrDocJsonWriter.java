@@ -24,7 +24,7 @@ import gov.nasa.pds.search.util.NameMapper;
  * Writes Solr response in JSON format. 
  * @author karpenko
  */
-public class JsonResponseWriter implements IResponseWriter
+public class SolrDocJsonWriter
 {
     private JsonGenerator jgen;
     private List<String> includeFields;
@@ -36,7 +36,7 @@ public class JsonResponseWriter implements IResponseWriter
      * @param out Output Stream for JSON.
      * @throws IOException
      */
-    public JsonResponseWriter(Writer writer) throws IOException
+    public SolrDocJsonWriter(Writer writer) throws IOException
     {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 

@@ -41,17 +41,20 @@ public class NerDictionaryHashMap implements NerDictionary
         String[] kvs = val.split("\\|");
         for(String kv: kvs)
         {
+            // Has next token / multiple word token
             if(kv.equals("N=1"))
             {
-                token.hasNext = true;
+                token.setHasNext(true);
             }
+            // Type. Can be multiple, separated by comma
             else if(kv.startsWith("T="))
             {
-                token.type = Integer.parseInt(kv.substring(2)); 
+                setType(token, kv.substring(2));
             }
-            else if(kv.startsWith("ID="))
+            // ID / Short name
+            else if(kv.startsWith("I="))
             {
-                token.id = kv.substring(3);
+                token.setId(kv.substring(2));
             }
         }
         
@@ -59,6 +62,27 @@ public class NerDictionaryHashMap implements NerDictionary
     }
 
 
+    private static void setType(NerToken token, String strType)
+    {
+        if(strType.indexOf(',') > 0)    // Multiple values
+        {
+            String[] strTypes = strType.split(",");
+            int[] types = new int[strTypes.length];
+            
+            for(int i = 0; i < strTypes.length; i++)
+            {
+                types[i] = Integer.parseInt(strTypes[i]);
+            }
+            
+            token.setTypes(types);
+        }
+        else    // Single value
+        {
+            token.setType(Integer.parseInt(strType));
+        }
+    }
+    
+    
     @Override
     public void load(File dir)
     {
