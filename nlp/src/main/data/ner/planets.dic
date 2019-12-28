@@ -1,10 +1,10 @@
 # Planets
 Mercury->T=1
-Venus->T=1
+Venus->T=1|N=1
 Earth->T=1
-Mars->T=1
+Mars->T=1|N=1
 Jupiter->T=1
-Saturn->T=1
+Saturn->T=1|N=1
 Uranus->T=1
 Neptune->T=1
 
@@ -22,9 +22,10 @@ Orcus->T=1
 
 # Earth Moons
 Moon->T=1
+Lunar->T=1|N=1
 
 # Mars Moons
-Phobos->T=1
+Phobos->T=1|N=1
 Deimos->T=1
 
 # Jupiter Named Moons
