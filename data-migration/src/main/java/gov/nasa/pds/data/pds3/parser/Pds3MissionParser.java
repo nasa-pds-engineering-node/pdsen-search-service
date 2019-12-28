@@ -61,23 +61,4 @@ public class Pds3MissionParser
         
         return obj;
     }
-    
-    
-    public static interface Callback
-    {
-        public void onMission(Pds3Mission mission) throws Exception;
-    }
-    
-    
-    public static void crawl(String directory, Callback cb) throws Exception
-    {
-        XmlDomCrawler crawler = new XmlDomCrawler(directory);
-        Pds3MissionParser parser = new Pds3MissionParser();
-        
-        crawler.crawl((doc, path) -> 
-        {
-            Pds3Mission mission = parser.parse(doc);
-            cb.onMission(mission);
-        });
-    }
 }

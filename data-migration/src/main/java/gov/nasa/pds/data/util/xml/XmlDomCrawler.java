@@ -45,7 +45,7 @@ public class XmlDomCrawler
     		{
     			try 
     			{
-    				DocumentBuilder db = dbf.newDocumentBuilder();
+    				DocumentBuilder db = dbf.newDocumentBuilder();    				
     				Document doc = db.parse(p.toFile());
     				cb.onDocument(doc, p);
     			}

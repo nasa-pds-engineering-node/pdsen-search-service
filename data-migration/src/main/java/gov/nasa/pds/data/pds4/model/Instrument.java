@@ -1,7 +1,7 @@
 package gov.nasa.pds.data.pds4.model;
 
 
-public class InstrumentHost
+public class Instrument
 {
     public String lid;
     public String shortLid;
@@ -11,8 +11,6 @@ public class InstrumentHost
     public String name;
     public String type;
     public String description;
-
-    public String[] investigationRef;
-    public String[] instrumentRef;
-    public String[] targetRef;
+    
+    public String instrumentHostRef;
 }

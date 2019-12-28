@@ -5,6 +5,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 
+import gov.nasa.pds.data.pds3.parser.Pds3Utils;
 import gov.nasa.pds.data.pds4.model.InstrumentHost;
 import gov.nasa.pds.data.util.xml.XPathUtils;
 
@@ -48,6 +49,8 @@ public class InstrumentHostParser
         InstrumentHost obj = new InstrumentHost();
 
         obj.lid = XPathUtils.getStringValue(doc, xLid);
+        obj.shortLid = Pds3Utils.getShortLid(obj.lid);
+        
         String strVid = XPathUtils.getStringValue(doc, xVid); 
         obj.vid = Float.parseFloat(strVid);
 
