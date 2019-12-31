@@ -11,3 +11,17 @@ mars odyssey->T=3,4|I=ody
         
 mars science-->N=1
 mars science laboratory->T=3,4|I=msl
+
+maven->T=3
+
+# Maven instruments
+euv->T=2
+iuvs->T=2
+lpw->T=2
+mag->T=2
+ngims->T=2
+rss->T=2
+sep->T=2
+static->T=2
+swea->T=2
+swia->T=2

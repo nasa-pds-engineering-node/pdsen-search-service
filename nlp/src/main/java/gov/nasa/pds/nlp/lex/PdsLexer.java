@@ -12,7 +12,9 @@ public class PdsLexer
     
     public List<String> parse(String sentence)
     {
+        sentence = AsciiUtils.toAscii(sentence);
         sentence = sentence.toLowerCase();
+
         String[] tmp = sentence.split("\\s+");
         List<String> tokens = Arrays.asList(tmp);
      

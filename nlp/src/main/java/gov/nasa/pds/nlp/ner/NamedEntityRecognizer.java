@@ -1,10 +1,9 @@
 package gov.nasa.pds.nlp.ner;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 import gov.nasa.pds.nlp.ner.dic.NerDictionary;
+
 
 public class NamedEntityRecognizer
 {

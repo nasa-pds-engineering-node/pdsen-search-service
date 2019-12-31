@@ -184,4 +184,7 @@ VENUS EXPRESS->T=3|I=VEX
 VEX->T=3
 
 VIKING->T=3
-VOYAGER->T=3
+
+Voyager->T=3|N=1
+Voyager 1->T=3
+Voyager 2->T=3

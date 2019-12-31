@@ -129,7 +129,7 @@ public class NerDictionaryHashMap implements NerDictionary
                     LOG.warning("Invalid entry: " + line);
                 }
                 
-                String key = line.substring(0, idx);
+                String key = line.substring(0, idx).toLowerCase();
                 String val = line.substring(idx + 2);
                 
                 map.put(key, val);
