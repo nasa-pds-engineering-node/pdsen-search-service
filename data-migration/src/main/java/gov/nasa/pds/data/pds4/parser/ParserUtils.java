@@ -29,12 +29,13 @@ public class ParserUtils
     public static String getInstrumentId(String shortLid)
     {
         if(shortLid == null) return null;
+        if(shortLid.startsWith("instrument.")) shortLid = shortLid.substring(11);
         
-        int idx = shortLid.indexOf('.');
-        if(idx > 0)
-        {
-            return shortLid.substring(0, idx);
-        }
+        int idx = shortLid.indexOf(".");
+        if(idx > 0) return shortLid.substring(0, idx);
+        
+        idx = shortLid.indexOf("__");
+        if(idx > 0) return shortLid.substring(0, idx);
         
         return null;
     }

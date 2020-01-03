@@ -2,8 +2,6 @@ package tt;
 
 import java.io.FileWriter;
 import java.io.Writer;
-import java.util.Set;
-import java.util.TreeSet;
 
 import gov.nasa.pds.data.pds4.model.ProductCollection;
 import gov.nasa.pds.data.pds4.parser.ParserUtils;
@@ -37,7 +35,6 @@ public class ExtractCollections
             writeSolrDoc(writer, pc);
         });
         
-
         writer.append("</add>\n");
         writer.close();
     }

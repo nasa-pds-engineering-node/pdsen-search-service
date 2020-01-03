@@ -13,4 +13,5 @@ public class Instrument
     public String description;
     
     public String instrumentHostRef;
+    public String instrumentHostId;
 }

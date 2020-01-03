@@ -40,7 +40,7 @@ public class ExportPds4Context
         String dir = "/ws/data/context/pds4/investigation";
         
         // Read file names of latest versions of context products
-        Set<String> latestFiles = readLatestIndex(dir);
+        Set<String> latestFiles = ExtractContextUtils.readLatestIndex(dir);
         
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         InvestigationParser parser = new InvestigationParser();
@@ -65,7 +65,7 @@ public class ExportPds4Context
         String dir = "/ws/data/context/pds4/instrument_host";
         
         // Read file names of latest versions of context products
-        Set<String> latestFiles = readLatestIndex(dir);
+        Set<String> latestFiles = ExtractContextUtils.readLatestIndex(dir);
         
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         InstrumentHostParser parser = new InstrumentHostParser();
@@ -82,30 +82,6 @@ public class ExportPds4Context
         });
     }
 
-    
-    private static Set<String> readLatestIndex(String dir) throws Exception
-    {
-        File file = new File(dir, "latest.idx");
-        if(!file.exists()) throw new RuntimeException("latest.xml index file doesn't exist in " + dir);
-        
-        BufferedReader rd = new BufferedReader(new FileReader(file));
-        
-        Set<String> set = new HashSet<>();
-        
-        String line;
-        while((line = rd.readLine()) != null)
-        {
-            line = line.trim();
-            if(line.isEmpty()) continue;
-            
-            set.add(line);
-        }
-        
-        rd.close();
-        
-        return set;
-    }    
-    
     
     public static void main(String[] args) throws Exception
     {

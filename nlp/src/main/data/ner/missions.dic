@@ -4,49 +4,58 @@
 MARS ODYSSEY->T=3|I=ODY
 ODY->T=3
 
-APOLLO->T=3|N=1
-APOLLO 12->T=3
-APOLLO 14->T=3
-APOLLO 15->T=3
-APOLLO 16->T=3
-APOLLO 17->T=3
+Apollo->T=3|N=1
+Apollo 12->T=3
+Apollo 14->T=3
+Apollo 15->T=3
+Apollo 16->T=3
+Apollo 17->T=3
 
 BOPPS->T=3
 
-CASSINI->T=3
-CASSINI-HUYGENS->T=3
+Cassini->T=3|N=1|I=cassini
+Cassini-Huygens->T=3|I=cassini
+Cassini Orbiter->T=4|I=co
+Huygens->T=4|N=1|I=hp
+Huygens Probe->T=4|I=hp
 
-CHANDRAYAAN->T=3
-CHANDRAYAAN-1->T=3
+Chandrayaan->T=3|N=1|I=ch1-orb
+Chandrayaan-1->T=3|I=ch1-orb
+Chandrayaan 1->T=3|I=ch1-orb
 
 # COMET SL9/JUPITER COLLISION->T=3
 
-CONTOUR->T=3
+CONTOUR->T=3|I=con
 DAWN->T=3
 
 DEEP->N=1
 DEEP IMPACT->T=3
 
-DEEP SPACE->N=1
-DEEP SPACE 1->T=3|I=DS1
-DS1->T=3
+Deep Space->N=1
+Deep Space 1->T=3|I=ds1
+ds1->T=3
 
-# DEEP SPACE PROGRAM SCIENCE EXPERIMENT->T=3
-DSPSE->T=3
-Clementine->T=3
+# DEEP SPACE PROGRAM SCIENCE EXPERIMENT
+DSPSE->T=3|I=clem1
+Clementine->T=3|N=1|I=clem1
+Clementine 1->T=3|I=clem1
+clem1->T=3
 
 EPOXI->T=3
-GALILEO->T=3
 
-GIOTTO->T=3
-GIO->T=3
-# GIOTTO EXTENDED MISSION->T=3
+Galileo->T=3
+Galileo Orbiter->T=4|I=go
+Galileo Probe->T=4|I=gp
 
-# GRAVITY RECOVERY AND INTERIOR LABORATORY->T=3
+Giotto->T=3|N=1
+Giotto Extended->T=3|I=gem
+gio->T=4
+
+# GRAVITY RECOVERY AND INTERIOR LABORATORY
 GRAIL->T=3
 
-HAYABUSA->T=3
-HAY->T=3
+HAYABUSA->T=3|I=hay
+hay->T=3
 
 Hubble->T=3|N=1|I=HST
 Hubble Telescope->T=3|I=HST
@@ -54,7 +63,7 @@ Hubble Space->N=1
 Hubble Space Telescope->T=3|I=HST
 HST->T=3
 
-# INFRARED ASTRONOMICAL SATELLITE->T=3|I=IRAS
+# INFRARED ASTRONOMICAL SATELLITE
 IRAS->T=3
 
 INSIGHT->T=3
@@ -71,14 +80,15 @@ INTERNATIONAL ULTRAVIOLET->N=1
 INTERNATIONAL ULTRAVIOLET EXPLORER->T=3|I=IUE
 IUE->T=3
 
-JUNO->T=3
+JUNO->T=3|I=jno
+jno->T=3
+
 LADEE->T=3
 
 # LUNAR CRATER OBSERVATION AND SENSING SATELLITE->T=3|I=LCROSS
 LCROSS->T=3
 
-LUNAR PROSPECTOR->T=3|I=LP
-LP->T=3
+LUNAR PROSPECTOR->T=3|I=lp
 
 LUNAR RECONNAISSANCE->N=1
 LUNAR RECONNAISSANCE ORBITER->T=3|I=LRO
@@ -87,14 +97,23 @@ LRO->T=3
 MAGELLAN->T=3|I=MGN
 MGN->T=3
 
-MARINER->T=3|N=1
-MARINER 10->T=3
-MARINER 69->T=3
-MARINER 71->T=3
+Mariner->T=3|N=1
+Mariner 69->T=3|I=mariner69
+Mariner 71->T=3|I=mariner71
+Mariner 6->T=4|I=mr6
+Mariner 7->T=4|I=mr7
+Mariner 9->T=4|I=mr9
+Mariner 10->T=3|I=m10
 
-MARS EXPLORATION->N=1
-MARS EXPLORATION ROVER->T=3|I=MER
+Mars Exploration->N=1
+Mars Exploration Rover->T=3|I=MER
 MER->T=3
+Spirit->T=4|N=1|I=mer2
+Spirit Rover->T=4|I=mer2
+Opportunity->T=4|N=1|I=mer1
+Opportunity Rover->T=4|I=mer1
+mer1->T=4
+mer2->T=4
 
 MARS EXPRESS->T=3|I=MEX
 MEX->T=3
@@ -104,9 +123,14 @@ MARS GLOBAL SURVEYOR->T=3|I=MGS
 MGS->T=3
 
 MARS OBSERVER->T=3|I=MO
-MO->T=3
 
-MARS PATHFINDER->T=3
+Pathfinder->T=3|N=1
+Mars Pathfinder->T=3|N=1|I=pathfinder
+Mars Pathfinder Lander->T=4|I=mpfl
+Pathfinder Lander->T=4|I=mpfl
+Mars Pathfinder Rover->T=4|I=mpfr
+Pathfinder Rover->T=4|I=mpfr
+Sojourner->T=4|I=mpfr
 
 MARS RECONNAISSANCE->N=1
 MARS RECONNAISSANCE ORBITER->T=3|I=MRO
@@ -115,6 +139,8 @@ MRO->T=3
 MARS SCIENCE->N=1
 MARS SCIENCE LABORATORY->T=3|I=MSL
 MSL->T=3
+Curiosity->T=4|N=1|I=msl
+Curiosity Rover->T=4|I=msl
 
 MAVEN->T=3
 
@@ -126,11 +152,12 @@ MIDCOURSE SPACE->N=1
 MIDCOURSE SPACE EXPERIMENT->T=3|I=MSX
 MSX->T=3
 
-# NEAR EARTH ASTEROID RENDEZVOUS->T=3|I=NEAR
+# NEAR EARTH ASTEROID RENDEZVOUS
 NEAR->T=3
 
 NEW->N=1
 NEW HORIZONS->T=3|I=NH
+NEW HORIZON->T=3|I=NH
 
 NEXT->T=3
 
@@ -143,12 +170,12 @@ PHB2->T=3
 PHOENIX->T=3|I=PHX
 PHX->T=3
 
-PIONEER->T=3|N=1
+Pioneer->T=3|N=1
 Pioneer 8->T=3
 Pioneer 9->T=3
-PIONEER 10->T=3
-PIONEER 11->T=3
-PIONEER VENUS->T=3
+Pioneer 10->T=3
+Pioneer 11->T=3
+Pioneer Venus->T=3
 
 SAKIGAKE->T=3|I=SAKIG
 SAKIG->T=3
@@ -176,14 +203,22 @@ VEGA->T=3|N=1
 VEGA 1->T=3|I=VEGA1
 VEGA 2->T=3|I=VEGA2
 
-VENERA->N=1
+VENERA->T=3|N=1
 VENERA 15->T=3
 VENERA 16->T=3
 
 VENUS EXPRESS->T=3|I=VEX
 VEX->T=3
 
-VIKING->T=3
+Viking->T=3|N=1
+Viking 1->T=3|I=viking
+Viking 2->T=3|I=viking
+Viking Lander->T=4|N=1|I=vl12
+Viking Lander 1->T=4|I=vl1
+Viking Lander 2->T=4|I=vl2
+Viking Orbiter->T=4|N=1|I=vo12
+Viking Orbiter 1->T=4|N=1|I=vo1
+Viking Orbiter 2->T=4|N=1|I=vo2
 
 Voyager->T=3|N=1
 Voyager 1->T=3
