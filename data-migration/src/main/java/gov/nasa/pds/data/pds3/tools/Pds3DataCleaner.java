@@ -3,6 +3,7 @@ package gov.nasa.pds.data.pds3.tools;
 import java.io.FileWriter;
 import java.io.Writer;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
@@ -20,9 +21,13 @@ public class Pds3DataCleaner
 
         private Set<String> ignoreFields;
         private Set<String> doNotCleanText;
+
+        private Map<String, String> missionName2Id;
         
-        public CleanCB(Writer writer)
+        
+        public CleanCB(Map<String, String> missionMap, Writer writer)
         {
+            this.missionName2Id = missionMap;
             this.writer = writer;
             
             // Ignore fields
@@ -89,15 +94,29 @@ public class Pds3DataCleaner
                 value = StringUtils.normalizeSpace(value);
             }
             
+            // Add mission id
+            if(name.equals("investigation_name"))
+            {
+                String id = missionName2Id.get(value);
+                if(id == null)
+                {
+                    id = value;
+                    System.out.println("WARNING: " + value);
+                }
+                
+                fields.addValue("investigation_id", id);
+                return;
+            }
+            
             fields.addValue(name, value);
         }
     }
     
     
-    public static void processFile(String inPath, String outPath) throws Exception
+    public static void processFile(String inPath, String outPath, Map<String, String> missionMap) throws Exception
     {
         Writer writer = new FileWriter(outPath);
-        CleanCB cb = new CleanCB(writer);
+        CleanCB cb = new CleanCB(missionMap, writer);
         SolrDocParser parser = new SolrDocParser(inPath, cb);
         
         writer.write("<add>\n");

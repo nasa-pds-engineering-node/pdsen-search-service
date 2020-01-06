@@ -3,17 +3,20 @@ package tt;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 
 import gov.nasa.pds.data.pds3.tools.Pds3DataCleaner;
+import gov.nasa.pds.data.util.MapUtils;
 
 public class TestPds3DataCleaner
 {
 
     public static void main(String[] args) throws Exception
-    {        
-        //Pds3DataCleaner.processFile("/tmp/pds3-ds-11.xml", "/tmp/pds3-ds-11.xml.clean");
-        
-        crawl("/tmp");
+    {
+        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
+        Pds3DataCleaner.processFile("/tmp/pds3-ds-2.xml", "/tmp/pds3-ds-2.xml.clean", missionMap);
+
+        //crawl("/tmp");
     }
 
     
@@ -25,6 +28,10 @@ public class TestPds3DataCleaner
             throw new IllegalArgumentException("Not a folder: " + folderPath);
         }
 
+        
+        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
+        
+        
         Files.list(folder).filter(p -> 
             {
                 String str = p.getFileName().toString();
@@ -36,7 +43,7 @@ public class TestPds3DataCleaner
                 try
                 {
                     System.out.println("Processing: " + str);
-                    Pds3DataCleaner.processFile(str, str + ".clean");
+                    Pds3DataCleaner.processFile(str, str + ".clean", missionMap);
                 }
                 catch(Exception ex)
                 {

@@ -17,6 +17,9 @@ BOPPS->T=3
 Cassini->T=3|N=1|I=cassini
 Cassini-Huygens->T=3|I=cassini
 Cassini Orbiter->T=4|I=co
+
+GRSFE->T=3
+
 Huygens->T=4|N=1|I=hp
 Huygens Probe->T=4|I=hp
 
@@ -32,6 +35,7 @@ Chandrayaan 1->T=3|I=ch1-orb
 # COMET SL9/JUPITER COLLISION
 
 CONTOUR->T=3|I=con
+
 DAWN->T=3
 
 DEEP->N=1
@@ -48,6 +52,9 @@ Clementine 1->T=3|I=clem1
 clem1->T=3
 
 EPOXI->T=3
+
+ExoMars->T=3|N=1
+ExoMars 2016->T=3|I=exomars
 
 Extreme->N=1
 Extreme Ultraviolet->N-1
@@ -192,7 +199,11 @@ Pioneer 8->T=3
 Pioneer 9->T=3
 Pioneer 10->T=3
 Pioneer 11->T=3
-Pioneer Venus->T=3
+
+Pioneer Venus->T=3|N=1
+Pioneer Venus Orbiter->T=4|I=pvo
+Pioneer Venus Multiprobe-T=4|I=pvm
+Pioneer 13->T=4|I=pvm
 
 SAKIGAKE->T=3|I=SAKIG
 SAKIG->T=3
@@ -204,6 +215,9 @@ SATURN RING PLANE CROSSING->T=3
 SATURN SMALL->N=1
 SATURN SMALL SATELLITE->N=1
 SATURN SMALL SATELLITE ASTROMETRY->T=3
+
+SMART->T=3
+SMART-1->T=3|I=smart
 
 # SOLAR AND HELIOSPHERIC OBSERVATORY->T=3|I=SOHO
 SOHO->T=3
@@ -223,6 +237,10 @@ VEGA 2->T=4|I=VEGA2
 VENERA->T=3|N=1
 VENERA 15->T=3
 VENERA 16->T=3
+
+VENUS CLIMATE->N=1
+VENUS CLIMATE ORBITER->T=3|I=vco
+Akatsuki->T=3|I=vco
 
 VENUS EXPRESS->T=3|I=VEX
 VEX->T=3

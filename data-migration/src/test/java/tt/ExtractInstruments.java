@@ -15,6 +15,7 @@ import org.apache.commons.lang.WordUtils;
 
 import gov.nasa.pds.data.pds4.model.Instrument;
 import gov.nasa.pds.data.pds4.parser.InstrumentParser;
+import gov.nasa.pds.data.util.MapUtils;
 import gov.nasa.pds.data.util.xml.SolrDocUtils;
 import gov.nasa.pds.data.util.xml.XmlDomCrawler;
 
@@ -57,7 +58,7 @@ public class ExtractInstruments
         Set<String> latestFiles = ExtractContextUtils.readLatestIndex(dir);
     
         // Read host id to mission id map
-        Map<String, String> host2mis = readMap("src/main/data/host2mission.ids");
+        Map<String, String> host2mis = MapUtils.loadMap("src/main/data/host2mission.ids");
         
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         InstrumentParser parser = new InstrumentParser();
@@ -197,28 +198,6 @@ public class ExtractInstruments
 
         writer.append("</doc>\n");
     }
-    
-
-    public static Map<String, String> readMap(String path) throws Exception
-    {
-        BufferedReader rd = new BufferedReader(new FileReader(path));
-        
-        Map<String, String> map = new HashMap<>();
-        
-        String line;
-        while((line = rd.readLine()) != null)
-        {
-            line = line.trim();
-            if(line.isEmpty()) continue;
-            
-            String tokens[] = line.split("\\|");
-            map.put(tokens[0], tokens[1]);
-        }
-        
-        rd.close();
-        
-        return map;
-    }    
     
 
     private static String cleanName(String str)
