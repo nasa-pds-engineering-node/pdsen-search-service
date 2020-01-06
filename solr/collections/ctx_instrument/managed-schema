@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="ctx_instrument" version="1.0">
+
+    <!-- Fields -->
+    <field name="sid" type="string" indexed="true" stored="true" multiValued="false" />
+    <uniqueKey>sid</uniqueKey>
+
+    <field name="instrument_id" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="instrument_name" type="text_general" indexed="true" stored="true" multiValued="false" />
+    <field name="instrument_type" type="text_general" indexed="true" stored="true" multiValued="true" />
+
+    <field name="instrument_host_id" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="investigation_id" type="string" indexed="true" stored="true" multiValued="true" />
+
+    <!-- System fields -->
+    <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
+    <field name="timestamp" type="pdate" indexed="true" stored="true" default="NOW" multiValued="false"/>
+
+    <!-- Ignore unknown fields -->
+    <dynamicField name="*" type="ignored" />
+    <fieldType name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
+
+    <!-- Types -->
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true" />
+    <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+    <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
+    <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+    <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+    <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
+
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="lowercase" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+</schema>

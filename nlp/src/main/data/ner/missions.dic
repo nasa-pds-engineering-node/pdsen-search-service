@@ -11,6 +11,7 @@ Apollo 15->T=3
 Apollo 16->T=3
 Apollo 17->T=3
 
+BepiColombo->T=3
 BOPPS->T=3
 
 Cassini->T=3|N=1|I=cassini
@@ -19,11 +20,16 @@ Cassini Orbiter->T=4|I=co
 Huygens->T=4|N=1|I=hp
 Huygens Probe->T=4|I=hp
 
+Chandra->N=1
+Chandra X-ray->N=1
+Chandra X-ray Observatory->T=4|I=CXO
+CXO->T=4
+
 Chandrayaan->T=3|N=1|I=ch1-orb
 Chandrayaan-1->T=3|I=ch1-orb
 Chandrayaan 1->T=3|I=ch1-orb
 
-# COMET SL9/JUPITER COLLISION->T=3
+# COMET SL9/JUPITER COLLISION
 
 CONTOUR->T=3|I=con
 DAWN->T=3
@@ -42,6 +48,17 @@ Clementine 1->T=3|I=clem1
 clem1->T=3
 
 EPOXI->T=3
+
+Extreme->N=1
+Extreme Ultraviolet->N-1
+Extreme Ultraviolet Explorer->T=4|I=EUVE
+EUVE->T=4
+
+Far->N=1
+Far Ultraviolet->N=1
+Far Ultraviolet Spectroscopic->N=1
+Far Ultraviolet Spectroscopic Explorer->T=4|I=FUSE
+FUSE->T=4
 
 Galileo->T=3
 Galileo Orbiter->T=4|I=go
@@ -200,8 +217,8 @@ ULYSSES->T=3|I=ULY
 ULY->T=3
 
 VEGA->T=3|N=1
-VEGA 1->T=3|I=VEGA1
-VEGA 2->T=3|I=VEGA2
+VEGA 1->T=4|I=VEGA1
+VEGA 2->T=4|I=VEGA2
 
 VENERA->T=3|N=1
 VENERA 15->T=3
@@ -213,13 +230,13 @@ VEX->T=3
 Viking->T=3|N=1
 Viking 1->T=3|I=viking
 Viking 2->T=3|I=viking
-Viking Lander->T=4|N=1|I=vl12
+Viking Lander->T=4|N=1|I=vl1
 Viking Lander 1->T=4|I=vl1
 Viking Lander 2->T=4|I=vl2
-Viking Orbiter->T=4|N=1|I=vo12
+Viking Orbiter->T=4|N=1|I=vo1
 Viking Orbiter 1->T=4|N=1|I=vo1
 Viking Orbiter 2->T=4|N=1|I=vo2
 
 Voyager->T=3|N=1
-Voyager 1->T=3
-Voyager 2->T=3
+Voyager 1->T=4|vg1
+Voyager 2->T=4|vg2
