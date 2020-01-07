@@ -13,10 +13,10 @@ public class TestPds3DataCleaner
 
     public static void main(String[] args) throws Exception
     {
-        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
-        Pds3DataCleaner.processFile("/tmp/pds3-ds-2.xml", "/tmp/pds3-ds-2.xml.clean", missionMap);
+        //Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
+        //Pds3DataCleaner.processFile("/tmp/pds3-ds-1.xml", "/tmp/pds3-ds-1.xml.clean", missionMap);
 
-        //crawl("/tmp");
+        crawl("/tmp");
     }
 
     

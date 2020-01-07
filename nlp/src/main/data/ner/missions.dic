@@ -13,6 +13,7 @@ Apollo 17->T=3
 
 BepiColombo->T=3
 BOPPS->T=3
+BRRISON->T=3
 
 Cassini->T=3|N=1|I=cassini
 Cassini-Huygens->T=3|I=cassini
@@ -28,9 +29,9 @@ Chandra X-ray->N=1
 Chandra X-ray Observatory->T=4|I=CXO
 CXO->T=4
 
-Chandrayaan->T=3|N=1|I=ch1-orb
-Chandrayaan-1->T=3|I=ch1-orb
-Chandrayaan 1->T=3|I=ch1-orb
+Chandrayaan->T=3|N=1
+Chandrayaan-1->T=3
+Chandrayaan-2->T=3
 
 # COMET SL9/JUPITER COLLISION
 
@@ -97,7 +98,12 @@ INTERNATIONAL COMETARY->N=1
 INTERNATIONAL COMETARY EXPLORER->T=3|I=ICE
 ICE->T=3
 
-# INTERNATIONAL ROSETTA MISSION->T=3
+INTERNATIONAL HALLEY->N=1
+INTERNATIONAL HALLEY WATCH->T=3|I=ihw
+IHW->T=3
+
+INTERNATIONAL ROSETTA->N=1
+INTERNATIONAL ROSETTA MISSION->T=3|I=rosetta
 ROSETTA->T=3
 
 INTERNATIONAL ULTRAVIOLET->N=1

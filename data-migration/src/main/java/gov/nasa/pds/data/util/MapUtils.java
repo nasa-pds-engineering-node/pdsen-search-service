@@ -17,7 +17,7 @@ public class MapUtils
         while((line = rd.readLine()) != null)
         {
             line = line.trim();
-            if(line.isEmpty()) continue;
+            if(line.isEmpty() || line.startsWith("#")) continue;
             
             String tokens[] = line.split("\\|");
             map.put(tokens[0], tokens[1]);

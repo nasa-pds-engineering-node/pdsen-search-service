@@ -94,24 +94,32 @@ public class Pds3DataCleaner
                 value = StringUtils.normalizeSpace(value);
             }
             
-            // Add mission id
+            // Replace investigation_name with investigation_id
             if(name.equals("investigation_name"))
             {
-                String id = missionName2Id.get(value);
-                if(id == null)
-                {
-                    id = value;
-                    System.out.println("WARNING: " + value);
-                }
-                
+                String id = getMissionId(value);
                 fields.addValue("investigation_id", id);
                 return;
             }
             
             fields.addValue(name, value);
         }
+        
+        
+        private String getMissionId(String value)
+        {
+            String id = missionName2Id.get(value);
+            if(id == null)
+            {
+                id = value.toLowerCase();
+                System.out.println("WARNING: " + value);
+            }
+
+            return id;
+        }
     }
     
+    ////////////////////////////////////////////////////////////////////////////////////////    
     
     public static void processFile(String inPath, String outPath, Map<String, String> missionMap) throws Exception
     {
