@@ -54,6 +54,20 @@ public class ParserUtils
         return null;
     }
 
+    
+    public static String getInstrumentHostId(String shortLid)
+    {
+        if(shortLid == null) return null;
+        
+        int idx = shortLid.indexOf('.');
+        if(idx > 0)
+        {
+            return shortLid.substring(idx+1);
+        }
+        
+        return null;
+    }
+
 
     public static String getTargetId(String shortLid)
     {

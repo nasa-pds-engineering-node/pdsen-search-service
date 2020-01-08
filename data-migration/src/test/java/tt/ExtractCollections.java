@@ -11,15 +11,19 @@ import gov.nasa.pds.data.util.xml.XmlDomCrawler;
 
 public class ExtractCollections
 {
-
+    private static String[] defInvestigationRef = { "urn:nasa:pds:context:investigation:mission.maven" };
+    private static String[] defInstrumentHostRef = { "urn:nasa:pds:context:instrument_host:spacecraft.maven" };
+    
+    
     public static void main(String[] args) throws Exception
     {
-        String dir = "/ws3/MAVEN/rose";
+        //String dir = "/ws3/MAVEN/rose";
+        String dir = "/ws3/MAVEN/";
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         
         ProductCollectionParser parser = new ProductCollectionParser();
 
-        FileWriter writer = new FileWriter("/tmp/solr-docs.xml");
+        FileWriter writer = new FileWriter("/tmp/maven.xml");
         writer.append("<add>\n");
         
         crawler.crawl((doc, path) -> 
@@ -29,9 +33,12 @@ public class ExtractCollections
             
             ProductCollection pc = parser.parse(doc);
             
-            // Skip document collections
-            if(pc.type.equals("Document")) return;
-
+            // Fix document collections
+            if(pc.type.equals("Document")) 
+            {
+                validateAndFixDocumentCollection(pc);
+            }
+            
             writeSolrDoc(writer, pc);
         });
         
@@ -40,14 +47,36 @@ public class ExtractCollections
     }
     
     
+    private static void validateAndFixDocumentCollection(ProductCollection pc)
+    {
+        if(pc.investigationRef == null) 
+        {
+            System.out.println("WARNING: Missing investigation_id: LID = " + pc.lid);
+            // TODO: Fix
+            pc.investigationRef = defInvestigationRef;
+        }
+        
+        if(pc.instrumentRef != null && pc.instrumentHostRef == null)
+        {
+            System.out.println("WARNING: Missing instrument_host_id: LID = " + pc.lid);
+            // TODO: Fix
+            pc.instrumentHostRef = defInstrumentHostRef;
+        }
+    }
+    
+    
     private static void writeSolrDoc(Writer writer, ProductCollection pc) throws Exception
     {
         writer.append("<doc>\n");
 
+        SolrDocUtils.writeField(writer, "lid", pc.lid);
+        SolrDocUtils.writeField(writer, "vid", pc.vid);
+        SolrDocUtils.writeField(writer, "product_class", "Product_Collection");
         SolrDocUtils.writeField(writer, "title", pc.title);
         SolrDocUtils.writeField(writer, "collection_type", pc.type);
         
         writeInvestigation(writer, pc);
+        writeInstrumentHost(writer, pc);
         writeInstruments(writer, pc);
         writeTargets(writer, pc);
 
@@ -66,7 +95,24 @@ public class ExtractCollections
             String id = ParserUtils.getInvestigationId(shortLid);
             if(id != null)
             {
-                SolrDocUtils.writeField(writer, "investigation", id);
+                SolrDocUtils.writeField(writer, "investigation_id", id);
+            }
+        }
+    }
+
+    
+    private static void writeInstrumentHost(Writer writer, ProductCollection pc) throws Exception
+    {
+        if(pc.instrumentHostRef == null) return;
+
+        for(String ref: pc.instrumentHostRef)
+        {
+            String shortLid = ParserUtils.getShortLid(ref);
+            
+            String id = ParserUtils.getInstrumentHostId(shortLid);
+            if(id != null)
+            {
+                SolrDocUtils.writeField(writer, "instrument_host_id", id);
             }
         }
     }
@@ -83,7 +129,7 @@ public class ExtractCollections
             String id = ParserUtils.getInstrumentId(shortLid);
             if(id != null)
             {
-                SolrDocUtils.writeField(writer, "instrument", id);
+                SolrDocUtils.writeField(writer, "instrument_id", id);
             }
         }
     }
