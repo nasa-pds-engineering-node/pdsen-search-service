@@ -45,7 +45,7 @@ public class DataQueryBuilder
                 investigationId = getProductId(token);
                 break;
             default:
-                unknownTokens.add(token.getKey());    
+                addUnknownToken(unknownTokens, token.getKey());
             }
         }
 
@@ -55,13 +55,22 @@ public class DataQueryBuilder
         bld.addRequiredField("instrument_id", instrumentId);
         bld.addRequiredField("instrument_host_id", instrumentHostId);
 
-        bld.addRequiredField("title", unknownTokens);
+        bld.addRequiredField("search_p1", unknownTokens);
         
         String queryString = bld.toString();
         if(queryString.isEmpty()) return null;
         
         SolrQuery query = new SolrQuery(queryString);
         return query;
+    }
+    
+    
+    private static void addUnknownToken(List<String> unknownTokens, String token)
+    {
+        //TODO: Properly handle data query stop words
+        if(token.equals("data")) return;
+        
+        unknownTokens.add(token);
     }
     
     

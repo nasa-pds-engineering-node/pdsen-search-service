@@ -1,11 +1,15 @@
 package gov.nasa.pds.data.util.xml;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 
@@ -26,6 +30,13 @@ public class XPathUtils
 	    return node != null;
 	}
 	
+	
+    public static NodeList getNodeList(Document doc, XPathExpression expr) throws Exception
+    {
+        NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+        return nodes;
+    }
+
 	
 	public static String getStringValue(Document doc, XPathExpression expr) throws Exception
 	{
@@ -48,4 +59,38 @@ public class XPathUtils
         return vals;
 	}
 
+	
+    public static String[] getChildValues(Document doc, XPathExpression expr) throws Exception
+    {
+        NodeList nodes = getNodeList(doc, expr);
+        if(nodes == null || nodes.getLength() == 0) return null;
+
+        List<String> list = new ArrayList<>();
+        
+        for(int i = 0; i < nodes.getLength(); i++)
+        {
+            Node node = nodes.item(i);
+            appendValues(node.getChildNodes(), list);
+        }
+        
+        if(list.isEmpty()) return null;
+        return list.toArray(new String[0]);
+    }
+    
+    
+    private static void appendValues(NodeList nodes, List<String> values)
+    {
+        if(nodes == null || nodes.getLength() == 0) return;
+        
+        for(int i = 0; i < nodes.getLength(); i++)
+        {
+            Node node = nodes.item(i);
+            if(node.getNodeType() == Node.ELEMENT_NODE)
+            {
+                String value = node.getTextContent();
+                values.add(value);
+            }
+        }
+    }
+	
 }

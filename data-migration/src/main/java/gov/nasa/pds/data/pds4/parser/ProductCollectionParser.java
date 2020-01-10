@@ -5,9 +5,9 @@ import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 
-import gov.nasa.pds.data.pds3.parser.Pds3Utils;
 import gov.nasa.pds.data.pds4.model.ProductCollection;
 import gov.nasa.pds.data.util.xml.XPathUtils;
+
 
 public class ProductCollectionParser
 {
@@ -18,6 +18,9 @@ public class ProductCollectionParser
     private XPathExpression xType;
     private XPathExpression xDescr;
 
+    private XPathExpression xScienceFacets;
+    private XPathExpression xProcessingLevel;
+    
     private XPathExpression xInvestigationRef;
     private XPathExpression xInstrumentHostRef;
     private XPathExpression xInstrumentRef;
@@ -28,19 +31,23 @@ public class ProductCollectionParser
     {
         XPathFactory xpf = XPathFactory.newInstance();
     
-        xLid = XPathUtils.compileXPath(xpf, "//Identification_Area/logical_identifier");
-        xVid = XPathUtils.compileXPath(xpf, "//Identification_Area/version_id");
+        xLid = XPathUtils.compileXPath(xpf, "/Product_Collection/Identification_Area/logical_identifier");
+        xVid = XPathUtils.compileXPath(xpf, "/Product_Collection/Identification_Area/version_id");
 
-        xTitle = XPathUtils.compileXPath(xpf, "//Identification_Area/title");
+        xTitle = XPathUtils.compileXPath(xpf, "/Product_Collection/Identification_Area/title");
         
         xType = XPathUtils.compileXPath(xpf, "/Product_Collection/Collection/collection_type");
         xDescr = XPathUtils.compileXPath(xpf, "/Product_Collection/Collection/description");
 
+        // Results
+        xProcessingLevel = XPathUtils.compileXPath(xpf, "/Product_Collection/Context_Area/Primary_Result_Summary/processing_level");
+        xScienceFacets = XPathUtils.compileXPath(xpf, "/Product_Collection/Context_Area/Primary_Result_Summary/Science_Facets");
+        
+        // References
         xInvestigationRef = XPathUtils.compileXPath(xpf, "//Internal_Reference[reference_type='collection_to_investigation']/lid_reference");
         xInstrumentHostRef = XPathUtils.compileXPath(xpf, "//Internal_Reference[reference_type='is_instrument_host']/lid_reference");
         xInstrumentRef = XPathUtils.compileXPath(xpf, "//Internal_Reference[reference_type='is_instrument']/lid_reference");
         xTargetRef = XPathUtils.compileXPath(xpf, "//Internal_Reference[reference_type='collection_to_target']/lid_reference");
-                
     }
 
     
@@ -56,6 +63,9 @@ public class ProductCollectionParser
         pc.type = XPathUtils.getStringValue(doc, xType);
         pc.description = XPathUtils.getStringValue(doc, xDescr);
 
+        pc.processingLevel = XPathUtils.getStringValue(doc, xProcessingLevel);
+        pc.scienceFacets = XPathUtils.getChildValues(doc, xScienceFacets);
+        
         // References
         pc.investigationRef = XPathUtils.getStringArray(doc, xInvestigationRef);
         pc.instrumentHostRef = XPathUtils.getStringArray(doc, xInstrumentHostRef);

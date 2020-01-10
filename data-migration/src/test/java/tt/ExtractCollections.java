@@ -17,7 +17,7 @@ public class ExtractCollections
     
     public static void main(String[] args) throws Exception
     {
-        //String dir = "/ws3/MAVEN/rose";
+        //String dir = "/ws3/MAVEN/mag";
         String dir = "/ws3/MAVEN/";
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         
@@ -36,7 +36,8 @@ public class ExtractCollections
             // Fix document collections
             if(pc.type.equals("Document")) 
             {
-                validateAndFixDocumentCollection(pc);
+                //validateAndFixDocumentCollection(pc);
+                return;
             }
             
             writeSolrDoc(writer, pc);
@@ -74,6 +75,8 @@ public class ExtractCollections
         SolrDocUtils.writeField(writer, "product_class", "Product_Collection");
         SolrDocUtils.writeField(writer, "title", pc.title);
         SolrDocUtils.writeField(writer, "collection_type", pc.type);
+        SolrDocUtils.writeField(writer, "processing_level", pc.processingLevel);
+        SolrDocUtils.writeField(writer, "science_facets", pc.scienceFacets);
         
         writeInvestigation(writer, pc);
         writeInstrumentHost(writer, pc);

@@ -13,6 +13,17 @@ public class SolrDocUtils
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     
 
+    public static void writeField(Writer writer, String key, Object[] values) throws Exception
+    {
+        if(values == null || values.length == 0) return;
+        
+        for(Object value: values)
+        {
+            writeField(writer, key, value);
+        }
+    }
+    
+    
     public static void writeField(Writer writer, String key, Object value) throws Exception
     {
         writer.write("  <field name=\"");

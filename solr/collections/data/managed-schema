@@ -11,6 +11,11 @@
     <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
     <field name="collection_type" type="lowercase" indexed="true" stored="true" multiValued="false" />
 
+    <!-- Results -->
+    <field name="processing_level" type="lowercase" indexed="true" stored="true" multiValued="true" />
+    <field name="science_facets" type="text_general" indexed="true" stored="true" multiValued="true" />
+
+    <!-- References -->    
     <field name="investigation_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="instrument_host_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="instrument_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
@@ -32,6 +37,13 @@
     <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
     <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
 
+    <!-- Copy Fields -->
+    <!-- Search field, priority 1 (top) -->
+    <field name="search_p1" type="text_general" indexed="true" stored="false" multiValued="true"/>
+    <copyField source="title" dest="search_p1" />
+    <copyField source="science_facets" dest="search_p1" />
+
+    <!-- Field Types -->
     <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
       <analyzer type="index">
         <tokenizer class="solr.StandardTokenizerFactory"/>
