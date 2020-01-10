@@ -1,5 +1,6 @@
 package gov.nasa.pds.search.solr;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -113,7 +114,7 @@ public class PdsApiQueryBuilder
     
     private String buildQueryString()
     {
-        SolrQueryStringBuilder bld = new SolrQueryStringBuilder();
+        LuceneQueryBuilder bld = new LuceneQueryBuilder();
         
         for(String paramName: params.getParameterNames())
         {
@@ -122,13 +123,13 @@ public class PdsApiQueryBuilder
 
             if(searchFields.contains(solrFieldName))
             {
-                bld.addField(solrFieldName, params.getParameterValues(paramName));
+                bld.addRequiredField(solrFieldName, Arrays.asList(params.getParameterValues(paramName)));
             }
         }
         
         // TODO: This is a temporary fix.
         // TODO: Remove when we switch to a separate data collection.
-        bld.addField("objectType", data_fields);
+        bld.addRequiredField("objectType", Arrays.asList(data_fields));
 
         return bld.toString();
     }

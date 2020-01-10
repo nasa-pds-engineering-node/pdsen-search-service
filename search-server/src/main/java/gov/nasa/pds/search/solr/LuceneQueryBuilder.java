@@ -1,50 +1,55 @@
 package gov.nasa.pds.search.solr;
 
+import java.util.List;
+
 /**
- * Builds a Solr query string in Lucene query format.
+ * Builds a Lucene query string.
  * @author karpenko
  */
-public class SolrQueryStringBuilder
+public class LuceneQueryBuilder
 {
     private StringBuilder bld; 
     
     /**
      * Constructor.
      */
-    public SolrQueryStringBuilder()
+    public LuceneQueryBuilder()
     {
         bld = new StringBuilder();
     }
+
     
     /**
      * Add query field.
      * @param field
      * @param values
      */
-    public void addField(String field, String[] values)
+    public void addRequiredField(String field, String value)
     {
-        if(values == null) return;
+        if(value == null) return;
         
-        if(values.length == 1)
+        addSpace();
+        bld.append("+");
+        addTerm(field, value);
+    }
+    
+    
+    public void addRequiredField(String fieldName, List<String> values)
+    {
+        if(values == null || values.size() == 0) return;
+        
+        addSpace();
+        bld.append("+");
+        bld.append(fieldName);
+        bld.append(":(");
+        
+        for(int i = 0; i < values.size(); i++)
         {
-            addSpace();
-            bld.append("+"); // MUST
-            addTerm(field, values[0]);
+            if(i != 0) bld.append(" ");
+            bld.append(values.get(i));
         }
-        else
-        {
-            addSpace();
-            bld.append("+("); // MUST
-            
-            // SHOULD
-            for(int i = 0; i < values.length; i++)
-            {
-                if(i != 0) bld.append(" ");
-                addTerm(field, values[i]);
-            }
-            
-            bld.append(")");
-        }
+        
+        bld.append(")");
     }
     
     
@@ -58,9 +63,7 @@ public class SolrQueryStringBuilder
     {
         bld.append(field);
         bld.append(":");
-        bld.append("\"");
         bld.append(value);
-        bld.append("\"");
     }
     
     /**
