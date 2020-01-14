@@ -1,7 +1,8 @@
-Comet->N=1
+comet->T=10|N=1
+comets->T=10|I=comet
 
-Churyumov-Gerasimenko->T=1|I=67P/Churyumov-Gerasimenko
-67P/Churyumov-Gerasimenko->T=1
-Comet 67P->T=1|I=67P/Churyumov-Gerasimenko
-Comet 67->T=1|I=67P/Churyumov-Gerasimenko
-Comet P67->T=1|I=67P/Churyumov-Gerasimenko
+Churyumov-Gerasimenko->T=1|I=67p
+67P/Churyumov-Gerasimenko->T=1|I=67p
+Comet 67P->T=1|I=67p
+Comet 67->T=1|I=67p
+Comet P67->T=1|I=67p

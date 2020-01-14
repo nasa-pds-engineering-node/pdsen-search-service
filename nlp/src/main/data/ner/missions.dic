@@ -108,7 +108,7 @@ ROSETTA->T=3|N=1
 Rosetta Orbiter->T=4|I=ro
 Rosetta Lander->T=4|I=rl
 Philae->T=4|N=1|I=rl
-Philae Lander|T=4|I=rl
+Philae Lander->T=4|I=rl
 
 INTERNATIONAL ULTRAVIOLET->N=1
 INTERNATIONAL ULTRAVIOLET EXPLORER->T=3|I=IUE
@@ -212,7 +212,7 @@ Pioneer 11->T=3
 
 Pioneer Venus->T=3|N=1
 Pioneer Venus Orbiter->T=4|I=pvo
-Pioneer Venus Multiprobe-T=4|I=pvm
+Pioneer Venus Multiprobe->T=4|I=pvm
 Pioneer 13->T=4|I=pvm
 
 SAKIGAKE->T=3|I=SAKIG

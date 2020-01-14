@@ -8,6 +8,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import gov.nasa.pds.nlp.ner.NerToken;
+import gov.nasa.pds.nlp.ner.NerTokenType;
 
 
 /**
@@ -85,6 +86,9 @@ public class NerJsonWriter
         
         for(NerToken token: tokens)
         {
+            // Skip unknown tokens
+            if(token.getType() == NerTokenType.UNKNOWN) continue;
+            
             jgen.writeStartObject();
             
             // Text
@@ -116,7 +120,7 @@ public class NerJsonWriter
     {
         jgen.writeFieldName("type");
 
-        if(token.getType() == NerToken.TYPE_MULTIPLE)
+        if(token.getType() == NerTokenType.MULTIPLE)
         {
             jgen.writeStartArray();            
             for(int val: token.getAllTypes())
@@ -136,13 +140,15 @@ public class NerJsonWriter
     {
         switch(typeId)
         {
-        case NerToken.TYPE_TARGET:
+        case NerTokenType.TARGET:
             return "target";
-        case NerToken.TYPE_INSTRUMENT:
+        case NerTokenType.TARGET_TYPE:
+            return "target_type";
+        case NerTokenType.INSTRUMENT:
             return "instrument";
-        case NerToken.TYPE_INSTRUMENT_HOST:
+        case NerTokenType.INSTRUMENT_HOST:
             return "instrument_host";
-        case NerToken.TYPE_INVESTIGATION:
+        case NerTokenType.INVESTIGATION:
             return "investigation";
         default:
             return "unknown";

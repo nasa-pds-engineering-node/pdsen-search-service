@@ -73,7 +73,7 @@ public class NamedEntityRecognizer
             // LID
             if(word.startsWith("urn:nasa:pds:"))
             {
-                results.add(new NerToken(word, NerToken.TYPE_LID));
+                results.add(new NerToken(word, NerTokenType.LID));
                 continue;
             }
 
@@ -81,7 +81,7 @@ public class NamedEntityRecognizer
             NerToken token = dic.get(word);            
             if(token == null)
             {
-                results.add(new NerToken(word, NerToken.TYPE_UNKNOWN));
+                results.add(new NerToken(word, NerTokenType.UNKNOWN));
             }
             else
             {

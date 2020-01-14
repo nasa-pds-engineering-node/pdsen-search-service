@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.nlp.ner.NerToken;
+import gov.nasa.pds.nlp.ner.NerTokenType;
 import gov.nasa.pds.search.solr.LuceneQueryBuilder;
 
 public class DataQueryBuilder
@@ -32,16 +33,16 @@ public class DataQueryBuilder
         {
             switch(token.getType())
             {
-            case NerToken.TYPE_TARGET:
+            case NerTokenType.TARGET:
                 targetId = getProductId(token);
                 break;
-            case NerToken.TYPE_INSTRUMENT:
+            case NerTokenType.INSTRUMENT:
                 instrumentId = getProductId(token);
                 break;
-            case NerToken.TYPE_INSTRUMENT_HOST:
+            case NerTokenType.INSTRUMENT_HOST:
                 instrumentHostId = getProductId(token);
                 break;
-            case NerToken.TYPE_INVESTIGATION:
+            case NerTokenType.INVESTIGATION:
                 investigationId = getProductId(token);
                 break;
             default:
@@ -50,7 +51,7 @@ public class DataQueryBuilder
         }
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
-        bld.addRequiredField("target", targetId);
+        bld.addRequiredField("target_name", targetId);
         bld.addRequiredField("investigation_id", investigationId);
         bld.addRequiredField("instrument_id", instrumentId);
         bld.addRequiredField("instrument_host_id", instrumentHostId);

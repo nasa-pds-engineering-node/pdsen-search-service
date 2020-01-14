@@ -2,19 +2,6 @@ package gov.nasa.pds.nlp.ner;
 
 public class NerToken
 {
-    public static final byte TYPE_UNKNOWN = 0;
-    public static final byte TYPE_MULTIPLE = -1;
-    
-    public static final byte TYPE_TARGET = 1;
-    public static final byte TYPE_INSTRUMENT = 2;
-    public static final byte TYPE_INVESTIGATION = 3;
-    public static final byte TYPE_INSTRUMENT_HOST = 4;
-    
-    public static final byte TYPE_PRODUCT_TYPE = 7;
-    public static final byte TYPE_FEATURE = 9;    
-
-    public static final byte TYPE_LID = 20;
-    
     private String key;
     private String id;
     
@@ -68,7 +55,7 @@ public class NerToken
         }
         else
         {
-            this.type = TYPE_MULTIPLE;
+            this.type = NerTokenType.MULTIPLE;
             this.types = types;
         }
     }
