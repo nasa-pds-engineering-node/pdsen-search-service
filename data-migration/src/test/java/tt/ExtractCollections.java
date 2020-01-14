@@ -2,6 +2,8 @@ package tt;
 
 import java.io.FileWriter;
 import java.io.Writer;
+import java.util.Set;
+import java.util.TreeSet;
 
 import gov.nasa.pds.data.pds4.model.ProductCollection;
 import gov.nasa.pds.data.pds4.parser.ParserUtils;
@@ -19,11 +21,13 @@ public class ExtractCollections
     {
         //String dir = "/ws3/MAVEN/mag";
         String dir = "/ws3/MAVEN/";
+        String outFile = "/tmp/maven.xml";
+        
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         
         ProductCollectionParser parser = new ProductCollectionParser();
 
-        FileWriter writer = new FileWriter("/tmp/maven.xml");
+        FileWriter writer = new FileWriter(outFile);
         writer.append("<add>\n");
         
         crawler.crawl((doc, path) -> 
@@ -73,10 +77,23 @@ public class ExtractCollections
         SolrDocUtils.writeField(writer, "lid", pc.lid);
         SolrDocUtils.writeField(writer, "vid", pc.vid);
         SolrDocUtils.writeField(writer, "product_class", "Product_Collection");
+        
         SolrDocUtils.writeField(writer, "title", pc.title);
+        SolrDocUtils.writeField(writer, "description", pc.description);
+        
         SolrDocUtils.writeField(writer, "collection_type", pc.type);
         SolrDocUtils.writeField(writer, "processing_level", pc.processingLevel);
+        
+        if(pc.purpose == null)
+        {
+            pc.purpose = "Science";
+            System.out.println("Primary_Result_Summary/purpose is missing for " + pc.lid);
+        }
+        
+        SolrDocUtils.writeField(writer, "purpose", pc.purpose);
+
         SolrDocUtils.writeField(writer, "science_facets", pc.scienceFacets);
+        SolrDocUtils.writeField(writer, "science_facets", pc.keywords);
         
         writeInvestigation(writer, pc);
         writeInstrumentHost(writer, pc);
@@ -142,15 +159,39 @@ public class ExtractCollections
     {
         if(pc.targetRef == null) return;
 
+        Set<String> types = new TreeSet<>(); 
+        
         for(String ref: pc.targetRef)
         {
             String shortLid = ParserUtils.getShortLid(ref);
 
-            String id = ParserUtils.getTargetId(shortLid);
-            if(id != null)
+            String[] tuple = ParserUtils.getTargetTuple(shortLid);
+            if(tuple == null || tuple.length != 2)
             {
-                SolrDocUtils.writeField(writer, "target", id);
+                System.out.println("WARNING: Invalid target reference: " + ref);
+                continue;
             }
+            
+            String tgtType = tuple[0];
+            String tgtName = tuple[1];
+            
+            types.add(tgtType);
+            
+            // TODO: FIX: It is hack. Do dictionary lookup.
+            if(tgtType.equals("asteroid"))
+            {
+                String[] names = tgtName.split("_");
+                SolrDocUtils.writeField(writer, "target_name", names);
+            }
+            else
+            {
+                SolrDocUtils.writeField(writer, "target_name", tgtName);
+            }
+        }
+
+        for(String type: types)
+        {
+            SolrDocUtils.writeField(writer, "target_type", type);
         }
     }
 

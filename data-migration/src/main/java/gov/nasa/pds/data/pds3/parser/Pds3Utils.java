@@ -42,4 +42,29 @@ public class Pds3Utils
         }        
     }
 
+    
+    public static String extractInstrumentId(String shortLid)
+    {
+        if(shortLid == null) return null;
+        if(shortLid.startsWith("instrument.")) shortLid = shortLid.substring(11);
+        
+        if(shortLid.startsWith("dawn."))
+        {
+            return shortLid.substring(5);
+        }
+
+        if(shortLid.startsWith("vex."))
+        {
+            return shortLid.substring(4);
+        }
+
+        int idx = shortLid.indexOf(".");
+        if(idx > 0) return shortLid.substring(0, idx);
+        
+        idx = shortLid.indexOf("__");
+        if(idx > 0) return shortLid.substring(0, idx);
+        
+        return null;
+    }
+
 }

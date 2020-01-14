@@ -2,6 +2,7 @@ package gov.nasa.pds.data.util.xml;
 
 import java.io.Writer;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Set;
 
 import org.apache.commons.lang.StringEscapeUtils;
@@ -12,7 +13,7 @@ public class SolrDocUtils
 {
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     
-
+    
     public static void writeField(Writer writer, String key, Object[] values) throws Exception
     {
         if(values == null || values.length == 0) return;
@@ -26,6 +27,8 @@ public class SolrDocUtils
     
     public static void writeField(Writer writer, String key, Object value) throws Exception
     {
+        if(value == null) return;
+        
         writer.write("  <field name=\"");
         writer.write(key);
         writer.write("\">");

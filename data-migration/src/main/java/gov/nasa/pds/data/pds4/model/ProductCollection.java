@@ -7,11 +7,15 @@ public class ProductCollection
     
     public String title;
     public String type;
-    public String description;
+    public String[] description;
 
     public String processingLevel;
     public String[] scienceFacets;
     
+    public String[] keywords;
+    public String purpose;
+    
+    // References
     public String[] investigationRef;
     public String[] instrumentHostRef;
     public String[] instrumentRef;

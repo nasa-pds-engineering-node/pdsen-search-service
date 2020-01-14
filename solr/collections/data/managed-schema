@@ -9,11 +9,13 @@
     <!-- Data Fields -->
     <field name="product_class" type="lowercase" indexed="true" stored="true" multiValued="false" />
     <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
+    <field name="description" type="text_general" indexed="true" stored="true" multiValued="false" />
     <field name="collection_type" type="lowercase" indexed="true" stored="true" multiValued="false" />
 
     <!-- Results -->
     <field name="processing_level" type="lowercase" indexed="true" stored="true" multiValued="true" />
-    <field name="science_facets" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="codmac_level" type="pint" indexed="true" stored="true" multiValued="true" />
+    <field name="science_facets" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- References -->    
     <field name="investigation_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
