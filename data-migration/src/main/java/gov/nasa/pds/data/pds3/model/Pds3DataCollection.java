@@ -1,5 +1,7 @@
 package gov.nasa.pds.data.pds3.model;
 
+import java.util.Set;
+
 public class Pds3DataCollection
 {
     public String lid;
@@ -10,16 +12,17 @@ public class Pds3DataCollection
     public String type;
     public String[] description;
 
-    public String processingLevel;
+    public Set<String> processingLevels;
+    public Set<String> codmacLevels;
     public String[] scienceFacets;
     
     public String[] keywords;
     public String purpose;
     
     // References
-    public String[] investigationId;
+    public Set<String> investigationIds;
     public String[] instrumentHostId;
     public String[] instrumentId;
-    public String[] targetName;
-    public String[] targetType;
+    public Set<String> targetNames;
+    public Set<String> targetTypes;
 }

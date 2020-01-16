@@ -38,45 +38,51 @@ public class ProductCollectionWriterPds3
         SolrDocUtils.writeField(writer, "title", data.title);
         //SolrDocUtils.writeField(writer, "description", pc.description);
         
-        //SolrDocUtils.writeField(writer, "collection_type", pc.type);
-        //SolrDocUtils.writeField(writer, "processing_level", pc.processingLevel);
+        SolrDocUtils.writeField(writer, "collection_type", data.type);
+        writeProcessingLevels(data);
         
         SolrDocUtils.writeField(writer, "purpose", data.purpose);
         
-        SolrDocUtils.writeField(writer, "investigation_id", data.investigationId);
-        
-        //writeTargets(data);
+        writeInvestigations(data);
+        writeTargets(data);
 
         writer.append("</doc>\n");
     }
     
-    
-    private void writeTargets(FieldMap fields) throws Exception
+
+    private void writeProcessingLevels(Pds3DataCollection data) throws Exception
     {
-        Set<String> targetNames = fields.getValues("target_name");
-        if(targetNames == null || targetNames.isEmpty())
+        if(data.processingLevels != null && !data.processingLevels.isEmpty())
         {
-            System.out.println("WARNING: Target name(s) are missing for " + fields.getFirstValue("identifier"));
-        }
-        else
-        {
-            for(String tgtName: targetNames)
-            {
-                SolrDocUtils.writeField(writer, "target_name", tgtName.toLowerCase());
-            }
+            SolrDocUtils.writeField(writer, "processing_level", data.processingLevels.toArray(new String[0]));
         }
         
-        Set<String> targetTypes = fields.getValues("target_type");
-        if(targetTypes == null || targetTypes.isEmpty())
+        if(data.codmacLevels != null && !data.codmacLevels.isEmpty())
         {
-            System.out.println("WARNING: Target type(s) are missing for " + fields.getFirstValue("identifier"));
-        }
-        else
-        {
-            for(String type: targetTypes)
-            {
-                SolrDocUtils.writeField(writer, "target_type", type.toLowerCase());
-            }
+            SolrDocUtils.writeField(writer, "codmac_level", data.codmacLevels.toArray(new String[0]));
         }
     }
+
+    
+    private void writeInvestigations(Pds3DataCollection data) throws Exception
+    {
+        if(data.investigationIds == null || data.investigationIds.isEmpty()) return;
+        
+        SolrDocUtils.writeField(writer, "investigation_id", data.investigationIds.toArray(new String[0]));
+    }
+
+    
+    private void writeTargets(Pds3DataCollection data) throws Exception
+    {
+        if(data.targetNames != null && !data.targetNames.isEmpty())
+        {
+            SolrDocUtils.writeField(writer, "target_name", data.targetNames.toArray(new String[0]));
+        }
+
+        if(data.targetTypes != null && !data.targetTypes.isEmpty())
+        {
+            SolrDocUtils.writeField(writer, "target_type", data.targetTypes.toArray(new String[0]));
+        }
+    }
+    
 }
