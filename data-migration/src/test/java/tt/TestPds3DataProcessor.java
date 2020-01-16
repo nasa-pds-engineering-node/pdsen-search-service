@@ -3,18 +3,17 @@ package tt;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Map;
 
-import gov.nasa.pds.data.pds3.tools.Pds3DataProcessor;
-import gov.nasa.pds.data.util.MapUtils;
+import gov.nasa.pds.data.pds3.tools.SolrDumpProcessor_Pds3DataSet;
+
 
 public class TestPds3DataProcessor
 {
 
     public static void main(String[] args) throws Exception
     {
-        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
-        Pds3DataProcessor.processFile("/tmp/pds3-ds-1.xml", "/tmp/pds3-ds-1.xml.clean", missionMap);
+        SolrDumpProcessor_Pds3DataSet processor = new SolrDumpProcessor_Pds3DataSet();
+        processor.processFile("/tmp/pds3-ds-1.xml", "/tmp/pds3-ds-1.xml.clean");
 
         //crawl("/tmp");
     }
@@ -28,9 +27,7 @@ public class TestPds3DataProcessor
             throw new IllegalArgumentException("Not a folder: " + folderPath);
         }
 
-        
-        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
-        
+        SolrDumpProcessor_Pds3DataSet processor = new SolrDumpProcessor_Pds3DataSet();
         
         Files.list(folder).filter(p -> 
             {
@@ -43,7 +40,7 @@ public class TestPds3DataProcessor
                 try
                 {
                     System.out.println("Processing: " + str);
-                    Pds3DataProcessor.processFile(str, str + ".clean", missionMap);
+                    processor.processFile(str, str + ".clean");
                 }
                 catch(Exception ex)
                 {

@@ -6,29 +6,30 @@ import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 
+import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
 import gov.nasa.pds.data.pds3.solr.ProductCollectionWriterPds3;
 import gov.nasa.pds.data.util.FieldMap;
 import gov.nasa.pds.data.util.xml.SolrDocParser;
 
 
-public class Pds3DataProcessor
+public class SolrDumpProcessor_Pds3DataSet
 {
     private static class CleanCB implements SolrDocParser.Callback
     {
         private FieldMap fields;
+        
+        private Pds3DataSetProcessor dsp;
         private ProductCollectionWriterPds3 writer;
 
         private Set<String> ignoreFields;
         private Set<String> doNotCleanText;
 
-        private Map<String, String> missionName2Id;
-
         public int counter;
 
         
-        public CleanCB(Map<String, String> missionMap, String outPath) throws Exception
+        public CleanCB(Pds3DataSetProcessor dsp, String outPath) throws Exception
         {
-            this.missionName2Id = missionMap;
+            this.dsp = dsp;
             this.writer = new ProductCollectionWriterPds3(outPath);
             
             // Ignore fields
@@ -50,6 +51,8 @@ public class Pds3DataProcessor
             ignoreFields.add("timestamp");
             ignoreFields.add("score");
             
+            ignoreFields.add("target_type");
+            
             // Temporary
             ignoreFields.add("confidence_level_note");
             ignoreFields.add("data_set_description");
@@ -63,6 +66,7 @@ public class Pds3DataProcessor
             ignoreFields.add("start_time");
             ignoreFields.add("stop_time");
             ignoreFields.add("data_set_release_date");
+
             
             // Text normalization
             doNotCleanText = new HashSet<>();
@@ -103,8 +107,16 @@ public class Pds3DataProcessor
             // Replace investigation_name with investigation_id
             if(name.equals("investigation_name"))
             {
-                String id = getMissionId(value);
-                fields.addValue("investigation_id", id);
+                String id = dsp.getInvestigationIdByName(value);
+                if(id == null)
+                {
+                    System.out.println("WARNING: Unknown investigation name: " + value);                    
+                }
+                else
+                {
+                    fields.addValue("investigation_id", id.toLowerCase());
+                }
+                
                 return;
             }
             
@@ -120,8 +132,10 @@ public class Pds3DataProcessor
                 String investigationId = fields.getFirstValue("investigation_id"); 
                 if(investigationId == null || !investigationId.equalsIgnoreCase("dawn")) return true;
 
-                counter++;
-                writer.write(fields);
+                Pds3DataCollection data = dsp.process(fields);
+                writer.write(data);
+                
+                counter++;                
             }
             catch(Exception ex)
             {
@@ -131,28 +145,23 @@ public class Pds3DataProcessor
             
             return true;
         }
-
-        
-        private String getMissionId(String value)
-        {
-            String id = missionName2Id.get(value);
-            if(id == null)
-            {
-                id = value.toLowerCase();
-                System.out.println("WARNING: " + value);
-            }
-
-            return id;
-        }
-        
         
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////    
+
+    private Pds3DataSetProcessor dsp;
     
-    public static void processFile(String inPath, String outPath, Map<String, String> missionMap) throws Exception
+    
+    public SolrDumpProcessor_Pds3DataSet() throws Exception
     {
-        CleanCB cb = new CleanCB(missionMap, outPath);
+        dsp = new Pds3DataSetProcessor();    
+    }
+        
+    
+    public void processFile(String inPath, String outPath) throws Exception
+    {
+        CleanCB cb = new CleanCB(dsp, outPath);
         SolrDocParser parser = new SolrDocParser(inPath, cb);
         parser.parse();
         parser.close();

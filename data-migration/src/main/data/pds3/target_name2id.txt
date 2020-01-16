@@ -1,0 +1,7 @@
+mars|planet.mars
+1 ceres|dwarf_planet.ceres
+4 vesta|dwarf_planet.vesta
+20 cephei|star.20_cephei
+42 pegasi|star.42_pegasi
+epsilon geminorum|star.epsilon_geminorum
+hr 2290|star.hr_2290

@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.Writer;
 import java.util.Set;
 
+import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
 import gov.nasa.pds.data.util.FieldMap;
 import gov.nasa.pds.data.util.xml.SolrDocUtils;
 
@@ -25,24 +26,26 @@ public class ProductCollectionWriterPds3
     }
 
     
-    public void write(FieldMap fields) throws Exception
+    public void write(Pds3DataCollection data) throws Exception
     {
         writer.append("<doc>\n");
 
-        SolrDocUtils.writeField(writer, "lid", fields.getFirstValue("identifier"));
-        SolrDocUtils.writeField(writer, "vid", fields.getFirstValue("version_id"));
-        SolrDocUtils.writeField(writer, "data_set_id", fields.getFirstValue("data_set_id"));
+        SolrDocUtils.writeField(writer, "lid", data.lid);
+        SolrDocUtils.writeField(writer, "vid", data.vid);
+        SolrDocUtils.writeField(writer, "data_set_id", data.datasetId);
         SolrDocUtils.writeField(writer, "product_class", "Product_Data_Set_PDS3");
         
-        SolrDocUtils.writeField(writer, "title", fields.getFirstValue("title"));
+        SolrDocUtils.writeField(writer, "title", data.title);
         //SolrDocUtils.writeField(writer, "description", pc.description);
         
         //SolrDocUtils.writeField(writer, "collection_type", pc.type);
         //SolrDocUtils.writeField(writer, "processing_level", pc.processingLevel);
         
-        SolrDocUtils.writeField(writer, "purpose", "Science");
+        SolrDocUtils.writeField(writer, "purpose", data.purpose);
         
-        writeTargets(fields);
+        SolrDocUtils.writeField(writer, "investigation_id", data.investigationId);
+        
+        //writeTargets(data);
 
         writer.append("</doc>\n");
     }
