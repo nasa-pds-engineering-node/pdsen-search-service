@@ -1,34 +1,35 @@
 package gov.nasa.pds.data.pds3.tools;
 
-import java.io.FileWriter;
-import java.io.Writer;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 
+import gov.nasa.pds.data.pds3.solr.ProductCollectionWriterPds3;
 import gov.nasa.pds.data.util.FieldMap;
 import gov.nasa.pds.data.util.xml.SolrDocParser;
-import gov.nasa.pds.data.util.xml.SolrDocUtils;
 
-public class Pds3DataCleaner
+
+public class Pds3DataProcessor
 {
     private static class CleanCB implements SolrDocParser.Callback
     {
         private FieldMap fields;
-        private Writer writer;
+        private ProductCollectionWriterPds3 writer;
 
         private Set<String> ignoreFields;
         private Set<String> doNotCleanText;
 
         private Map<String, String> missionName2Id;
+
+        public int counter;
+
         
-        
-        public CleanCB(Map<String, String> missionMap, Writer writer)
+        public CleanCB(Map<String, String> missionMap, String outPath) throws Exception
         {
             this.missionName2Id = missionMap;
-            this.writer = writer;
+            this.writer = new ProductCollectionWriterPds3(outPath);
             
             // Ignore fields
             ignoreFields = new HashSet<>();
@@ -49,10 +50,30 @@ public class Pds3DataCleaner
             ignoreFields.add("timestamp");
             ignoreFields.add("score");
             
+            // Temporary
+            ignoreFields.add("confidence_level_note");
+            ignoreFields.add("data_set_description");
+            ignoreFields.add("archive_status");
+            ignoreFields.add("external_reference_text");
+            ignoreFields.add("pds_model_version");
+            ignoreFields.add("citation_description");
+            ignoreFields.add("resLocation");
+            ignoreFields.add("resource_ref");
+            
+            ignoreFields.add("start_time");
+            ignoreFields.add("stop_time");
+            ignoreFields.add("data_set_release_date");
+            
             // Text normalization
             doNotCleanText = new HashSet<>();
             doNotCleanText.add("data_set_description");
             doNotCleanText.add("confidence_level_note");
+        }
+
+        
+        public void close() throws Exception
+        {
+            writer.close();
         }
         
         @Override
@@ -61,21 +82,6 @@ public class Pds3DataCleaner
             fields = new FieldMap();
         }
 
-        @Override
-        public boolean onDocEnd()
-        {
-            try
-            {
-                SolrDocUtils.writeFieldMap(writer, fields);
-            }
-            catch(Exception ex)
-            {
-                ex.printStackTrace();
-                return false;
-            }
-            
-            return true;
-        }
 
         @Override
         public void onField(String name, String value)
@@ -106,6 +112,27 @@ public class Pds3DataCleaner
         }
         
         
+        @Override
+        public boolean onDocEnd()
+        {
+            try
+            {
+                String investigationId = fields.getFirstValue("investigation_id"); 
+                if(investigationId == null || !investigationId.equalsIgnoreCase("dawn")) return true;
+
+                counter++;
+                writer.write(fields);
+            }
+            catch(Exception ex)
+            {
+                ex.printStackTrace();
+                return false;
+            }
+            
+            return true;
+        }
+
+        
         private String getMissionId(String value)
         {
             String id = missionName2Id.get(value);
@@ -117,22 +144,21 @@ public class Pds3DataCleaner
 
             return id;
         }
+        
+        
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////    
     
     public static void processFile(String inPath, String outPath, Map<String, String> missionMap) throws Exception
     {
-        Writer writer = new FileWriter(outPath);
-        CleanCB cb = new CleanCB(missionMap, writer);
+        CleanCB cb = new CleanCB(missionMap, outPath);
         SolrDocParser parser = new SolrDocParser(inPath, cb);
-        
-        writer.write("<add>\n");
         parser.parse();
-        writer.write("</add>\n");
-        
-        writer.close();
         parser.close();
+        cb.close();
+        
+        System.out.println(cb.counter);
     }
 
 }

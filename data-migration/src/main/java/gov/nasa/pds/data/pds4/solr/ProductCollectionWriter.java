@@ -53,16 +53,16 @@ public class ProductCollectionWriter
         SolrDocUtils.writeField(writer, "science_facets", pc.scienceFacets);
         SolrDocUtils.writeField(writer, "science_facets", pc.keywords);
         
-        writeInvestigation(writer, pc);
-        writeInstrumentHost(writer, pc);
-        writeInstruments(writer, pc);
-        writeTargets(writer, pc);
+        writeInvestigation(pc);
+        writeInstrumentHost(pc);
+        writeInstruments(pc);
+        writeTargets(pc);
 
         writer.append("</doc>\n");
     }
 
     
-    private static void writeInvestigation(Writer writer, ProductCollection pc) throws Exception
+    private void writeInvestigation(ProductCollection pc) throws Exception
     {
         if(pc.investigationRef == null) return;
 
@@ -79,7 +79,7 @@ public class ProductCollectionWriter
     }
 
     
-    private static void writeInstrumentHost(Writer writer, ProductCollection pc) throws Exception
+    private void writeInstrumentHost(ProductCollection pc) throws Exception
     {
         if(pc.instrumentHostRef == null) return;
 
@@ -96,7 +96,7 @@ public class ProductCollectionWriter
     }
 
     
-    private static void writeInstruments(Writer writer, ProductCollection pc) throws Exception
+    private void writeInstruments(ProductCollection pc) throws Exception
     {
         if(pc.instrumentRef == null) return;
 
@@ -113,7 +113,7 @@ public class ProductCollectionWriter
     }
     
     
-    private static void writeTargets(Writer writer, ProductCollection pc) throws Exception
+    private void writeTargets(ProductCollection pc) throws Exception
     {
         if(pc.targetRef == null) return;
 

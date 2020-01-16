@@ -1,0 +1,7 @@
+mars|planet
+1 ceres|dwarf_planet,minor_planet
+4 vesta|dwarf_planet,minor_planet
+20 cephei|star
+42 pegasi|star
+epsilon geminorum|star
+hr 2290|star

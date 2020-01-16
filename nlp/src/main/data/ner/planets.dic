@@ -1,3 +1,13 @@
+# Target Types
+planet->T=10
+planets->T=10|I=planet
+dwarf->N=1
+dwarf planet->T=10
+dwarf planets->T=10|I=dwarf_planet
+minor->N=1
+minor planet->T=10
+minor planets->T=10|I=minor_planet
+
 # Planets
 Mercury->T=1
 Venus->T=1|N=1

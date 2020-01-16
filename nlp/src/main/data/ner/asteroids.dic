@@ -4,3 +4,5 @@ asteroids->T=10|I=asteroid
 Bennu->T=1
 101955->N=1
 101955 Bennu->T=1|I=bennu
+
+Vesta->T=1

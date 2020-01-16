@@ -5,18 +5,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import gov.nasa.pds.data.pds3.tools.Pds3DataCleaner;
+import gov.nasa.pds.data.pds3.tools.Pds3DataProcessor;
 import gov.nasa.pds.data.util.MapUtils;
 
-public class TestPds3DataCleaner
+public class TestPds3DataProcessor
 {
 
     public static void main(String[] args) throws Exception
     {
-        //Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
-        //Pds3DataCleaner.processFile("/tmp/pds3-ds-1.xml", "/tmp/pds3-ds-1.xml.clean", missionMap);
+        Map<String, String> missionMap = MapUtils.loadMap("src/main/data/pds3/mission_name_to_id.txt");
+        Pds3DataProcessor.processFile("/tmp/pds3-ds-1.xml", "/tmp/pds3-ds-1.xml.clean", missionMap);
 
-        crawl("/tmp");
+        //crawl("/tmp");
     }
 
     
@@ -43,7 +43,7 @@ public class TestPds3DataCleaner
                 try
                 {
                     System.out.println("Processing: " + str);
-                    Pds3DataCleaner.processFile(str, str + ".clean", missionMap);
+                    Pds3DataProcessor.processFile(str, str + ".clean", missionMap);
                 }
                 catch(Exception ex)
                 {
