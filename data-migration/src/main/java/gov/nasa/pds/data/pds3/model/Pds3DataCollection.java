@@ -19,10 +19,13 @@ public class Pds3DataCollection
     public String[] keywords;
     public String purpose;
     
+    public String collectionType;
+    
     // References
     public Set<String> investigationIds;
     public String[] instrumentHostId;
-    public String[] instrumentId;
+    public Set<String> instrumentIds;
     public Set<String> targetNames;
     public Set<String> targetTypes;
 }
+

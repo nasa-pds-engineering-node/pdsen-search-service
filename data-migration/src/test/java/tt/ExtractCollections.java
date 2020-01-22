@@ -15,8 +15,8 @@ public class ExtractCollections
     public static void main(String[] args) throws Exception
     {
         //String dir = "/ws3/MAVEN/mag";
-        String dir = "/ws3/OREX/";
-        String outFile = "/tmp/orex.xml";
+        String dir = "/ws3/MAVEN/";
+        String outFile = "/tmp/maven.xml";
         
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         ProductCollectionWriter writer = new ProductCollectionWriter(outFile);
@@ -30,7 +30,7 @@ public class ExtractCollections
             ProductCollection pc = parser.parse(doc);
             
             // Fix document collections
-            if(pc.type.equals("Document")) 
+            if(pc.type.equalsIgnoreCase("document")) 
             {
                 //validateAndFixDocumentCollection(pc);
                 return;

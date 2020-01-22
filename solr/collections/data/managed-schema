@@ -14,8 +14,8 @@
 
     <!-- Results -->
     <field name="processing_level" type="lowercase" indexed="true" stored="true" multiValued="true" />
-    <field name="purpose" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="codmac_level" type="pint" indexed="true" stored="true" multiValued="true" />
+    <field name="purpose" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="science_facets" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- References -->    

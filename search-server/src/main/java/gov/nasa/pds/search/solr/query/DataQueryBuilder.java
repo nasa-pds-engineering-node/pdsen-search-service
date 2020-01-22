@@ -26,6 +26,7 @@ public class DataQueryBuilder
         String instrumentId = null;
         String instrumentHostId = null;
         String targetId = null;
+        String targetType = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -35,6 +36,9 @@ public class DataQueryBuilder
             {
             case NerTokenType.TARGET:
                 targetId = getProductId(token);
+                break;
+            case NerTokenType.TARGET_TYPE:
+                targetType = getProductId(token);
                 break;
             case NerTokenType.INSTRUMENT:
                 instrumentId = getProductId(token);
@@ -52,6 +56,7 @@ public class DataQueryBuilder
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
         bld.addRequiredField("target_name", targetId);
+        bld.addRequiredField("target_type", targetType);
         bld.addRequiredField("investigation_id", investigationId);
         bld.addRequiredField("instrument_id", instrumentId);
         bld.addRequiredField("instrument_host_id", instrumentHostId);

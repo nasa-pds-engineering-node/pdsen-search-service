@@ -1,8 +1,5 @@
 package gov.nasa.pds.data.pds4.parser;
 
-import java.util.List;
-import java.util.Set;
-
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
@@ -91,6 +88,17 @@ public class ProductCollectionParser
     }
 
     
+    private String normalizeCollectionType(String str)
+    {
+        if(str == null) return "data";
+        
+        str = str.toLowerCase();
+        str = str.replace(' ', '_');
+        
+        return str;
+    }
+    
+    
     public ProductCollection parse(Document doc) throws Exception
     {
         ProductCollection pc = new ProductCollection();
@@ -100,8 +108,8 @@ public class ProductCollectionParser
         pc.vid = Float.parseFloat(strVid);
 
         pc.title = normalizeSpaces(XPathUtils.getStringValue(doc, xTitle));
-        pc.type = XPathUtils.getStringValue(doc, xType);
-
+        pc.type = normalizeCollectionType(XPathUtils.getStringValue(doc, xType));
+        
         // Description
         String descr1 = normalizeSpaces(XPathUtils.getStringValue(doc, xCitationDescr));
         String descr2 = normalizeSpaces(XPathUtils.getStringValue(doc, xDescr));

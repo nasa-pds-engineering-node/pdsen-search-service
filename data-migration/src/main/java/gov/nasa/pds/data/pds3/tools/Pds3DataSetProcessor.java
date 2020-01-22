@@ -40,11 +40,10 @@ public class Pds3DataSetProcessor
         data.title = fields.getFirstValue("title");
         //SolrDocUtils.writeField(writer, "description", pc.description);
         
-        //SolrDocUtils.writeField(writer, "collection_type", pc.type);
+        extractCollectionType(data, fields);
 
         extractProcessingLevels(data, fields);
 
-        data.type = "Data";
         data.purpose = "Science";
         
         data.investigationIds = fields.getValues("investigation_id");
@@ -53,6 +52,24 @@ public class Pds3DataSetProcessor
         return data; 
     }
     
+    
+    private void processInstruments(Pds3DataCollection data, FieldMap fields)
+    {
+    }
+
+    
+    private void extractCollectionType(Pds3DataCollection data, FieldMap fields)
+    {
+        Set<String> instrumentIds = fields.getValues("instrument_id");
+        if(instrumentIds != null && instrumentIds.contains("SPICE"))
+        {
+            data.type = "spice_kernel";
+            return;
+        }
+        
+        data.type = "data";        
+    }
+
     
     private void extractProcessingLevels(Pds3DataCollection data, FieldMap fields)
     {

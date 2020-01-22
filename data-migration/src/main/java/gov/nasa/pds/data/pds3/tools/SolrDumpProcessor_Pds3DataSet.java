@@ -1,7 +1,6 @@
 package gov.nasa.pds.data.pds3.tools;
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
