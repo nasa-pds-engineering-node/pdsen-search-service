@@ -20,7 +20,6 @@ import gov.nasa.pds.nlp.lex.PdsLexer;
 import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.ner.NerJsonWriter;
 import gov.nasa.pds.search.solr.SolrDocJsonWriter;
 import gov.nasa.pds.search.solr.SolrManager;
 import gov.nasa.pds.search.solr.query.DataQueryBuilder;
@@ -28,10 +27,10 @@ import gov.nasa.pds.search.util.RequestParameters;
 
 
 @RestController
-@RequestMapping(path = "/api")
-public class TextSearchController
+@RequestMapping(path = "/api/v1")
+public class DataSearchController
 {
-    private static final Logger LOG = LoggerFactory.getLogger(TextSearchController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DataSearchController.class);
     
     @Autowired
     private SearchServerConfiguration ssConfig;
@@ -39,7 +38,7 @@ public class TextSearchController
     private NamedEntityRecognizer ner;
 
     
-    @GetMapping(path = "/search/text/v1")
+    @GetMapping(path = "/search/data")
     public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());

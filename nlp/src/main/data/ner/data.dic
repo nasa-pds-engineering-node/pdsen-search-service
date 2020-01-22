@@ -1,0 +1,28 @@
+spice->T=20|I=spice_kernel
+spice kernel->T=20|I=spice_kernel
+spice kernels->T=20|I=spice_kernel
+Observation->N=1
+Observation Geometry->T=20|I=spice_kernel
+shape->N=1
+shape model->T=20|I=spice_kernel
+shape models->T=20|I=spice_kernel
+leapsecond->T=20|I=spice_kernel
+leapseconds->T=20|I=spice_kernel
+leap->N=1
+leap seconds->T=20|I=spice_kernel
+leap second->T=20|I=spice_kernel
+orientation->N=1|T=20|I=spice_kernel
+orientation constants->T=20|I=spice_kernel
+Rotation->N=1
+Rotation Period->T=20|I=spice_kernel
+Polar->N=1
+Polar Dimension->T=20|I=spice_kernel
+Polar Dimensions->T=20|I=spice_kernel
+Equatorial->N=1
+Equatorial Dimension->T=20|I=spice_kernel
+Equatorial Dimensions->T=20|I=spice_kernel
+Dimension->T=20|I=spice_kernel
+Dimensions->T=20|I=spice_kernel
+radius->T=20|I=spice_kernel
+diameter->T=20|I=spice_kernel
+ephemerides->T=20|I=spice_kernel

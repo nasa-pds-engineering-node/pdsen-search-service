@@ -10,7 +10,9 @@ public interface NerTokenType
     public static final byte INVESTIGATION = 3;
     public static final byte INSTRUMENT_HOST = 4;
     
-    public static final byte TARGET_TYPE = 10;    
+    public static final byte TARGET_TYPE = 10;
+    
+    public static final byte DATA_TYPE = 20;
 
-    public static final byte LID = 20;
+    public static final byte LID = 50;
 }

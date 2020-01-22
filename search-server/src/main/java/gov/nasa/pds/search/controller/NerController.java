@@ -20,7 +20,7 @@ import gov.nasa.pds.search.util.RequestParameters;
 
 
 @RestController
-@RequestMapping(path = "/api")
+@RequestMapping(path = "/api/v1")
 public class NerController
 {
     private static final Logger LOG = LoggerFactory.getLogger(NerController.class);
@@ -29,7 +29,7 @@ public class NerController
     private NamedEntityRecognizer ner;
 
     
-    @GetMapping(path = "/ner/v1")
+    @GetMapping(path = "/ner")
     public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());

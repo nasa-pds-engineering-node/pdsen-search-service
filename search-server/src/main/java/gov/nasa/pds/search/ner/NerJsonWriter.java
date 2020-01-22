@@ -86,9 +86,6 @@ public class NerJsonWriter
         
         for(NerToken token: tokens)
         {
-            // Skip unknown tokens
-            if(token.getType() == NerTokenType.UNKNOWN) continue;
-            
             jgen.writeStartObject();
             
             // Text
@@ -150,6 +147,8 @@ public class NerJsonWriter
             return "instrument_host";
         case NerTokenType.INVESTIGATION:
             return "investigation";
+        case NerTokenType.DATA_TYPE:
+            return "data_type";
         default:
             return "unknown";
         }
