@@ -27,6 +27,7 @@ public class DataQueryBuilder
         String instrumentHostId = null;
         String targetId = null;
         String targetType = null;
+        String collectionType = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -49,6 +50,9 @@ public class DataQueryBuilder
             case NerTokenType.INVESTIGATION:
                 investigationId = getProductId(token);
                 break;
+            case NerTokenType.DATA_TYPE:
+                collectionType = getProductId(token);
+                break;
             default:
                 addUnknownToken(unknownTokens, token.getKey());
             }
@@ -60,6 +64,7 @@ public class DataQueryBuilder
         bld.addRequiredField("investigation_id", investigationId);
         bld.addRequiredField("instrument_id", instrumentId);
         bld.addRequiredField("instrument_host_id", instrumentHostId);
+        bld.addRequiredField("collection_type", collectionType);
 
         bld.addRequiredField("search_p1", unknownTokens);
         
