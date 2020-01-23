@@ -15,6 +15,7 @@ package gov.nasa.pds.nlp.lex;
 static final int DIGITS = 1;
 static final int ALPHA = 2;
 static final int ALPHANUM = 3;
+static final int ALPHA_DASH = 4;
 
 %}
 
@@ -27,8 +28,7 @@ static final int ALPHANUM = 3;
 // Internal apostrophes: O'Reilly, you're, O'Reilly's
 //APOSTROPHE =  {ALPHA} ("'" {ALPHA})+
 
-// Internal dashes (X-Ray / Chandrayaan-1)
-//DASH =  {ALPHA} ("-" {ALPHANUM})+
+ALPHA_DASH =  {ALPHA} ("-" {ALPHA})+
 
 // Internal dashes (453-HDBK-GN / 2010-09-16)
 //DASHNUM =  {DIGITS} ("-" {ALPHANUM})+
@@ -45,6 +45,7 @@ ALPHANUM  = ([A-Za-z0-9])+
 {DIGITS}                 { return DIGITS; }
 {ALPHA}                  { return ALPHA; }
 {ALPHANUM}               { return ALPHANUM; }
+{ALPHA_DASH}             { return ALPHA_DASH; }
 
 /** Ignore the rest */
-[^]                                                            { /* Break so we don't hit fall-through warning: */ break;/* ignore */ }
+[^]                      { /* Break so we don't hit fall-through warning: */ break;/* ignore */ }

@@ -69,7 +69,7 @@ public class DataQueryBuilder
         bld.addRequiredField("search_p1", unknownTokens);
         
         String queryString = bld.toString();
-        if(queryString.isEmpty()) return null;
+        if(queryString == null || queryString.isEmpty()) return null;
         
         SolrQuery query = new SolrQuery(queryString);
         return query;

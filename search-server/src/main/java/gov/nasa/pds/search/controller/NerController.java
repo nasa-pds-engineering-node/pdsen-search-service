@@ -30,7 +30,7 @@ public class NerController
 
     
     @GetMapping(path = "/ner")
-    public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
+    public void getNer(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
 
