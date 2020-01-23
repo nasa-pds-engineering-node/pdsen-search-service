@@ -38,23 +38,44 @@ public class Pds3DataSetProcessor
         data.datasetId = fields.getFirstValue("data_set_id");
         
         data.title = fields.getFirstValue("title");
-        //SolrDocUtils.writeField(writer, "description", pc.description);
+        data.description = fields.getFirstValue("description");
         
         extractCollectionType(data, fields);
-
         extractProcessingLevels(data, fields);
 
         data.purpose = "Science";
         
         data.investigationIds = fields.getValues("investigation_id");
+        
+        processInstrumentHost(data, fields);
+        processInstruments(data, fields);
         processTargets(data, fields);
         
         return data; 
     }
+
     
+    private void processInstrumentHost(Pds3DataCollection data, FieldMap fields)
+    {
+        Set<String> ihIds = fields.getValues("instrument_host_id");
+        if(ihIds == null)
+        {
+            System.out.println("WARNING: No instrument host id for " + data.lid);
+            return;
+        }
+        
+        if(ihIds.size() > 1)
+        {
+            System.out.println("WARNING: Multiple instrument host ids for " + data.lid);
+        }
+        
+        data.instrumentHostIds = ihIds;
+    }
+
     
     private void processInstruments(Pds3DataCollection data, FieldMap fields)
     {
+        data.instrumentIds = fields.getValues("instrument_id");
     }
 
     
@@ -150,12 +171,7 @@ public class Pds3DataSetProcessor
             String tgtName = tuple[1];
 
             data.targetNames.add(tgtName);
-            
             data.targetTypes.add(tgtType);
-            if(tgtType.equals("asteroid") || tgtType.equals("dwarf_planet"))
-            {
-                data.targetTypes.add("minor_planet");
-            }
         }
     }
 

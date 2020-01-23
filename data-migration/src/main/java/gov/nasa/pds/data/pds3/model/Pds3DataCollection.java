@@ -10,7 +10,7 @@ public class Pds3DataCollection
     
     public String title;
     public String type;
-    public String[] description;
+    public String description;
 
     public Set<String> processingLevels;
     public Set<String> codmacLevels;
@@ -23,7 +23,7 @@ public class Pds3DataCollection
     
     // References
     public Set<String> investigationIds;
-    public String[] instrumentHostId;
+    public Set<String> instrumentHostIds;
     public Set<String> instrumentIds;
     public Set<String> targetNames;
     public Set<String> targetTypes;
