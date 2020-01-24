@@ -52,7 +52,7 @@ public class DataSearchController
         if(qParam == null || qParam.isEmpty())
         {
             httpResp.setStatus(400);
-            respWriter.error("Missing query parameter(s)");
+            respWriter.error("Missing query parameter (q=...)");
             return;
         }
         
@@ -61,7 +61,6 @@ public class DataSearchController
         List<String> lexTokens = lexer.parse(qParam);
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
-        
         // Build Solr query
         DataQueryBuilder queryBuilder = new DataQueryBuilder(nerTokens);
         SolrQuery query = queryBuilder.build();
@@ -74,7 +73,8 @@ public class DataSearchController
             return;
         }
 
-        //query.setRows(50);
+        // Set "start" and "rows"
+        setPageInfo(query, reqParams);
         
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
@@ -85,6 +85,22 @@ public class DataSearchController
         respWriter.write(docList);
     }
     
+    
+    private void setPageInfo(SolrQuery query, RequestParameters reqParams)
+    {
+        Integer rows = reqParams.getIntParameter("rows");
+        if(rows != null)
+        {
+            query.setRows(rows);
+        }
+        
+        Integer start = reqParams.getIntParameter("start");
+        if(start != null)
+        {
+            query.setStart(start);
+        }
+    }
+
     
     private String getSolrCollectionName()
     {

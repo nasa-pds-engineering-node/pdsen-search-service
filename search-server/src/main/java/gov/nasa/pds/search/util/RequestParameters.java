@@ -17,6 +17,7 @@ public class RequestParameters
         return params.get(name);
     }
     
+
     public String getParameter(String name)
     {
         String[] values = getParameterValues(name);
@@ -28,6 +29,22 @@ public class RequestParameters
         else
         {
             return values[0];
+        }
+    }
+    
+    
+    public Integer getIntParameter(String name)
+    {
+        String val = getParameter(name);
+        if(val == null) return null;
+        
+        try
+        {
+            return Integer.valueOf(val);
+        }
+        catch(Exception ex)
+        {
+            return null;
         }
     }
     
