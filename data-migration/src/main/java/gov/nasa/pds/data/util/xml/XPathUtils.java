@@ -41,7 +41,10 @@ public class XPathUtils
 	public static String getStringValue(Document doc, XPathExpression expr) throws Exception
 	{
         Object res = expr.evaluate(doc, XPathConstants.STRING);
-        return (res == null) ? null : res.toString();
+        if(res == null) return null;
+        
+        String val = res.toString();
+        return (val.isEmpty()) ? null : val;
 	}
 
 

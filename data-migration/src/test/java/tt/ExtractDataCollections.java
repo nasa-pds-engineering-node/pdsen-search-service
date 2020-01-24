@@ -6,11 +6,8 @@ import gov.nasa.pds.data.pds4.solr.ProductCollectionWriter;
 import gov.nasa.pds.data.util.xml.XmlDomCrawler;
 
 
-public class ExtractCollections
+public class ExtractDataCollections
 {
-    private static String[] defInvestigationRef = { "urn:nasa:pds:context:investigation:mission.maven" };
-    private static String[] defInstrumentHostRef = { "urn:nasa:pds:context:instrument_host:spacecraft.maven" };
-    
     
     public static void main(String[] args) throws Exception
     {
@@ -29,13 +26,13 @@ public class ExtractCollections
             
             ProductCollection pc = parser.parse(doc);
             
-            // Fix document collections
+            // Skip document collections
             if(pc.type.equalsIgnoreCase("document")) 
             {
-                //validateAndFixDocumentCollection(pc);
                 return;
             }
             
+            validateAndFixCollection(pc);
             writer.write(pc);
         });
         
@@ -43,22 +40,15 @@ public class ExtractCollections
     }
     
     
-    private static void validateAndFixDocumentCollection(ProductCollection pc)
+    private static void validateAndFixCollection(ProductCollection pc)
     {
-        if(pc.investigationRef == null) 
+        if(pc.purpose == null)
         {
-            System.out.println("WARNING: Missing investigation_id: LID = " + pc.lid);
-            // TODO: Fix
-            pc.investigationRef = defInvestigationRef;
-        }
-        
-        if(pc.instrumentRef != null && pc.instrumentHostRef == null)
-        {
-            System.out.println("WARNING: Missing instrument_host_id: LID = " + pc.lid);
-            // TODO: Fix
-            pc.instrumentHostRef = defInstrumentHostRef;
+            pc.purpose = "Science";
+            System.out.println("Primary_Result_Summary/purpose is missing for " + pc.lid);
         }
     }
     
+
 }
 

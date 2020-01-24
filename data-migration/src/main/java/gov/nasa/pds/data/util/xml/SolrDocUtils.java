@@ -2,12 +2,10 @@ package gov.nasa.pds.data.util.xml;
 
 import java.io.Writer;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Set;
-
 import org.apache.commons.lang.StringEscapeUtils;
-
 import gov.nasa.pds.data.util.FieldMap;
+
 
 public class SolrDocUtils
 {

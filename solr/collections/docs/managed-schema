@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<schema name="data" version="1.0">
+<schema name="docs" version="1.0">
     <!-- IDs -->
     <field name="lid" type="string" indexed="true" stored="true" multiValued="false" />
     <uniqueKey>lid</uniqueKey>

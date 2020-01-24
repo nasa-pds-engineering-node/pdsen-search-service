@@ -41,13 +41,6 @@ public class ProductCollectionWriter
         
         SolrDocUtils.writeField(writer, "collection_type", pc.type);
         SolrDocUtils.writeField(writer, "processing_level", pc.processingLevel);
-        
-        if(pc.purpose == null)
-        {
-            pc.purpose = "Science";
-            System.out.println("Primary_Result_Summary/purpose is missing for " + pc.lid);
-        }
-        
         SolrDocUtils.writeField(writer, "purpose", pc.purpose);
 
         SolrDocUtils.writeField(writer, "science_facets", pc.scienceFacets);
