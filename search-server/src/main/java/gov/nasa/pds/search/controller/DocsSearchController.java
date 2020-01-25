@@ -22,16 +22,16 @@ import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.solr.SolrDocJsonWriter;
 import gov.nasa.pds.search.solr.SolrManager;
-import gov.nasa.pds.search.solr.query.DataQueryBuilder;
+import gov.nasa.pds.search.solr.query.DocsQueryBuilder;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
 @RestController
 @RequestMapping(path = "/api/v1")
-public class DataSearchController
+public class DocsSearchController
 {
-    private static final Logger LOG = LoggerFactory.getLogger(DataSearchController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DocsSearchController.class);
     
     @Autowired
     private SearchServerConfiguration ssConfig;
@@ -39,7 +39,7 @@ public class DataSearchController
     private NamedEntityRecognizer ner;
 
     
-    @GetMapping(path = "/search/data")
+    @GetMapping(path = "/search/docs")
     public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
@@ -63,7 +63,7 @@ public class DataSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Build Solr query
-        DataQueryBuilder queryBuilder = new DataQueryBuilder(nerTokens);
+        DocsQueryBuilder queryBuilder = new DocsQueryBuilder(nerTokens);
         SolrQuery query = queryBuilder.build();
         
         // Invalid request
@@ -89,6 +89,6 @@ public class DataSearchController
     
     private String getSolrCollectionName()
     {
-        return "data";
+        return "docs";
     }
 }

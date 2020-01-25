@@ -9,12 +9,12 @@ import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
 import gov.nasa.pds.search.solr.LuceneQueryBuilder;
 
-public class DataQueryBuilder
+public class DocsQueryBuilder
 {
     private List<NerToken> nerTokens;
     
     
-    public DataQueryBuilder(List<NerToken> nerTokens)
+    public DocsQueryBuilder(List<NerToken> nerTokens)
     {
         this.nerTokens = nerTokens;
     }
@@ -27,7 +27,6 @@ public class DataQueryBuilder
         String instrumentHostId = null;
         String targetId = null;
         String targetType = null;
-        String collectionType = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -50,9 +49,6 @@ public class DataQueryBuilder
             case NerTokenType.INVESTIGATION:
                 investigationId = getProductId(token);
                 break;
-            case NerTokenType.DATA_TYPE:
-                collectionType = getProductId(token);
-                break;
             default:
                 addUnknownToken(unknownTokens, token.getKey());
             }
@@ -64,7 +60,6 @@ public class DataQueryBuilder
         bld.addField(true, "investigation_id", investigationId);
         bld.addField(true, "instrument_id", instrumentId);
         bld.addField(true, "instrument_host_id", instrumentHostId);
-        bld.addField(true, "collection_type", collectionType);
 
         // Unknown tokens
         if(!unknownTokens.isEmpty())
@@ -86,9 +81,14 @@ public class DataQueryBuilder
     
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
-        //TODO: Properly handle data query stop words
-        if(token.equals("data")) return;
-        
+        //TODO: Properly handle docs query stop words
+        if(token.equals("data") 
+                || token.equals("document")
+                || token.equals("documents")
+                || token.equals("doc")
+                || token.equals("docs")
+                || token.equals("documentation")) return;
+
         unknownTokens.add(token);
     }
     
@@ -102,14 +102,6 @@ public class DataQueryBuilder
         }
         
         return id;
-    }
-    
-    
-    //TODO: Encode or strip out special Lucene query characters:
-    // + - && || ! ( ) { } [ ] ^ " ~ * ? : \
-    private String encode(String str)
-    {
-        return str;
     }
     
 }

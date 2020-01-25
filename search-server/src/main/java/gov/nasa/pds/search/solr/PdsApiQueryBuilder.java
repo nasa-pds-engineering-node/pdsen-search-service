@@ -123,13 +123,13 @@ public class PdsApiQueryBuilder
 
             if(searchFields.contains(solrFieldName))
             {
-                bld.addRequiredField(solrFieldName, Arrays.asList(params.getParameterValues(paramName)));
+                bld.addField(true, solrFieldName, Arrays.asList(params.getParameterValues(paramName)));
             }
         }
         
         // TODO: This is a temporary fix.
         // TODO: Remove when we switch to a separate data collection.
-        bld.addRequiredField("objectType", Arrays.asList(data_fields));
+        bld.addField(true, "objectType", Arrays.asList(data_fields));
 
         return bld.toString();
     }

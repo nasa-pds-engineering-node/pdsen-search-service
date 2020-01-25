@@ -18,28 +18,52 @@ public class LuceneQueryBuilder
         bld = new StringBuilder();
     }
 
+        
+    public void addGroupStart(boolean required)
+    {
+        addSpace();
+        if(required) bld.append("+");
+        bld.append("(");
+    }
     
+
+    public void addGroupEnd()
+    {
+        bld.append(")");
+    }
+
+
+    public void addBoost(int boost)
+    {
+        bld.append("^" + boost);
+    }
+
     /**
      * Add query field.
      * @param field
      * @param values
      */
-    public void addRequiredField(String field, String value)
+    public void addField(boolean required, String field, String value)
     {
         if(value == null) return;
         
         addSpace();
-        bld.append("+");
-        addTerm(field, value);
+        if(required) bld.append("+");
+
+        bld.append(field);
+        bld.append(":");
+        bld.append(value);
     }
     
     
-    public void addRequiredField(String fieldName, List<String> values)
+    public void addField(boolean required, String fieldName, List<String> values)
     {
         if(values == null || values.size() == 0) return;
         
         addSpace();
-        bld.append("+");
+        
+        if(required) bld.append("+");
+        
         bld.append(fieldName);
         bld.append(":(");
         
@@ -55,19 +79,16 @@ public class LuceneQueryBuilder
     
     private void addSpace()
     {
-        if(bld.length() > 0) bld.append(" ");        
+        if(bld.length() == 0) return; 
+        
+        char lastChar = bld.charAt(bld.length()-1); 
+        
+        if(lastChar != '(') bld.append(" ");
     }
     
-    
-    private void addTerm(String field, String value)
-    {
-        bld.append(field);
-        bld.append(":");
-        bld.append(value);
-    }
     
     /**
-     * Returns a Solr query in Lucene query format.
+     * Returns query string.
      */
     public String toString()
     {
