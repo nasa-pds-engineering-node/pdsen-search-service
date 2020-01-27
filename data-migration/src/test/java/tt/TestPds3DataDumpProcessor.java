@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import gov.nasa.pds.data.pds3.tools.SolrDumpProcessor_Pds3DataSet;
 
 
-public class TestPds3DataProcessor
+public class TestPds3DataDumpProcessor
 {
 
     public static void main(String[] args) throws Exception

@@ -6,7 +6,6 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 
 import gov.nasa.pds.data.pds3.parser.Pds3Utils;
-import gov.nasa.pds.data.pds4.model.InstrumentHost;
 import gov.nasa.pds.data.pds4.model.Investigation;
 import gov.nasa.pds.data.util.xml.XPathUtils;
 
@@ -39,10 +38,8 @@ public class InvestigationParser
         Investigation obj = new Investigation();
 
         obj.lid = XPathUtils.getStringValue(doc, xLid);
-        obj.shortLid = Pds3Utils.getShortLid(obj.lid);
-        
-        String strVid = XPathUtils.getStringValue(doc, xVid); 
-        obj.vid = Float.parseFloat(strVid);
+        obj.shortLid = Pds3Utils.getShortLid(obj.lid);        
+        obj.vid = XPathUtils.getStringValue(doc, xVid); 
 
         obj.name = XPathUtils.getStringValue(doc, xName);
         obj.type = XPathUtils.getStringValue(doc, xType);

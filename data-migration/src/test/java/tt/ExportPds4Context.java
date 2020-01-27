@@ -1,9 +1,5 @@
 package tt;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.HashSet;
 import java.util.Set;
 
 import gov.nasa.pds.data.pds4.model.Instrument;
@@ -54,7 +50,7 @@ public class ExportPds4Context
             Investigation inv = parser.parse(doc);
             if("Mission".equalsIgnoreCase(inv.type))
             {
-                System.out.println(inv.shortLid + "|" + inv.name);
+                System.out.println(inv.shortLid + "|" + inv.title);
             }
         });
     }

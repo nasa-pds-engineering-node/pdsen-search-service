@@ -1,0 +1,5 @@
+mission.bopps|comet.c2014_e2_jacques,comet.c2012_k1_panstarrs,comet.c2014_a1_siding_spring,dwarf_planet.1_ceres
+mission.contour_mission|comet.2p_encke,comet.73p_schwassmann-wachmann_3,comet.6p_darrest
+mission.maven|planet.mars
+mission.pioneer_8|plasma_stream.solar_wind
+mission.pioneer_9|plasma_stream.solar_wind

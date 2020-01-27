@@ -1,16 +1,16 @@
 2001 MARS ODYSSEY|ody
 
-APOLLO 12|apollo_12
-APOLLO 14|apollo_14
-APOLLO 15|apollo_15
-APOLLO 16|apollo_16
-APOLLO 17|apollo_17
+APOLLO 12|apollo_12,apollo
+APOLLO 14|apollo_14,apollo
+APOLLO 15|apollo_15,apollo
+APOLLO 16|apollo_16,apollo
+APOLLO 17|apollo_17,apollo
 
 BEPICOLOMBO|bepicolombo
 BRRISON|brrison
 
 CASSINI-HUYGENS|cassini
-CHANDRAYAAN-1|chandrayaan-1
+CHANDRAYAAN-1|chandrayaan1
 COMET SL9/JUPITER COLLISION|sl9_collision
 CONTOUR MISSION|con
 
@@ -66,10 +66,12 @@ NEW HORIZONS|nh
 NEXT|next
 
 PIONEER|pioneer
-PIONEER 10|pioneer_10
-PIONEER 11|pioneer_11
+PIONEER 8|pioneer_8,pioneer
+PIONEER 9|pioneer_9,pioneer
+PIONEER 10|pioneer_10,pioneer
+PIONEER 11|pioneer_11,pioneer
 
-PIONEER VENUS|pioneer_venus
+PIONEER VENUS|pioneer_venus,pioneer
 PHOBOS 2|phb2
 PHOENIX|phx
 
@@ -89,6 +91,7 @@ ULYSSES|uly
 
 VEGA 1|vega1
 VEGA 2|vega2
+VENERA 15 AND 16|venera
 VENUS CLIMATE ORBITER|vco
 VENUS EXPRESS|vex
 VIKING|viking

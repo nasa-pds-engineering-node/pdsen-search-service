@@ -1,0 +1,82 @@
+2001 MARS ODYSSEY|2001 Mars Odyssey
+
+APOLLO 12|Apollo 12
+APOLLO 14|Apollo 14
+APOLLO 15|Apollo 15
+APOLLO 16|Apollo 16
+APOLLO 17|Apollo 17
+
+CASSINI-HUYGENS|Cassini-Huygens
+CHANDRAYAAN-1|Chandrayaan-1
+COMET SL9/JUPITER COLLISION|Comet SL9 Jupiter Collision
+CONTOUR MISSION|CONTOUR
+
+DAWN MISSION TO VESTA AND CERES|Dawn Mission to Vesta and Ceres
+DEEP IMPACT|Deep Impact
+DEEP SPACE 1|Deep Space 1
+DEEP SPACE PROGRAM SCIENCE EXPERIMENT|Deep Space Program Science Experiment
+
+EXOMARS 2016|ExoMars
+GALILEO|Galileo
+GEOLOGIC REMOTE SENSING FIELD EXPERIMENT|Geologic Remote Sensing Field Experiment
+GIOTTO|Giotto
+GIOTTO EXTENDED MISSION|Giotto Extended Mission
+GRAVITY RECOVERY AND INTERIOR LABORATORY|Gravity Recovery and Interior Laboratory (GRAIL)
+
+HAYABUSA|Hayabusa
+HST|Hubble Space Telescope
+
+INFRARED ASTRONOMICAL SATELLITE|Infrared Astronomical Satellite
+INTERNATIONAL COMETARY EXPLORER|International Cometary Explorer
+INTERNATIONAL HALLEY WATCH|International Halley Watch
+INTERNATIONAL ROSETTA MISSION|International Rosetta Mission
+INTERNATIONAL ULTRAVIOLET EXPLORER|International Ultraviolet Explorer
+IUE|International Ultraviolet Explorer
+
+JUNO|Juno
+LUNAR CRATER OBSERVATION AND SENSING SATELLITE|Lunar Crater Observation and Sensing Satellite (LCROSS)
+LUNAR PROSPECTOR|Lunar Prospector
+LUNAR RECONNAISSANCE ORBITER|Lunar Reconnaissance Orbiter (LRO)
+
+MAGELLAN|Magellan
+MARINER 10|Mariner 10
+MARINER69|Mariner 69
+MARINER71|Mariner 71
+
+MARS EXPLORATION ROVER|Mars Exploration Rover (MER)
+MARS EXPRESS|Mars Express
+MARS GLOBAL SURVEYOR|Mars Global Surveyor (MGS)
+MARS OBSERVER|Mars Observer
+MARS PATHFINDER|Mars Pathfinder
+MARS RECONNAISSANCE ORBITER|Mars Reconnaissance Orbiter (MRO)
+MARS SCIENCE LABORATORY|Mars Science Laboratory (MSL)
+MIDCOURSE SPACE EXPERIMENT|Midcourse Space Experiment (MSX)
+
+NEAR EARTH ASTEROID RENDEZVOUS|Near Earth Asteroid Rendezvous
+NEW HORIZONS|New Horizons
+NEXT|Stardust-NExT
+
+PHOBOS 2|Phobos 2
+PHOENIX|Phoenix
+PIONEER|Pioneer
+PIONEER 10|Pioneer 10
+PIONEER 11|Pioneer 11
+PIONEER VENUS|Pioneer Venus
+
+SAKIGAKE|Sakigake
+SATURN OCCULTATION OF 28 SAGITTARIUS 1989|Saturn Occultation of 28 Sagittarius
+SATURN RING PLANE CROSSING 1995|Saturn Ring Plane Crossing
+SATURN SMALL SATELLITE ASTROMETRY|Saturn Small Satellite Astrometry
+SMALL MISSIONS FOR ADVANCED RESEARCH AND TECHNOLOGY|Small Missions for Advanced Research and Technology (SMART)
+SOLAR AND HELIOSPHERIC OBSERVATORY|Solar and Heliospheric Observatory (SOHO)
+STARDUST|Stardust
+SUISEI|Suisei
+ULYSSES|Ulysses
+
+VEGA 1|Vega 1
+VEGA 2|Vega 2
+VENERA 15 AND 16|Venera 15 and 16
+VENUS CLIMATE ORBITER|Venus Climate Orbiter
+VENUS EXPRESS|Venus Express
+VIKING|Viking
+VOYAGER|Voyager

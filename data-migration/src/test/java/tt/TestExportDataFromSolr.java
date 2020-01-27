@@ -19,11 +19,15 @@ public class TestExportDataFromSolr
 
         // Instrument Host
         //String strQuery = "objectType:Product_Instrument_Host_PDS3";   // PDS3
-        String strQuery = "data_class:Instrument_Host";                  // PDS4
+        //String strQuery = "data_class:Instrument_Host";                  // PDS4
         
+        // Missions
+        //String strQuery = "objectType:Product_Mission_PDS3";   // PDS3
+        String strQuery = "data_class:Investigation";            // PDS4
+
         
         String primaryKey = "search_id";
-        String exportPath = "/tmp/instrument_host_pds4.xml";
+        String exportPath = "/tmp/missions_pds4.xml";
 
         LegacyExporter exporter = new LegacyExporter(solrUrl, requestHandler);
         exporter.setQuery(strQuery, primaryKey);

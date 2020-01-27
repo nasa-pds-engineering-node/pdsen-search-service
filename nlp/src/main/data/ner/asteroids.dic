@@ -5,4 +5,8 @@ Bennu->T=1
 101955->N=1
 101955 Bennu->T=1|I=bennu
 
+21->N=1
+21 Lutetia->T=1
+Lutetia->T=1|21_lutetia
+
 Vesta->T=1

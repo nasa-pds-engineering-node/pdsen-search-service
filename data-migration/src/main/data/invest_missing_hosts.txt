@@ -1,0 +1,4 @@
+mission.bopps|bopps
+mission.maven|maven
+mission.pioneer_8|p8
+mission.pioneer_9|p9

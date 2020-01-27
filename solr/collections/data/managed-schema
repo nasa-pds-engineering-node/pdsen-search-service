@@ -29,6 +29,12 @@
     <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
     <field name="timestamp" type="pdate" indexed="true" stored="true" default="NOW" multiValued="false"/>
 
+    <!-- Copy Fields -->
+    <!-- Search field, priority 1 (top) -->
+    <field name="search_p1" type="text_general" indexed="true" stored="false" multiValued="true"/>
+    <copyField source="title" dest="search_p1" />
+    <copyField source="science_facets" dest="search_p1" />
+
     <!-- Ignore unknown fields -->
     <dynamicField name="*" type="ignored" />
     <fieldType name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
@@ -41,13 +47,7 @@
     <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
     <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
 
-    <!-- Copy Fields -->
-    <!-- Search field, priority 1 (top) -->
-    <field name="search_p1" type="text_general" indexed="true" stored="false" multiValued="true"/>
-    <copyField source="title" dest="search_p1" />
-    <copyField source="science_facets" dest="search_p1" />
-
-    <!-- Field Types -->
+    <!-- Text Types -->
     <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
       <analyzer type="index">
         <tokenizer class="solr.StandardTokenizerFactory"/>
