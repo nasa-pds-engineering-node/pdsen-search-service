@@ -1,11 +1,42 @@
 comet->T=10|N=1
 comets->T=10|I=comet
 
-Churyumov-Gerasimenko->T=1|I=67p
-67P->N=1|T=1
-67P Churyumov-Gerasimenko->T=1|I=67p
-Churyumov->N=1
-Churyumov Gerasimenko->T=1|I=67p
-Comet 67P->T=1|I=67p
-Comet 67->T=1|I=67p
-Comet P67->T=1|I=67p
+1p->N=1
+comet 1p->T=1|I=1p_halley
+1p halley->T=1|I=1p_halley
+halley->T=1|I=1p_halley
+
+2p->N=1
+comet 2p->T=1|I=2p_encke
+2p encke->T=1|I=2p_encke
+encke->T=1|I=2p_encke
+
+9p->N=1
+comet 9p->T=1|I=9p_tempel_1
+9p tempel->T=1|N=1|I=9p_tempel_1
+9p tempel 1->T=1|I=9p_tempel_1
+tempel->T=1|N=1|I=9p_tempel_1
+tempel 1->T=1|I=9p_tempel_1
+
+10p->N=1
+comet 10p->T=1|I=10p_tempel_2
+10p tempel->T=1|N=1|I=10p_tempel_2
+10p tempel 1->T=1|I=10p_tempel_2
+tempel->T=1|N=1|I=10p_tempel_2
+tempel 2->T=1|I=10p_tempel_2
+
+19p->N=1
+comet 19p->T=1|I=19p_borrelly
+19p borrelly->T=1|I=19p_borrelly
+borrelly->T=1|I=19p_borrelly
+
+21p->N=1
+comet 21p->T=1|I=21p_giacobini-zinner
+21p giacobini-zinner->T=1|I=21p_giacobini-zinner
+giacobini-zinner->T=1|I=21p_giacobini-zinner
+
+67p->N=1
+comet 67p->T=1|I=67p_churyumov-gerasimenko
+67p Churyumov-Gerasimenko->T=1|I=67p_churyumov-gerasimenko
+Churyumov-Gerasimenko->T=1|I=67p_churyumov-gerasimenko
+

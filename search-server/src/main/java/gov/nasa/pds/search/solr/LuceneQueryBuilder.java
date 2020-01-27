@@ -51,8 +51,9 @@ public class LuceneQueryBuilder
         if(required) bld.append("+");
 
         bld.append(field);
-        bld.append(":");
+        bld.append(":\"");
         bld.append(value);
+        bld.append("\"");
     }
     
     

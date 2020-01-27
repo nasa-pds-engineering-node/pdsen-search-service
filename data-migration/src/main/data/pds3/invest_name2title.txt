@@ -27,11 +27,11 @@ HAYABUSA|Hayabusa
 HST|Hubble Space Telescope
 
 INFRARED ASTRONOMICAL SATELLITE|Infrared Astronomical Satellite
-INTERNATIONAL COMETARY EXPLORER|International Cometary Explorer
+INTERNATIONAL COMETARY EXPLORER|International Cometary Explorer (ICE)
 INTERNATIONAL HALLEY WATCH|International Halley Watch
 INTERNATIONAL ROSETTA MISSION|International Rosetta Mission
-INTERNATIONAL ULTRAVIOLET EXPLORER|International Ultraviolet Explorer
-IUE|International Ultraviolet Explorer
+INTERNATIONAL ULTRAVIOLET EXPLORER|International Ultraviolet Explorer (IUE)
+IUE|International Ultraviolet Explorer (IUE)
 
 JUNO|Juno
 LUNAR CRATER OBSERVATION AND SENSING SATELLITE|Lunar Crater Observation and Sensing Satellite (LCROSS)
