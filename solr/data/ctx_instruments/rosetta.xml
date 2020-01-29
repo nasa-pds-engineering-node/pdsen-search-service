@@ -1,153 +1,153 @@
 <add>
 <doc>
-  <field name="sid">alice.ro</field>
+  <field name="id">alice.ro</field>
   <field name="instrument_id">alice</field>
-  <field name="instrument_name">Alice</field>
+  <field name="title">Alice</field>
   <field name="instrument_type">Ultraviolet Spectrometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">cosima.ro</field>
+  <field name="id">cosima.ro</field>
   <field name="instrument_id">cosima</field>
-  <field name="instrument_name">Cometary Secondary Ion Mass Analyzer</field>
+  <field name="title">Cometary Secondary Ion Mass Analyzer</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">giada.ro</field>
+  <field name="id">giada.ro</field>
   <field name="instrument_id">giada</field>
-  <field name="instrument_name">Grain Impact Analyser and Dust Accumulator</field>
+  <field name="title">Grain Impact Analyser and Dust Accumulator</field>
   <field name="instrument_type">Dust Detector</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">consert.ro</field>
+  <field name="id">consert.ro</field>
   <field name="instrument_id">consert</field>
-  <field name="instrument_name">Comet Nucleus Sounding Experiment by Radiowave Transmission</field>
+  <field name="title">Comet Nucleus Sounding Experiment by Radiowave Transmission</field>
   <field name="instrument_type">Radar</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">midas.ro</field>
+  <field name="id">midas.ro</field>
   <field name="instrument_id">midas</field>
-  <field name="instrument_name">Micro-imaging Dust Analysis System</field>
+  <field name="title">Micro-imaging Dust Analysis System</field>
   <field name="instrument_type">Scanning Probe Microscope</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">miro.ro</field>
+  <field name="id">miro.ro</field>
   <field name="instrument_id">miro</field>
-  <field name="instrument_name">Microwave Instrument for the Rosetta Orbiter</field>
+  <field name="title">Microwave Instrument for the Rosetta Orbiter</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">navcam.ro</field>
+  <field name="id">navcam.ro</field>
   <field name="instrument_id">navcam</field>
-  <field name="instrument_name">Navigation Camera</field>
+  <field name="title">Navigation Camera</field>
   <field name="instrument_type">CCD Camera</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">osinac.ro</field>
+  <field name="id">osinac.ro</field>
   <field name="instrument_id">osinac</field>
-  <field name="instrument_name">Osiris - Narrow Angle Camera</field>
+  <field name="title">Osiris - Narrow Angle Camera</field>
   <field name="instrument_type">Frame CCD Reflecting Telescope</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">osiwac.ro</field>
+  <field name="id">osiwac.ro</field>
   <field name="instrument_id">osiwac</field>
-  <field name="instrument_name">Osiris - Wide Angle Camera</field>
+  <field name="title">Osiris - Wide Angle Camera</field>
   <field name="instrument_type">Frame CCD Reflecting Telescope</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rosina.ro</field>
+  <field name="id">rosina.ro</field>
   <field name="instrument_id">rosina</field>
-  <field name="instrument_name">Rosetta Orbiter Spectrometer for Ion and Neutral Analysis</field>
+  <field name="title">Rosetta Orbiter Spectrometer for Ion and Neutral Analysis</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rpcica.ro</field>
+  <field name="id">rpcica.ro</field>
   <field name="instrument_id">rpcica</field>
-  <field name="instrument_name">Rosetta Plasma Consortium - Ion Composition Analyser</field>
+  <field name="title">Rosetta Plasma Consortium - Ion Composition Analyser</field>
   <field name="instrument_type">Plasma Instrument</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rpcies.ro</field>
+  <field name="id">rpcies.ro</field>
   <field name="instrument_id">rpcies</field>
-  <field name="instrument_name">Rosetta Plasma Consortium - Ion And Electron Sensor</field>
+  <field name="title">Rosetta Plasma Consortium - Ion And Electron Sensor</field>
   <field name="instrument_type">Plasma Instrument</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rpclap.ro</field>
+  <field name="id">rpclap.ro</field>
   <field name="instrument_id">rpclap</field>
-  <field name="instrument_name">Rosetta Plasma Consortium - Langmuir Probe</field>
+  <field name="title">Rosetta Plasma Consortium - Langmuir Probe</field>
   <field name="instrument_type">Plasma Instrument</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rpcmag.ro</field>
+  <field name="id">rpcmag.ro</field>
   <field name="instrument_id">rpcmag</field>
-  <field name="instrument_name">Rosetta Plasma Consortium - Fluxgate Magnetometer</field>
+  <field name="title">Rosetta Plasma Consortium - Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rpcmip.ro</field>
+  <field name="id">rpcmip.ro</field>
   <field name="instrument_id">rpcmip</field>
-  <field name="instrument_name">Rosetta Plasma Consortium - Mutual Impedance Probe</field>
+  <field name="title">Rosetta Plasma Consortium - Mutual Impedance Probe</field>
   <field name="instrument_type">Plasma Analyzer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rsi.ro</field>
+  <field name="id">rsi.ro</field>
   <field name="instrument_id">rsi</field>
-  <field name="instrument_name">Rosetta Radio Science Investigation</field>
+  <field name="title">Rosetta Radio Science Investigation</field>
   <field name="instrument_type">Radio Science</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">virtis.ro</field>
+  <field name="id">virtis.ro</field>
   <field name="instrument_id">virtis</field>
-  <field name="instrument_name">Visible and Infrared Thermal Imaging Spectrometer</field>
+  <field name="title">Visible and Infrared Thermal Imaging Spectrometer</field>
   <field name="instrument_type">Imaging Spectrometer</field>
   <field name="instrument_host_id">ro</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">apxs.rl</field>
+  <field name="id">apxs.rl</field>
   <field name="instrument_id">apxs</field>
-  <field name="instrument_name">Alpha Particle X-ray Spectrometer</field>
+  <field name="title">Alpha Particle X-ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">civa.rl</field>
+  <field name="id">civa.rl</field>
   <field name="instrument_id">civa</field>
-  <field name="instrument_name">Cometary Infrared and Visible Analyser</field>
+  <field name="title">Cometary Infrared and Visible Analyser</field>
   <field name="instrument_type">Imaging Camera</field>
   <field name="instrument_type">Imaging Spectrometer</field>
   <field name="instrument_type">Infrared Spectrometer</field>
@@ -155,26 +155,26 @@
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">consert.rl</field>
+  <field name="id">consert.rl</field>
   <field name="instrument_id">consert</field>
-  <field name="instrument_name">Comet Nucleus Sounding Experiment by Radiowave Transmission</field>
+  <field name="title">Comet Nucleus Sounding Experiment by Radiowave Transmission</field>
   <field name="instrument_type">Radar</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">cosac.rl</field>
+  <field name="id">cosac.rl</field>
   <field name="instrument_id">cosac</field>
-  <field name="instrument_name">Cometary Sampling and Composition Experiment</field>
+  <field name="title">Cometary Sampling and Composition Experiment</field>
   <field name="instrument_type">Gas Chromatograph</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">mupus.rl</field>
+  <field name="id">mupus.rl</field>
   <field name="instrument_id">mupus</field>
-  <field name="instrument_name">Multi Purpose Suite for Surface and Subsurface Science</field>
+  <field name="title">Multi Purpose Suite for Surface and Subsurface Science</field>
   <field name="instrument_type">Accelerometer</field>
   <field name="instrument_type">Infrared Radiometer</field>
   <field name="instrument_type">Penetrometer Thermal Probe</field>
@@ -182,25 +182,25 @@
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">ptolemy.rl</field>
+  <field name="id">ptolemy.rl</field>
   <field name="instrument_id">ptolemy</field>
-  <field name="instrument_name">Gas Chromatograph Isotope Ratio Mass Spectrometer</field>
+  <field name="title">Gas Chromatograph Isotope Ratio Mass Spectrometer</field>
   <field name="instrument_type">Gas Isotope Ratio Analyser</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">rolis.rl</field>
+  <field name="id">rolis.rl</field>
   <field name="instrument_id">rolis</field>
-  <field name="instrument_name">Rosetta Lander Imaging System</field>
+  <field name="title">Rosetta Lander Imaging System</field>
   <field name="instrument_type">Imaging Camera</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">romap.rl</field>
+  <field name="id">romap.rl</field>
   <field name="instrument_id">romap</field>
-  <field name="instrument_name">Rosetta Lander Magnetometer and Plasma Monitor</field>
+  <field name="title">Rosetta Lander Magnetometer and Plasma Monitor</field>
   <field name="instrument_type">Electrostatic Analyzer</field>
   <field name="instrument_type">Faraday Cup</field>
   <field name="instrument_type">Fluxgate Magnetometer</field>
@@ -208,17 +208,17 @@
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">sd2.rl</field>
+  <field name="id">sd2.rl</field>
   <field name="instrument_id">sd2</field>
-  <field name="instrument_name">Sampling, Drilling and Distribution Subsystem</field>
+  <field name="title">Sampling, Drilling and Distribution Subsystem</field>
   <field name="instrument_type">Drill</field>
   <field name="instrument_host_id">rl</field>
   <field name="investigation_id">rosetta</field>
 </doc>
 <doc>
-  <field name="sid">sesame.rl</field>
+  <field name="id">sesame.rl</field>
   <field name="instrument_id">sesame</field>
-  <field name="instrument_name">Surface Electric Sounding and Acoustic Monitoring Experiment</field>
+  <field name="title">Surface Electric Sounding and Acoustic Monitoring Experiment</field>
   <field name="instrument_type">Acoustic Sensor</field>
   <field name="instrument_type">Dust Impact Detector</field>
   <field name="instrument_type">Permittivity Probe</field>

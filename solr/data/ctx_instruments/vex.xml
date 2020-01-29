@@ -1,8 +1,8 @@
 <add>
 <doc>
-  <field name="sid">aspera4.vex</field>
+  <field name="id">aspera4.vex</field>
   <field name="instrument_id">aspera4</field>
-  <field name="instrument_name">Analyzer Of Space Plasma And Energetic Atoms</field>
+  <field name="title">Analyzer Of Space Plasma And Energetic Atoms</field>
   <field name="instrument_type">Electrostatic Analyzer</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_type">Neutral Particle Imager</field>
@@ -12,18 +12,18 @@
   <field name="description">The scientific objective of the ASPERA-4 experiment is to study the solar wind-atmosphere interaction and characterise the plasma and neutral gas environment in near-Mars space through Energetic Neutral Atom (ENA) imaging and local charged particle measurements.</field>
 </doc>
 <doc>
-  <field name="sid">mag.vex</field>
+  <field name="id">mag.vex</field>
   <field name="instrument_id">mag</field>
-  <field name="instrument_name">Magnetometer</field>
+  <field name="title">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">vex</field>
   <field name="investigation_id">vex</field>
   <field name="description">Venus has no detectable internal magnetic field, and the field that exists around the planet is entirely due to the interaction between the solar wind and the atmosphere. MAG will study this process and will help in understanding the effect this has on the atmosphere.</field>
 </doc>
 <doc>
-  <field name="sid">spicav.vex</field>
+  <field name="id">spicav.vex</field>
   <field name="instrument_id">spicav</field>
-  <field name="instrument_name">Spectroscopy for Investigation of Characteristics of the Atmosphere of Venus</field>
+  <field name="title">Spectroscopy for Investigation of Characteristics of the Atmosphere of Venus</field>
   <field name="instrument_type">Infrared Imaging Spectrometer</field>
   <field name="instrument_type">Ultraviolet Imaging Spectrometer</field>
   <field name="instrument_host_id">vex</field>
@@ -31,36 +31,36 @@
   <field name="description">SPICAV is an imaging spectrometer for ultraviolet and infrared radiation designed to search for water, sulphur compounds and molecular oxygen in the atmosphere and determine the density and temperature of the atmosphere at 80 to 180 kilometers altitude.</field>
 </doc>
 <doc>
-  <field name="sid">spicav-soir.vex</field>
+  <field name="id">spicav-soir.vex</field>
   <field name="instrument_id">spicav-soir</field>
-  <field name="instrument_name">SPICAV Solar Occultation in Infrared</field>
+  <field name="title">SPICAV Solar Occultation in Infrared</field>
   <field name="instrument_type">Infrared Spectrometer</field>
   <field name="instrument_host_id">vex</field>
   <field name="investigation_id">vex</field>
   <field name="description">The SOIR element of SPICAV will investigate the chemistry, structure and dynamics of the Venusian atmosphere as well as vertical profiling of the aeronomic emissions. SOIR uses stellar occultation techniques and a spectrometer with range 2.3 to 4.2 microns.</field>
 </doc>
 <doc>
-  <field name="sid">virtis.vex</field>
+  <field name="id">virtis.vex</field>
   <field name="instrument_id">virtis</field>
-  <field name="instrument_name">Visible and Infrared Thermal Imaging Spectrometer</field>
+  <field name="title">Visible and Infrared Thermal Imaging Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">vex</field>
   <field name="investigation_id">vex</field>
   <field name="description">VIRTIS is an imaging spectrometer which allows Venus Express to map details of Venus from the surface to the mesosphere. Scientific objectives cover meteorology of the middle atmosphere, surface mineralogy, aeronomy of the upper atmosphere and a dynamical study of the Venusian atmosphere.</field>
 </doc>
 <doc>
-  <field name="sid">vmc.vex</field>
+  <field name="id">vmc.vex</field>
   <field name="instrument_id">vmc</field>
-  <field name="instrument_name">Venus Monitoring Camera</field>
+  <field name="title">Venus Monitoring Camera</field>
   <field name="instrument_type">Framing Camera</field>
   <field name="instrument_host_id">vex</field>
   <field name="investigation_id">vex</field>
   <field name="description">VMC is a wide-angle multi-channel camera that will take images of the planet in the near infrared, ultraviolet and visible wavelengths. VMC will make global images and will study the cloud dynamics and image the surface.</field>
 </doc>
 <doc>
-  <field name="sid">vra.vex</field>
+  <field name="id">vra.vex</field>
   <field name="instrument_id">vra</field>
-  <field name="instrument_name">Venus Express Radio Science</field>
+  <field name="title">Venus Express Radio Science</field>
   <field name="instrument_type">Radio Science</field>
   <field name="instrument_host_id">vex</field>
   <field name="investigation_id">vex</field>

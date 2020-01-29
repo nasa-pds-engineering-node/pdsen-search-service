@@ -1,56 +1,56 @@
 <add>
 <doc>
-  <field name="sid">aspera-3.mex</field>
+  <field name="id">aspera-3.mex</field>
   <field name="instrument_id">aspera-3</field>
-  <field name="instrument_name">Analyzer Of Space Plasma And Energetic Atoms (3rd Version)</field>
+  <field name="title">Analyzer Of Space Plasma And Energetic Atoms (3rd Version)</field>
   <field name="instrument_type">Energetic Particle Detector</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">hrsc.mex</field>
+  <field name="id">hrsc.mex</field>
   <field name="instrument_id">hrsc</field>
-  <field name="instrument_name">High Resolution Stereo Camera</field>
+  <field name="title">High Resolution Stereo Camera</field>
   <field name="instrument_type">Camera</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">marsis.mex</field>
+  <field name="id">marsis.mex</field>
   <field name="instrument_id">marsis</field>
-  <field name="instrument_name">Mars Advanced Radar For Subsurface And Ionosphere Sounding</field>
+  <field name="title">Mars Advanced Radar For Subsurface And Ionosphere Sounding</field>
   <field name="instrument_type">Radar</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">mrs.mex</field>
+  <field name="id">mrs.mex</field>
   <field name="instrument_id">mrs</field>
-  <field name="instrument_name">Mars Express Orbiter Radio Science</field>
+  <field name="title">Mars Express Orbiter Radio Science</field>
   <field name="instrument_type">Radio Science</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">omega.mex</field>
+  <field name="id">omega.mex</field>
   <field name="instrument_id">omega</field>
-  <field name="instrument_name">Observatoire Mineralogie, Eau, Glaces, Activite</field>
+  <field name="title">Observatoire Mineralogie, Eau, Glaces, Activite</field>
   <field name="instrument_type">Imaging Spectrometer</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">pfs.mex</field>
+  <field name="id">pfs.mex</field>
   <field name="instrument_id">pfs</field>
-  <field name="instrument_name">Planetary Fourier Spectrometer</field>
+  <field name="title">Planetary Fourier Spectrometer</field>
   <field name="instrument_type">Infrared Interferometer</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
 </doc>
 <doc>
-  <field name="sid">spicam.mex</field>
+  <field name="id">spicam.mex</field>
   <field name="instrument_id">spicam</field>
-  <field name="instrument_name">Spicam</field>
+  <field name="title">Spicam</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mex</field>
   <field name="investigation_id">mex</field>
