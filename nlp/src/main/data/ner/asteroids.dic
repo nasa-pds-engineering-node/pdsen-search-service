@@ -1,5 +1,5 @@
-asteroid->T=10
-asteroids->T=10|I=asteroid
+asteroid->T=11
+asteroids->T=11|I=asteroid
 
 Bennu->T=1
 101955->N=1

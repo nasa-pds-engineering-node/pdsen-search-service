@@ -1,5 +1,5 @@
-comet->T=10|N=1
-comets->T=10|I=comet
+comet->T=11|N=1
+comets->T=11|I=comet
 
 1p->N=1
 comet 1p->T=1|I=1p_halley

@@ -26,10 +26,9 @@ public class TestNER
         String sent4 = "Mars Science";
         String sent5 = "2001 Mars Odyssey instruments";
         String sent6 = "Mars Reconnaissance Test";
-        
-        
+                
         PdsLexer lexer = new PdsLexer();
-        List<String> lexTokens = lexer.parse(sent2);
+        List<String> lexTokens = lexer.parse(sent1);
         
         List<NerToken> nerTokens = ner.parse(lexTokens);
         for(NerToken token: nerTokens)
