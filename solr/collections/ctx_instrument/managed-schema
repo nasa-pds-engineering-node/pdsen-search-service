@@ -6,6 +6,8 @@
     <field name="id" type="string" indexed="true" stored="true" multiValued="false" />
     <uniqueKey>id</uniqueKey>
 
+    <field name="data_class" type="lowercase" indexed="true" stored="true" default="Instrument" multiValued="false"/>
+
     <field name="instrument_id" type="lowercase" indexed="true" stored="true" multiValued="false" />
     <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
     <field name="instrument_type" type="text_general" indexed="true" stored="true" multiValued="true" />

@@ -33,6 +33,8 @@ public class InvestigationProcessor
         data.shortLid = ParserUtils.getShortLid(data.lid);
         data.vid = fields.getFirstValue("version_id");
         
+        data.type = fields.getFirstValue("investigation_type");
+        
         setInvestigationId(data, fields);
         setInvestigationTitle(data, fields);
         

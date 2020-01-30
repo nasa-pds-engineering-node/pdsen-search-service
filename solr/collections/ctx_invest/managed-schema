@@ -3,13 +3,15 @@
 <schema name="investigation" version="1.0">
 
     <!-- Fields -->
-    <field name="lid" type="string" indexed="true" stored="true" multiValued="false" />
-    <uniqueKey>lid</uniqueKey>
-    <field name="vid" type="pfloat" indexed="true" stored="true" multiValued="false" />
-
+    <field name="id" type="string" indexed="true" stored="true" multiValued="false" />
+    <uniqueKey>id</uniqueKey>
+    <field name="data_class" type="lowercase" indexed="true" stored="true" default="Investigation" multiValued="false"/>
     <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
 
+    <field name="lid" type="string" indexed="true" stored="true" multiValued="true" />
+
     <field name="investigation_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
+    <field name="investigation_type" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="instrument_host_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="target_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="target_type" type="lowercase" indexed="true" stored="true" multiValued="true" />

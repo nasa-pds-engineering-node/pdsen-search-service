@@ -3,7 +3,6 @@ package gov.nasa.pds.data.pds4.tools;
 import java.util.HashSet;
 import java.util.Set;
 
-import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
 import gov.nasa.pds.data.pds4.model.Investigation;
 import gov.nasa.pds.data.pds4.solr.InvestigationWriter;
 import gov.nasa.pds.data.util.FieldMap;
