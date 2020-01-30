@@ -9,12 +9,12 @@ import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
 import gov.nasa.pds.search.solr.LuceneQueryBuilder;
 
-public class InvestigationQueryBuilder
+public class InstrumentQueryBuilder
 {
     private List<NerToken> nerTokens;
     
     
-    public InvestigationQueryBuilder(List<NerToken> nerTokens)
+    public InstrumentQueryBuilder(List<NerToken> nerTokens)
     {
         this.nerTokens = nerTokens;
     }
@@ -25,8 +25,6 @@ public class InvestigationQueryBuilder
         String investigationId = null;
         String instrumentId = null;
         String instrumentHostId = null;
-        String targetId = null;
-        String targetType = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -34,12 +32,6 @@ public class InvestigationQueryBuilder
         {
             switch(token.getType())
             {
-            case NerTokenType.TARGET:
-                targetId = getProductId(token);
-                break;
-            case NerTokenType.TARGET_TYPE:
-                targetType = getProductId(token);
-                break;
             case NerTokenType.INSTRUMENT:
                 instrumentId = getProductId(token);
                 break;
@@ -55,8 +47,6 @@ public class InvestigationQueryBuilder
         }
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
-        bld.addField(true, "target_id", targetId);
-        bld.addField(true, "target_type", targetType);
         bld.addField(true, "investigation_id", investigationId);
         bld.addField(true, "instrument_id", instrumentId);
         bld.addField(true, "instrument_host_id", instrumentHostId);
@@ -64,7 +54,7 @@ public class InvestigationQueryBuilder
         // Unknown tokens
         if(!unknownTokens.isEmpty())
         {
-            bld.addField(true, "title", unknownTokens);
+            bld.addField(true, "search_p1", unknownTokens);
         }
         
         String queryString = bld.toString();
@@ -78,8 +68,8 @@ public class InvestigationQueryBuilder
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
         //TODO: Properly handle data query stop words
-        if(token.equals("investigation") 
-                || token.equals("mission")) return;
+        if(token.equals("instrument") 
+                || token.equals("instruments")) return;
         
         unknownTokens.add(token);
     }

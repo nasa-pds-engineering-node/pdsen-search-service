@@ -19,11 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import gov.nasa.pds.nlp.lex.PdsLexer;
 import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.ner.NerToken;
-import gov.nasa.pds.search.cfg.SearchServerConfiguration;
+import gov.nasa.pds.nlp.query.ContextQueryClass;
+import gov.nasa.pds.nlp.query.ContextQueryClassifier;
 import gov.nasa.pds.search.solr.SolrDocJsonWriter;
 import gov.nasa.pds.search.solr.SolrManager;
-import gov.nasa.pds.search.solr.query.ContextQueryBuilder;
+import gov.nasa.pds.search.solr.query.InstrumentQueryBuilder;
+import gov.nasa.pds.search.solr.query.InvestigationQueryBuilder;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
+import gov.nasa.pds.search.solr.query.TargetQueryBuilder;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -32,9 +35,12 @@ import gov.nasa.pds.search.util.RequestParameters;
 public class ContextSearchController
 {
     private static final Logger LOG = LoggerFactory.getLogger(ContextSearchController.class);
-    
-    @Autowired
-    private SearchServerConfiguration ssConfig;
+
+    private static final String COLLECTION_INVESTIGATION = "ctx_invest";
+    private static final String COLLECTION_INSTRUMENT = "ctx_instrument";
+    private static final String COLLECTION_TARGET = "ctx_target";
+
+
     @Autowired
     private NamedEntityRecognizer ner;
 
@@ -61,34 +67,104 @@ public class ContextSearchController
         PdsLexer lexer = new PdsLexer();
         List<String> lexTokens = lexer.parse(qParam);
         List<NerToken> nerTokens = ner.parse(lexTokens);
+        ContextQueryClassifier queryClassifier = new ContextQueryClassifier();
+        byte queryCategory = queryClassifier.classify(nerTokens);
 
-        // Build Solr query
-        ContextQueryBuilder queryBuilder = new ContextQueryBuilder(nerTokens);
-        SolrQuery query = queryBuilder.build();
+        SolrDocumentList solrDocs = null;
+        
+        switch(queryCategory)
+        {
+        case ContextQueryClass.INVESTIGATION:
+            solrDocs = runInvestigationQuery(nerTokens, reqParams);
+            break;
+        case ContextQueryClass.INSTRUMENT:
+            solrDocs = runInstrumentQuery(nerTokens, reqParams);
+            break;
+        case ContextQueryClass.TARGET:
+            solrDocs = runTargetQuery(nerTokens, reqParams);
+            break;
+        default:
+            solrDocs = runUnknownQuery(nerTokens, reqParams);
+            break;
+        }
         
         // Invalid request
-        if(query == null)
+        if(solrDocs == null)
         {
             httpResp.setStatus(400);
             respWriter.error("Invalid query");
             return;
         }
 
+        // Write documents
+        respWriter.write(solrDocs);
+    }
+    
+    
+    private SolrDocumentList runTargetQuery(List<NerToken> tokens, 
+            RequestParameters reqParams) throws Exception
+    {
+        // Build Solr query
+        TargetQueryBuilder queryBuilder = new TargetQueryBuilder(tokens);
+        SolrQuery query = queryBuilder.build();
+        if(query == null) return null;
+
         // Set "start" and "rows"
         SolrQueryUtils.setPageInfo(query, reqParams);
-        
+
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(getSolrCollectionName(), query);
+        QueryResponse resp = solrClient.query(COLLECTION_TARGET, query);
         SolrDocumentList docList = resp.getResults();
-        
-        // Write documents
-        respWriter.write(docList);
+
+        return docList;
     }
+
     
-    
-    private String getSolrCollectionName()
+    private SolrDocumentList runInstrumentQuery(List<NerToken> tokens, 
+            RequestParameters reqParams) throws Exception
     {
-        return "ctx_invest";
+        // Build Solr query
+        InstrumentQueryBuilder queryBuilder = new InstrumentQueryBuilder(tokens);
+        SolrQuery query = queryBuilder.build();
+        if(query == null) return null;
+
+        // Set "start" and "rows"
+        SolrQueryUtils.setPageInfo(query, reqParams);
+
+        // Call Solr and get results
+        SolrClient solrClient = SolrManager.getInstance().getSolrClient();
+        QueryResponse resp = solrClient.query(COLLECTION_INSTRUMENT, query);
+        SolrDocumentList docList = resp.getResults();
+
+        return docList;
     }
+
+    
+    private SolrDocumentList runInvestigationQuery(List<NerToken> tokens, 
+            RequestParameters reqParams) throws Exception
+    {
+        // Build Solr query
+        InvestigationQueryBuilder queryBuilder = new InvestigationQueryBuilder(tokens);
+        SolrQuery query = queryBuilder.build();
+        if(query == null) return null;
+
+        // Set "start" and "rows"
+        SolrQueryUtils.setPageInfo(query, reqParams);
+
+        // Call Solr and get results
+        SolrClient solrClient = SolrManager.getInstance().getSolrClient();
+        QueryResponse resp = solrClient.query(COLLECTION_INVESTIGATION, query);
+        SolrDocumentList docList = resp.getResults();
+
+        return docList;
+    }
+
+    
+    private SolrDocumentList runUnknownQuery(List<NerToken> tokens, 
+            RequestParameters reqParams) throws Exception
+    {
+        return null;
+    }
+    
 }

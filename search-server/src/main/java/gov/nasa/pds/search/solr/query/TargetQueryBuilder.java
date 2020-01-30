@@ -9,12 +9,12 @@ import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
 import gov.nasa.pds.search.solr.LuceneQueryBuilder;
 
-public class InvestigationQueryBuilder
+public class TargetQueryBuilder
 {
     private List<NerToken> nerTokens;
     
     
-    public InvestigationQueryBuilder(List<NerToken> nerTokens)
+    public TargetQueryBuilder(List<NerToken> nerTokens)
     {
         this.nerTokens = nerTokens;
     }
@@ -78,8 +78,7 @@ public class InvestigationQueryBuilder
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
         //TODO: Properly handle data query stop words
-        if(token.equals("investigation") 
-                || token.equals("mission")) return;
+        if(token.equals("investigation")) return;
         
         unknownTokens.add(token);
     }

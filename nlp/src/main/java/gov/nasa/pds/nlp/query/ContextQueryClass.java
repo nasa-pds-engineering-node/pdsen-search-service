@@ -7,10 +7,10 @@ package gov.nasa.pds.nlp.query;
  */
 public class ContextQueryClass
 {
-    public static byte UNKNOWN = 0;
-    public static byte TARGET = 1;
-    public static byte INSTRUMENT = 2;
-    public static byte INVESTIGATION = 3;
+    public static final byte UNKNOWN = 0;
+    public static final byte TARGET = 1;
+    public static final byte INSTRUMENT = 2;
+    public static final byte INVESTIGATION = 3;
     
     
     public static String toString(byte cc)
