@@ -1,50 +1,124 @@
 <add>
 <doc>
   <field name="id">planet.mercury</field>
-  <field name="name">Mercury</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.mercury</field>
+  <field name="target_id">mercury</field>
   <field name="target_type">planet</field>
+  <field name="title">Mercury</field>
+  <field name="semi_major_axis_au">0.3871</field>
+  <field name="diameter_km">4878</field>
 </doc>
 <doc>
   <field name="id">planet.venus</field>
-  <field name="name">Venus</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.venus</field>
+  <field name="target_id">venus</field>
   <field name="target_type">planet</field>
+  <field name="title">Venus</field>
+  <field name="semi_major_axis_au">0.7233</field>
+  <field name="diameter_km">12104</field>
 </doc>
 <doc>
   <field name="id">planet.earth</field>
-  <field name="name">Earth</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.earth</field>
+  <field name="target_id">earth</field>
   <field name="target_type">planet</field>
+  <field name="title">Earth</field>
+  <field name="semi_major_axis_au">1.0</field>
+  <field name="diameter_km">12756</field>
 </doc>
 <doc>
   <field name="id">planet.mars</field>
-  <field name="name">Mars</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.mars</field>
+  <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="title">Mars</field>
+  <field name="semi_major_axis_au">1.5273</field>
+  <field name="diameter_km">6794</field>
 </doc>
 <doc>
   <field name="id">planet.jupiter</field>
-  <field name="name">Jupiter</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.jupiter</field>
+  <field name="target_id">jupiter</field>
   <field name="target_type">planet</field>
+  <field name="title">Jupiter</field>
+  <field name="semi_major_axis_au">5.2028</field>
+  <field name="diameter_km">142984</field>
 </doc>
 <doc>
   <field name="id">planet.saturn</field>
-  <field name="name">Saturn</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.saturn</field>
+  <field name="target_id">saturn</field>
   <field name="target_type">planet</field>
+  <field name="title">Saturn</field>
+  <field name="semi_major_axis_au">9.5388</field>
+  <field name="diameter_km">120536</field>
 </doc>
 <doc>
   <field name="id">planet.uranus</field>
-  <field name="name">Uranus</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.uranus</field>
+  <field name="target_id">uranus</field>
   <field name="target_type">planet</field>
+  <field name="title">Uranus</field>
+  <field name="semi_major_axis_au">19.1914</field>
+  <field name="diameter_km">51118</field>
 </doc>
 <doc>
   <field name="id">planet.neptune</field>
-  <field name="name">Neptune</field>
-  <field name="class">target</field>
+  <field name="lid">urn:nasa:pds:context:target:planet.neptune</field>
+  <field name="target_id">neptune</field>
   <field name="target_type">planet</field>
+  <field name="title">Neptune</field>
+  <field name="semi_major_axis_au">30.0611</field>
+  <field name="diameter_km">49532</field>
+</doc>
+<doc>
+  <field name="id">dwarf_planet.1_ceres</field>
+  <field name="lid">urn:nasa:pds:context:target:dwarf_planet.1_ceres</field>
+  <field name="target_id">1_ceres</field>
+  <field name="target_id">ceres</field>
+  <field name="target_type">dwarf_planet</field>
+  <field name="title">Ceres</field>
+  <field name="semi_major_axis_au">2.76596</field>
+  <field name="diameter_km">950</field>
+</doc>
+<doc>
+  <field name="id">dwarf_planet.134340_pluto</field>
+  <field name="lid">urn:nasa:pds:context:target:dwarf_planet.134340_pluto</field>
+  <field name="target_id">134340_pluto</field>
+  <field name="target_id">pluto</field>
+  <field name="target_type">dwarf_planet</field>
+  <field name="title">Pluto</field>
+  <field name="semi_major_axis_au">39.5294</field>
+  <field name="diameter_km">2370</field>
+</doc>
+<doc>
+  <field name="id">dwarf_planet.136108_haumea</field>
+  <field name="lid">urn:nasa:pds:context:target:dwarf_planet.136108_haumea</field>
+  <field name="target_id">136108_haumea</field>
+  <field name="target_id">haumea</field>
+  <field name="target_type">dwarf_planet</field>
+  <field name="title">Haumea</field>
+  <field name="semi_major_axis_au">43.335</field>
+  <field name="diameter_km">1632</field>
+</doc>
+<doc>
+  <field name="id">dwarf_planet.136472_makemake</field>
+  <field name="lid">urn:nasa:pds:context:target:dwarf_planet.136472_makemake</field>
+  <field name="target_id">136472_makemake</field>
+  <field name="target_id">makemake</field>
+  <field name="target_type">dwarf_planet</field>
+  <field name="title">Makemake</field>
+  <field name="semi_major_axis_au">45.791</field>
+  <field name="diameter_km">1430</field>
+</doc>
+<doc>
+  <field name="id">dwarf_planet.136199_eris</field>
+  <field name="lid">urn:nasa:pds:context:target:dwarf_planet.136199_eris</field>
+  <field name="target_id">136199_eris</field>
+  <field name="target_id">eris</field>
+  <field name="target_type">dwarf_planet</field>
+  <field name="title">Eris</field>
+  <field name="semi_major_axis_au">67.6681</field>
+  <field name="diameter_km">2326</field>
 </doc>
 </add>

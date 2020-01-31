@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<schema name="names" version="1.0">
+<schema name="ctx_target" version="1.0">
 
     <!-- Fields -->
     <field name="id" type="string" indexed="true" stored="true" multiValued="false" />
     <uniqueKey>id</uniqueKey>
+    <field name="data_class" type="lowercase" indexed="true" stored="true" default="Target" multiValued="false"/>
 
-    <field name="name" type="text_general" indexed="true" stored="true" multiValued="false" />
-    <field name="class" type="string" indexed="true" stored="true" multiValued="false" />
-    <field name="target_type" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="lid" type="string" indexed="true" stored="true" multiValued="true" />
+
+    <field name="title" type="text_general" indexed="true" stored="true" multiValued="false" />
+    <field name="target_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
+    <field name="target_type" type="lowercase" indexed="true" stored="true" multiValued="true" />
 
     <!-- Target fields -->
     <field name="group" type="text_general" indexed="true" stored="true" multiValued="false" />
     <field name="roman_number" type="string" indexed="true" stored="true" multiValued="false" />
-    <field name="roman_int" type="pint" indexed="true" stored="true" multiValued="false" />
+    <field name="number" type="pint" indexed="true" stored="true" multiValued="false" />
     <field name="designation" type="string" indexed="true" stored="true" multiValued="false" />
-    <field name="name_of_primary" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="id_of_primary" type="string" indexed="true" stored="true" multiValued="false" />
     <field name="year_discovered" type="pint" indexed="true" stored="true" multiValued="false" />
 
-    <field name="semi_major_axis" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="inclination" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="eccentricity" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="pariaphis" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="node" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="anomaly" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="period" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="optical_magnitude" type="pfloat" indexed="true" stored="true" multiValued="false" />
-    <field name="diameter" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="semi_major_axis_au" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="semi_major_axis_km" type="pfloat" indexed="true" stored="true" multiValued="false" />
+    <field name="diameter_km" type="pfloat" indexed="true" stored="true" multiValued="false" />
 
     <!-- System fields -->
     <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
