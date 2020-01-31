@@ -8,6 +8,10 @@ minor->N=1
 minor planet->T=11
 minor planets->T=11|I=minor_planet
 
+satellite->T=11
+satellites->T=11|I=satellite
+moons->T=11|I=satellite
+
 # Planets
 Mercury->T=1
 Venus->T=1|N=1
@@ -19,11 +23,25 @@ Uranus->T=1
 Neptune->T=1
 
 # Dwarf Planets
-Ceres->T=1
-Pluto->T=1
-Eris->T=1
-Haumea->T=1
-Makemake->T=1
+1->N=1
+Ceres->T=1|I=1_ceres
+1 Ceres->T=1|I=1_ceres
+
+134340->N=1
+Pluto->T=1|I=134340_pluto
+134340 Pluto->T=1|I=134340_pluto
+
+136199->N=1
+Eris->T=1|I=136199_eris
+136199 Eris->T=1|I=136199_eris
+
+136108->N=1
+Haumea->T=1|I=136108_haumea
+136108 Haumea->T=1|I=136108_haumea
+
+136472->N=1
+Makemake->T=1|I=136472_makemake
+136472 Makemake->T=1|I=136472_makemake
 
 # Dwarf candidates
 Quaoar->T=1

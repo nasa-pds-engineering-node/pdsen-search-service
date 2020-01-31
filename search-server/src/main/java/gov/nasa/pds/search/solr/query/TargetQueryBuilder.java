@@ -22,9 +22,6 @@ public class TargetQueryBuilder
 
     public SolrQuery build()
     {
-        String investigationId = null;
-        String instrumentId = null;
-        String instrumentHostId = null;
         String targetId = null;
         String targetType = null;
         
@@ -40,31 +37,29 @@ public class TargetQueryBuilder
             case NerTokenType.TARGET_TYPE:
                 targetType = getProductId(token);
                 break;
-            case NerTokenType.INSTRUMENT:
-                instrumentId = getProductId(token);
-                break;
-            case NerTokenType.INSTRUMENT_HOST:
-                instrumentHostId = getProductId(token);
-                break;
-            case NerTokenType.INVESTIGATION:
-                investigationId = getProductId(token);
-                break;
             default:
                 addUnknownToken(unknownTokens, token.getKey());
             }
         }
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
-        bld.addField(true, "target_id", targetId);
-        bld.addField(true, "target_type", targetType);
-        bld.addField(true, "investigation_id", investigationId);
-        bld.addField(true, "instrument_id", instrumentId);
-        bld.addField(true, "instrument_host_id", instrumentHostId);
 
+        // "Mars moons" || "Satellites of Jupiter"
+        if(targetId != null && "satellite".equals(targetType))
+        {
+            bld.addField(true, "id_of_primary", targetId);
+            bld.addField(true, "target_type", targetType);
+        }
+        else
+        {
+            bld.addField(true, "target_id", targetId);
+            bld.addField(true, "target_type", targetType);
+        }
+        
         // Unknown tokens
         if(!unknownTokens.isEmpty())
         {
-            bld.addField(true, "title", unknownTokens);
+            bld.addField(true, "search_p1", unknownTokens);
         }
         
         String queryString = bld.toString();
@@ -78,7 +73,7 @@ public class TargetQueryBuilder
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
         //TODO: Properly handle data query stop words
-        if(token.equals("investigation")) return;
+        if(token.equals("of")) return;
         
         unknownTokens.add(token);
     }

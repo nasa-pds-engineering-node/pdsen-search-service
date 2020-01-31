@@ -77,9 +77,13 @@ public class InvestigationQueryBuilder
     
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
-        //TODO: Properly handle data query stop words
-        if(token.equals("investigation") 
-                || token.equals("mission")) return;
+        //TODO: Properly handle investigation query stop words
+        if(token.equals("investigation")
+                || token.equals("investigations")
+                || token.equals("mission")
+                || token.equals("missions")
+                || token.equals("exploration")
+                ) return;
         
         unknownTokens.add(token);
     }
