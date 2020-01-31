@@ -2,10 +2,10 @@
 <doc>
   <field name="id">satellite.earth.moon</field>
   <field name="lid">urn:nasa:pds:context:target:satellite.earth.moon</field>
-  <field name="title">Moon</field>
   <field name="target_id">moon</field>
+  <field name="title">Moon</field>
   <field name="target_type">satellite</field>
-  <field name="id_of_primary">earth</field>
+  <field name="id_of_primary">Earth</field>
   <field name="number">1</field>
   <field name="semi_major_axis_km">384402</field>
   <field name="diameter_km">3474.2</field>
@@ -13,10 +13,10 @@
 <doc>
   <field name="id">satellite.mars.phobos</field>
   <field name="lid">urn:nasa:pds:context:target:satellite.mars.phobos</field>
-  <field name="title">Phobos</field>
   <field name="target_id">phobos</field>
+  <field name="title">Phobos</field>
   <field name="target_type">satellite</field>
-  <field name="id_of_primary">mars</field>
+  <field name="id_of_primary">Mars</field>
   <field name="number">1</field>
   <field name="semi_major_axis_km">9376</field>
   <field name="diameter_km">22.5</field>
@@ -25,10 +25,10 @@
 <doc>
   <field name="id">satellite.mars.deimos</field>
   <field name="lid">urn:nasa:pds:context:target:satellite.mars.deimos</field>
-  <field name="title">Deimos</field>
   <field name="target_id">deimos</field>
+  <field name="title">Deimos</field>
   <field name="target_type">satellite</field>
-  <field name="id_of_primary">mars</field>
+  <field name="id_of_primary">Mars</field>
   <field name="number">2</field>
   <field name="semi_major_axis_km">23463</field>
   <field name="diameter_km">12.4</field>

@@ -1,0 +1,72 @@
+<add>
+<doc>
+  <field name="id">satellite.134340_pluto.charon</field>
+  <field name="lid">urn:nasa:pds:context:target:satellite.134340_pluto.charon</field>
+  <field name="target_id">charon</field>
+  <field name="title">Charon</field>
+  <field name="designation">S/1978 P1</field>
+  <field name="target_type">satellite</field>
+  <field name="id_of_primary">134340_pluto</field>
+  <field name="roman_number">I</field>
+  <field name="number">1</field>
+  <field name="semi_major_axis_km">19591</field>
+  <field name="diameter_km">1207</field>
+  <field name="year_discovered">1978</field>
+</doc>
+<doc>
+  <field name="id">satellite.134340_pluto.styx</field>
+  <field name="lid">urn:nasa:pds:context:target:satellite.134340_pluto.styx</field>
+  <field name="target_id">styx</field>
+  <field name="title">Styx</field>
+  <field name="designation">S/2012 P1</field>
+  <field name="target_type">satellite</field>
+  <field name="id_of_primary">134340_pluto</field>
+  <field name="roman_number">V</field>
+  <field name="number">5</field>
+  <field name="semi_major_axis_km">42393</field>
+  <field name="diameter_km">20</field>
+  <field name="year_discovered">2012</field>
+</doc>
+<doc>
+  <field name="id">satellite.134340_pluto.nix</field>
+  <field name="lid">urn:nasa:pds:context:target:satellite.134340_pluto.nix</field>
+  <field name="target_id">nix</field>
+  <field name="title">Nix</field>
+  <field name="designation">S/2005 P2</field>
+  <field name="target_type">satellite</field>
+  <field name="id_of_primary">134340_pluto</field>
+  <field name="roman_number">II</field>
+  <field name="number">2</field>
+  <field name="semi_major_axis_km">48671</field>
+  <field name="diameter_km">70</field>
+  <field name="year_discovered">2005</field>
+</doc>
+<doc>
+  <field name="id">satellite.134340_pluto.kerberos</field>
+  <field name="lid">urn:nasa:pds:context:target:satellite.134340_pluto.kerberos</field>
+  <field name="target_id">kerberos</field>
+  <field name="title">Kerberos</field>
+  <field name="designation">S/2011 P1</field>
+  <field name="target_type">satellite</field>
+  <field name="id_of_primary">134340_pluto</field>
+  <field name="roman_number">IV</field>
+  <field name="number">4</field>
+  <field name="semi_major_axis_km">57729</field>
+  <field name="diameter_km">25</field>
+  <field name="year_discovered">2011</field>
+</doc>
+<doc>
+  <field name="id">satellite.134340_pluto.hydra</field>
+  <field name="lid">urn:nasa:pds:context:target:satellite.134340_pluto.hydra</field>
+  <field name="target_id">hydra</field>
+  <field name="title">Hydra</field>
+  <field name="designation">S/2005 P1</field>
+  <field name="target_type">satellite</field>
+  <field name="id_of_primary">134340_pluto</field>
+  <field name="roman_number">III</field>
+  <field name="number">3</field>
+  <field name="semi_major_axis_km">64698</field>
+  <field name="diameter_km">90</field>
+  <field name="year_discovered">2005</field>
+</doc>
+</add>

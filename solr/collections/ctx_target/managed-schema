@@ -17,8 +17,8 @@
     <field name="group" type="text_general" indexed="true" stored="true" multiValued="false" />
     <field name="roman_number" type="string" indexed="true" stored="true" multiValued="false" />
     <field name="number" type="pint" indexed="true" stored="true" multiValued="false" />
-    <field name="designation" type="string" indexed="true" stored="true" multiValued="false" />
-    <field name="id_of_primary" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="designation" type="lowercase" indexed="true" stored="true" multiValued="false" />
+    <field name="id_of_primary" type="lowercase" indexed="true" stored="true" multiValued="false" />
     <field name="year_discovered" type="pint" indexed="true" stored="true" multiValued="false" />
 
     <field name="semi_major_axis_au" type="pfloat" indexed="true" stored="true" multiValued="false" />
