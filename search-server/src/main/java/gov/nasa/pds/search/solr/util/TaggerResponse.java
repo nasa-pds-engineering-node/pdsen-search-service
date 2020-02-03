@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.solr;
+package gov.nasa.pds.search.solr.util;
 
 import org.apache.solr.client.solrj.response.SolrResponseBase;
 import org.apache.solr.common.SolrDocumentList;

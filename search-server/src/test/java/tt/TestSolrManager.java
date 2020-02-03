@@ -8,7 +8,7 @@ import org.apache.solr.common.SolrDocumentList;
 
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SolrConfiguration;
-import gov.nasa.pds.search.solr.SolrManager;
+import gov.nasa.pds.search.solr.util.SolrManager;
 
 
 public class TestSolrManager

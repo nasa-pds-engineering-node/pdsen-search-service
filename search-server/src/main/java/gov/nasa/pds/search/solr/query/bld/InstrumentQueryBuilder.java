@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.solr.query;
+package gov.nasa.pds.search.solr.query.bld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,14 +7,14 @@ import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
-import gov.nasa.pds.search.solr.LuceneQueryBuilder;
+import gov.nasa.pds.search.solr.util.LuceneQueryBuilder;
 
-public class TargetQueryBuilder
+public class InstrumentQueryBuilder
 {
     private List<NerToken> nerTokens;
     
     
-    public TargetQueryBuilder(List<NerToken> nerTokens)
+    public InstrumentQueryBuilder(List<NerToken> nerTokens)
     {
         this.nerTokens = nerTokens;
     }
@@ -22,8 +22,9 @@ public class TargetQueryBuilder
 
     public SolrQuery build()
     {
-        String targetId = null;
-        String targetType = null;
+        String investigationId = null;
+        String instrumentId = null;
+        String instrumentHostId = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -31,11 +32,14 @@ public class TargetQueryBuilder
         {
             switch(token.getType())
             {
-            case NerTokenType.TARGET:
-                targetId = getProductId(token);
+            case NerTokenType.INSTRUMENT:
+                instrumentId = getProductId(token);
                 break;
-            case NerTokenType.TARGET_TYPE:
-                targetType = getProductId(token);
+            case NerTokenType.INSTRUMENT_HOST:
+                instrumentHostId = getProductId(token);
+                break;
+            case NerTokenType.INVESTIGATION:
+                investigationId = getProductId(token);
                 break;
             default:
                 addUnknownToken(unknownTokens, token.getKey());
@@ -43,19 +47,10 @@ public class TargetQueryBuilder
         }
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
+        bld.addField(true, "investigation_id", investigationId);
+        bld.addField(true, "instrument_id", instrumentId);
+        bld.addField(true, "instrument_host_id", instrumentHostId);
 
-        // "Mars moons" || "Satellites of Jupiter"
-        if(targetId != null && "satellite".equals(targetType))
-        {
-            bld.addField(true, "id_of_primary", targetId);
-            bld.addField(true, "target_type", targetType);
-        }
-        else
-        {
-            bld.addField(true, "target_id", targetId);
-            bld.addField(true, "target_type", targetType);
-        }
-        
         // Unknown tokens
         if(!unknownTokens.isEmpty())
         {
@@ -73,7 +68,8 @@ public class TargetQueryBuilder
     private static void addUnknownToken(List<String> unknownTokens, String token)
     {
         //TODO: Properly handle data query stop words
-        if(token.equals("of")) return;
+        if(token.equals("instrument") 
+                || token.equals("instruments")) return;
         
         unknownTokens.add(token);
     }

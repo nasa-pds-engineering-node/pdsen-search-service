@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.solr;
+package gov.nasa.pds.search.solr.util;
 
 import java.util.List;
 

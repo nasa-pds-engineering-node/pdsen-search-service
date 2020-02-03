@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.solr.query;
+package gov.nasa.pds.search.solr.query.bld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
-import gov.nasa.pds.search.solr.LuceneQueryBuilder;
+import gov.nasa.pds.search.solr.util.LuceneQueryBuilder;
 
 public class InvestigationQueryBuilder
 {

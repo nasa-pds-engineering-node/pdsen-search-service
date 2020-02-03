@@ -15,7 +15,7 @@ import gov.nasa.pds.nlp.ner.dic.NerDictionary;
 import gov.nasa.pds.nlp.ner.dic.NerDictionaryHashMap;
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.solr.SolrManager;
+import gov.nasa.pds.search.solr.util.SolrManager;
 
 
 /**

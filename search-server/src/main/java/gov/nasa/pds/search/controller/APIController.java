@@ -20,8 +20,8 @@ import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
 import gov.nasa.pds.search.solr.SolrDocJsonWriter;
+import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
-import gov.nasa.pds.search.solr.SolrManager;
 import gov.nasa.pds.search.util.NameMapper;
 import gov.nasa.pds.search.util.RequestParameters;
 

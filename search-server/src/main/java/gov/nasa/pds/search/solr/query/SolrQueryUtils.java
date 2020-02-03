@@ -6,6 +6,7 @@ import gov.nasa.pds.search.util.RequestParameters;
 
 public class SolrQueryUtils
 {
+
     public static void setPageInfo(SolrQuery query, RequestParameters reqParams)
     {
         Integer rows = reqParams.getIntParameter("rows");
@@ -20,4 +21,15 @@ public class SolrQueryUtils
             query.setStart(start);
         }
     }
+    
+    
+    public static void setFields(SolrQuery query, RequestParameters reqParams)
+    {
+        String fields = reqParams.getParameter("fl");
+        if(fields != null && !fields.isEmpty())
+        {
+            query.set("fl", fields);
+        }
+    }
+    
 }

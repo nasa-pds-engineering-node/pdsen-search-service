@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import gov.nasa.pds.nlp.lex.PdsLexer;
 import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.ner.NerToken;
-import gov.nasa.pds.search.ner.NerJsonWriter;
 import gov.nasa.pds.search.util.RequestParameters;
 
 

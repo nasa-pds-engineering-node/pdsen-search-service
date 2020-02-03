@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 import gov.nasa.pds.nlp.lex.PdsLexer;
 import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.ner.NerToken;
-import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.solr.SolrDocJsonWriter;
-import gov.nasa.pds.search.solr.SolrManager;
-import gov.nasa.pds.search.solr.query.DocsQueryBuilder;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
+import gov.nasa.pds.search.solr.query.bld.DocsQueryBuilder;
+import gov.nasa.pds.search.solr.query.run.DocsQueryRunner;
+import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -33,8 +33,6 @@ public class DocsSearchController
 {
     private static final Logger LOG = LoggerFactory.getLogger(DocsSearchController.class);
     
-    @Autowired
-    private SearchServerConfiguration ssConfig;
     @Autowired
     private NamedEntityRecognizer ner;
 
@@ -62,33 +60,19 @@ public class DocsSearchController
         List<String> lexTokens = lexer.parse(qParam);
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
-        // Build Solr query
-        DocsQueryBuilder queryBuilder = new DocsQueryBuilder(nerTokens);
-        SolrQuery query = queryBuilder.build();
-        
+        // Call Solr and get results
+        SolrDocumentList solrDocs = DocsQueryRunner.runDocsQuery(nerTokens, reqParams);
+
         // Invalid request
-        if(query == null)
+        if(solrDocs == null)
         {
             httpResp.setStatus(400);
             respWriter.error("Invalid query");
             return;
         }
-
-        // Set "start" and "rows"
-        SolrQueryUtils.setPageInfo(query, reqParams);
-        
-        // Call Solr and get results
-        SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query(getSolrCollectionName(), query);
-        SolrDocumentList docList = resp.getResults();
         
         // Write documents
-        respWriter.write(docList);
+        respWriter.write(solrDocs);
     }
-    
-    
-    private String getSolrCollectionName()
-    {
-        return "docs";
-    }
+
 }

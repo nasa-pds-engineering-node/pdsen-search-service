@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.ner;
+package gov.nasa.pds.search.controller;
 
 import java.io.IOException;
 import java.io.Writer;
