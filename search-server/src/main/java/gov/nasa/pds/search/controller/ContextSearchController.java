@@ -18,9 +18,7 @@ import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.query.ContextQueryClass;
 import gov.nasa.pds.nlp.query.ContextQueryClassifier;
-import gov.nasa.pds.search.solr.SolrDocJsonWriter;
 import gov.nasa.pds.search.solr.query.run.ContextQueryRunner;
-import gov.nasa.pds.search.util.RequestParameters;
 
 
 @RestController
@@ -36,56 +34,98 @@ public class ContextSearchController
     @GetMapping(path = "/search/ctx")
     public void getContext(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
-        RequestParameters reqParams = new RequestParameters(httpReq.getParameterMap());
+        SearchContext ctx = new SearchContext(httpReq, httpResp);
+        if(!ctx.validateAndContinue()) return;
 
-        httpResp.setContentType("application/json");
-        SolrDocJsonWriter respWriter = new SolrDocJsonWriter(httpResp.getWriter());
-
-        String qParam = reqParams.getParameter("q");
-        
-        // Validate request
-        if(qParam == null || qParam.isEmpty())
-        {
-            httpResp.setStatus(400);
-            respWriter.error("Missing query parameter (q=...)");
-            return;
-        }
-        
         // Call NER
         PdsLexer lexer = new PdsLexer();
-        List<String> lexTokens = lexer.parse(qParam);
+        List<String> lexTokens = lexer.parse(ctx.qParam);
         List<NerToken> nerTokens = ner.parse(lexTokens);
         ContextQueryClassifier queryClassifier = new ContextQueryClassifier();
         byte queryCategory = queryClassifier.classify(nerTokens);
 
+        // Run Solr Query
         SolrDocumentList solrDocs = null;
-        
         switch(queryCategory)
         {
         case ContextQueryClass.INVESTIGATION:
-            solrDocs = ContextQueryRunner.runInvestigationQuery(nerTokens, reqParams);
+            solrDocs = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
             break;
         case ContextQueryClass.INSTRUMENT:
-            solrDocs = ContextQueryRunner.runInstrumentQuery(nerTokens, reqParams);
+            solrDocs = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
             break;
         case ContextQueryClass.TARGET:
-            solrDocs = ContextQueryRunner.runTargetQuery(nerTokens, reqParams);
+            solrDocs = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
             break;
         default:
-            solrDocs = ContextQueryRunner.runUnknownQuery(nerTokens, reqParams);
+            solrDocs = ContextQueryRunner.runUnknownQuery(nerTokens, ctx.reqParams);
             break;
         }
         
-        // Invalid request
-        if(solrDocs == null)
-        {
-            httpResp.setStatus(400);
-            respWriter.error("Invalid query");
-            return;
-        }
+        if(!ctx.validateAndContinue(solrDocs)) return;
 
         // Write documents
-        respWriter.write(solrDocs);
+        ctx.respWriter.write(solrDocs);
+    }
+
+    
+    @GetMapping(path = "/search/ctx/invest")
+    public void getInvestigation(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
+    {
+        SearchContext ctx = new SearchContext(httpReq, httpResp);
+        if(!ctx.validateAndContinue()) return;
+        
+        // Call NER
+        PdsLexer lexer = new PdsLexer();
+        List<String> lexTokens = lexer.parse(ctx.qParam);
+        List<NerToken> nerTokens = ner.parse(lexTokens);
+
+        // Run Solr Query
+        SolrDocumentList solrDocs = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(solrDocs)) return;
+
+        // Write documents
+        ctx.respWriter.write(solrDocs);
+    }
+
+    
+    @GetMapping(path = "/search/ctx/instrument")
+    public void getInstrument(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
+    {
+        SearchContext ctx = new SearchContext(httpReq, httpResp);
+        if(!ctx.validateAndContinue()) return;
+        
+        // Call NER
+        PdsLexer lexer = new PdsLexer();
+        List<String> lexTokens = lexer.parse(ctx.qParam);
+        List<NerToken> nerTokens = ner.parse(lexTokens);
+
+        // Run Solr Query
+        SolrDocumentList solrDocs = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(solrDocs)) return;
+
+        // Write documents
+        ctx.respWriter.write(solrDocs);
+    }
+
+    
+    @GetMapping(path = "/search/ctx/target")
+    public void getTarget(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
+    {
+        SearchContext ctx = new SearchContext(httpReq, httpResp);
+        if(!ctx.validateAndContinue()) return;
+        
+        // Call NER
+        PdsLexer lexer = new PdsLexer();
+        List<String> lexTokens = lexer.parse(ctx.qParam);
+        List<NerToken> nerTokens = ner.parse(lexTokens);
+
+        // Run Solr Query
+        SolrDocumentList solrDocs = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(solrDocs)) return;
+
+        // Write documents
+        ctx.respWriter.write(solrDocs);
     }
 
 }
