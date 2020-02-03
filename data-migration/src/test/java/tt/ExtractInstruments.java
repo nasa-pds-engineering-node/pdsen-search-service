@@ -83,75 +83,12 @@ public class ExtractInstruments
             
             // Housekeeping data
             if("huygens_hk".equals(inst.id)) return;
-            
-            // Two hosts with the same instruments. Skip second one.
-            if(hostId.equals("grail-b") || hostId.equals("mer2") 
-                    || hostId.equals("vega2") || hostId.equals("vg1") 
-                    || hostId.equals("vl2") || hostId.equals("vo1"))
+                                    
+            String missionId = host2mis.get(hostId);
+            if(missionId == null) 
             {
-                return;
-            }
-                        
-            String missionId;
-            
-            // grail-a & grail-b
-            if(hostId.equals("grail-a"))
-            {
-                if(inst.id.equals("lgrs-a")) inst.id = "lgrs";
-                
-                hostId = "grail-a,grail-b";
-                missionId = "grail";
-            }
-            // mer1 & mer2
-            else if(hostId.equals("mer1") )
-            {
-                hostId = "mer1,mer2";
-                missionId = "mer";
-            }
-            // vega1 & vega2
-            else if(hostId.equals("vega1") )
-            {
-                // Are those vega1 only?
-                if(inst.id.equals("iks") || inst.id.equals("tnm"))
-                {
-                    hostId = "vega1";
-                }
-                else
-                {
-                    hostId = "vega1,vega2";
-                }
-                missionId = "vega";
-            }
-            // vg1 & vg2
-            else if(hostId.equals("vg2") )
-            {
-                if(inst.id.startsWith("rss-vg")) return;
-                
-                //TDOO: Is PPS in VG2 only?
-                
-                hostId = "vg1,vg2";
-                missionId = "voyager";
-            }
-            // vl1 & vl2
-            else if(hostId.equals("vl1") )
-            {
-                hostId = "vl1,vl2";
-                missionId = "viking";
-                
-                if(inst.id.equals("lr1")) inst.id = "lr";
-            }
-            // vo1 & vo2
-            else if(hostId.equals("vo2"))
-            {
-                hostId = "vo1,vo2";
-                missionId = "viking";
-                
-                //TDOO: Is RSS in VO2 only?
-            }
-            else
-            {
-                missionId = host2mis.get(hostId);
-                if(missionId == null) missionId = hostId;
+                System.out.println("WARNING: unknown host id: " + hostId);
+                missionId = hostId;
             }
 
             //debug(inst, hostId, missionId);
@@ -178,7 +115,8 @@ public class ExtractInstruments
         
         writer.append("<doc>\n");
 
-        SolrDocUtils.writeField(writer, "sid", inst.shortLid);
+        SolrDocUtils.writeField(writer, "id", inst.shortLid);
+        SolrDocUtils.writeField(writer, "lid", inst.lid);
         
         SolrDocUtils.writeField(writer, "instrument_id", inst.id);
         SolrDocUtils.writeField(writer, "instrument_name", name);

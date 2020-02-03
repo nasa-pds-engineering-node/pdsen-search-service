@@ -13,16 +13,42 @@ a17l|apollo_17,apollo
 co|cassini
 hp|cassini
 
+ch1-orb|chandrayaan1
+clem1|clem1
+con|con
+dawn|dawn
+
 dif|deep_impact
 dii|deep_impact
+
+ds1|ds1
 
 gio|giotto,gem
 
 go|galileo
 gp|galileo
 
+grail-a|grail
+grail-b|grail
+
+hay|hay
+hst|hst
+ice|ice
+insight|insight
+iras|iras
+iue|iue
+jno|jno
+ladee|ladee
+lcross|lcross
+lp|lp
+lro|lro
+maven|maven
+
 mer1|mer
 mer2|mer
+
+mo|mo
+msx|msx
 
 mpfl|pathfinder
 mpfr|pathfinder
@@ -32,6 +58,18 @@ mr7|mariner69,mariner
 mr9|mariner71,mariner
 m10|m10,mariner
 
+mess|mess
+mex|mex
+mgn|mgn
+mgs|mgs
+mro|mro
+msl|msl
+
+near|near
+nh|nh
+ody|ody
+orex|orex
+
 p8|pioneer,pioneer_8
 p9|pioneer,pioneer_9
 p10|pioneer,pioneer_10
@@ -39,7 +77,18 @@ p11|pioneer,pioneer_11
 p12|pioneer,pioneer_12
 pvo|pioneer_venus
 
+phb2|phb2
+phx|phx
+
 ro|rosetta
+rl|rosetta
+
+sakig|sakig
+sdu|sdu
+soho|soho
+suisei|suisei
+
+uly|uly
 
 v15|venera,venera_15
 v16|venera,venera_16
@@ -51,3 +100,7 @@ vl1|viking
 vl2|viking
 vo1|viking
 vo2|viking
+
+vega1|vega
+vega2|vega
+vex|vex
