@@ -1,6 +1,7 @@
 <add>
 <doc>
   <field name="id">aspera4.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.aspera4-els</field>
   <field name="instrument_id">aspera4</field>
   <field name="title">Analyzer Of Space Plasma And Energetic Atoms</field>
   <field name="instrument_type">Electrostatic Analyzer</field>
@@ -13,6 +14,7 @@
 </doc>
 <doc>
   <field name="id">mag.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.mag</field>
   <field name="instrument_id">mag</field>
   <field name="title">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
@@ -22,6 +24,7 @@
 </doc>
 <doc>
   <field name="id">spicav.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.spicav</field>
   <field name="instrument_id">spicav</field>
   <field name="title">Spectroscopy for Investigation of Characteristics of the Atmosphere of Venus</field>
   <field name="instrument_type">Infrared Imaging Spectrometer</field>
@@ -32,6 +35,8 @@
 </doc>
 <doc>
   <field name="id">spicav-soir.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.spicav-soir</field>
+  <field name="instrument_id">spicav</field>
   <field name="instrument_id">spicav-soir</field>
   <field name="title">SPICAV Solar Occultation in Infrared</field>
   <field name="instrument_type">Infrared Spectrometer</field>
@@ -41,6 +46,7 @@
 </doc>
 <doc>
   <field name="id">virtis.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.virtis</field>
   <field name="instrument_id">virtis</field>
   <field name="title">Visible and Infrared Thermal Imaging Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
@@ -50,6 +56,7 @@
 </doc>
 <doc>
   <field name="id">vmc.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.vmc</field>
   <field name="instrument_id">vmc</field>
   <field name="title">Venus Monitoring Camera</field>
   <field name="instrument_type">Framing Camera</field>
@@ -59,6 +66,7 @@
 </doc>
 <doc>
   <field name="id">vra.vex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vex.rss</field>
   <field name="instrument_id">vra</field>
   <field name="title">Venus Express Radio Science</field>
   <field name="instrument_type">Radio Science</field>

@@ -1,8 +1,9 @@
 <add>
 <doc>
   <field name="id">ccig.a12a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ccig.a12a</field>
   <field name="instrument_id">ccig</field>
-  <field name="title">Cold Cathode Ion Gage Experiment</field>
+  <field name="instrument_name">Cold Cathode Ion Gage Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a12a</field>
   <field name="investigation_id">apollo_12</field>
@@ -10,8 +11,9 @@
 </doc>
 <doc>
   <field name="id">side.a12a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:side.a12a</field>
   <field name="instrument_id">side</field>
-  <field name="title">Suprathermal Ion Detector Experiment</field>
+  <field name="instrument_name">Suprathermal Ion Detector Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a12a</field>
   <field name="investigation_id">apollo_12</field>
@@ -19,8 +21,9 @@
 </doc>
 <doc>
   <field name="id">sws.a12a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sws.a12a</field>
   <field name="instrument_id">sws</field>
-  <field name="title">Solar Wind Spectrometer</field>
+  <field name="instrument_name">Solar Wind Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">a12a</field>
   <field name="investigation_id">apollo_12</field>
@@ -28,8 +31,9 @@
 </doc>
 <doc>
   <field name="id">ccig.a14a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ccig.a14a</field>
   <field name="instrument_id">ccig</field>
-  <field name="title">Cold Cathode Ion Gage Experiment</field>
+  <field name="instrument_name">Cold Cathode Ion Gage Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">a14a</field>
   <field name="investigation_id">apollo_14</field>
@@ -37,8 +41,9 @@
 </doc>
 <doc>
   <field name="id">cplee.a14a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cplee.a14a</field>
   <field name="instrument_id">cplee</field>
-  <field name="title">Charged Particle Lunar Environment Experiment</field>
+  <field name="instrument_name">Charged Particle Lunar Environment Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a14a</field>
   <field name="investigation_id">apollo_14</field>
@@ -46,8 +51,9 @@
 </doc>
 <doc>
   <field name="id">side.a14a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:side.a14a</field>
   <field name="instrument_id">side</field>
-  <field name="title">Suprathermal Ion Detector Experiment</field>
+  <field name="instrument_name">Suprathermal Ion Detector Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a14a</field>
   <field name="investigation_id">apollo_14</field>
@@ -55,8 +61,9 @@
 </doc>
 <doc>
   <field name="id">ccig.a15a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ccig.a15a</field>
   <field name="instrument_id">ccig</field>
-  <field name="title">Cold Cathode Ion Gage Experiment</field>
+  <field name="instrument_name">Cold Cathode Ion Gage Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a15a</field>
   <field name="investigation_id">apollo_15</field>
@@ -64,8 +71,9 @@
 </doc>
 <doc>
   <field name="id">hfe.a15a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hfe.a15a</field>
   <field name="instrument_id">hfe</field>
-  <field name="title">Heat Flow Experiment</field>
+  <field name="instrument_name">Heat Flow Experiment</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">a15a</field>
   <field name="investigation_id">apollo_15</field>
@@ -73,8 +81,9 @@
 </doc>
 <doc>
   <field name="id">side.a15a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:side.a15a</field>
   <field name="instrument_id">side</field>
-  <field name="title">Suprathermal Ion Detector Experiment</field>
+  <field name="instrument_name">Suprathermal Ion Detector Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">a15a</field>
   <field name="investigation_id">apollo_15</field>
@@ -82,8 +91,9 @@
 </doc>
 <doc>
   <field name="id">sws.a15a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sws.a15a</field>
   <field name="instrument_id">sws</field>
-  <field name="title">Solar Wind Spectrometer</field>
+  <field name="instrument_name">Solar Wind Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">a15a</field>
   <field name="investigation_id">apollo_15</field>
@@ -91,8 +101,9 @@
 </doc>
 <doc>
   <field name="id">metriccam.a15c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:metriccam.a15c</field>
   <field name="instrument_id">metriccam</field>
-  <field name="title">Metric (mapping) Camera</field>
+  <field name="instrument_name">Metric (mapping) Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a15c</field>
   <field name="investigation_id">apollo_15</field>
@@ -100,8 +111,9 @@
 </doc>
 <doc>
   <field name="id">oms.a15c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:oms.a15c</field>
   <field name="instrument_id">oms</field>
-  <field name="title">Orbital Mass Spectrometer</field>
+  <field name="instrument_name">Orbital Mass Spectrometer (oms) Experiment</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">a15c</field>
   <field name="investigation_id">apollo_15</field>
@@ -109,8 +121,9 @@
 </doc>
 <doc>
   <field name="id">pancam.a15c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pancam.a15c</field>
   <field name="instrument_id">pancam</field>
-  <field name="title">Panoramic Camera</field>
+  <field name="instrument_name">Panoramic Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a15c</field>
   <field name="investigation_id">apollo_15</field>
@@ -118,8 +131,9 @@
 </doc>
 <doc>
   <field name="id">lsrp.a15l</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lsrp.a15l</field>
   <field name="instrument_id">lsrp</field>
-  <field name="title">Lunar Self-recording Penetrometer</field>
+  <field name="instrument_name">Lunar Self-recording Penetrometer</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">a15l</field>
   <field name="investigation_id">apollo_15</field>
@@ -127,8 +141,9 @@
 </doc>
 <doc>
   <field name="id">lsm.a16a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lsm.a16a</field>
   <field name="instrument_id">lsm</field>
-  <field name="title">Lunar Surface Magnetometer</field>
+  <field name="instrument_name">Lunar Surface Magnetometer (lsm) Experiment</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">a16a</field>
   <field name="investigation_id">apollo_16</field>
@@ -136,8 +151,9 @@
 </doc>
 <doc>
   <field name="id">metriccam.a16c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:metriccam.a16c</field>
   <field name="instrument_id">metriccam</field>
-  <field name="title">Metric (mapping) Camera</field>
+  <field name="instrument_name">Metric (mapping) Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a16c</field>
   <field name="investigation_id">apollo_16</field>
@@ -145,8 +161,9 @@
 </doc>
 <doc>
   <field name="id">oms.a16c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:oms.a16c</field>
   <field name="instrument_id">oms</field>
-  <field name="title">Orbital Mass Spectrometer</field>
+  <field name="instrument_name">Orbital Mass Spectrometer (oms) Experiment</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">a16c</field>
   <field name="investigation_id">apollo_16</field>
@@ -154,8 +171,9 @@
 </doc>
 <doc>
   <field name="id">pancam.a16c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pancam.a16c</field>
   <field name="instrument_id">pancam</field>
-  <field name="title">Panoramic Camera</field>
+  <field name="instrument_name">Panoramic Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a16c</field>
   <field name="investigation_id">apollo_16</field>
@@ -163,8 +181,9 @@
 </doc>
 <doc>
   <field name="id">lsrp.a16l</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lsrp.a16l</field>
   <field name="instrument_id">lsrp</field>
-  <field name="title">Lunar Self-recording Penetrometer</field>
+  <field name="instrument_name">Lunar Self-recording Penetrometer</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">a16l</field>
   <field name="investigation_id">apollo_16</field>
@@ -172,8 +191,9 @@
 </doc>
 <doc>
   <field name="id">hfe.a17a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hfe.a17a</field>
   <field name="instrument_id">hfe</field>
-  <field name="title">Heat Flow Experiment</field>
+  <field name="instrument_name">Heat Flow Experiment</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">a17a</field>
   <field name="investigation_id">apollo_17</field>
@@ -181,8 +201,9 @@
 </doc>
 <doc>
   <field name="id">leam.a17a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:leam.a17a</field>
   <field name="instrument_id">leam</field>
-  <field name="title">Alsep Lunar Ejecta And Meteorites</field>
+  <field name="instrument_name">Alsep Lunar Ejecta And Meteorites (leam) Experiment</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">a17a</field>
   <field name="investigation_id">apollo_17</field>
@@ -190,8 +211,9 @@
 </doc>
 <doc>
   <field name="id">lsg.a17a</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lsg.a17a</field>
   <field name="instrument_id">lsg</field>
-  <field name="title">Lunar Surface Gravimeter</field>
+  <field name="instrument_name">Lunar Surface Gravimeter (lsg) Experiment</field>
   <field name="instrument_type">Gravimeter</field>
   <field name="instrument_host_id">a17a</field>
   <field name="investigation_id">apollo_17</field>
@@ -199,8 +221,9 @@
 </doc>
 <doc>
   <field name="id">fuvs.a17c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fuvs.a17c</field>
   <field name="instrument_id">fuvs</field>
-  <field name="title">Far-ultraviolet Spectrometer</field>
+  <field name="instrument_name">Far-ultraviolet Spectrometer (fuvs)</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">a17c</field>
   <field name="investigation_id">apollo_17</field>
@@ -208,8 +231,9 @@
 </doc>
 <doc>
   <field name="id">metriccam.a17c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:metriccam.a17c</field>
   <field name="instrument_id">metriccam</field>
-  <field name="title">Metric (mapping) Camera</field>
+  <field name="instrument_name">Metric (mapping) Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a17c</field>
   <field name="investigation_id">apollo_17</field>
@@ -217,8 +241,9 @@
 </doc>
 <doc>
   <field name="id">pancam.a17c</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pancam.a17c</field>
   <field name="instrument_id">pancam</field>
-  <field name="title">Panoramic Camera</field>
+  <field name="instrument_name">Panoramic Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">a17c</field>
   <field name="investigation_id">apollo_17</field>
@@ -226,8 +251,9 @@
 </doc>
 <doc>
   <field name="id">sep.a17l</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sep.a17l</field>
   <field name="instrument_id">sep</field>
-  <field name="title">Surface Electrical Properties</field>
+  <field name="instrument_name">Surface Electrical Properties (sep) Experiment</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">a17l</field>
   <field name="investigation_id">apollo_17</field>
@@ -235,8 +261,9 @@
 </doc>
 <doc>
   <field name="id">tg.a17l</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tg.a17l</field>
   <field name="instrument_id">tg</field>
-  <field name="title">Traverse Gravimeter</field>
+  <field name="instrument_name">Traverse Gravimeter</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">a17l</field>
   <field name="investigation_id">apollo_17</field>
@@ -244,336 +271,378 @@
 </doc>
 <doc>
   <field name="id">m3.ch1-orb</field>
+  <field name="lid">urn:nasa:pds:context:instrument:m3.ch1-orb</field>
   <field name="instrument_id">m3</field>
-  <field name="title">Moon Mineralogy Mapper</field>
+  <field name="instrument_name">Moon Mineralogy Mapper</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">ch1-orb</field>
-  <field name="investigation_id">ch1-orb</field>
+  <field name="investigation_id">chandrayaan1</field>
 </doc>
 <doc>
   <field name="id">mrffr.ch1-orb</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mrffr.ch1-orb</field>
   <field name="instrument_id">mrffr</field>
-  <field name="title">Mini-rf Forerunner</field>
+  <field name="instrument_name">Mini-rf Forerunner</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">ch1-orb</field>
-  <field name="investigation_id">ch1-orb</field>
+  <field name="investigation_id">chandrayaan1</field>
 </doc>
 <doc>
   <field name="id">a-star.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:a-star.clem1</field>
   <field name="instrument_id">a-star</field>
-  <field name="title">A Star Tracker Camera</field>
+  <field name="instrument_name">A Star Tracker Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">b-star.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:b-star.clem1</field>
   <field name="instrument_id">b-star</field>
-  <field name="title">B Star Tracker Camera</field>
+  <field name="instrument_name">B Star Tracker Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">hires.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hires.clem1</field>
   <field name="instrument_id">hires</field>
-  <field name="title">Lidar High-resolution Imager</field>
+  <field name="instrument_name">Lidar High-resolution Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">lidar.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lidar.clem1</field>
   <field name="instrument_id">lidar</field>
-  <field name="title">Laser Rangefinder</field>
+  <field name="instrument_name">Laser Rangefinder</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">lwir.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lwir.clem1</field>
   <field name="instrument_id">lwir</field>
-  <field name="title">Long Wavelength Infrared Camera</field>
+  <field name="instrument_name">Long Wavelength Infrared Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">nir.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nir.clem1</field>
   <field name="instrument_id">nir</field>
-  <field name="title">Near Infrared Camera</field>
+  <field name="instrument_name">Near Infrared Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">rss.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.clem1</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">uvvis.clem1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvvis.clem1</field>
   <field name="instrument_id">uvvis</field>
-  <field name="title">Ultraviolet/visible Camera</field>
+  <field name="instrument_name">Ultraviolet/visible Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">clem1</field>
   <field name="investigation_id">clem1</field>
 </doc>
 <doc>
   <field name="id">caps.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:caps.co</field>
   <field name="instrument_id">caps</field>
-  <field name="title">Cassini Plasma Spectrometer</field>
+  <field name="instrument_name">Cassini Plasma Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">cda.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cda.co</field>
   <field name="instrument_id">cda</field>
-  <field name="title">Cosmic Dust Analyzer</field>
+  <field name="instrument_name">Cosmic Dust Analyzer</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">cirs.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cirs.co</field>
   <field name="instrument_id">cirs</field>
-  <field name="title">Composite Infrared Spectrometer</field>
+  <field name="instrument_name">Composite Infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">hrd.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hrd.co</field>
   <field name="instrument_id">hrd</field>
-  <field name="title">High Rate Detector</field>
+  <field name="instrument_name">High Rate Detector</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">inms.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:inms.co</field>
   <field name="instrument_id">inms</field>
-  <field name="title">Ion And Neutral Mass Spectrometer</field>
+  <field name="instrument_name">Ion And Neutral Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">issna.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:issna.co</field>
   <field name="instrument_id">issna</field>
-  <field name="title">Imaging Science Subsystem - Narrow Angle</field>
+  <field name="instrument_name">Imaging Science Subsystem - Narrow Angle</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">isswa.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:isswa.co</field>
   <field name="instrument_id">isswa</field>
-  <field name="title">Imaging Science Subsystem - Wide Angle</field>
+  <field name="instrument_name">Imaging Science Subsystem - Wide Angle</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">mag.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.co</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Dual Technique Magnetometer</field>
+  <field name="instrument_name">Dual Technique Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">mimi.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mimi.co</field>
   <field name="instrument_id">mimi</field>
-  <field name="title">Magnetospheric Imaging Instrument</field>
+  <field name="instrument_name">Magnetospheric Imaging Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">radar.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:radar.co</field>
   <field name="instrument_id">radar</field>
-  <field name="title">Radar</field>
+  <field name="instrument_name">Radar</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">rpws.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rpws.co</field>
   <field name="instrument_id">rpws</field>
-  <field name="title">Radio And Plasma Wave Science</field>
+  <field name="instrument_name">Radio And Plasma Wave Science</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">rss.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.co</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">uvis.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvis.co</field>
   <field name="instrument_id">uvis</field>
-  <field name="title">Ultraviolet Imaging Spectrograph</field>
+  <field name="instrument_name">Ultraviolet Imaging Spectrograph</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">vims.co</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vims.co</field>
   <field name="instrument_id">vims</field>
-  <field name="title">Visual And Infrared Mapping Spectrometer</field>
+  <field name="instrument_name">Visual And Infrared Mapping Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">co</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">cfi.con</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cfi.con</field>
   <field name="instrument_id">cfi</field>
-  <field name="title">Contour Forward Imager</field>
+  <field name="instrument_name">Contour Forward Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">con</field>
   <field name="investigation_id">con</field>
 </doc>
 <doc>
   <field name="id">cida.con</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cida.con</field>
   <field name="instrument_id">cida</field>
-  <field name="title">Contour Dust Analyzer</field>
+  <field name="instrument_name">Contour Dust Analyzer</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">con</field>
   <field name="investigation_id">con</field>
 </doc>
 <doc>
   <field name="id">crispimag.con</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crispimag.con</field>
   <field name="instrument_id">crispimag</field>
-  <field name="title">Contour Remote Imaging Spectrograph - Imager</field>
+  <field name="instrument_name">Contour Remote Imaging Spectrograph - Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">con</field>
   <field name="investigation_id">con</field>
 </doc>
 <doc>
   <field name="id">crispspec.con</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crispspec.con</field>
   <field name="instrument_id">crispspec</field>
-  <field name="title">Contour Remote Imaging Spectrograph - Spectrometer</field>
+  <field name="instrument_name">Contour Remote Imaging Spectrograph - Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">con</field>
   <field name="investigation_id">con</field>
 </doc>
 <doc>
   <field name="id">ngims.con</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ngims.con</field>
   <field name="instrument_id">ngims</field>
-  <field name="title">Neutral Gas And Ion Mass Spectrometer</field>
+  <field name="instrument_name">Neutral Gas And Ion Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">con</field>
   <field name="investigation_id">con</field>
 </doc>
 <doc>
   <field name="id">dawn.fc2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dawn.fc2</field>
   <field name="instrument_id">fc2</field>
-  <field name="title">Framing Camera 2</field>
+  <field name="instrument_name">Framing Camera 2</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">dawn</field>
   <field name="investigation_id">dawn</field>
 </doc>
 <doc>
   <field name="id">dawn.grand</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dawn.grand</field>
   <field name="instrument_id">grand</field>
-  <field name="title">Gamma-ray And Neutron Detector</field>
+  <field name="instrument_name">Gamma-ray And Neutron Detector</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">dawn</field>
   <field name="investigation_id">dawn</field>
 </doc>
 <doc>
   <field name="id">dawn.rss</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dawn.rss</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Gravity Science Instrument</field>
+  <field name="instrument_name">Gravity Science Instrument</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">dawn</field>
   <field name="investigation_id">dawn</field>
 </doc>
 <doc>
   <field name="id">dawn.vir</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dawn.vir</field>
   <field name="instrument_id">vir</field>
-  <field name="title">Visible And Infrared Spectrometer</field>
+  <field name="instrument_name">Visible And Infrared Spectrometer</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">dawn</field>
   <field name="investigation_id">dawn</field>
 </doc>
 <doc>
   <field name="id">hrii.dif</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hrii.dif</field>
   <field name="instrument_id">hrii</field>
-  <field name="title">High Resolution Instrument - Ir Spectrometer</field>
+  <field name="instrument_name">High Resolution Instrument - Ir Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">dif</field>
   <field name="investigation_id">deep_impact</field>
 </doc>
 <doc>
   <field name="id">hriv.dif</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hriv.dif</field>
   <field name="instrument_id">hriv</field>
-  <field name="title">High Resolution Instrument - Visible Ccd</field>
+  <field name="instrument_name">High Resolution Instrument - Visible Ccd</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">dif</field>
   <field name="investigation_id">deep_impact</field>
 </doc>
 <doc>
   <field name="id">mri.dif</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mri.dif</field>
   <field name="instrument_id">mri</field>
-  <field name="title">Medium Resolution Instrument - Visible Ccd</field>
+  <field name="instrument_name">Medium Resolution Instrument - Visible Ccd</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">dif</field>
   <field name="investigation_id">deep_impact</field>
 </doc>
 <doc>
   <field name="id">rss.dif</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.dif</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">dif</field>
   <field name="investigation_id">deep_impact</field>
 </doc>
 <doc>
   <field name="id">its.dii</field>
+  <field name="lid">urn:nasa:pds:context:instrument:its.dii</field>
   <field name="instrument_id">its</field>
-  <field name="title">Impactor Targeting Sensor - Visible Ccd</field>
+  <field name="instrument_name">Impactor Targeting Sensor - Visible Ccd</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">dii</field>
   <field name="investigation_id">deep_impact</field>
 </doc>
 <doc>
   <field name="id">ids.ds1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ids.ds1</field>
   <field name="instrument_id">ids</field>
-  <field name="title">Ion Propulsion System Diagnostic Subsystem</field>
+  <field name="instrument_name">Ion Propulsion System Diagnostic Subsystem</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">ds1</field>
   <field name="investigation_id">ds1</field>
 </doc>
 <doc>
   <field name="id">micas.ds1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:micas.ds1</field>
   <field name="instrument_id">micas</field>
-  <field name="title">Miniature Integrated Camera-spectrometer</field>
+  <field name="instrument_name">Miniature Integrated Camera-spectrometer</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">ds1</field>
   <field name="investigation_id">ds1</field>
 </doc>
 <doc>
   <field name="id">pepe.ds1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pepe.ds1</field>
   <field name="instrument_id">pepe</field>
-  <field name="title">Plasma Experiment For Planetary Exploration</field>
+  <field name="instrument_name">Plasma Experiment For Planetary Exploration</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ds1</field>
   <field name="investigation_id">ds1</field>
 </doc>
 <doc>
   <field name="id">did.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:did.gio</field>
   <field name="instrument_id">did</field>
-  <field name="title">Dust Impact Detector</field>
+  <field name="instrument_name">Dust Impact Detector</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -581,8 +650,9 @@
 </doc>
 <doc>
   <field name="id">epa.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epa.gio</field>
   <field name="instrument_id">epa</field>
-  <field name="title">Energetic Particle Experiment</field>
+  <field name="instrument_name">Energetic Particle Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -590,8 +660,9 @@
 </doc>
 <doc>
   <field name="id">gre.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gre.gio</field>
   <field name="instrument_id">gre</field>
-  <field name="title">Giotto Radioscience Experiment</field>
+  <field name="instrument_name">Giotto Radioscience Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -599,8 +670,9 @@
 </doc>
 <doc>
   <field name="id">hmc.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hmc.gio</field>
   <field name="instrument_id">hmc</field>
-  <field name="title">Halley Multicolour Camera</field>
+  <field name="instrument_name">Halley Multicolour Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -608,8 +680,9 @@
 </doc>
 <doc>
   <field name="id">ims.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ims.gio</field>
   <field name="instrument_id">ims</field>
-  <field name="title">Ion Mass Spectrometer</field>
+  <field name="instrument_name">Ion Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -617,8 +690,9 @@
 </doc>
 <doc>
   <field name="id">jpa.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:jpa.gio</field>
   <field name="instrument_id">jpa</field>
-  <field name="title">Johnstone Plasma Analyzer</field>
+  <field name="instrument_name">Johnstone Plasma Analyzer (jpa)</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -626,8 +700,9 @@
 </doc>
 <doc>
   <field name="id">mag.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.gio</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Fluxgate Magnetometer</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -635,8 +710,9 @@
 </doc>
 <doc>
   <field name="id">ope.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ope.gio</field>
   <field name="instrument_id">ope</field>
-  <field name="title">Optical Probe Experiment</field>
+  <field name="instrument_name">Optical Probe Experiment</field>
   <field name="instrument_type">Photometer</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -644,8 +720,9 @@
 </doc>
 <doc>
   <field name="id">pia.gio</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pia.gio</field>
   <field name="instrument_id">pia</field>
-  <field name="title">Particulate Impact Analyzer</field>
+  <field name="instrument_name">Particulate Impact Analyzer</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">gio</field>
   <field name="investigation_id">giotto</field>
@@ -653,697 +730,792 @@
 </doc>
 <doc>
   <field name="id">epd.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epd.go</field>
   <field name="instrument_id">epd</field>
-  <field name="title">Energetic Particles Detector</field>
+  <field name="instrument_name">Energetic Particles Detector</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">gdds.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gdds.go</field>
   <field name="instrument_id">gdds</field>
-  <field name="title">Galileo Dust Detection System</field>
+  <field name="instrument_name">Galileo Dust Detection System</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">hic.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hic.go</field>
   <field name="instrument_id">hic</field>
-  <field name="title">Heavy Ion Counter</field>
+  <field name="instrument_name">Heavy Ion Counter</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">mag.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.go</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Triaxial Fluxgate Magnetometer</field>
+  <field name="instrument_name">Triaxial Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">nims.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nims.go</field>
   <field name="instrument_id">nims</field>
-  <field name="title">Near Infrared Mapping Spectrometer</field>
+  <field name="instrument_name">Near Infrared Mapping Spectrometer</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">pls.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pls.go</field>
   <field name="instrument_id">pls</field>
-  <field name="title">Plasma Science Experiment</field>
+  <field name="instrument_name">Plasma Science Experiment</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">ppr.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ppr.go</field>
   <field name="instrument_id">ppr</field>
-  <field name="title">Photopolarimeter Radiometer</field>
+  <field name="instrument_name">Photopolarimeter Radiometer</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">pws.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pws.go</field>
   <field name="instrument_id">pws</field>
-  <field name="title">Plasma Wave Receiver</field>
+  <field name="instrument_name">Plasma Wave Receiver</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">rss.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.go</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">ssd.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ssd.go</field>
   <field name="instrument_id">ssd</field>
-  <field name="title">Galileo Orbiter Star Scanner</field>
+  <field name="instrument_name">Galileo Orbiter Star Scanner</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">ssi.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ssi.go</field>
   <field name="instrument_id">ssi</field>
-  <field name="title">Solid State Imaging System</field>
+  <field name="instrument_name">Solid State Imaging System</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">uvs.go</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvs.go</field>
   <field name="instrument_id">uvs</field>
-  <field name="title">Ultraviolet Spectrometer</field>
+  <field name="instrument_name">Ultraviolet Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">go</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">asi.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:asi.gp</field>
   <field name="instrument_id">asi</field>
-  <field name="title">Atmospheric Structure Instrument</field>
+  <field name="instrument_name">Atmospheric Structure Instrument</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">dwe.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dwe.gp</field>
   <field name="instrument_id">dwe</field>
-  <field name="title">Doppler Wind Experiment</field>
+  <field name="instrument_name">Doppler Wind Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">epi.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epi.gp</field>
   <field name="instrument_id">epi</field>
-  <field name="title">Energetic Particles Investigation</field>
+  <field name="instrument_name">Energetic Particles Investigation</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">gpms.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gpms.gp</field>
   <field name="instrument_id">gpms</field>
-  <field name="title">Galileo Probe Mass Spectrometer</field>
+  <field name="instrument_name">Galileo Probe Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">had.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:had.gp</field>
   <field name="instrument_id">had</field>
-  <field name="title">Helium Abundance Detector</field>
+  <field name="instrument_name">Helium Abundance Detector</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">lrd.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lrd.gp</field>
   <field name="instrument_id">lrd</field>
-  <field name="title">Lightning And Radio Emission Detector</field>
+  <field name="instrument_name">Lightning And Radio Emission Detector</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">nep.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nep.gp</field>
   <field name="instrument_id">nep</field>
-  <field name="title">Galileo Probe Nephelometer</field>
+  <field name="instrument_name">Galileo Probe Nephelometer</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">nfr.gp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nfr.gp</field>
   <field name="instrument_id">nfr</field>
-  <field name="title">Net Flux Radiometer</field>
+  <field name="instrument_name">Net Flux Radiometer</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">gp</field>
   <field name="investigation_id">galileo</field>
 </doc>
 <doc>
   <field name="id">lgrs-a.grail-a</field>
-  <field name="instrument_id">lgrs</field>
-  <field name="title">Lunar Gravity Ranging System</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lgrs-a.grail-a</field>
+  <field name="instrument_id">lgrs-a</field>
+  <field name="instrument_name">Lunar Gravity Ranging System A</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">grail-a</field>
+  <field name="investigation_id">grail</field>
+</doc>
+<doc>
+  <field name="id">lgrs-b.grail-b</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lgrs-b.grail-b</field>
+  <field name="instrument_id">lgrs-b</field>
+  <field name="instrument_name">Lunar Gravity Ranging System B</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">grail-b</field>
   <field name="investigation_id">grail</field>
 </doc>
 <doc>
   <field name="id">amica.hay</field>
+  <field name="lid">urn:nasa:pds:context:instrument:amica.hay</field>
   <field name="instrument_id">amica</field>
-  <field name="title">Asteroid Multi-band Imaging Camera</field>
+  <field name="instrument_name">Asteroid Multi-band Imaging Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">hay</field>
   <field name="investigation_id">hay</field>
 </doc>
 <doc>
   <field name="id">lidar.hay</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lidar.hay</field>
   <field name="instrument_id">lidar</field>
-  <field name="title">Light Detection And Ranging Instrument</field>
+  <field name="instrument_name">Light Detection And Ranging Instrument</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">hay</field>
   <field name="investigation_id">hay</field>
 </doc>
 <doc>
   <field name="id">nirs.hay</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nirs.hay</field>
   <field name="instrument_id">nirs</field>
-  <field name="title">Near-infrared Spectrometer</field>
+  <field name="instrument_name">Near-infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">hay</field>
   <field name="investigation_id">hay</field>
 </doc>
 <doc>
   <field name="id">acp.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:acp.hp</field>
   <field name="instrument_id">acp</field>
-  <field name="title">Aerosol Collector Pyrolyser</field>
+  <field name="instrument_name">Aerosol Collector Pyrolyser</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">disr.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:disr.hp</field>
   <field name="instrument_id">disr</field>
-  <field name="title">Descent Imager Spectral Radiometer</field>
+  <field name="instrument_name">Descent Imager Spectral Radiometer</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">dwe.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dwe.hp</field>
   <field name="instrument_id">dwe</field>
-  <field name="title">Doppler Wind Experiment</field>
+  <field name="instrument_name">Doppler Wind Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">gcms.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gcms.hp</field>
   <field name="instrument_id">gcms</field>
-  <field name="title">Gas Chromatograph Mass Spectrometer</field>
+  <field name="instrument_name">Gas Chromatograph Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">hasi.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hasi.hp</field>
   <field name="instrument_id">hasi</field>
-  <field name="title">Huygens Atmospheric Structure Instrument</field>
+  <field name="instrument_name">Huygens Atmospheric Structure Instrument</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">ssp.hp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ssp.hp</field>
   <field name="instrument_id">ssp</field>
-  <field name="title">Surface Science Package</field>
+  <field name="instrument_name">Surface Science Package</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">hp</field>
   <field name="investigation_id">cassini</field>
 </doc>
 <doc>
   <field name="id">hstacs.hst</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hstacs.hst</field>
   <field name="instrument_id">hstacs</field>
-  <field name="title">Advance Camera For Surveys</field>
+  <field name="instrument_name">Advance Camera For Surveys</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">hst</field>
   <field name="investigation_id">hst</field>
 </doc>
 <doc>
   <field name="id">wfpc2.hst</field>
+  <field name="lid">urn:nasa:pds:context:instrument:wfpc2.hst</field>
   <field name="instrument_id">wfpc2</field>
-  <field name="title">Wide Field Planetary Camera 2</field>
+  <field name="instrument_name">Wide Field Planetary Camera 2</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">hst</field>
   <field name="investigation_id">hst</field>
 </doc>
 <doc>
   <field name="id">epas.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epas.ice</field>
   <field name="instrument_id">epas</field>
-  <field name="title">Energetic Particle Anisotropy Spectrometer</field>
+  <field name="instrument_name">Energetic Particle Anisotropy Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">ici.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ici.ice</field>
   <field name="instrument_id">ici</field>
-  <field name="title">Ion Composition Instrument</field>
+  <field name="instrument_name">Ion Composition Instrument</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">mag.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.ice</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">plawav.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:plawav.ice</field>
   <field name="instrument_id">plawav</field>
-  <field name="title">Plasma Wave Experiment</field>
+  <field name="instrument_name">Plasma Wave Experiment</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">radwav.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:radwav.ice</field>
   <field name="instrument_id">radwav</field>
-  <field name="title">Radiowave Detector</field>
+  <field name="instrument_name">Radiowave Detector</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">swp.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swp.ice</field>
   <field name="instrument_id">swp</field>
-  <field name="title">Solar Wind Plasma Experiment</field>
+  <field name="instrument_name">Solar Wind Plasma Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">uleca.ice</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uleca.ice</field>
   <field name="instrument_id">uleca</field>
-  <field name="title">Ultra Low Energy Charge Analyzer</field>
+  <field name="instrument_name">Ultra Low Energy Charge Analyzer</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">ice</field>
   <field name="investigation_id">ice</field>
 </doc>
 <doc>
   <field name="id">apss-ifg.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apss-ifg.insight</field>
   <field name="instrument_id">apss-ifg</field>
-  <field name="title">Insight Fluxgate Magnetometer</field>
+  <field name="instrument_name">Insight Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">apss-ps.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apss-ps.insight</field>
   <field name="instrument_id">apss-ps</field>
-  <field name="title">Auxiliary Payload Sensor Subsystem Pressure Sensor</field>
+  <field name="instrument_name">Auxiliary Payload Sensor Subsystem Pressure Sensor</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">apss-twins.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apss-twins.insight</field>
   <field name="instrument_id">apss-twins</field>
-  <field name="title">Auxiliary Payload Sensor Subsystem Temperatures And Wind Sensor For Insight</field>
+  <field name="instrument_name">Auxiliary Payload Sensor Subsystem Temperatures And Wind Sensor For Insight</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">hp3.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hp3.insight</field>
   <field name="instrument_id">hp3</field>
-  <field name="title">Heat Flow And Physical Properties Package</field>
+  <field name="instrument_name">Heat Flow And Physical Properties Package</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">icc.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:icc.insight</field>
   <field name="instrument_id">icc</field>
-  <field name="title">Insight Context Camera</field>
+  <field name="instrument_name">Insight Context Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">ida.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ida.insight</field>
   <field name="instrument_id">ida</field>
-  <field name="title">Instrument Deployment Arm</field>
+  <field name="instrument_name">Instrument Deployment Arm</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">idc.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:idc.insight</field>
   <field name="instrument_id">idc</field>
-  <field name="title">Insight Deployment Camera</field>
+  <field name="instrument_name">Insight Deployment Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">radiometer.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:radiometer.insight</field>
   <field name="instrument_id">radiometer</field>
-  <field name="title">Radiometer</field>
+  <field name="instrument_name">Radiometer</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">rise.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rise.insight</field>
   <field name="instrument_id">rise</field>
-  <field name="title">Rise</field>
+  <field name="instrument_name">Rise</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">seis.insight</field>
+  <field name="lid">urn:nasa:pds:context:instrument:seis.insight</field>
   <field name="instrument_id">seis</field>
-  <field name="title">Seismic Experiment For Interior Structure</field>
+  <field name="instrument_name">Seismic Experiment For Interior Structure</field>
   <field name="instrument_type">Seismometer</field>
   <field name="instrument_host_id">insight</field>
   <field name="investigation_id">insight</field>
 </doc>
 <doc>
   <field name="id">fpa.iras</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fpa.iras</field>
   <field name="instrument_id">fpa</field>
-  <field name="title">Focal Plane Array</field>
+  <field name="instrument_name">Focal Plane Array</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">iras</field>
   <field name="investigation_id">iras</field>
 </doc>
 <doc>
   <field name="id">lwp.iue</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lwp.iue</field>
   <field name="instrument_id">lwp</field>
-  <field name="title">Long-wavelength Prime</field>
+  <field name="instrument_name">Long-wavelength Prime</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">iue</field>
   <field name="investigation_id">iue</field>
 </doc>
 <doc>
   <field name="id">lwr.iue</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lwr.iue</field>
   <field name="instrument_id">lwr</field>
-  <field name="title">Long-wavelength Redundant</field>
+  <field name="instrument_name">Long-wavelength Redundant</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">iue</field>
   <field name="investigation_id">iue</field>
 </doc>
 <doc>
   <field name="id">swp.iue</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swp.iue</field>
   <field name="instrument_id">swp</field>
-  <field name="title">Short-wavelength Prime</field>
+  <field name="instrument_name">Short-wavelength Prime</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">iue</field>
   <field name="investigation_id">iue</field>
 </doc>
 <doc>
   <field name="id">fgm.jno</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fgm.jno</field>
   <field name="instrument_id">fgm</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">jno</field>
   <field name="investigation_id">jno</field>
 </doc>
 <doc>
   <field name="id">grav.jno</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grav.jno</field>
   <field name="instrument_id">grav</field>
-  <field name="title">Gravity Science Instrument</field>
+  <field name="instrument_name">Gravity Science Instrument</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">jno</field>
   <field name="investigation_id">jno</field>
 </doc>
 <doc>
   <field name="id">jiram.jno</field>
+  <field name="lid">urn:nasa:pds:context:instrument:jiram.jno</field>
   <field name="instrument_id">jiram</field>
-  <field name="title">Jovian Infrared Auroral Mapper</field>
+  <field name="instrument_name">Jovian Infrared Auroral Mapper</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">jno</field>
   <field name="investigation_id">jno</field>
 </doc>
 <doc>
   <field name="id">mwr.jno</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mwr.jno</field>
   <field name="instrument_id">mwr</field>
-  <field name="title">Microwave Radiometer</field>
+  <field name="instrument_name">Microwave Radiometer</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">jno</field>
   <field name="investigation_id">jno</field>
 </doc>
 <doc>
   <field name="id">uvs.jno</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvs.jno</field>
   <field name="instrument_id">uvs</field>
-  <field name="title">Ultraviolet Spectrograph</field>
+  <field name="instrument_name">Ultraviolet Spectrograph</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">jno</field>
   <field name="investigation_id">jno</field>
 </doc>
 <doc>
   <field name="id">instrument.ldex__ladee</field>
+  <field name="lid">urn:nasa:pds:context:instrument:instrument.ldex__ladee</field>
   <field name="instrument_id">ldex</field>
-  <field name="title">Lunar Dust Experiment</field>
+  <field name="instrument_name">Lunar Dust Experiment</field>
   <field name="instrument_type">Dust Detector</field>
   <field name="instrument_host_id">ladee</field>
   <field name="investigation_id">ladee</field>
 </doc>
 <doc>
   <field name="id">instrument.nms__ladee</field>
+  <field name="lid">urn:nasa:pds:context:instrument:instrument.nms__ladee</field>
   <field name="instrument_id">nms</field>
-  <field name="title">Neutral Mass Spectrometer</field>
+  <field name="instrument_name">Neutral Mass Spectrometer</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_host_id">ladee</field>
   <field name="investigation_id">ladee</field>
 </doc>
 <doc>
   <field name="id">instrument.uvs__ladee</field>
+  <field name="lid">urn:nasa:pds:context:instrument:instrument.uvs__ladee</field>
   <field name="instrument_id">uvs</field>
-  <field name="title">Ultraviolet-visible Spectrometer</field>
+  <field name="instrument_name">Ultraviolet-visible Spectrometer</field>
   <field name="instrument_type">Ultraviolet Spectrometer</field>
   <field name="instrument_host_id">ladee</field>
   <field name="investigation_id">ladee</field>
 </doc>
 <doc>
   <field name="id">mir1.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mir1.lcross</field>
   <field name="instrument_id">mir1</field>
-  <field name="title">Mid Infrared Camera 1</field>
+  <field name="instrument_name">Mid Infrared Camera 1</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">mir2.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mir2.lcross</field>
   <field name="instrument_id">mir2</field>
-  <field name="title">Mid Infrared Camera 2</field>
+  <field name="instrument_name">Mid Infrared Camera 2</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">nir1.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nir1.lcross</field>
   <field name="instrument_id">nir1</field>
-  <field name="title">Near Infrared Camera 1</field>
+  <field name="instrument_name">Near Infrared Camera 1</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">nir2.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nir2.lcross</field>
   <field name="instrument_id">nir2</field>
-  <field name="title">Near Infrared Camera 2</field>
+  <field name="instrument_name">Near Infrared Camera 2</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">nsp1.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nsp1.lcross</field>
   <field name="instrument_id">nsp1</field>
-  <field name="title">Near Infrared Spectrometer 1</field>
+  <field name="instrument_name">Near Infrared Spectrometer 1</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">nsp2.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nsp2.lcross</field>
   <field name="instrument_id">nsp2</field>
-  <field name="title">Near Infrared Spectrometer 2</field>
+  <field name="instrument_name">Near Infrared Spectrometer 2</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">tlp.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tlp.lcross</field>
   <field name="instrument_id">tlp</field>
-  <field name="title">Total Luminance Photometer</field>
+  <field name="instrument_name">Total Luminance Photometer</field>
   <field name="instrument_type">Photometer</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">vis.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vis.lcross</field>
   <field name="instrument_id">vis</field>
-  <field name="title">Visible Camera</field>
+  <field name="instrument_name">Visible Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">vsp.lcross</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vsp.lcross</field>
   <field name="instrument_id">vsp</field>
-  <field name="title">Visible Spectrometer</field>
+  <field name="instrument_name">Visible Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lcross</field>
   <field name="investigation_id">lcross</field>
 </doc>
 <doc>
   <field name="id">aps.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:aps.lp</field>
   <field name="instrument_id">aps</field>
-  <field name="title">Alpha Particle Spectrometer</field>
+  <field name="instrument_name">Alpha Particle Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">eng.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:eng.lp</field>
   <field name="instrument_id">eng</field>
-  <field name="title">Lp Engineering</field>
+  <field name="instrument_name">Lp Engineering</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">er.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:er.lp</field>
   <field name="instrument_id">er</field>
-  <field name="title">Electron Reflectometer</field>
+  <field name="instrument_name">Electron Reflectometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">grs.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grs.lp</field>
   <field name="instrument_id">grs</field>
-  <field name="title">Gamma Ray Spectrometer</field>
+  <field name="instrument_name">Gamma Ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">mager.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mager.lp</field>
   <field name="instrument_id">mager</field>
-  <field name="title">Magnetometer - Electron Reflectometer</field>
+  <field name="instrument_name">Magnetometer - Electron Reflectometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">mag.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.lp</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">ns.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ns.lp</field>
   <field name="instrument_id">ns</field>
-  <field name="title">Neutron Spectrometer</field>
+  <field name="instrument_name">Neutron Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">rss.lp</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.lp</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">lp</field>
   <field name="investigation_id">lp</field>
 </doc>
 <doc>
   <field name="id">crat.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crat.lro</field>
   <field name="instrument_id">crat</field>
-  <field name="title">Cosmic Ray Telescope For The Effects Of Radiation</field>
+  <field name="instrument_name">Cosmic Ray Telescope For The Effects Of Radiation</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">dlre.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dlre.lro</field>
   <field name="instrument_id">dlre</field>
-  <field name="title">Diviner Lunar Radiometer Experiment</field>
+  <field name="instrument_name">Diviner Lunar Radiometer Experiment</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">lamp.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lamp.lro</field>
   <field name="instrument_id">lamp</field>
-  <field name="title">Lyman Alpha Mapping Project</field>
+  <field name="instrument_name">Lyman Alpha Mapping Project</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">lend.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lend.lro</field>
   <field name="instrument_id">lend</field>
-  <field name="title">Lunar Exploration Neutron Detector</field>
+  <field name="instrument_name">Lunar Exploration Neutron Detector</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">lola.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lola.lro</field>
   <field name="instrument_id">lola</field>
-  <field name="title">Lunar Orbiter Laser Altimeter</field>
+  <field name="instrument_name">Lunar Orbiter Laser Altimeter</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">lroc.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lroc.lro</field>
   <field name="instrument_id">lroc</field>
-  <field name="title">Lunar Reconnaissance Orbiter Camera</field>
+  <field name="instrument_name">Lunar Reconnaissance Orbiter Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">mrflro.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mrflro.lro</field>
   <field name="instrument_id">mrflro</field>
-  <field name="title">Mini-rf Lro</field>
+  <field name="instrument_name">Mini-rf Lro</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">rss.lro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.lro</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">lro</field>
   <field name="investigation_id">lro</field>
 </doc>
 <doc>
   <field name="id">mag.m10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.m10</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Triaxial Fluxgate Magnetometer</field>
+  <field name="instrument_name">Triaxial Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">m10</field>
   <field name="investigation_id">m10</field>
@@ -1351,8 +1523,9 @@
 </doc>
 <doc>
   <field name="id">pls.m10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pls.m10</field>
   <field name="instrument_id">pls</field>
-  <field name="title">Plasma Science Experiment</field>
+  <field name="instrument_name">Plasma Science Experiment</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">m10</field>
   <field name="investigation_id">m10</field>
@@ -1360,411 +1533,549 @@
 </doc>
 <doc>
   <field name="id">acc.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:acc.maven</field>
   <field name="instrument_id">acc</field>
-  <field name="title">Accelerometer</field>
+  <field name="instrument_name">Accelerometer</field>
   <field name="instrument_type">Accelerometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">euv.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:euv.maven</field>
   <field name="instrument_id">euv</field>
-  <field name="title">Extreme Ultraviolet Monitor</field>
+  <field name="instrument_name">Extreme Ultraviolet Monitor</field>
   <field name="instrument_type">Ultraviolet Spectrometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">iuvs.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iuvs.maven</field>
   <field name="instrument_id">iuvs</field>
-  <field name="title">Imaging Ultraviolet Spectrograph</field>
+  <field name="instrument_name">Imaging Ultraviolet Spectrograph</field>
   <field name="instrument_type">Ultraviolet Spectrometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">lpw.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lpw.maven</field>
   <field name="instrument_id">lpw</field>
-  <field name="title">Langmuir Probe And Waves Instrument</field>
+  <field name="instrument_name">Langmuir Probe And Waves Instrument</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">mag.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.maven</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">ngims.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ngims.maven</field>
   <field name="instrument_id">ngims</field>
-  <field name="title">Neutral Gas And Ion Mass Spectrometer</field>
+  <field name="instrument_name">Neutral Gas And Ion Mass Spectrometer</field>
   <field name="instrument_type">Mass Spectrometer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">sep.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sep.maven</field>
   <field name="instrument_id">sep</field>
-  <field name="title">Solar Energetic Particle Instrument</field>
+  <field name="instrument_name">Solar Energetic Particle Instrument</field>
   <field name="instrument_type">Energetic Particle Detector</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">static.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:static.maven</field>
   <field name="instrument_id">static</field>
-  <field name="title">Supra-thermal And Thermal Ion Composition</field>
+  <field name="instrument_name">Supra-thermal And Thermal Ion Composition</field>
   <field name="instrument_type">Plasma Analyzer</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">swea.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swea.maven</field>
   <field name="instrument_id">swea</field>
-  <field name="title">Solar Wind Electron Analyzer</field>
+  <field name="instrument_name">Solar Wind Electron Analyzer</field>
   <field name="instrument_type">Energetic Particle Detector</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">swia.maven</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swia.maven</field>
   <field name="instrument_id">swia</field>
-  <field name="title">Solar Wind Ion Analyzer</field>
+  <field name="instrument_name">Solar Wind Ion Analyzer</field>
   <field name="instrument_type">Energetic Particle Detector</field>
   <field name="instrument_host_id">maven</field>
   <field name="investigation_id">maven</field>
 </doc>
 <doc>
   <field name="id">apxs.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apxs.mer1</field>
   <field name="instrument_id">apxs</field>
-  <field name="title">Alpha Particle X-ray Spectrometer</field>
+  <field name="instrument_name">Alpha Particle X-ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">descam.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:descam.mer1</field>
   <field name="instrument_id">descam</field>
-  <field name="title">Descent Camera</field>
+  <field name="instrument_name">Descent Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">hazcam.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hazcam.mer1</field>
   <field name="instrument_id">hazcam</field>
-  <field name="title">Hazard Avoidance Camera</field>
+  <field name="instrument_name">Hazard Avoidance Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">imu.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:imu.mer1</field>
   <field name="instrument_id">imu</field>
-  <field name="title">Inertial Measurement Unit</field>
+  <field name="instrument_name">Inertial Measurement Unit</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">mb.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mb.mer1</field>
   <field name="instrument_id">mb</field>
-  <field name="title">Moessbauer Spectrometer</field>
+  <field name="instrument_name">Moessbauer Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">mini-tes.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mini-tes.mer1</field>
   <field name="instrument_id">mini-tes</field>
-  <field name="title">Miniature Thermal Emission Spectrometer</field>
+  <field name="instrument_name">Miniature Thermal Emission Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">mi.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mi.mer1</field>
   <field name="instrument_id">mi</field>
-  <field name="title">Microscopic Imager</field>
+  <field name="instrument_name">Microscopic Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">navcam.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:navcam.mer1</field>
   <field name="instrument_id">navcam</field>
-  <field name="title">Navigation Camera</field>
+  <field name="instrument_name">Navigation Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">pancam.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pancam.mer1</field>
   <field name="instrument_id">pancam</field>
-  <field name="title">Panoramic Camera</field>
+  <field name="instrument_name">Panoramic Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">rat.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rat.mer1</field>
   <field name="instrument_id">rat</field>
-  <field name="title">Rock Abrasion Tool</field>
+  <field name="instrument_name">Rock Abrasion Tool</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">mer1</field>
-  <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">rss.mer1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mer1</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mer1</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">apxs.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apxs.mer2</field>
+  <field name="instrument_id">apxs</field>
+  <field name="instrument_name">Alpha Particle X-ray Spectrometer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">descam.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:descam.mer2</field>
+  <field name="instrument_id">descam</field>
+  <field name="instrument_name">Descent Camera</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">hazcam.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hazcam.mer2</field>
+  <field name="instrument_id">hazcam</field>
+  <field name="instrument_name">Hazard Avoidance Camera</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">imu.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:imu.mer2</field>
+  <field name="instrument_id">imu</field>
+  <field name="instrument_name">Inertial Measurement Unit</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">mb.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mb.mer2</field>
+  <field name="instrument_id">mb</field>
+  <field name="instrument_name">Moessbauer Spectrometer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">mini-tes.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mini-tes.mer2</field>
+  <field name="instrument_id">mini-tes</field>
+  <field name="instrument_name">Miniature Thermal Emission Spectrometer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">mi.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mi.mer2</field>
+  <field name="instrument_id">mi</field>
+  <field name="instrument_name">Microscopic Imager</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">navcam.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:navcam.mer2</field>
+  <field name="instrument_id">navcam</field>
+  <field name="instrument_name">Navigation Camera</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">pancam.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pancam.mer2</field>
+  <field name="instrument_id">pancam</field>
+  <field name="instrument_name">Panoramic Camera</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">rat.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rat.mer2</field>
+  <field name="instrument_id">rat</field>
+  <field name="instrument_name">Rock Abrasion Tool</field>
+  <field name="instrument_type">Regolith Properties</field>
+  <field name="instrument_host_id">mer2</field>
+  <field name="investigation_id">mer</field>
+</doc>
+<doc>
+  <field name="id">rss.mer2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mer2</field>
+  <field name="instrument_id">rss</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mer2</field>
   <field name="investigation_id">mer</field>
 </doc>
 <doc>
   <field name="id">epps.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epps.mess</field>
   <field name="instrument_id">epps</field>
-  <field name="title">Energetic Particle And Plasma Spectrometer</field>
+  <field name="instrument_name">Energetic Particle And Plasma Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">grs.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grs.mess</field>
   <field name="instrument_id">grs</field>
-  <field name="title">Gamma Ray Spectrometer</field>
+  <field name="instrument_name">Gamma Ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">mag.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.mess</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">mascs.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mascs.mess</field>
   <field name="instrument_id">mascs</field>
-  <field name="title">Mercury Atmospheric And Surface Composition Spectrometer</field>
+  <field name="instrument_name">Mercury Atmospheric And Surface Composition Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">mdis-nac.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mdis-nac.mess</field>
   <field name="instrument_id">mdis-nac</field>
-  <field name="title">Mercury Dual Imaging System Narrow Angle Camera</field>
+  <field name="instrument_name">Mercury Dual Imaging System Narrow Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">mdis-wac.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mdis-wac.mess</field>
   <field name="instrument_id">mdis-wac</field>
-  <field name="title">Mercury Dual Imaging System Wide Angle Camera</field>
+  <field name="instrument_name">Mercury Dual Imaging System Wide Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">mla.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mla.mess</field>
   <field name="instrument_id">mla</field>
-  <field name="title">Mercury Laser Altimeter</field>
+  <field name="instrument_name">Mercury Laser Altimeter</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">ns.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ns.mess</field>
   <field name="instrument_id">ns</field>
-  <field name="title">Neutron Spectrometer</field>
+  <field name="instrument_name">Neutron Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">rss.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mess</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Radio Science</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">xrs.mess</field>
+  <field name="lid">urn:nasa:pds:context:instrument:xrs.mess</field>
   <field name="instrument_id">xrs</field>
-  <field name="title">X-ray Spectrometer</field>
+  <field name="instrument_name">X-ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mess</field>
   <field name="investigation_id">mess</field>
 </doc>
 <doc>
   <field name="id">rdrs.mgn</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rdrs.mgn</field>
   <field name="instrument_id">rdrs</field>
-  <field name="title">Radar System</field>
+  <field name="instrument_name">Radar System</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">mgn</field>
   <field name="investigation_id">mgn</field>
 </doc>
 <doc>
   <field name="id">rss.mgn</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mgn</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mgn</field>
   <field name="investigation_id">mgn</field>
 </doc>
 <doc>
   <field name="id">accel.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:accel.mgs</field>
   <field name="instrument_id">accel</field>
-  <field name="title">Accelerometer</field>
+  <field name="instrument_name">Accelerometer</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">er.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:er.mgs</field>
   <field name="instrument_id">er</field>
-  <field name="title">Electron Reflectometer</field>
+  <field name="instrument_name">Electron Reflectometer</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">mag.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.mgs</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">moc.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:moc.mgs</field>
   <field name="instrument_id">moc</field>
-  <field name="title">Mars Orbiter Camera</field>
+  <field name="instrument_name">Mars Orbiter Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">mola.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mola.mgs</field>
   <field name="instrument_id">mola</field>
-  <field name="title">Mars Orbiter Laser Altimeter</field>
+  <field name="instrument_name">Mars Orbiter Laser Altimeter</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">rss.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mgs</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">tes.mgs</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tes.mgs</field>
   <field name="instrument_id">tes</field>
-  <field name="title">Thermal Emission Spectrometer</field>
+  <field name="instrument_name">Thermal Emission Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mgs</field>
   <field name="investigation_id">mgs</field>
 </doc>
 <doc>
   <field name="id">rss.mo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mo</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mo</field>
   <field name="investigation_id">mo</field>
 </doc>
 <doc>
   <field name="id">asimet.mpfl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:asimet.mpfl</field>
   <field name="instrument_id">asimet</field>
-  <field name="title">Atmospheric Structure Instrument / Meteorology Package</field>
+  <field name="instrument_name">Atmospheric Structure Instrument / Meteorology Package</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mpfl</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">imp.mpfl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:imp.mpfl</field>
   <field name="instrument_id">imp</field>
-  <field name="title">Imager For Mars Pathfinder</field>
+  <field name="instrument_name">Imager For Mars Pathfinder</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mpfl</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">rss.mpfl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mpfl</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mpfl</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">windsock.mpfl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:windsock.mpfl</field>
   <field name="instrument_id">windsock</field>
-  <field name="title">Mars Pathfinder Imp Windsocks</field>
+  <field name="instrument_name">Mars Pathfinder Imp Windsocks</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mpfl</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">apxs.mpfr</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apxs.mpfr</field>
   <field name="instrument_id">apxs</field>
-  <field name="title">Alpha Proton X-ray Spectrometer</field>
+  <field name="instrument_name">Alpha Proton X-ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mpfr</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">rclt.mpfr</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rclt.mpfr</field>
   <field name="instrument_id">rclt</field>
-  <field name="title">Rover Camera Left</field>
+  <field name="instrument_name">Rover Camera Left</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mpfr</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">rcrr.mpfr</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rcrr.mpfr</field>
   <field name="instrument_id">rcrr</field>
-  <field name="title">Rover Camera Rear</field>
+  <field name="instrument_name">Rover Camera Rear</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mpfr</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">rcrt.mpfr</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rcrt.mpfr</field>
   <field name="instrument_id">rcrt</field>
-  <field name="title">Rover Camera Right</field>
+  <field name="instrument_name">Rover Camera Right</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mpfr</field>
   <field name="investigation_id">pathfinder</field>
 </doc>
 <doc>
   <field name="id">irs.mr6</field>
+  <field name="lid">urn:nasa:pds:context:instrument:irs.mr6</field>
   <field name="instrument_id">irs</field>
-  <field name="title">Infrared Spectrometer</field>
+  <field name="instrument_name">Infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mr6</field>
   <field name="investigation_id">mariner69</field>
@@ -1772,8 +2083,9 @@
 </doc>
 <doc>
   <field name="id">nac.mr6</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nac.mr6</field>
   <field name="instrument_id">nac</field>
-  <field name="title">Narrow Angle Camera</field>
+  <field name="instrument_name">Narrow Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mr6</field>
   <field name="investigation_id">mariner69</field>
@@ -1781,8 +2093,9 @@
 </doc>
 <doc>
   <field name="id">wac.mr6</field>
+  <field name="lid">urn:nasa:pds:context:instrument:wac.mr6</field>
   <field name="instrument_id">wac</field>
-  <field name="title">Wide Angle Camera</field>
+  <field name="instrument_name">Wide Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mr6</field>
   <field name="investigation_id">mariner69</field>
@@ -1790,8 +2103,9 @@
 </doc>
 <doc>
   <field name="id">irs.mr7</field>
+  <field name="lid">urn:nasa:pds:context:instrument:irs.mr7</field>
   <field name="instrument_id">irs</field>
-  <field name="title">Infrared Spectrometer</field>
+  <field name="instrument_name">Infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mr7</field>
   <field name="investigation_id">mariner69</field>
@@ -1799,8 +2113,9 @@
 </doc>
 <doc>
   <field name="id">nac.mr7</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nac.mr7</field>
   <field name="instrument_id">nac</field>
-  <field name="title">Narrow Angle Camera</field>
+  <field name="instrument_name">Narrow Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mr7</field>
   <field name="investigation_id">mariner69</field>
@@ -1808,8 +2123,9 @@
 </doc>
 <doc>
   <field name="id">wac.mr7</field>
+  <field name="lid">urn:nasa:pds:context:instrument:wac.mr7</field>
   <field name="instrument_id">wac</field>
-  <field name="title">Wide Angle Camera</field>
+  <field name="instrument_name">Wide Angle Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mr7</field>
   <field name="investigation_id">mariner69</field>
@@ -1817,8 +2133,9 @@
 </doc>
 <doc>
   <field name="id">iris.mr9</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iris.mr9</field>
   <field name="instrument_id">iris</field>
-  <field name="title">Infrared Interferometer Spectrometer</field>
+  <field name="instrument_name">Infrared Interferometer Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mr9</field>
   <field name="investigation_id">mariner71</field>
@@ -1826,8 +2143,9 @@
 </doc>
 <doc>
   <field name="id">iss.mr9</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iss.mr9</field>
   <field name="instrument_id">iss</field>
-  <field name="title">Imaging Science Subsystem</field>
+  <field name="instrument_name">Imaging Science Subsystem</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mr9</field>
   <field name="investigation_id">mariner71</field>
@@ -1835,504 +2153,567 @@
 </doc>
 <doc>
   <field name="id">accel.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:accel.mro</field>
   <field name="instrument_id">accel</field>
-  <field name="title">Accelerometer</field>
+  <field name="instrument_name">Accelerometer</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">crism.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crism.mro</field>
   <field name="instrument_id">crism</field>
-  <field name="title">Compact Reconnaissance Imaging Spectrometer For Mars</field>
+  <field name="instrument_name">Compact Reconnaissance Imaging Spectrometer For Mars</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">ctx.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ctx.mro</field>
   <field name="instrument_id">ctx</field>
-  <field name="title">Context Camera</field>
+  <field name="instrument_name">Context Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">hirise.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hirise.mro</field>
   <field name="instrument_id">hirise</field>
-  <field name="title">High Resolution Imaging Science Experiment</field>
+  <field name="instrument_name">High Resolution Imaging Science Experiment</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">marci.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:marci.mro</field>
   <field name="instrument_id">marci</field>
-  <field name="title">Mars Color Imager</field>
+  <field name="instrument_name">Mars Color Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">mcs.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mcs.mro</field>
   <field name="instrument_id">mcs</field>
-  <field name="title">Mars Climate Sounder</field>
+  <field name="instrument_name">Mars Climate Sounder</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">rss.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.mro</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">sharad.mro</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sharad.mro</field>
   <field name="instrument_id">sharad</field>
-  <field name="title">Shallow Radar</field>
+  <field name="instrument_name">Shallow Radar</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">mro</field>
   <field name="investigation_id">mro</field>
 </doc>
 <doc>
   <field name="id">accel.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:accel.msl</field>
   <field name="instrument_id">accel</field>
-  <field name="title">Accelerometer</field>
+  <field name="instrument_name">Accelerometer</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">apxs.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:apxs.msl</field>
   <field name="instrument_id">apxs</field>
-  <field name="title">Alpha Particle X-ray Spectrometer</field>
+  <field name="instrument_name">Alpha Particle X-ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">chemcam_libs.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:chemcam_libs.msl</field>
   <field name="instrument_id">chemcam_libs</field>
-  <field name="title">Chemistry Camera Laser Induced Breakdown Spectrometer</field>
+  <field name="instrument_name">Chemistry Camera Laser Induced Breakdown Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">chemcam_rmi.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:chemcam_rmi.msl</field>
   <field name="instrument_id">chemcam_rmi</field>
-  <field name="title">Chemistry Camera Remote Micro-imager</field>
+  <field name="instrument_name">Chemistry Camera Remote Micro-imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">chemcam_soh.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:chemcam_soh.msl</field>
   <field name="instrument_id">chemcam_soh</field>
-  <field name="title">Chemistry Camera State Of Health</field>
+  <field name="instrument_name">Chemistry Camera State Of Health</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">chemin.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:chemin.msl</field>
   <field name="instrument_id">chemin</field>
-  <field name="title">Chemistry And Mineralogy Instrument</field>
+  <field name="instrument_name">Chemistry And Mineralogy Instrument</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">dan.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dan.msl</field>
   <field name="instrument_id">dan</field>
-  <field name="title">Dynamic Albedo Of Neutrons</field>
+  <field name="instrument_name">Dynamic Albedo Of Neutrons</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">fhaz_left_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fhaz_left_a.msl</field>
   <field name="instrument_id">fhaz_left_a</field>
-  <field name="title">Front Hazard Avoidance Camera Left String A</field>
+  <field name="instrument_name">Front Hazard Avoidance Camera Left String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">fhaz_left_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fhaz_left_b.msl</field>
   <field name="instrument_id">fhaz_left_b</field>
-  <field name="title">Front Hazard Avoidance Camera Left String B</field>
+  <field name="instrument_name">Front Hazard Avoidance Camera Left String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">fhaz_right_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fhaz_right_a.msl</field>
   <field name="instrument_id">fhaz_right_a</field>
-  <field name="title">Front Hazard Avoidance Camera Right String A</field>
+  <field name="instrument_name">Front Hazard Avoidance Camera Right String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">fhaz_right_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fhaz_right_b.msl</field>
   <field name="instrument_id">fhaz_right_b</field>
-  <field name="title">Front Hazard Avoidance Camera Right String B</field>
+  <field name="instrument_name">Front Hazard Avoidance Camera Right String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">hazcam.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hazcam.msl</field>
   <field name="instrument_id">hazcam</field>
-  <field name="title">Hazard Avoidance Camera</field>
+  <field name="instrument_name">Hazard Avoidance Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">mahli.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mahli.msl</field>
   <field name="instrument_id">mahli</field>
-  <field name="title">Mars Hand Lens Imager Camera</field>
+  <field name="instrument_name">Mars Hand Lens Imager Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">mardi.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mardi.msl</field>
   <field name="instrument_id">mardi</field>
-  <field name="title">Mars Descent Imager Camera</field>
+  <field name="instrument_name">Mars Descent Imager Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">mast_left.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mast_left.msl</field>
   <field name="instrument_id">mast_left</field>
-  <field name="title">Mast Camera Left</field>
+  <field name="instrument_name">Mast Camera Left</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">mast_right.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mast_right.msl</field>
   <field name="instrument_id">mast_right</field>
-  <field name="title">Mast Camera Right</field>
+  <field name="instrument_name">Mast Camera Right</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">navcam.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:navcam.msl</field>
   <field name="instrument_id">navcam</field>
-  <field name="title">Navigation Camera</field>
+  <field name="instrument_name">Navigation Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">nav_left_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nav_left_a.msl</field>
   <field name="instrument_id">nav_left_a</field>
-  <field name="title">Navigation Camera Left String A</field>
+  <field name="instrument_name">Navigation Camera Left String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">nav_left_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nav_left_b.msl</field>
   <field name="instrument_id">nav_left_b</field>
-  <field name="title">Navigation Camera Left String B</field>
+  <field name="instrument_name">Navigation Camera Left String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">nav_right_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nav_right_a.msl</field>
   <field name="instrument_id">nav_right_a</field>
-  <field name="title">Navigation Camera Right String A</field>
+  <field name="instrument_name">Navigation Camera Right String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">nav_right_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nav_right_b.msl</field>
   <field name="instrument_id">nav_right_b</field>
-  <field name="title">Navigation Camera Right String B</field>
+  <field name="instrument_name">Navigation Camera Right String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rad.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rad.msl</field>
   <field name="instrument_id">rad</field>
-  <field name="title">Radiation Assessment Detector</field>
+  <field name="instrument_name">Radiation Assessment Detector</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rems.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rems.msl</field>
   <field name="instrument_id">rems</field>
-  <field name="title">Rover Environmental Monitoring Station</field>
+  <field name="instrument_name">Rover Environmental Monitoring Station</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rhaz_left_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rhaz_left_a.msl</field>
   <field name="instrument_id">rhaz_left_a</field>
-  <field name="title">Rear Hazard Avoidance Camera Left String A</field>
+  <field name="instrument_name">Rear Hazard Avoidance Camera Left String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rhaz_left_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rhaz_left_b.msl</field>
   <field name="instrument_id">rhaz_left_b</field>
-  <field name="title">Rear Hazard Avoidance Camera Left String B</field>
+  <field name="instrument_name">Rear Hazard Avoidance Camera Left String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rhaz_right_a.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rhaz_right_a.msl</field>
   <field name="instrument_id">rhaz_right_a</field>
-  <field name="title">Rear Hazard Avoidance Camera Right String A</field>
+  <field name="instrument_name">Rear Hazard Avoidance Camera Right String A</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">rhaz_right_b.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rhaz_right_b.msl</field>
   <field name="instrument_id">rhaz_right_b</field>
-  <field name="title">Rear Hazard Avoidance Camera Right String B</field>
+  <field name="instrument_name">Rear Hazard Avoidance Camera Right String B</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">sam.msl</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sam.msl</field>
   <field name="instrument_id">sam</field>
-  <field name="title">Sample Analysis At Mars</field>
+  <field name="instrument_name">Sample Analysis At Mars</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">msl</field>
   <field name="investigation_id">msl</field>
 </doc>
 <doc>
   <field name="id">spirit3.msx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:spirit3.msx</field>
   <field name="instrument_id">spirit3</field>
-  <field name="title">Spatial Infrared Imaging Telescope</field>
+  <field name="instrument_name">Spatial Infrared Imaging Telescope</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">msx</field>
   <field name="investigation_id">msx</field>
 </doc>
 <doc>
   <field name="id">grs.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grs.near</field>
   <field name="instrument_id">grs</field>
-  <field name="title">Gamma Ray Spectrometer</field>
+  <field name="instrument_name">Gamma Ray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">mag.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.near</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Magnetometer</field>
+  <field name="instrument_name">Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">msi.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:msi.near</field>
   <field name="instrument_id">msi</field>
-  <field name="title">Multi-spectral Imager</field>
+  <field name="instrument_name">Multi-spectral Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">nis.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nis.near</field>
   <field name="instrument_id">nis</field>
-  <field name="title">Near Infrared Spectrometer</field>
+  <field name="instrument_name">Near Infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">nlr.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:nlr.near</field>
   <field name="instrument_id">nlr</field>
-  <field name="title">Near Laser Rangefinder</field>
+  <field name="instrument_name">Near Laser Rangefinder</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">rss.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.near</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">xrs.near</field>
+  <field name="lid">urn:nasa:pds:context:instrument:xrs.near</field>
   <field name="instrument_id">xrs</field>
-  <field name="title">X-ray Spectrometer</field>
+  <field name="instrument_name">Xray Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">near</field>
   <field name="investigation_id">near</field>
 </doc>
 <doc>
   <field name="id">alice.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:alice.nh</field>
   <field name="instrument_id">alice</field>
-  <field name="title">Alice Ultraviolet Imaging Spectrograph</field>
+  <field name="instrument_name">Alice Ultraviolet Imaging Spectrograph</field>
   <field name="instrument_type">Spectrograph</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">leisa.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:leisa.nh</field>
   <field name="instrument_id">leisa</field>
-  <field name="title">Linear Etalon Imaging Spectral Array</field>
+  <field name="instrument_name">Linear Etalon Imaging Spectral Array</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">lorri.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lorri.nh</field>
   <field name="instrument_id">lorri</field>
-  <field name="title">Long Range Reconnaissance Imager</field>
+  <field name="instrument_name">Long Range Reconnaissance Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">mvic.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mvic.nh</field>
   <field name="instrument_id">mvic</field>
-  <field name="title">Multispectral Visible Imaging Camera</field>
+  <field name="instrument_name">Multispectral Visible Imaging Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">pepssi.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pepssi.nh</field>
   <field name="instrument_id">pepssi</field>
-  <field name="title">Pluto Energetic Particle Spectrometer Science Investigation</field>
+  <field name="instrument_name">Pluto Energetic Particle Spectrometer Science Investigation</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">sdc.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sdc.nh</field>
   <field name="instrument_id">sdc</field>
-  <field name="title">Student Dust Counter</field>
+  <field name="instrument_name">Student Dust Counter</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">swap.nh</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swap.nh</field>
   <field name="instrument_id">swap</field>
-  <field name="title">Solar Wind Around Pluto</field>
+  <field name="instrument_name">Solar Wind Around Pluto</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">nh</field>
   <field name="investigation_id">nh</field>
 </doc>
 <doc>
   <field name="id">accel.ody</field>
+  <field name="lid">urn:nasa:pds:context:instrument:accel.ody</field>
   <field name="instrument_id">accel</field>
-  <field name="title">Accelerometer</field>
+  <field name="instrument_name">Accelerometer</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">ody</field>
   <field name="investigation_id">ody</field>
 </doc>
 <doc>
   <field name="id">grs.ody</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grs.ody</field>
   <field name="instrument_id">grs</field>
-  <field name="title">Gamma Ray/neutron Spectrometer/high Energy Neutron Detector</field>
+  <field name="instrument_name">Gamma Ray/neutron Spectrometer/high Energy Neutron Detector</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">ody</field>
   <field name="investigation_id">ody</field>
 </doc>
 <doc>
   <field name="id">mar.ody</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mar.ody</field>
   <field name="instrument_id">mar</field>
-  <field name="title">Mars Radiation Environment Experiment</field>
+  <field name="instrument_name">Mars Radiation Environment Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">ody</field>
   <field name="investigation_id">ody</field>
 </doc>
 <doc>
   <field name="id">rss.ody</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.ody</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">ody</field>
   <field name="investigation_id">ody</field>
 </doc>
 <doc>
   <field name="id">themis.ody</field>
+  <field name="lid">urn:nasa:pds:context:instrument:themis.ody</field>
   <field name="instrument_id">themis</field>
-  <field name="title">Thermal Emission Imaging System</field>
+  <field name="instrument_name">Thermal Emission Imaging System</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">ody</field>
   <field name="investigation_id">ody</field>
 </doc>
 <doc>
   <field name="id">ocams.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ocams.orex</field>
   <field name="instrument_id">ocams</field>
-  <field name="title">Ocams</field>
+  <field name="instrument_name">Ocams</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">ola.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ola.orex</field>
   <field name="instrument_id">ola</field>
-  <field name="title">Ola</field>
+  <field name="instrument_name">Ola</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">otes.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:otes.orex</field>
   <field name="instrument_id">otes</field>
-  <field name="title">Otes</field>
+  <field name="instrument_name">Otes</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">ovirs.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ovirs.orex</field>
   <field name="instrument_id">ovirs</field>
-  <field name="title">Ovirs</field>
+  <field name="instrument_name">Ovirs</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">rexis.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rexis.orex</field>
   <field name="instrument_id">rexis</field>
-  <field name="title">Rexis</field>
+  <field name="instrument_name">Rexis</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">tagcams.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tagcams.orex</field>
   <field name="instrument_id">tagcams</field>
-  <field name="title">Tagcams</field>
+  <field name="instrument_name">Tagcams</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">orex</field>
   <field name="investigation_id">orex</field>
 </doc>
 <doc>
   <field name="id">cpi.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cpi.p10</field>
   <field name="instrument_id">cpi</field>
-  <field name="title">Charged Particle Instrument</field>
+  <field name="instrument_name">Charged Particle Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2340,8 +2721,9 @@
 </doc>
 <doc>
   <field name="id">crt.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crt.p10</field>
   <field name="instrument_id">crt</field>
-  <field name="title">Cosmic Ray Telescope</field>
+  <field name="instrument_name">Cosmic Ray Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2349,8 +2731,9 @@
 </doc>
 <doc>
   <field name="id">gtt.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gtt.p10</field>
   <field name="instrument_id">gtt</field>
-  <field name="title">Geiger Tube Telescope</field>
+  <field name="instrument_name">Geiger Tube Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2358,8 +2741,9 @@
 </doc>
 <doc>
   <field name="id">hvm.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hvm.p10</field>
   <field name="instrument_id">hvm</field>
-  <field name="title">Helium Vector Magnetometer</field>
+  <field name="instrument_name">Helium Vector Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2367,8 +2751,9 @@
 </doc>
 <doc>
   <field name="id">pa.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pa.p10</field>
   <field name="instrument_id">pa</field>
-  <field name="title">Quadrispherical Plasma Analyzer</field>
+  <field name="instrument_name">Quadrispherical Plasma Analyzer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2376,8 +2761,9 @@
 </doc>
 <doc>
   <field name="id">trd.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:trd.p10</field>
   <field name="instrument_id">trd</field>
-  <field name="title">Trapped Radiation Detector</field>
+  <field name="instrument_name">Trapped Radiation Detector</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2385,8 +2771,9 @@
 </doc>
 <doc>
   <field name="id">uv.p10</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uv.p10</field>
   <field name="instrument_id">uv</field>
-  <field name="title">Ultraviolet Photometer</field>
+  <field name="instrument_name">Ultraviolet Photometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">p10</field>
   <field name="investigation_id">pioneer</field>
@@ -2394,8 +2781,9 @@
 </doc>
 <doc>
   <field name="id">cpi.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cpi.p11</field>
   <field name="instrument_id">cpi</field>
-  <field name="title">Charged Particle Instrument</field>
+  <field name="instrument_name">Charged Particle Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2403,8 +2791,9 @@
 </doc>
 <doc>
   <field name="id">crs.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crs.p11</field>
   <field name="instrument_id">crs</field>
-  <field name="title">Crs</field>
+  <field name="instrument_name">Crs</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2412,8 +2801,9 @@
 </doc>
 <doc>
   <field name="id">crt.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crt.p11</field>
   <field name="instrument_id">crt</field>
-  <field name="title">Cosmic Ray Telescope</field>
+  <field name="instrument_name">Cosmic Ray Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2421,8 +2811,9 @@
 </doc>
 <doc>
   <field name="id">fgm.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fgm.p11</field>
   <field name="instrument_id">fgm</field>
-  <field name="title">Fluxgate Magnetometer</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2430,8 +2821,9 @@
 </doc>
 <doc>
   <field name="id">gtt.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gtt.p11</field>
   <field name="instrument_id">gtt</field>
-  <field name="title">Geiger Tube Telescope</field>
+  <field name="instrument_name">Geiger Tube Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2439,8 +2831,9 @@
 </doc>
 <doc>
   <field name="id">hvm.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hvm.p11</field>
   <field name="instrument_id">hvm</field>
-  <field name="title">Helium Vector Magnetometer</field>
+  <field name="instrument_name">Helium Vector Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2448,8 +2841,9 @@
 </doc>
 <doc>
   <field name="id">pa.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pa.p11</field>
   <field name="instrument_id">pa</field>
-  <field name="title">Quadrispherical Plasma Analyzer</field>
+  <field name="instrument_name">Quadrispherical Plasma Analyzer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2457,8 +2851,9 @@
 </doc>
 <doc>
   <field name="id">trd.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:trd.p11</field>
   <field name="instrument_id">trd</field>
-  <field name="title">Trapped Radiation Detector</field>
+  <field name="instrument_name">Trapped Radiation Detector</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2466,8 +2861,9 @@
 </doc>
 <doc>
   <field name="id">uv.p11</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uv.p11</field>
   <field name="instrument_id">uv</field>
-  <field name="title">Ultraviolet Photometer</field>
+  <field name="instrument_name">Ultraviolet Photometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">p11</field>
   <field name="investigation_id">pioneer</field>
@@ -2475,8 +2871,9 @@
 </doc>
 <doc>
   <field name="id">orad.p12</field>
+  <field name="lid">urn:nasa:pds:context:instrument:orad.p12</field>
   <field name="instrument_id">orad</field>
-  <field name="title">Orbiting Radar</field>
+  <field name="instrument_name">Orbiting Radar</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">p12</field>
   <field name="investigation_id">pioneer</field>
@@ -2484,8 +2881,9 @@
 </doc>
 <doc>
   <field name="id">rss.p12</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.p12</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">p12</field>
   <field name="investigation_id">pioneer</field>
@@ -2493,8 +2891,9 @@
 </doc>
 <doc>
   <field name="id">cdd.p8</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cdd.p8</field>
   <field name="instrument_id">cdd</field>
-  <field name="title">Pioneer 8 Cosmic Dust Detector</field>
+  <field name="instrument_name">Pioneer 8 Cosmic Dust Detector</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">p8</field>
   <field name="investigation_id">pioneer</field>
@@ -2502,8 +2901,9 @@
 </doc>
 <doc>
   <field name="id">cdd.p9</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cdd.p9</field>
   <field name="instrument_id">cdd</field>
-  <field name="title">Pioneer 9 Cosmic Dust Detector</field>
+  <field name="instrument_name">Pioneer 9 Cosmic Dust Detector</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">p9</field>
   <field name="investigation_id">pioneer</field>
@@ -2511,408 +2911,459 @@
 </doc>
 <doc>
   <field name="id">krfm.phb2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:krfm.phb2</field>
   <field name="instrument_id">krfm</field>
-  <field name="title">Krfm-combined Radiometer Spectrophotometer For Mars</field>
+  <field name="instrument_name">Krfm-combined Radiometer Spectrophotometer For Mars</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">phb2</field>
   <field name="investigation_id">phb2</field>
 </doc>
 <doc>
   <field name="id">ts.phb2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ts.phb2</field>
   <field name="instrument_id">ts</field>
-  <field name="title">Termoskan</field>
+  <field name="instrument_name">Termoskan</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">phb2</field>
   <field name="investigation_id">phb2</field>
 </doc>
 <doc>
   <field name="id">vsk.phb2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vsk.phb2</field>
   <field name="instrument_id">vsk</field>
-  <field name="title">Vsk-fregat</field>
+  <field name="instrument_name">Vsk-fregat</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">phb2</field>
   <field name="investigation_id">phb2</field>
 </doc>
 <doc>
   <field name="id">ase.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ase.phx</field>
   <field name="instrument_id">ase</field>
-  <field name="title">Atmospheric Structure Experiment</field>
+  <field name="instrument_name">Atmospheric Structure Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">lidar.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lidar.phx</field>
   <field name="instrument_id">lidar</field>
-  <field name="title">Meteorology Suite, Lidar</field>
+  <field name="instrument_name">Meteorology Suite, Lidar</field>
   <field name="instrument_type">Altimeter</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">meca_afm.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:meca_afm.phx</field>
   <field name="instrument_id">meca_afm</field>
-  <field name="title">Meca Atomic Force Microscope</field>
+  <field name="instrument_name">Meca Atomic Force Microscope</field>
   <field name="instrument_type">Microscope</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">meca_elec.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:meca_elec.phx</field>
   <field name="instrument_id">meca_elec</field>
-  <field name="title">Meca Common Electronics</field>
+  <field name="instrument_name">Meca Common Electronics</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">meca_tecp.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:meca_tecp.phx</field>
   <field name="instrument_id">meca_tecp</field>
-  <field name="title">Meca Thermal And Electrical Conductivity Probe</field>
+  <field name="instrument_name">Meca Thermal And Electrical Conductivity Probe</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">meca_wcl.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:meca_wcl.phx</field>
   <field name="instrument_id">meca_wcl</field>
-  <field name="title">Meca Wet Chemistry Laboratory</field>
+  <field name="instrument_name">Meca Wet Chemistry Laboratory</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">met.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:met.phx</field>
   <field name="instrument_id">met</field>
-  <field name="title">Meteorology Suite, Pressure &amp; Temperature</field>
+  <field name="instrument_name">Meteorology Suite, Pressure &amp; Temperature</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">om.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:om.phx</field>
   <field name="instrument_id">om</field>
-  <field name="title">Meca Optical Microscope</field>
+  <field name="instrument_name">Meca Optical Microscope</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">rac.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rac.phx</field>
   <field name="instrument_id">rac</field>
-  <field name="title">Robotic Arm Camera</field>
+  <field name="instrument_name">Robotic Arm Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">ra.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ra.phx</field>
   <field name="instrument_id">ra</field>
-  <field name="title">Robotic Arm</field>
+  <field name="instrument_name">Robotic Arm</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">ssi.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ssi.phx</field>
   <field name="instrument_id">ssi</field>
-  <field name="title">Surface Stereo Imager</field>
+  <field name="instrument_name">Surface Stereo Imager</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">tega.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tega.phx</field>
   <field name="instrument_id">tega</field>
-  <field name="title">Thermal Evolved Gas Analyzer</field>
+  <field name="instrument_name">Thermal Evolved Gas Analyzer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">tt.phx</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tt.phx</field>
   <field name="instrument_id">tt</field>
-  <field name="title">Telltale</field>
+  <field name="instrument_name">Telltale</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">phx</field>
   <field name="investigation_id">phx</field>
 </doc>
 <doc>
   <field name="id">oefd.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:oefd.pvo</field>
   <field name="instrument_id">oefd</field>
-  <field name="title">Plasma Wave Analyzer</field>
+  <field name="instrument_name">Plasma Wave Analyzer</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">oetp.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:oetp.pvo</field>
   <field name="instrument_id">oetp</field>
-  <field name="title">Electron Temperature Probe</field>
+  <field name="instrument_name">Electron Temperature Probe</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">oims.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:oims.pvo</field>
   <field name="instrument_id">oims</field>
-  <field name="title">Pvo Orbiter Ion Mass Spectrometer</field>
+  <field name="instrument_name">Pvo Orbiter Ion Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">omag.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:omag.pvo</field>
   <field name="instrument_id">omag</field>
-  <field name="title">Fluxgate Magnetometer</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">onms.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:onms.pvo</field>
   <field name="instrument_id">onms</field>
-  <field name="title">Orbiter Neutral Mass Spectrometer</field>
+  <field name="instrument_name">Orbiter Neutral Mass Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">orad.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:orad.pvo</field>
   <field name="instrument_id">orad</field>
-  <field name="title">Surface Radar Mapper</field>
+  <field name="instrument_name">Surface Radar Mapper</field>
   <field name="instrument_type">Radio-Radar</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">orpa.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:orpa.pvo</field>
   <field name="instrument_id">orpa</field>
-  <field name="title">Orbiter Retarding Potential Analyzer</field>
+  <field name="instrument_name">Orbiter Retarding Potential Analyzer</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">orse.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:orse.pvo</field>
   <field name="instrument_id">orse</field>
-  <field name="title">Orbiter Radio Science Experiment</field>
+  <field name="instrument_name">Orbiter Radio Science Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">ouvs.pvo</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ouvs.pvo</field>
   <field name="instrument_id">ouvs</field>
-  <field name="title">Pioneer Venus Orbiter Ultraviolet Spectrometer</field>
+  <field name="instrument_name">Pioneer Venus Orbiter Ultraviolet Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">pvo</field>
   <field name="investigation_id">pioneer_venus</field>
 </doc>
 <doc>
   <field name="id">imf.sakig</field>
+  <field name="lid">urn:nasa:pds:context:instrument:imf.sakig</field>
   <field name="instrument_id">imf</field>
-  <field name="title">Interplanetary Magnetic Field Experiment</field>
+  <field name="instrument_name">Interplanetary Magnetic Field Experiment</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">sakig</field>
   <field name="investigation_id">sakig</field>
 </doc>
 <doc>
   <field name="id">sow.sakig</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sow.sakig</field>
   <field name="instrument_id">sow</field>
-  <field name="title">Solar-wind Instrument</field>
+  <field name="instrument_name">Solar-wind Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">sakig</field>
   <field name="investigation_id">sakig</field>
 </doc>
 <doc>
   <field name="id">cida.sdu</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cida.sdu</field>
   <field name="instrument_id">cida</field>
-  <field name="title">Cometary And Interstellar Dust Analyzer</field>
+  <field name="instrument_name">Cometary And Interstellar Dust Analyzer</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">sdu</field>
   <field name="investigation_id">sdu</field>
 </doc>
 <doc>
   <field name="id">dfmi.sdu</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dfmi.sdu</field>
   <field name="instrument_id">dfmi</field>
-  <field name="title">Dust Flux Monitor Instrument</field>
+  <field name="instrument_name">Dust Flux Monitor Instrument</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">sdu</field>
   <field name="investigation_id">sdu</field>
 </doc>
 <doc>
   <field name="id">dynsci.sdu</field>
+  <field name="lid">urn:nasa:pds:context:instrument:dynsci.sdu</field>
   <field name="instrument_id">dynsci</field>
-  <field name="title">Dynamic Science Experiment</field>
+  <field name="instrument_name">Dynamic Science Experiment</field>
   <field name="instrument_type">Small Bodies Sciences</field>
   <field name="instrument_host_id">sdu</field>
   <field name="investigation_id">sdu</field>
 </doc>
 <doc>
   <field name="id">navcam.sdu</field>
+  <field name="lid">urn:nasa:pds:context:instrument:navcam.sdu</field>
   <field name="instrument_id">navcam</field>
-  <field name="title">Navigation Camera</field>
+  <field name="instrument_name">Navigation Camera</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">sdu</field>
   <field name="investigation_id">sdu</field>
 </doc>
 <doc>
   <field name="id">src.sdu</field>
+  <field name="lid">urn:nasa:pds:context:instrument:src.sdu</field>
   <field name="instrument_id">src</field>
-  <field name="title">Sample Return Capsule</field>
+  <field name="instrument_name">Sample Return Capsule</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">sdu</field>
   <field name="investigation_id">sdu</field>
 </doc>
 <doc>
   <field name="id">lasco.soho</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lasco.soho</field>
   <field name="instrument_id">lasco</field>
-  <field name="title">Large Angle Spectrometric Coronagraph</field>
+  <field name="instrument_name">Large Angle Spectrometric Coronagraph</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">soho</field>
   <field name="investigation_id">soho</field>
 </doc>
 <doc>
   <field name="id">esp.suisei</field>
+  <field name="lid">urn:nasa:pds:context:instrument:esp.suisei</field>
   <field name="instrument_id">esp</field>
-  <field name="title">Solar-wind Experiment</field>
+  <field name="instrument_name">Solar-wind Experiment</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">suisei</field>
   <field name="investigation_id">suisei</field>
 </doc>
 <doc>
   <field name="id">cospin-at.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cospin-at.uly</field>
   <field name="instrument_id">cospin-at</field>
-  <field name="title">Cospin-anisotropy Telescope</field>
+  <field name="instrument_name">Cospin-anisotropy Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">cospin-het.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cospin-het.uly</field>
   <field name="instrument_id">cospin-het</field>
-  <field name="title">Cospin-high Energy Telescope</field>
+  <field name="instrument_name">Cospin-high Energy Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">cospin-hft.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cospin-hft.uly</field>
   <field name="instrument_id">cospin-hft</field>
-  <field name="title">Cospin-high Flux Telescope</field>
+  <field name="instrument_name">Cospin-high Flux Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">cospin-ket.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cospin-ket.uly</field>
   <field name="instrument_id">cospin-ket</field>
-  <field name="title">Cospin-kiel Electron Telescope</field>
+  <field name="instrument_name">Cospin-kiel Electron Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">cospin-let.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cospin-let.uly</field>
   <field name="instrument_id">cospin-let</field>
-  <field name="title">Cospin-low Energy Telescope</field>
+  <field name="instrument_name">Cospin-low Energy Telescope</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">epac.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:epac.uly</field>
   <field name="instrument_id">epac</field>
-  <field name="title">Energetic Particle Composition Instrument</field>
+  <field name="instrument_name">Energetic Particle Composition Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">gas.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gas.uly</field>
   <field name="instrument_id">gas</field>
-  <field name="title">Gas Instrument</field>
+  <field name="instrument_name">Gas Instrument</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">grb.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:grb.uly</field>
   <field name="instrument_id">grb</field>
-  <field name="title">Solar X-ray/cosmic Gamma-ray Burst Instrument</field>
+  <field name="instrument_name">Solar X-ray/cosmic Gamma-ray Burst Instrument</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">gwe.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:gwe.uly</field>
   <field name="instrument_id">gwe</field>
-  <field name="title">Gravitational Wave Experiment</field>
+  <field name="instrument_name">Gravitational Wave Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">hiscale.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:hiscale.uly</field>
   <field name="instrument_id">hiscale</field>
-  <field name="title">Heliospheric Inst-spectra,composition,anisotropy At Low Ener</field>
+  <field name="instrument_name">Heliospheric Inst-spectra,composition,anisotropy At Low Ener</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">sce.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sce.uly</field>
   <field name="instrument_id">sce</field>
-  <field name="title">Solar Corona Experiment</field>
+  <field name="instrument_name">Solar Corona Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">swics.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swics.uly</field>
   <field name="instrument_id">swics</field>
-  <field name="title">Solar Wind Ion Composition Spectrometer</field>
+  <field name="instrument_name">Solar Wind Ion Composition Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">swoops.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:swoops.uly</field>
   <field name="instrument_id">swoops</field>
-  <field name="title">Solar Wind Observations Over The Poles Of The Sun</field>
+  <field name="instrument_name">Solar Wind Observations Over The Poles Of The Sun</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">udds.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:udds.uly</field>
   <field name="instrument_id">udds</field>
-  <field name="title">Ulysses Dust Detection System</field>
+  <field name="instrument_name">Ulysses Dust Detection System</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">urap.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:urap.uly</field>
   <field name="instrument_id">urap</field>
-  <field name="title">Unified Radio And Plasma Wave Experiment</field>
+  <field name="instrument_name">Unified Radio And Plasma Wave Experiment</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">vhm-fgm.uly</field>
+  <field name="lid">urn:nasa:pds:context:instrument:vhm-fgm.uly</field>
   <field name="instrument_id">vhm-fgm</field>
-  <field name="title">Vector Helium/fluxgate Magnetometers</field>
+  <field name="instrument_name">Vector Helium/fluxgate Magnetometers</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">uly</field>
   <field name="investigation_id">uly</field>
 </doc>
 <doc>
   <field name="id">roe.v15</field>
+  <field name="lid">urn:nasa:pds:context:instrument:roe.v15</field>
   <field name="instrument_id">roe</field>
-  <field name="title">Radio Occultation Experiment</field>
+  <field name="instrument_name">Radio Occultation Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">v15</field>
   <field name="investigation_id">venera</field>
@@ -2920,8 +3371,9 @@
 </doc>
 <doc>
   <field name="id">roe.v16</field>
+  <field name="lid">urn:nasa:pds:context:instrument:roe.v16</field>
   <field name="instrument_id">roe</field>
-  <field name="title">Radio Occultation Experiment</field>
+  <field name="instrument_name">Radio Occultation Experiment</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">v16</field>
   <field name="investigation_id">venera</field>
@@ -2929,278 +3381,541 @@
 </doc>
 <doc>
   <field name="id">ducma.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ducma.vega1</field>
   <field name="instrument_id">ducma</field>
-  <field name="title">Dust Particle Counter And Mass Analyzer</field>
+  <field name="instrument_name">Dust Particle Counter And Mass Analyzer</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">iks.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iks.vega1</field>
   <field name="instrument_id">iks</field>
-  <field name="title">Infrared Spectrometer</field>
+  <field name="instrument_name">Infrared Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">vega1</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">mischa.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mischa.vega1</field>
   <field name="instrument_id">mischa</field>
-  <field name="title">Fluxgate Magnetometer</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">pm1.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pm1.vega1</field>
   <field name="instrument_id">pm1</field>
-  <field name="title">Plasma Energy Analyzer</field>
+  <field name="instrument_name">Plasma Energy Analyzer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">puma.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:puma.vega1</field>
   <field name="instrument_id">puma</field>
-  <field name="title">Dust Impact Mass Analyzer</field>
+  <field name="instrument_name">Dust Impact Mass Analyzer</field>
   <field name="instrument_type">Spectrometer</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">sp1.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sp1.vega1</field>
   <field name="instrument_id">sp1</field>
-  <field name="title">Dust Impact Plasma Detector</field>
+  <field name="instrument_name">Dust Impact Plasma Detector</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">sp2.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sp2.vega1</field>
   <field name="instrument_id">sp2</field>
-  <field name="title">Dust Particle Detector</field>
+  <field name="instrument_name">Dust Particle Detector</field>
   <field name="instrument_type">Dust</field>
   <field name="instrument_host_id">vega1</field>
-  <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">tnm.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tnm.vega1</field>
   <field name="instrument_id">tnm</field>
-  <field name="title">Tunde-m Energetic Particle Analyzer</field>
+  <field name="instrument_name">Tunde-m Energetic Particle Analyzer</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vega1</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
   <field name="id">tvs.vega1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tvs.vega1</field>
   <field name="instrument_id">tvs</field>
-  <field name="title">Television System</field>
+  <field name="instrument_name">Television System</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">vega1</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">ducma.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ducma.vega2</field>
+  <field name="instrument_id">ducma</field>
+  <field name="instrument_name">Dust Particle Counter And Mass Analyzer</field>
+  <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vega2</field>
   <field name="investigation_id">vega</field>
 </doc>
 <doc>
-  <field name="id">crs.vg2</field>
+  <field name="id">mischa.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mischa.vega2</field>
+  <field name="instrument_id">mischa</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
+  <field name="instrument_type">Magnetometer</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">pm1.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pm1.vega2</field>
+  <field name="instrument_id">pm1</field>
+  <field name="instrument_name">Plasma Energy Analyzer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">puma.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:puma.vega2</field>
+  <field name="instrument_id">puma</field>
+  <field name="instrument_name">Dust Impact Mass Analyzer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">sp1.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sp1.vega2</field>
+  <field name="instrument_id">sp1</field>
+  <field name="instrument_name">Dust Impact Plasma Detector</field>
+  <field name="instrument_type">Particle Detector</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">sp2.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:sp2.vega2</field>
+  <field name="instrument_id">sp2</field>
+  <field name="instrument_name">Dust Particle Detector</field>
+  <field name="instrument_type">Dust</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">tvs.vega2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tvs.vega2</field>
+  <field name="instrument_id">tvs</field>
+  <field name="instrument_name">Television System</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vega2</field>
+  <field name="investigation_id">vega</field>
+</doc>
+<doc>
+  <field name="id">crs.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crs.vg1</field>
   <field name="instrument_id">crs</field>
-  <field name="title">Cosmic Ray Subsystem</field>
+  <field name="instrument_name">Cosmic Ray Subsystem</field>
   <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">iris.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iris.vg1</field>
+  <field name="instrument_id">iris</field>
+  <field name="instrument_name">Infrared Interferometer Spectrometer And Radiometer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">issn.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:issn.vg1</field>
+  <field name="instrument_id">issn</field>
+  <field name="instrument_name">Imaging Science Subsystem - Narrow Angle</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">issw.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:issw.vg1</field>
+  <field name="instrument_id">issw</field>
+  <field name="instrument_name">Imaging Science Subsystem - Wide Angle</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">lecp.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lecp.vg1</field>
+  <field name="instrument_id">lecp</field>
+  <field name="instrument_name">Low Energy Charged Particle</field>
+  <field name="instrument_type">Particle Detector</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">mag.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.vg1</field>
+  <field name="instrument_id">mag</field>
+  <field name="instrument_name">Fluxgate Magnetometer</field>
+  <field name="instrument_type">Magnetometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">pls.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pls.vg1</field>
+  <field name="instrument_id">pls</field>
+  <field name="instrument_name">Plasma Science Experiment</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">pra.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pra.vg1</field>
+  <field name="instrument_id">pra</field>
+  <field name="instrument_name">Planetary Radio Astronomy Receiver</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">pws.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pws.vg1</field>
+  <field name="instrument_id">pws</field>
+  <field name="instrument_name">Plasma Wave Receiver</field>
+  <field name="instrument_type">Plasma Wave Spectrometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">rss-vg1s.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss-vg1s.vg1</field>
+  <field name="instrument_id">rss-vg1s</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">uvs.vg1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvs.vg1</field>
+  <field name="instrument_id">uvs</field>
+  <field name="instrument_name">Ultraviolet Spectrometer</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vg1</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">crs.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:crs.vg2</field>
+  <field name="instrument_id">crs</field>
+  <field name="instrument_name">Cosmic Ray Subsystem</field>
+  <field name="instrument_type">Particle Detector</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">iris.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:iris.vg2</field>
   <field name="instrument_id">iris</field>
-  <field name="title">Infrared Interferometer Spectrometer And Radiometer</field>
+  <field name="instrument_name">Infrared Interferometer Spectrometer And Radiometer</field>
   <field name="instrument_type">Spectrometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">issn.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:issn.vg2</field>
   <field name="instrument_id">issn</field>
-  <field name="title">Imaging Science Subsystem - Narrow Angle</field>
+  <field name="instrument_name">Imaging Science Subsystem - Narrow Angle</field>
   <field name="instrument_type">Imager</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">issw.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:issw.vg2</field>
   <field name="instrument_id">issw</field>
-  <field name="title">Imaging Science Subsystem - Wide Angle</field>
+  <field name="instrument_name">Imaging Science Subsystem - Wide Angle</field>
   <field name="instrument_type">Imager</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">lecp.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lecp.vg2</field>
   <field name="instrument_id">lecp</field>
-  <field name="title">Low Energy Charged Particle</field>
+  <field name="instrument_name">Low Energy Charged Particle</field>
   <field name="instrument_type">Particle Detector</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">mag.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mag.vg2</field>
   <field name="instrument_id">mag</field>
-  <field name="title">Triaxial Fluxgate Magnetometer</field>
+  <field name="instrument_name">Triaxial Fluxgate Magnetometer</field>
   <field name="instrument_type">Magnetometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">pls.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pls.vg2</field>
   <field name="instrument_id">pls</field>
-  <field name="title">Plasma Science Experiment</field>
+  <field name="instrument_name">Plasma Science Experiment</field>
   <field name="instrument_type">Spectrometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">pps.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pps.vg2</field>
   <field name="instrument_id">pps</field>
-  <field name="title">Photopolarimeter Subsystem</field>
+  <field name="instrument_name">Photopolarimeter Subsystem</field>
   <field name="instrument_type">Photometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">pra.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pra.vg2</field>
   <field name="instrument_id">pra</field>
-  <field name="title">Planetary Radio Astronomy Receiver</field>
+  <field name="instrument_name">Planetary Radio Astronomy Receiver</field>
   <field name="instrument_type">Spectrometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">pws.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:pws.vg2</field>
   <field name="instrument_id">pws</field>
-  <field name="title">Plasma Wave Receiver</field>
+  <field name="instrument_name">Plasma Wave Receiver</field>
   <field name="instrument_type">Plasma Wave Spectrometer</field>
-  <field name="instrument_host_id">vg1</field>
+  <field name="instrument_host_id">vg2</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">rss-vg2s.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss-vg2s.vg2</field>
+  <field name="instrument_id">rss-vg2s</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
+  <field name="instrument_host_id">vg2</field>
+  <field name="investigation_id">voyager</field>
+</doc>
+<doc>
+  <field name="id">rss-vg2u.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss-vg2u.vg2</field>
+  <field name="instrument_id">rss-vg2u</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">rss.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.vg2</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">uvs.vg2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:uvs.vg2</field>
   <field name="instrument_id">uvs</field>
-  <field name="title">Ultraviolet Spectrometer</field>
+  <field name="instrument_name">Ultraviolet Spectrometer</field>
   <field name="instrument_type">Spectrometer</field>
-  <field name="instrument_host_id">vg1</field>
   <field name="instrument_host_id">vg2</field>
   <field name="investigation_id">voyager</field>
 </doc>
 <doc>
   <field name="id">cam1.vl1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cam1.vl1</field>
   <field name="instrument_id">cam1</field>
-  <field name="title">Camera 1</field>
+  <field name="instrument_name">Camera 1</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">vl1</field>
-  <field name="instrument_host_id">vl2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">cam2.vl1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cam2.vl1</field>
   <field name="instrument_id">cam2</field>
-  <field name="title">Camera 2</field>
+  <field name="instrument_name">Camera 2</field>
   <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">vl1</field>
-  <field name="instrument_host_id">vl2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">fts.vl1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fts.vl1</field>
   <field name="instrument_id">fts</field>
-  <field name="title">FTS</field>
+  <field name="instrument_name">Unk - Instrument Id (fts)</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">vl1</field>
-  <field name="instrument_host_id">vl2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">lr1.vl1</field>
-  <field name="instrument_id">lr</field>
-  <field name="title">Labeled Release</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lr1.vl1</field>
+  <field name="instrument_id">lr1</field>
+  <field name="instrument_name">Labeled Release</field>
   <field name="instrument_type">Regolith Properties</field>
   <field name="instrument_host_id">vl1</field>
-  <field name="instrument_host_id">vl2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">met.vl1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:met.vl1</field>
   <field name="instrument_id">met</field>
-  <field name="title">Viking Meteorology Instrument System</field>
+  <field name="instrument_name">Viking Meteorology Instrument System</field>
   <field name="instrument_type">Atmospheric Sciences</field>
   <field name="instrument_host_id">vl1</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">cam1.vl2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cam1.vl2</field>
+  <field name="instrument_id">cam1</field>
+  <field name="instrument_name">Camera 1</field>
+  <field name="instrument_type">Imager</field>
   <field name="instrument_host_id">vl2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
-  <field name="id">irtm.vo2</field>
+  <field name="id">cam2.vl2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:cam2.vl2</field>
+  <field name="instrument_id">cam2</field>
+  <field name="instrument_name">Camera 2</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vl2</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">fts.vl2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:fts.vl2</field>
+  <field name="instrument_id">fts</field>
+  <field name="instrument_name">Unk - Instrument Id (fts)</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
+  <field name="instrument_host_id">vl2</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">lr2.vl2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:lr2.vl2</field>
+  <field name="instrument_id">lr2</field>
+  <field name="instrument_name">Labeled Release</field>
+  <field name="instrument_type">Regolith Properties</field>
+  <field name="instrument_host_id">vl2</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">met.vl2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:met.vl2</field>
+  <field name="instrument_id">met</field>
+  <field name="instrument_name">Viking Meteorology Instrument System</field>
+  <field name="instrument_type">Atmospheric Sciences</field>
+  <field name="instrument_host_id">vl2</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">irtm.vo1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:irtm.vo1</field>
   <field name="instrument_id">irtm</field>
-  <field name="title">Infrared Thermal Mapper</field>
+  <field name="instrument_name">Infrared Thermal Mapper</field>
   <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">vo1</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">mawd.vo1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mawd.vo1</field>
+  <field name="instrument_id">mawd</field>
+  <field name="instrument_name">Mars Atmospheric Water Detector</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">vo1</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">visa.vo1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:visa.vo1</field>
+  <field name="instrument_id">visa</field>
+  <field name="instrument_name">Visual Imaging Subsystem - Camera A</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vo1</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">visb.vo1</field>
+  <field name="lid">urn:nasa:pds:context:instrument:visb.vo1</field>
+  <field name="instrument_id">visb</field>
+  <field name="instrument_name">Visual Imaging Subsystem - Camera B</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">vo1</field>
+  <field name="investigation_id">viking</field>
+</doc>
+<doc>
+  <field name="id">irtm.vo2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:irtm.vo2</field>
+  <field name="instrument_id">irtm</field>
+  <field name="instrument_name">Infrared Thermal Mapper</field>
+  <field name="instrument_type">Radiometer</field>
   <field name="instrument_host_id">vo2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">mawd.vo2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:mawd.vo2</field>
   <field name="instrument_id">mawd</field>
-  <field name="title">Mars Atmospheric Water Detector</field>
+  <field name="instrument_name">Mars Atmospheric Water Detector</field>
   <field name="instrument_type">Spectrometer</field>
-  <field name="instrument_host_id">vo1</field>
   <field name="instrument_host_id">vo2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">rss.vo2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rss.vo2</field>
   <field name="instrument_id">rss</field>
-  <field name="title">Radio Science Subsystem</field>
+  <field name="instrument_name">Radio Science Subsystem</field>
   <field name="instrument_type">Atmospheric Sciences</field>
-  <field name="instrument_host_id">vo1</field>
   <field name="instrument_host_id">vo2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">visa.vo2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:visa.vo2</field>
   <field name="instrument_id">visa</field>
-  <field name="title">Visual Imaging Subsystem - Camera A</field>
+  <field name="instrument_name">Visual Imaging Subsystem - Camera A</field>
   <field name="instrument_type">Imager</field>
-  <field name="instrument_host_id">vo1</field>
   <field name="instrument_host_id">vo2</field>
   <field name="investigation_id">viking</field>
 </doc>
 <doc>
   <field name="id">visb.vo2</field>
+  <field name="lid">urn:nasa:pds:context:instrument:visb.vo2</field>
   <field name="instrument_id">visb</field>
-  <field name="title">Visual Imaging Subsystem - Camera B</field>
+  <field name="instrument_name">Visual Imaging Subsystem - Camera B</field>
   <field name="instrument_type">Imager</field>
-  <field name="instrument_host_id">vo1</field>
   <field name="instrument_host_id">vo2</field>
   <field name="investigation_id">viking</field>
 </doc>
