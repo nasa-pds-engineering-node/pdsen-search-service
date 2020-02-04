@@ -11,11 +11,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.solr.client.solrj.response.FacetField;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import gov.nasa.pds.search.util.NameMapper;
@@ -49,6 +51,12 @@ public class QueryResponseJsonWriter
     }
 
 
+    public void setPrettyPrint()
+    {
+        jgen.setPrettyPrinter(new DefaultPrettyPrinter());
+    }
+    
+    
     /**
      * Set a list of fields to write.
      * @param fields A list of fields to write.
@@ -111,28 +119,70 @@ public class QueryResponseJsonWriter
      * @param docList
      * @throws IOException
      */
-    public void write(QueryResponse qResponse) throws IOException
+    public void write(QueryResponse qResp) throws IOException
     {
-        SolrDocumentList docList = qResponse.getResults();
-        
         jgen.writeStartObject(); // Root
 
-        jgen.writeFieldName("response");
-        jgen.writeStartObject(); // Response
-        {
-            // Header
-            jgen.writeStringField("status", "ok");
-            jgen.writeNumberField("numFound", docList.getNumFound());
-            jgen.writeNumberField("start", docList.getStart());
-            jgen.writeNumberField("rows", docList.size());
-            // Docs
-            jgen.writeFieldName("docs"); writeDocs(docList);
-        }
-        jgen.writeEndObject(); // Response
+        writeResponse(qResp);
+        writeFacetCounts(qResp);
         
         jgen.writeEndObject(); // Root
         
         jgen.close();
+    }
+    
+    
+    private void writeResponse(QueryResponse qResp) throws IOException
+    {
+        SolrDocumentList docList = qResp.getResults();
+        
+        jgen.writeFieldName("response");
+        jgen.writeStartObject(); // Response
+
+        // Header
+        jgen.writeStringField("status", "ok");
+        jgen.writeNumberField("numFound", docList.getNumFound());
+        jgen.writeNumberField("start", docList.getStart());
+        jgen.writeNumberField("rows", docList.size());
+        // Docs
+        jgen.writeFieldName("docs"); writeDocs(docList);
+
+        jgen.writeEndObject(); // Response
+    }
+    
+    
+    private void writeFacetCounts(QueryResponse qResp) throws IOException
+    {
+        List<FacetField> facets = qResp.getFacetFields();
+        if(facets == null || facets.size() == 0) return;
+
+        jgen.writeFieldName("facet_counts");
+        jgen.writeStartObject();
+        jgen.writeFieldName("facet_fields");
+        jgen.writeStartObject();
+        
+        for(FacetField ff: facets)
+        {
+            jgen.writeFieldName(ff.getName());
+            writeFacetField(ff);
+        }
+
+        jgen.writeEndObject();  // end facet_fields        
+        jgen.writeEndObject();  // end facet_counts
+    }
+    
+    
+    private void writeFacetField(FacetField ff) throws IOException
+    {
+        jgen.writeStartArray();
+        
+        for(FacetField.Count cnt: ff.getValues())
+        {
+            jgen.writeString(cnt.getName());
+            jgen.writeNumber(cnt.getCount());
+        }
+        
+        jgen.writeEndArray();
     }
     
     
