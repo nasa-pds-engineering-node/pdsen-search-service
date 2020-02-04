@@ -2,6 +2,8 @@ package tt;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.response.FacetField;
+import org.apache.solr.client.solrj.response.FacetField.Count;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
@@ -22,32 +24,42 @@ public class TestSolrManager
         SolrManager.init(solrCfg);
 
         
+        String facetField = "science_facets";
+        
         //String strQuery = "form-investigation:\"VEGA 1\"";
         //String strQuery = "investigation_name:\"VEGA 1\"";        
         //String strQuery = "+target_name:\"(2003 J4)\"";
         
-        String strQuery = "+target_name:\"9018+029\"";
+        String strQuery = "investigation_id:maven";
         
         //String strQuery = "+(target:Mars target:Jupiter target:Pasadena) +investigation:\"Mars Reconnaissance Orbiter\" +product_class:Product_Data_Set_PDS3 +title:derived";
         
         SolrQuery query = new SolrQuery(strQuery);
-        query.add("rows", "10");
-        query.add("fl", "identifier,title,product_class,data_class");
+        query.add("rows", "5");
+        query.add("fl", "title");
         
+        query.add("facet", "on");
+        query.add("facet.field", facetField);
         
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
-        QueryResponse resp = solrClient.query("pds", query);
-        SolrDocumentList res = resp.getResults();
-        System.out.println("Found: " + res.getNumFound());
-        
-        for(SolrDocument doc: res)
+        QueryResponse resp = solrClient.query("data", query);
+
+        FacetField ff = resp.getFacetField(facetField);
+        for(Count cnt: ff.getValues())
         {
-            System.out.println(doc.getFirstValue("identifier"));
+            System.out.println(cnt.getName() + " --> " + cnt.getCount());
+        }
+        
+        /*
+        SolrDocumentList docList = resp.getResults();
+        System.out.println("Documents: " + docList.getNumFound());
+        
+        for(SolrDocument doc: docList)
+        {
             System.out.println(doc.getFirstValue("title"));
-            System.out.println(doc.getFirstValue("product_class"));
-            System.out.println(doc.getFirstValue("data_class"));            
             System.out.println("------------------------------------------------");
         }
+        */
         
         SolrManager.destroy();
     }

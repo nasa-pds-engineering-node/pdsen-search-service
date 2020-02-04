@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocumentList;
 
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
@@ -13,12 +12,13 @@ import gov.nasa.pds.search.solr.query.bld.DocsQueryBuilder;
 import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.util.RequestParameters;
 
+
 public class DocsQueryRunner
 {
     private static final String COLLECTION_DOCS = "docs";
     
 
-    public static SolrDocumentList runDocsQuery(List<NerToken> tokens, 
+    public static QueryResponse runDocsQuery(List<NerToken> tokens, 
             RequestParameters reqParams) throws Exception
     {
         // Build Solr query
@@ -34,9 +34,8 @@ public class DocsQueryRunner
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
         QueryResponse resp = solrClient.query(COLLECTION_DOCS, query);
-        SolrDocumentList docList = resp.getResults();
 
-        return docList;
+        return resp;
     }
 
 }

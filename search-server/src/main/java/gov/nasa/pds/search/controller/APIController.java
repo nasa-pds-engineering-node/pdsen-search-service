@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
 import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
-import gov.nasa.pds.search.solr.SolrDocJsonWriter;
+import gov.nasa.pds.search.solr.QueryResponseJsonWriter;
 import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
 import gov.nasa.pds.search.util.NameMapper;
@@ -41,7 +40,7 @@ public class APIController
         
         // Use default JSON output format
         httpResp.setContentType("application/json");
-        SolrDocJsonWriter respWriter = new SolrDocJsonWriter(httpResp.getWriter());
+        QueryResponseJsonWriter respWriter = new QueryResponseJsonWriter(httpResp.getWriter());
         
         SolrCollectionConfiguration solrConfig = ssConfig.getSolrConfiguration().getCollectionConfiguration("data");
         FieldConfiguration fieldConfig = ssConfig.getFieldConfiguration();
@@ -69,10 +68,9 @@ public class APIController
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
         QueryResponse resp = solrClient.query(solrConfig.collectionName, query);
-        SolrDocumentList docList = resp.getResults();
         
         // Write documents
-        respWriter.write(docList);
+        respWriter.write(resp);
     }
     
     

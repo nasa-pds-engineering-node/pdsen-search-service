@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.solr.common.SolrDocumentList;
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,11 +41,11 @@ public class DocsSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Run Solr query
-        SolrDocumentList solrDocs = DocsQueryRunner.runDocsQuery(nerTokens, ctx.reqParams);
-        if(!ctx.validateAndContinue(solrDocs)) return;
+        QueryResponse qResp = DocsQueryRunner.runDocsQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(qResp)) return;
         
         // Write documents
-        ctx.respWriter.write(solrDocs);
+        ctx.respWriter.write(qResp);
     }
 
 }

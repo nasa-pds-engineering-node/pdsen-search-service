@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.solr.common.SolrDocumentList;
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,27 +45,27 @@ public class ContextSearchController
         byte queryCategory = queryClassifier.classify(nerTokens);
 
         // Run Solr Query
-        SolrDocumentList solrDocs = null;
+        QueryResponse qResp = null;
         switch(queryCategory)
         {
         case ContextQueryClass.INVESTIGATION:
-            solrDocs = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
+            qResp = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
             break;
         case ContextQueryClass.INSTRUMENT:
-            solrDocs = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
+            qResp = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
             break;
         case ContextQueryClass.TARGET:
-            solrDocs = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
+            qResp = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
             break;
         default:
-            solrDocs = ContextQueryRunner.runUnknownQuery(nerTokens, ctx.reqParams);
+            qResp = ContextQueryRunner.runUnknownQuery(nerTokens, ctx.reqParams);
             break;
         }
         
-        if(!ctx.validateAndContinue(solrDocs)) return;
+        if(!ctx.validateAndContinue(qResp)) return;
 
         // Write documents
-        ctx.respWriter.write(solrDocs);
+        ctx.respWriter.write(qResp);
     }
 
     
@@ -81,11 +81,11 @@ public class ContextSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Run Solr Query
-        SolrDocumentList solrDocs = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
-        if(!ctx.validateAndContinue(solrDocs)) return;
+        QueryResponse qResp = ContextQueryRunner.runInvestigationQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(qResp)) return;
 
         // Write documents
-        ctx.respWriter.write(solrDocs);
+        ctx.respWriter.write(qResp);
     }
 
     
@@ -101,11 +101,11 @@ public class ContextSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Run Solr Query
-        SolrDocumentList solrDocs = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
-        if(!ctx.validateAndContinue(solrDocs)) return;
+        QueryResponse qResp = ContextQueryRunner.runInstrumentQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(qResp)) return;
 
         // Write documents
-        ctx.respWriter.write(solrDocs);
+        ctx.respWriter.write(qResp);
     }
 
     
@@ -121,11 +121,11 @@ public class ContextSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Run Solr Query
-        SolrDocumentList solrDocs = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
-        if(!ctx.validateAndContinue(solrDocs)) return;
+        QueryResponse qResp = ContextQueryRunner.runTargetQuery(nerTokens, ctx.reqParams);
+        if(!ctx.validateAndContinue(qResp)) return;
 
         // Write documents
-        ctx.respWriter.write(solrDocs);
+        ctx.respWriter.write(qResp);
     }
 
 }

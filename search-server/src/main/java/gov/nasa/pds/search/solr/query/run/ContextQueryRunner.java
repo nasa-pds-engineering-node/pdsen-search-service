@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocumentList;
 
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
@@ -23,7 +22,7 @@ public class ContextQueryRunner
     private static final String COLLECTION_TARGET = "ctx_target";
 
     
-    public static SolrDocumentList runTargetQuery(List<NerToken> tokens, 
+    public static QueryResponse runTargetQuery(List<NerToken> tokens, 
             RequestParameters reqParams) throws Exception
     {
         // Build Solr query
@@ -39,13 +38,12 @@ public class ContextQueryRunner
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
         QueryResponse resp = solrClient.query(COLLECTION_TARGET, query);
-        SolrDocumentList docList = resp.getResults();
 
-        return docList;
+        return resp;
     }
 
     
-    public static SolrDocumentList runInstrumentQuery(List<NerToken> tokens, 
+    public static QueryResponse runInstrumentQuery(List<NerToken> tokens, 
             RequestParameters reqParams) throws Exception
     {
         // Build Solr query
@@ -61,13 +59,12 @@ public class ContextQueryRunner
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
         QueryResponse resp = solrClient.query(COLLECTION_INSTRUMENT, query);
-        SolrDocumentList docList = resp.getResults();
 
-        return docList;
+        return resp;
     }
 
     
-    public static SolrDocumentList runInvestigationQuery(List<NerToken> tokens, 
+    public static QueryResponse runInvestigationQuery(List<NerToken> tokens, 
             RequestParameters reqParams) throws Exception
     {
         // Build Solr query
@@ -83,13 +80,12 @@ public class ContextQueryRunner
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
         QueryResponse resp = solrClient.query(COLLECTION_INVESTIGATION, query);
-        SolrDocumentList docList = resp.getResults();
 
-        return docList;
+        return resp;
     }
 
     
-    public static SolrDocumentList runUnknownQuery(List<NerToken> tokens, 
+    public static QueryResponse runUnknownQuery(List<NerToken> tokens, 
             RequestParameters reqParams) throws Exception
     {
         return null;

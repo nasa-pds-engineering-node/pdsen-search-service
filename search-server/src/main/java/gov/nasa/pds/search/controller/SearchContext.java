@@ -5,16 +5,17 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.solr.common.SolrDocumentList;
+import org.apache.solr.client.solrj.response.QueryResponse;
 
-import gov.nasa.pds.search.solr.SolrDocJsonWriter;
+import gov.nasa.pds.search.solr.QueryResponseJsonWriter;
 import gov.nasa.pds.search.util.RequestParameters;
+
 
 public class SearchContext
 {
     public RequestParameters reqParams;
     public HttpServletResponse httpResp;
-    public SolrDocJsonWriter respWriter;
+    public QueryResponseJsonWriter respWriter;
     public String qParam;
     
     
@@ -25,7 +26,7 @@ public class SearchContext
         this.httpResp = httpResp;
         this.httpResp.setContentType("application/json");
 
-        this.respWriter = new SolrDocJsonWriter(httpResp.getWriter());
+        this.respWriter = new QueryResponseJsonWriter(httpResp.getWriter());
     
         this.qParam = reqParams.getParameter("q");
     }
@@ -44,9 +45,9 @@ public class SearchContext
     }
 
     
-    public boolean validateAndContinue(SolrDocumentList solrDocs) throws IOException
+    public boolean validateAndContinue(QueryResponse qResp) throws IOException
     {
-        if(solrDocs == null)
+        if(qResp == null)
         {
             httpResp.setStatus(400);
             respWriter.error("Invalid query");

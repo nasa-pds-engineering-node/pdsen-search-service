@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 
@@ -24,7 +25,7 @@ import gov.nasa.pds.search.util.NameMapper;
  * Writes Solr response in JSON format. 
  * @author karpenko
  */
-public class SolrDocJsonWriter
+public class QueryResponseJsonWriter
 {
     private JsonGenerator jgen;
     private List<String> includeFields;
@@ -36,7 +37,7 @@ public class SolrDocJsonWriter
      * @param out Output Stream for JSON.
      * @throws IOException
      */
-    public SolrDocJsonWriter(Writer writer) throws IOException
+    public QueryResponseJsonWriter(Writer writer) throws IOException
     {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
@@ -110,8 +111,10 @@ public class SolrDocJsonWriter
      * @param docList
      * @throws IOException
      */
-    public void write(SolrDocumentList docList) throws IOException
+    public void write(QueryResponse qResponse) throws IOException
     {
+        SolrDocumentList docList = qResponse.getResults();
+        
         jgen.writeStartObject(); // Root
 
         jgen.writeFieldName("response");
