@@ -1,12 +1,484 @@
-asteroid->T=11
-asteroids->T=11|I=asteroid
+fideoja->T=1|I=10123_fideoja
+10123->N=1
+10123 fideoja->T=1|I=10123_fideoja
 
-Bennu->T=1
+bennu->T=1|I=101955_bennu
 101955->N=1
-101955 Bennu->T=1|I=bennu
+101955 bennu->T=1|I=101955_bennu
 
+amazone->T=1|I=1042_amazone
+1042->N=1
+1042 amazone->T=1|I=1042_amazone
+
+phemios->T=1|I=10664_phemios
+10664->N=1
+10664 phemios->T=1|I=10664_phemios
+
+dione->T=1|I=106_dione
+106->N=1
+106 dione->T=1|I=106_dione
+
+camilla->T=1|I=107_camilla
+107->N=1
+107 camilla->T=1|I=107_camilla
+
+felicitas->T=1|I=109_felicitas
+109->N=1
+109 felicitas->T=1|I=109_felicitas
+
+hygiea->T=1|I=10_hygiea
+10->N=1
+10 hygiea->T=1|I=10_hygiea
+
+ate->T=1|I=111_ate
+111->N=1
+111 ate->T=1|I=111_ate
+
+raissa->T=1|I=1137_raissa
+1137->N=1
+1137 raissa->T=1|I=1137_raissa
+
+amalthea->T=1|I=113_amalthea
+113->N=1
+113 amalthea->T=1|I=113_amalthea
+
+oda->T=1|I=1144_oda
+1144->N=1
+1144 oda->T=1|I=1144_oda
+
+merrill->T=1|I=11768_merrill
+11768->N=1
+11768 merrill->T=1|I=11768_merrill
+
+parthenope->T=1|I=11_parthenope
+11->N=1
+11 parthenope->T=1|I=11_parthenope
+
+troilus->T=1|I=1208_troilus
+1208->N=1
+1208 troilus->T=1|I=1208_troilus
+
+hermione->T=1|I=121_hermione
+121->N=1
+121 hermione->T=1|I=121_hermione
+
+crocus->T=1|I=1220_crocus
+1220->N=1
+1220 crocus->T=1|I=1220_crocus
+
+thulin->T=1|I=12379_thulin
+12379->N=1
+12379 thulin->T=1|I=12379_thulin
+
+peiraios->T=1|I=12658_peiraios
+12658->N=1
+12658 peiraios->T=1|I=12658_peiraios
+
+eteoneus->T=1|I=12916_eteoneus
+12916->N=1
+12916 eteoneus->T=1|I=12916_eteoneus
+
+elektra->T=1|I=130_elektra
+130->N=1
+130 elektra->T=1|I=130_elektra
+
+agasthenes->T=1|I=13185_agasthenes
+13185->N=1
+13185 agasthenes->T=1|I=13185_agasthenes
+
+nansmith->T=1|I=13765_nansmith
+13765->N=1
+13765 nansmith->T=1|I=13765_nansmith
+
+egeria->T=1|I=13_egeria
+13->N=1
+13 egeria->T=1|I=13_egeria
+
+vibilia->T=1|I=144_vibilia
+144->N=1
+144 vibilia->T=1|I=144_vibilia
+
+lucina->T=1|I=146_lucina
+146->N=1
+146 lucina->T=1|I=146_lucina
+
+thyestes->T=1|I=14792_thyestes
+14792->N=1
+14792 thyestes->T=1|I=14792_thyestes
+
+irene->T=1|I=14_irene
+14->N=1
+14 irene->T=1|I=14_irene
+
+oulu->T=1|I=1512_oulu
+1512->N=1
+1512 oulu->T=1|I=1512_oulu
+
+tlepolemos->T=1|I=15651_tlepolemos
+15651->N=1
+15651 tlepolemos->T=1|I=15651_tlepolemos
+
+eunomia->T=1|I=15_eunomia
+15->N=1
+15 eunomia->T=1|I=15_eunomia
+
+iphthime->T=1|I=16974_iphthime
+16974->N=1
+16974 iphthime->T=1|I=16974_iphthime
+
+christophedumas->T=1|I=17246_christophedumas
+17246->N=1
+17246 christophedumas->T=1|I=17246_christophedumas
+
+elsa->T=1|I=182_elsa
+182->N=1
+182 elsa->T=1|I=182_elsa
+
+melpomene->T=1|I=18_melpomene
+18->N=1
+18 melpomene->T=1|I=18_melpomene
+
+naef->T=1|I=1906_naef
+1906->N=1
+1906 naef->T=1|I=1906_naef
+
+fortuna->T=1|I=19_fortuna
+19->N=1
+19 fortuna->T=1|I=19_fortuna
+
+sg109->T=1|I=2006_sg109
+2006->N=1
+2006 sg109->T=1|I=2006_sg109
+
+wd5->T=1|I=2007_wd5
+2007->N=1
+2007 wd5->T=1|I=2007_wd5
+
+massalia->T=1|I=20_massalia
+20->N=1
+20 massalia->T=1|I=20_massalia
+
+moore-sitterly->T=1|I=2110_moore-sitterly
+2110->N=1
+2110 moore-sitterly->T=1|I=2110_moore-sitterly
+
+epeios->T=1|I=2148_epeios
+2148->N=1
+2148 epeios->T=1|I=2148_epeios
+
+kleopatra->T=1|I=216_kleopatra
+216->N=1
+216 kleopatra->T=1|I=216_kleopatra
+
+lutetia->T=1|I=21_lutetia
 21->N=1
-21 Lutetia->T=1
-Lutetia->T=1|21_lutetia
+21 lutetia->T=1|I=21_lutetia
 
-Vesta->T=1
+oljato->T=1|I=2201_oljato
+2201->N=1
+2201 oljato->T=1|I=2201_oljato
+
+oceana->T=1|I=224_oceana
+224->N=1
+224 oceana->T=1|I=224_oceana
+
+alconrad->T=1|I=22899_alconrad
+22899->N=1
+22899 alconrad->T=1|I=22899_alconrad
+
+kalliope->T=1|I=22_kalliope
+22->N=1
+22 kalliope->T=1|I=22_kalliope
+
+thomaslynch->T=1|I=23054_thomaslynch
+23054->N=1
+23054 thomaslynch->T=1|I=23054_thomaslynch
+
+zellner->T=1|I=2411_zellner
+2411->N=1
+2411 zellner->T=1|I=2411_zellner
+
+ida->T=1|I=243_ida
+243->N=1
+243 ida->T=1|I=243_ida
+
+itokawa->T=1|I=25143_itokawa
+25143->N=1
+25143 itokawa->T=1|I=25143_itokawa
+
+mathilde->T=1|I=253_mathilde
+253->N=1
+253 mathilde->T=1|I=253_mathilde
+
+masursky->T=1|I=2685_masursky
+2685->N=1
+2685 masursky->T=1|I=2685_masursky
+
+elias->T=1|I=26970_elias
+26970->N=1
+26970 elias->T=1|I=26970_elias
+
+emma->T=1|I=283_emma
+283->N=1
+283 emma->T=1|I=283_emma
+
+steins->T=1|I=2867_steins
+2867->N=1
+2867 steins->T=1|I=2867_steins
+
+glauke->T=1|I=288_glauke
+288->N=1
+288 glauke->T=1|I=288_glauke
+
+amphitrite->T=1|I=29_amphitrite
+29->N=1
+29 amphitrite->T=1|I=29_amphitrite
+
+pallas->T=1|I=2_pallas
+2->N=1
+2 pallas->T=1|I=2_pallas
+
+brucebills->T=1|I=300221_brucebills
+300221->N=1
+300221 brucebills->T=1|I=300221_brucebills
+
+phaethon->T=1|I=3200_phaethon
+3200->N=1
+3200 phaethon->T=1|I=3200_phaethon
+
+orpheus->T=1|I=3361_orpheus
+3361->N=1
+3361 orpheus->T=1|I=3361_orpheus
+
+bellingshausen->T=1|I=3659_bellingshausen
+3659->N=1
+3659 bellingshausen->T=1|I=3659_bellingshausen
+
+ursula->T=1|I=375_ursula
+375->N=1
+375 ursula->T=1|I=375_ursula
+
+huenna->T=1|I=379_huenna
+379->N=1
+379 huenna->T=1|I=379_huenna
+
+leda->T=1|I=38_leda
+38->N=1
+38 leda->T=1|I=38_leda
+
+wilson-harrington->T=1|I=4015_wilson-harrington
+4015->N=1
+4015 wilson-harrington->T=1|I=4015_wilson-harrington
+
+toutatis->T=1|I=4179_toutatis
+4179->N=1
+4179 toutatis->T=1|I=4179_toutatis
+
+eros->T=1|I=433_eros
+433->N=1
+433 eros->T=1|I=433_eros
+
+hungaria->T=1|I=434_hungaria
+434->N=1
+434 hungaria->T=1|I=434_hungaria
+
+ariadne->T=1|I=43_ariadne
+43->N=1
+43 ariadne->T=1|I=43_ariadne
+
+gyptis->T=1|I=444_gyptis
+444->N=1
+444 gyptis->T=1|I=444_gyptis
+
+nysa->T=1|I=44_nysa
+44->N=1
+44 nysa->T=1|I=44_nysa
+
+eugenia->T=1|I=45_eugenia
+45->N=1
+45 eugenia->T=1|I=45_eugenia
+
+hestia->T=1|I=46_hestia
+46->N=1
+46 hestia->T=1|I=46_hestia
+
+souchay->T=1|I=48424_souchay
+48424->N=1
+48424 souchay->T=1|I=48424_souchay
+
+pales->T=1|I=49_pales
+49->N=1
+49 pales->T=1|I=49_pales
+
+vesta->T=1|I=4_vesta
+4->N=1
+4 vesta->T=1|I=4_vesta
+
+martes->T=1|I=5026_martes
+5026->N=1
+5026 martes->T=1|I=5026_martes
+
+theotes->T=1|I=5041_theotes
+5041->N=1
+5041 theotes->T=1|I=5041_theotes
+
+nemausa->T=1|I=51_nemausa
+51->N=1
+51 nemausa->T=1|I=51_nemausa
+
+europa->T=1|I=52_europa
+52->N=1
+52 europa->T=1|I=52_europa
+
+herculina->T=1|I=532_herculina
+532->N=1
+532 herculina->T=1|I=532_herculina
+
+eumelos->T=1|I=5436_eumelos
+5436->N=1
+5436 eumelos->T=1|I=5436_eumelos
+
+alexandra->T=1|I=54_alexandra
+54->N=1
+54 alexandra->T=1|I=54_alexandra
+
+cloanthus->T=1|I=5511_cloanthus
+5511->N=1
+5511 cloanthus->T=1|I=5511_cloanthus
+
+annefrank->T=1|I=5535_annefrank
+5535->N=1
+5535 annefrank->T=1|I=5535_annefrank
+
+titania->T=1|I=593_titania
+593->N=1
+593 titania->T=1|I=593_titania
+
+scheila->T=1|I=596_scheila
+596->N=1
+596 scheila->T=1|I=596_scheila
+
+astraea->T=1|I=5_astraea
+5->N=1
+5 astraea->T=1|I=5_astraea
+
+rheinland->T=1|I=6070_rheinland
+6070->N=1
+6070 rheinland->T=1|I=6070_rheinland
+
+patroclus->T=1|I=617_patroclus
+617->N=1
+617 patroclus->T=1|I=617_patroclus
+
+triberga->T=1|I=619_triberga
+619->N=1
+619 triberga->T=1|I=619_triberga
+
+hektor->T=1|I=624_hektor
+624->N=1
+624 hektor->T=1|I=624_hektor
+
+ausonia->T=1|I=63_ausonia
+63->N=1
+63 ausonia->T=1|I=63_ausonia
+
+cybele->T=1|I=65_cybele
+65->N=1
+65 cybele->T=1|I=65_cybele
+
+rachele->T=1|I=674_rachele
+674->N=1
+674 rachele->T=1|I=674_rachele
+
+hebe->T=1|I=6_hebe
+6->N=1
+6 hebe->T=1|I=6_hebe
+
+alauda->T=1|I=702_alauda
+702->N=1
+702 alauda->T=1|I=702_alauda
+
+fringilla->T=1|I=709_fringilla
+709->N=1
+709 fringilla->T=1|I=709_fringilla
+
+hiera->T=1|I=7119_hiera
+7119->N=1
+7119 hiera->T=1|I=7119_hiera
+
+cureau->T=1|I=7126_cureau
+7126->N=1
+7126 cureau->T=1|I=7126_cureau
+
+prylis->T=1|I=7543_prylis
+7543->N=1
+7543 prylis->T=1|I=7543_prylis
+
+pulcova->T=1|I=762_pulcova
+762->N=1
+762 pulcova->T=1|I=762_pulcova
+
+reinerstoss->T=1|I=7689_reinerstoss
+7689->N=1
+7689 reinerstoss->T=1|I=7689_reinerstoss
+
+liebe->T=1|I=7696_liebe
+7696->N=1
+7696 liebe->T=1|I=7696_liebe
+
+elst-pizarro->T=1|I=7968_elst-pizarro
+7968->N=1
+7968 elst-pizarro->T=1|I=7968_elst-pizarro
+
+iris->T=1|I=7_iris
+7->N=1
+7 iris->T=1|I=7_iris
+
+shoko->T=1|I=8306_shoko
+8306->N=1
+8306 shoko->T=1|I=8306_shoko
+
+karin->T=1|I=832_karin
+832->N=1
+832 karin->T=1|I=832_karin
+
+kaleycuoco->T=1|I=8624_kaleycuoco
+8624->N=1
+8624 kaleycuoco->T=1|I=8624_kaleycuoco
+
+sylvia->T=1|I=87_sylvia
+87->N=1
+87 sylvia->T=1|I=87_sylvia
+
+jokaste->T=1|I=899_jokaste
+899->N=1
+899 jokaste->T=1|I=899_jokaste
+
+julia->T=1|I=89_julia
+89->N=1
+89 julia->T=1|I=89_julia
+
+flora->T=1|I=8_flora
+8->N=1
+8 flora->T=1|I=8_flora
+
+antiope->T=1|I=90_antiope
+90->N=1
+90 antiope->T=1|I=90_antiope
+
+minerva->T=1|I=93_minerva
+93->N=1
+93 minerva->T=1|I=93_minerva
+
+gaspra->T=1|I=951_gaspra
+951->N=1
+951 gaspra->T=1|I=951_gaspra
+
+archaeopteryx->T=1|I=9860_archaeopteryx
+9860->N=1
+9860 archaeopteryx->T=1|I=9860_archaeopteryx
+
+metis->T=1|I=9_metis
+9->N=1
+9 metis->T=1|I=9_metis
+

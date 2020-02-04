@@ -30,8 +30,8 @@ Chandra X-ray Observatory->T=4|I=CXO
 CXO->T=4
 
 Chandrayaan->T=3|N=1
-Chandrayaan-1->T=3
-Chandrayaan-2->T=3
+Chandrayaan-1->T=3|I=chandrayaan1
+Chandrayaan-2->T=3|I=chandrayaan2
 
 # COMET SL9/JUPITER COLLISION
 

@@ -18,6 +18,7 @@ public interface NerTokenType
     public static final byte INSTRUMENT_HOST_TYPE = 14;
     
     public static final byte DATA_TYPE = 20;
-
+    public static final byte PROCESSING_LEVEL = 21;
+    
     public static final byte LID = 50;
 }
