@@ -28,6 +28,7 @@ public class DataQueryBuilder
         String targetId = null;
         String targetType = null;
         String collectionType = null;
+        String processingLevel = null;
         
         List<String> unknownTokens = new ArrayList<String>();
         
@@ -53,6 +54,9 @@ public class DataQueryBuilder
             case NerTokenType.DATA_TYPE:
                 collectionType = getProductId(token);
                 break;
+            case NerTokenType.PROCESSING_LEVEL:
+                processingLevel = getProductId(token);
+                break;
             default:
                 addUnknownToken(unknownTokens, token.getKey());
             }
@@ -65,6 +69,7 @@ public class DataQueryBuilder
         bld.addField(true, "instrument_id", instrumentId);
         bld.addField(true, "instrument_host_id", instrumentHostId);
         bld.addField(true, "collection_type", collectionType);
+        bld.addField(true, "processing_level", processingLevel);
 
         // Unknown tokens
         if(!unknownTokens.isEmpty())

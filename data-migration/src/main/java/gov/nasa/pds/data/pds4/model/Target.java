@@ -7,7 +7,6 @@ public class Target
     public String shortLid;
     public float vid;
 
-    public String[] name;
+    public String title;
     public String type;
-    public String description;
 }

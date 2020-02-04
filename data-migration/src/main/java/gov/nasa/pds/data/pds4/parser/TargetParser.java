@@ -15,11 +15,8 @@ public class TargetParser
     private XPathExpression xVid;
     
     private XPathExpression xTitle;
-    private XPathExpression xAltTitle;
 
-    private XPathExpression xName;
     private XPathExpression xType;
-    private XPathExpression xDescr;
 
     
     public TargetParser() throws Exception
@@ -28,13 +25,9 @@ public class TargetParser
 
         xLid = XPathUtils.compileXPath(xpf, "//Identification_Area/logical_identifier");
         xVid = XPathUtils.compileXPath(xpf, "//Identification_Area/version_id");
-        
         xTitle = XPathUtils.compileXPath(xpf, "//Identification_Area/title");
-        xAltTitle = XPathUtils.compileXPath(xpf, "//Identification_Area/Alias_List/Alias/alternate_title");
         
-        xName = XPathUtils.compileXPath(xpf, "//Instrument_Host/name");
-        xType = XPathUtils.compileXPath(xpf, "//Instrument_Host/type");
-        xDescr = XPathUtils.compileXPath(xpf, "//Instrument_Host/description");
+        xType = XPathUtils.compileXPath(xpf, "/Product_Context/Target/type");
     }
     
     
@@ -44,36 +37,16 @@ public class TargetParser
 
         // Lid
         obj.lid = XPathUtils.getStringValue(doc, xLid);
-        obj.shortLid = getShortLid(obj.lid);
-        
+        obj.shortLid = ParserUtils.getShortLid(obj.lid);
+
         // Vid
         String strVid = XPathUtils.getStringValue(doc, xVid); 
         obj.vid = Float.parseFloat(strVid);
 
-        // Name
-        addName(obj, XPathUtils.getStringValue(doc, xName));
-        addName(obj, XPathUtils.getStringValue(doc, xTitle));
-        addName(obj, XPathUtils.getStringArray(doc, xAltTitle));
-        
-        // Other
+        obj.title = XPathUtils.getStringValue(doc, xTitle);
         obj.type = XPathUtils.getStringValue(doc, xType);
-        obj.description = XPathUtils.getStringValue(doc, xDescr);
 
         return obj;
     }
-    
-    
-    private static String getShortLid(String lid)
-    {
-        int idx = lid.indexOf(":target:");
-        if(idx > 0) return lid.substring(idx + 8);
 
-        return null;
-    }
-    
-    
-    private static void addName(Target tgt, String... name)
-    {
-        
-    }
 }
