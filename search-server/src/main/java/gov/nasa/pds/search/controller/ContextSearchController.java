@@ -31,7 +31,7 @@ public class ContextSearchController
     private NamedEntityRecognizer ner;
 
     
-    @GetMapping(path = "/search/ctx")
+    @GetMapping(path = "/search/context")
     public void getContext(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);
@@ -69,7 +69,7 @@ public class ContextSearchController
     }
 
     
-    @GetMapping(path = "/search/ctx/invest")
+    @GetMapping(path = "/search/context/investigation")
     public void getInvestigation(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);
@@ -89,7 +89,7 @@ public class ContextSearchController
     }
 
     
-    @GetMapping(path = "/search/ctx/instrument")
+    @GetMapping(path = "/search/context/instrument")
     public void getInstrument(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);
@@ -109,7 +109,7 @@ public class ContextSearchController
     }
 
     
-    @GetMapping(path = "/search/ctx/target")
+    @GetMapping(path = "/search/context/target")
     public void getTarget(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);

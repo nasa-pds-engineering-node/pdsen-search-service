@@ -29,7 +29,7 @@ public class DocsSearchController
     private NamedEntityRecognizer ner;
 
     
-    @GetMapping(path = "/search/docs")
+    @GetMapping(path = "/search/document")
     public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);
