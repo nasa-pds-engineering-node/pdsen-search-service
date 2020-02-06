@@ -16,6 +16,12 @@ public class FieldMap
     }
     
     
+    public boolean isEmpty()
+    {
+        return fields.isEmpty();
+    }
+    
+    
     public void addValue(String fieldName, String value)
     {
         if(fieldName == null) throw new IllegalArgumentException("Field name is null");

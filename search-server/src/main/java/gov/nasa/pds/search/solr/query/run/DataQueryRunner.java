@@ -25,14 +25,7 @@ public class DataQueryRunner
     {
         // Build Solr query
         DataQueryBuilder queryBuilder = new DataQueryBuilder(tokens);
-        String facetFieldValue = reqParams.getParameter("ff." + DEFAULT_FACET_FIELD);
-        if(facetFieldValue != null)
-        {
-            FieldMap fmap = new FieldMap();
-            fmap.addValue(DEFAULT_FACET_FIELD, facetFieldValue);
-            queryBuilder.addFields(fmap);
-        }
-        
+        addFacetFilters(queryBuilder, reqParams);        
         SolrQuery query = queryBuilder.build();
         if(query == null) return null;
 
@@ -48,13 +41,51 @@ public class DataQueryRunner
     }
 
     
+    private static void addFacetFilters(DataQueryBuilder queryBuilder, RequestParameters reqParams)
+    {
+        FieldMap fmap = new FieldMap();
+        
+        for(String fieldName: reqParams.getParameterNames())
+        {
+            if(fieldName.startsWith("ff."))
+            {
+                String value = reqParams.getParameter(fieldName);
+                fmap.addValue(fieldName.substring(3), value);
+            }
+        }
+        
+        if(!fmap.isEmpty())
+        {
+            queryBuilder.addFields(fmap);
+        }
+    }
+    
+    
     private static void setFacets(SolrQuery query, RequestParameters reqParams)
     {
+        // Facet on/off
         String pFacet = reqParams.getParameter("facet");
-        if(!"true".equalsIgnoreCase(pFacet) && !"on".equalsIgnoreCase(pFacet)) return;
-
-        query.set("facet", true);
-        query.set("facet.field", DEFAULT_FACET_FIELD);
+        if(!"true".equalsIgnoreCase(pFacet) && !"on".equalsIgnoreCase(pFacet)) 
+        {
+            return;
+        }
+        else
+        {
+            query.set("facet", true);
+        }
+        
+        // Facet fields
+        String[] facetFields = reqParams.getParameterValues("facet.field");
+        if(facetFields == null || facetFields.length == 0)
+        {
+            query.set("facet.field", DEFAULT_FACET_FIELD);
+        }
+        else
+        {
+            query.set("facet.field", facetFields);
+        }
+        
+        // Configuration
         query.set("facet.mincount", reqParams.getIntParameter("facet.mincount", 1));
         query.set("facet.limit", reqParams.getIntParameter("facet.limit", 15));
     }

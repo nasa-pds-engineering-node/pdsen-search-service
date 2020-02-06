@@ -124,7 +124,7 @@ public class QueryResponseJsonWriter
         jgen.writeStartObject(); // Root
 
         writeResponse(qResp);
-        writeFacetCounts(qResp);
+        writeFacets(qResp);
         
         jgen.writeEndObject(); // Root
         
@@ -151,13 +151,11 @@ public class QueryResponseJsonWriter
     }
     
     
-    private void writeFacetCounts(QueryResponse qResp) throws IOException
+    private void writeFacets(QueryResponse qResp) throws IOException
     {
         List<FacetField> facets = qResp.getFacetFields();
         if(facets == null || facets.size() == 0) return;
 
-        jgen.writeFieldName("facet_counts");
-        jgen.writeStartObject();
         jgen.writeFieldName("facet_fields");
         jgen.writeStartObject();
         
@@ -168,7 +166,6 @@ public class QueryResponseJsonWriter
         }
 
         jgen.writeEndObject();  // end facet_fields        
-        jgen.writeEndObject();  // end facet_counts
     }
     
     
@@ -178,8 +175,12 @@ public class QueryResponseJsonWriter
         
         for(FacetField.Count cnt: ff.getValues())
         {
-            jgen.writeString(cnt.getName());
-            jgen.writeNumber(cnt.getCount());
+            jgen.writeStartObject();            
+            
+            jgen.writeStringField("value", cnt.getName());
+            jgen.writeNumberField("count", cnt.getCount());            
+            
+            jgen.writeEndObject();
         }
         
         jgen.writeEndArray();
