@@ -23,7 +23,7 @@ public class SolrQueryUtils
     }
     
     
-    public static void setFields(SolrQuery query, RequestParameters reqParams)
+    public static void setFieldList(SolrQuery query, RequestParameters reqParams)
     {
         String fields = reqParams.getParameter("fl");
         if(fields != null && !fields.isEmpty())

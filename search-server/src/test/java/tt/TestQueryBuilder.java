@@ -20,6 +20,8 @@ public class TestQueryBuilder
         bld.addBoost(10);
         bld.addField(false, "description", list);
         bld.addGroupEnd();
+ 
+        bld.addField(true, "science_facets", "Solar Energetic");
         
         // +investigation_id:orex +(title:(camera)^10 description:(camera))
         System.out.println(bld);

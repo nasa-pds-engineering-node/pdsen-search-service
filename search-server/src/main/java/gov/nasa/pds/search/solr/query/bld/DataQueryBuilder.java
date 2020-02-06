@@ -8,15 +8,25 @@ import org.apache.solr.client.solrj.SolrQuery;
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
 import gov.nasa.pds.search.solr.util.LuceneQueryBuilder;
+import gov.nasa.pds.search.util.FieldMap;
 
 public class DataQueryBuilder
 {
     private List<NerToken> nerTokens;
     
+    //TODO: Use single field map for all fields, including targetId, instrumentId, etc.
+    private FieldMap additionalFields;
+    
     
     public DataQueryBuilder(List<NerToken> nerTokens)
     {
         this.nerTokens = nerTokens;
+    }
+
+
+    public void addFields(FieldMap fields)
+    {
+        this.additionalFields = fields; 
     }
 
 
@@ -63,6 +73,7 @@ public class DataQueryBuilder
         }
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
+        
         bld.addField(true, "target_name", targetId);
         bld.addField(true, "target_type", targetType);
         bld.addField(true, "investigation_id", investigationId);
@@ -79,6 +90,16 @@ public class DataQueryBuilder
             bld.addBoost(10);
             bld.addField(false, "description", unknownTokens);
             bld.addGroupEnd();
+        }
+
+        // Additional fields.
+        // TODO: Use single field map for all fields
+        if(additionalFields != null)
+        {
+            for(String fieldName: additionalFields.getNames())
+            {
+                bld.addField(true, fieldName, additionalFields.getFirstValue(fieldName));
+            }
         }
         
         String queryString = bld.toString();

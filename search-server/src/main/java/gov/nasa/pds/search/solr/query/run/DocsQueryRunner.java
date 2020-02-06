@@ -29,7 +29,7 @@ public class DocsQueryRunner
         // Set "start" and "rows"
         SolrQueryUtils.setPageInfo(query, reqParams);
         // Set field list "fl"
-        SolrQueryUtils.setFields(query, reqParams);
+        SolrQueryUtils.setFieldList(query, reqParams);
 
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();

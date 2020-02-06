@@ -47,7 +47,14 @@ public class RequestParameters
             return null;
         }
     }
+
     
+    public Integer getIntParameter(String name, int defaultValue)
+    {
+        Integer value = getIntParameter(name);
+        return (value == null) ? defaultValue : value;
+    }
+
     
     public int size()
     {
