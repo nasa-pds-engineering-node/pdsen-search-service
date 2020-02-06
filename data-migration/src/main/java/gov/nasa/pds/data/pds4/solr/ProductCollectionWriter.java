@@ -123,29 +123,11 @@ public class ProductCollectionWriter
                 continue;
             }
             
-            String tgtType = tuple[0];
-            String tgtName = tuple[1];
+            String targetType = tuple[0];
+            String targetId = tuple[1];
             
-            types.add(tgtType);
-            
-            // TODO: FIX: It is a hack. Do dictionary lookup.
-            if(tgtType.equals("asteroid"))
-            {
-                int idx = tgtName.indexOf('_');
-                if(idx > 0)
-                {
-                    String name = tgtName.substring(idx+1);
-                    SolrDocUtils.writeField(writer, "target_name", name);
-                }
-                else
-                {
-                    System.out.println("WARNING: Could not extract asterid name: " + tgtName);
-                }
-            }
-            else
-            {
-                SolrDocUtils.writeField(writer, "target_name", tgtName);
-            }
+            types.add(targetType);
+            SolrDocUtils.writeField(writer, "target_id", targetId);
         }
 
         for(String type: types)

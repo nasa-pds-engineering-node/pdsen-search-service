@@ -74,7 +74,7 @@ public class DataQueryBuilder
 
         LuceneQueryBuilder bld = new LuceneQueryBuilder();
         
-        bld.addField(true, "target_name", targetId);
+        bld.addField(true, "target_id", targetId);
         bld.addField(true, "target_type", targetType);
         bld.addField(true, "investigation_id", investigationId);
         bld.addField(true, "instrument_id", instrumentId);

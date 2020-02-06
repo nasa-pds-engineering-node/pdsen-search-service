@@ -16,13 +16,13 @@
     <field name="processing_level" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="codmac_level" type="pint" indexed="true" stored="true" multiValued="true" />
     <field name="purpose" type="lowercase" indexed="true" stored="true" multiValued="true" />
-    <field name="science_facets" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="science_facets" type="lowercase" indexed="true" stored="true" multiValued="true" />
 
     <!-- References -->    
     <field name="investigation_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="instrument_host_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="instrument_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
-    <field name="target_name" type="lowercase" indexed="true" stored="true" multiValued="true" />
+    <field name="target_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="target_type" type="lowercase" indexed="true" stored="true" multiValued="true" />
 
     <!-- System Fields -->
