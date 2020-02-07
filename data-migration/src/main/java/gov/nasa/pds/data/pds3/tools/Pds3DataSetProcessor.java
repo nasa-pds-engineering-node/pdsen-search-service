@@ -1,5 +1,6 @@
 package gov.nasa.pds.data.pds3.tools;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -38,12 +39,12 @@ public class Pds3DataSetProcessor
         data.datasetId = fields.getFirstValue("data_set_id");
         
         data.title = fields.getFirstValue("title");
-        data.description = fields.getFirstValue("description");
+        
+        processDescription(data, fields);
         
         extractCollectionType(data, fields);
         extractProcessingLevels(data, fields);
-
-        data.purpose = "Science";
+        extractPurpose(data, fields);
         
         data.investigationIds = fields.getValues("investigation_id");
         
@@ -54,6 +55,27 @@ public class Pds3DataSetProcessor
         return data; 
     }
 
+    
+    private void processDescription(Pds3DataCollection data, FieldMap fields)
+    {
+        data.description = new ArrayList<String>();
+        
+        String terse = fields.getFirstValue("data_set_terse_description");
+        if(terse != null && !terse.isEmpty()) data.description.add(terse);
+        
+        // Usually data_set_terse_description == description 
+        String descr = fields.getFirstValue("description");
+        if(descr != null && !descr.equals(terse)) data.description.add(descr);
+
+        String abstr = fields.getFirstValue("abstract_text");
+        if(abstr != null && !abstr.isEmpty()) 
+        {
+            if(abstr.startsWith("Abstract ========")) abstr = abstr.substring(18);
+            else if(abstr.startsWith("Abstract ")) abstr = abstr.substring(9);
+            data.description.add(abstr);
+        }
+    }
+    
     
     private void processInstrumentHost(Pds3DataCollection data, FieldMap fields)
     {
@@ -116,6 +138,21 @@ public class Pds3DataSetProcessor
                 data.codmacLevels.add(codmacLevel);
                 data.processingLevels.add(pds4Level);
             }
+        }
+    }
+
+    
+    private void extractPurpose(Pds3DataCollection data, FieldMap fields)
+    {
+        String datasetId = fields.getFirstValue("data_set_id");
+        String[] tokens = datasetId.split("-");
+        if(tokens.length > 1 && "CAL".equals(tokens[1]))
+        {
+            data.purpose = "Calibration";
+        }
+        else
+        {
+            data.purpose = "Science";
         }
     }
     

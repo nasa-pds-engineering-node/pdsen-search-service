@@ -34,7 +34,7 @@ public class ProductCollectionWriterPds3
         SolrDocUtils.writeField(writer, "product_class", "Product_Data_Set_PDS3");
         
         SolrDocUtils.writeField(writer, "title", data.title);
-        SolrDocUtils.writeField(writer, "description", data.description);
+        writeDescription(data);
         
         SolrDocUtils.writeField(writer, "collection_type", data.type);
         writeProcessingLevels(data);
@@ -50,6 +50,15 @@ public class ProductCollectionWriterPds3
     }
     
 
+    private void writeDescription(Pds3DataCollection data) throws Exception
+    {
+        if(data.description != null && !data.description.isEmpty())
+        {
+            SolrDocUtils.writeField(writer, "description", data.description.toArray(new String[0]));
+        }
+    }
+    
+    
     private void writeProcessingLevels(Pds3DataCollection data) throws Exception
     {
         if(data.processingLevels != null && !data.processingLevels.isEmpty())
@@ -92,7 +101,7 @@ public class ProductCollectionWriterPds3
     {
         if(data.targetNames != null && !data.targetNames.isEmpty())
         {
-            SolrDocUtils.writeField(writer, "target_name", data.targetNames.toArray(new String[0]));
+            SolrDocUtils.writeField(writer, "target_id", data.targetNames.toArray(new String[0]));
         }
 
         if(data.targetTypes != null && !data.targetTypes.isEmpty())

@@ -1,5 +1,6 @@
 package gov.nasa.pds.data.pds3.model;
 
+import java.util.List;
 import java.util.Set;
 
 public class Pds3DataCollection
@@ -10,7 +11,7 @@ public class Pds3DataCollection
     
     public String title;
     public String type;
-    public String description;
+    public List<String> description;
 
     public Set<String> processingLevels;
     public Set<String> codmacLevels;
