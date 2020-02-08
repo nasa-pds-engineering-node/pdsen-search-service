@@ -10,7 +10,6 @@ import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
 import gov.nasa.pds.search.solr.query.bld.DataQueryBuilder;
 import gov.nasa.pds.search.solr.util.SolrManager;
-import gov.nasa.pds.search.util.FieldMap;
 import gov.nasa.pds.search.util.RequestParameters;
 
 
@@ -25,13 +24,13 @@ public class DataQueryRunner
     {
         // Build Solr query
         DataQueryBuilder queryBuilder = new DataQueryBuilder(tokens);
-        addFacetFilters(queryBuilder, reqParams);        
+        FacetUtils.addFacetFilters(queryBuilder, reqParams);        
         SolrQuery query = queryBuilder.build();
         if(query == null) return null;
 
         // Set "fl", "start", "rows"
         setCommonSolrFields(query, reqParams);
-        setFacets(query, reqParams);
+        FacetUtils.setFacets(query, reqParams, DEFAULT_FACET_FIELD);
         
         // Call Solr and get results
         SolrClient solrClient = SolrManager.getInstance().getSolrClient();
@@ -40,56 +39,6 @@ public class DataQueryRunner
         return resp;
     }
 
-    
-    private static void addFacetFilters(DataQueryBuilder queryBuilder, RequestParameters reqParams)
-    {
-        FieldMap fmap = new FieldMap();
-        
-        for(String fieldName: reqParams.getParameterNames())
-        {
-            if(fieldName.startsWith("ff."))
-            {
-                String value = reqParams.getParameter(fieldName);
-                fmap.addValue(fieldName.substring(3), value);
-            }
-        }
-        
-        if(!fmap.isEmpty())
-        {
-            queryBuilder.addFields(fmap);
-        }
-    }
-    
-    
-    private static void setFacets(SolrQuery query, RequestParameters reqParams)
-    {
-        // Facet on/off
-        String pFacet = reqParams.getParameter("facet");
-        if(!"true".equalsIgnoreCase(pFacet) && !"on".equalsIgnoreCase(pFacet)) 
-        {
-            return;
-        }
-        else
-        {
-            query.set("facet", true);
-        }
-        
-        // Facet fields
-        String[] facetFields = reqParams.getParameterValues("facet.field");
-        if(facetFields == null || facetFields.length == 0)
-        {
-            query.set("facet.field", DEFAULT_FACET_FIELD);
-        }
-        else
-        {
-            query.set("facet.field", facetFields);
-        }
-        
-        // Configuration
-        query.set("facet.mincount", reqParams.getIntParameter("facet.mincount", 1));
-        query.set("facet.limit", reqParams.getIntParameter("facet.limit", 15));
-    }
-    
     
     private static void setCommonSolrFields(SolrQuery query, RequestParameters reqParams)
     {
