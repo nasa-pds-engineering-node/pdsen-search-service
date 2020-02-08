@@ -1,7 +1,156 @@
+planetary system|planetary_system.solar_system
+solar system|planetary_system.solar_system
+
+mercury|planet.mercury
+venus|planet.venus
+earth|planet.earth
 mars|planet.mars
+jupiter|planet.jupiter
+saturn|planet.saturn
+uranus|planet.uranus
+neptune|planet.neptune
+
+moon|satellite.earth.moon
+
+metis|satellite.jupiter.metis
+adrastea|satellite.jupiter.adrastea
+amalthea|satellite.jupiter.amalthea
+thebe|satellite.jupiter.thebe
+io|satellite.jupiter.io
+europa|satellite.jupiter.europa
+ganymede|satellite.jupiter.ganymede
+callisto|satellite.jupiter.callisto
+themisto|satellite.jupiter.themisto
+leda|satellite.jupiter.leda
+himalia|satellite.jupiter.himalia
+ersa|satellite.jupiter.ersa
+pandia|satellite.jupiter.pandia
+lysithea|satellite.jupiter.lysithea
+elara|satellite.jupiter.elara
+dia|satellite.jupiter.dia
+carpo|satellite.jupiter.carpo
+valetudo|satellite.jupiter.valetudo
+euporie|satellite.jupiter.euporie
+euanthe|satellite.jupiter.euanthe
+orthosie|satellite.jupiter.orthosie
+thyone|satellite.jupiter.thyone
+mneme|satellite.jupiter.mneme
+harpalyke|satellite.jupiter.harpalyke
+hermippe|satellite.jupiter.hermippe
+praxidike|satellite.jupiter.praxidike
+thelxinoe|satellite.jupiter.thelxinoe
+eupheme|satellite.jupiter.eupheme
+helike|satellite.jupiter.helike
+iocaste|satellite.jupiter.iocaste
+ananke|satellite.jupiter.ananke
+arche|satellite.jupiter.arche
+pasithee|satellite.jupiter.pasithee
+herse|satellite.jupiter.herse
+chaldene|satellite.jupiter.chaldene
+kale|satellite.jupiter.kale
+isonoe|satellite.jupiter.isonoe
+aitne|satellite.jupiter.aitne
+erinome|satellite.jupiter.erinome
+taygete|satellite.jupiter.taygete
+carme|satellite.jupiter.carme
+kalyke|satellite.jupiter.kalyke
+eukelade|satellite.jupiter.eukelade
+eirene|satellite.jupiter.eirene
+kallichore|satellite.jupiter.kallichore
+philophrosyne|satellite.jupiter.philophrosyne
+eurydome|satellite.jupiter.eurydome
+autonoe|satellite.jupiter.autonoe
+sponde|satellite.jupiter.sponde
+pasiphae|satellite.jupiter.pasiphae
+megaclite|satellite.jupiter.megaclite
+sinope|satellite.jupiter.sinope
+hegemone|satellite.jupiter.hegemone
+aoede|satellite.jupiter.aoede
+callirrhoe|satellite.jupiter.callirrhoe
+cyllene|satellite.jupiter.cyllene
+kore|satellite.jupiter.kore
+
+
+s rings|ring.saturn.s_rings
+
+pan|satellite.saturn.pan
+daphnis|satellite.saturn.daphnis
+atlas|satellite.saturn.atlas
+prometheus|satellite.saturn.prometheus
+pandora|satellite.saturn.pandora
+epimetheus|satellite.saturn.epimetheus
+janus|satellite.saturn.janus
+aegaeon|satellite.saturn.aegaeon
+mimas|satellite.saturn.mimas
+s1 mimas|satellite.saturn.mimas
+methone|satellite.saturn.methone
+anthe|satellite.saturn.anthe
+pallene|satellite.saturn.pallene
+enceladus|satellite.saturn.enceladus
+tethys|satellite.saturn.tethys
+s3 tethys|satellite.saturn.tethys
+telesto|satellite.saturn.telesto
+calypso|satellite.saturn.calypso
+polydeuces|satellite.saturn.polydeuces
+dione|satellite.saturn.dione
+s4 dione|satellite.saturn.dione
+helene|satellite.saturn.helene
+rhea|satellite.saturn.rhea
+titan|satellite.saturn.titan
+hyperion|satellite.saturn.hyperion
+iapetus|satellite.saturn.iapetus
+kiviuq|satellite.saturn.kiviuq
+ijiraq|satellite.saturn.ijiraq
+phoebe|satellite.saturn.phoebe
+s9 phoebe|satellite.saturn.phoebe
+paaliaq|satellite.saturn.paaliaq
+skathi|satellite.saturn.skathi
+skadi|satellite.saturn.skathi
+albiorix|satellite.saturn.albiorix
+bebhionn|satellite.saturn.bebhionn
+erriapus|satellite.saturn.erriapus
+erriapo|satellite.saturn.erriapus
+siarnaq|satellite.saturn.siarnaq
+skoll|satellite.saturn.skoll
+tarvos|satellite.saturn.tarvos
+tarqeq|satellite.saturn.tarqeq
+greip|satellite.saturn.greip
+hyrrokkin|satellite.saturn.hyrrokkin
+hyrokkin|satellite.saturn.hyrrokkin
+mundilfari|satellite.saturn.mundilfari
+jarnsaxa|satellite.saturn.jarnsaxa
+narvi|satellite.saturn.narvi
+bergelmir|satellite.saturn.bergelmir
+suttungr|satellite.saturn.suttungr
+suttung|satellite.saturn.suttungr
+hati|satellite.saturn.hati
+bestla|satellite.saturn.bestla
+bestia|satellite.saturn.bestla
+farbauti|satellite.saturn.farbauti
+thrymr|satellite.saturn.thrymr
+thrym|satellite.saturn.thrymr
+aegir|satellite.saturn.aegir
+kari|satellite.saturn.kari
+fenrir|satellite.saturn.fenrir
+surtur|satellite.saturn.surtur
+ymir|satellite.saturn.ymir
+loge|satellite.saturn.loge
+fornjot|satellite.saturn.fornjot
+
 1 ceres|dwarf_planet.1_ceres
 4 vesta|dwarf_planet.4_vesta
+
+dust|dust.dust
+
+star|star.star
+sun|sun.sun
+solar wind|plasma_stream.solar_wind
 20 cephei|star.20_cephei
 42 pegasi|star.42_pegasi
 epsilon geminorum|star.epsilon_geminorum
 hr 2290|star.hr_2290
+
+fomalhaut|star.fomalhaut
+spica|star.spica
+
+dark sky|sky.sky

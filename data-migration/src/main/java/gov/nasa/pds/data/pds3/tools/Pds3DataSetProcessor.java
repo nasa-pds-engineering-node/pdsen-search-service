@@ -121,9 +121,17 @@ public class Pds3DataSetProcessor
         data.processingLevels = new TreeSet<>();
         data.codmacLevels = new TreeSet<>();
         
-        String[] tokens = datasetId.split("-");
+        String[] tokens = (datasetId.indexOf('-') > 0) ? datasetId.split("-") : datasetId.split("_");
+        if(tokens.length < 4)
+        {
+            System.out.println("WARNING: Could not extract CODMAC level from data_set_id " + datasetId);
+            return;
+        }
+        
         // CODMAC levels separated by /
         String tmp = tokens[3];
+        if(datasetId.startsWith("CO-SR-UVIS-HSP")) tmp = tokens[4];
+        
         tokens = tmp.split("/");
         
         for(String codmacLevel: tokens)
@@ -131,7 +139,8 @@ public class Pds3DataSetProcessor
             String pds4Level = codmacToPds4(codmacLevel);
             if(pds4Level == null)
             {
-                System.out.println("WARNING: Invalid CODMAC level: " + codmacLevel);
+                System.out.println("WARNING: Invalid CODMAC level: " + codmacLevel 
+                        + " (data_set_id: " + datasetId + ")");
             }
             else
             {
@@ -198,14 +207,14 @@ public class Pds3DataSetProcessor
             String id = targetMap.get(name);
             
             String[] tuple = ParserUtils.getTargetTuple(id);
-            if(tuple == null || tuple.length != 2)
+            if(tuple == null || tuple.length < 2 || tuple.length > 3)
             {
                 System.out.println("WARNING: Invalid target id: " + id);
                 continue;
             }
             
             String tgtType = tuple[0];
-            String tgtName = tuple[1];
+            String tgtName = tuple[tuple.length-1];
 
             data.targetNames.add(tgtName);
             data.targetTypes.add(tgtType);

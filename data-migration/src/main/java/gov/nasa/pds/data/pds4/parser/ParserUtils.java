@@ -71,15 +71,8 @@ public class ParserUtils
 
     public static String[] getTargetTuple(String shortLid)
     {
-        if(shortLid == null) return null;
-        
-        int idx = shortLid.indexOf('.');
-        if(idx > 0)
-        {
-            return new String[] { shortLid.substring(0, idx), shortLid.substring(idx+1) };
-        }
-        
-        return null;
+        if(shortLid == null) return null;        
+        return shortLid.split("\\.");
     }
     
 }

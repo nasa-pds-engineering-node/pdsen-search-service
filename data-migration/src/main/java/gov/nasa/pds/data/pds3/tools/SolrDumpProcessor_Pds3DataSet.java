@@ -128,8 +128,8 @@ public class SolrDumpProcessor_Pds3DataSet
         {
             try
             {
-                String investigationId = fields.getFirstValue("investigation_id"); 
-                if(investigationId == null || !investigationId.equalsIgnoreCase("dawn")) return true;
+                Set<String> investigationIds = fields.getValues("investigation_id"); 
+                if(investigationIds == null || !investigationIds.contains("cassini")) return true;
 
                 Pds3DataCollection data = dsp.process(fields);
                 writer.write(data);
