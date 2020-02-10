@@ -23,7 +23,7 @@ public class TestContextQueryClassifier
     {
         ner = createNer();
         lexer = new PdsLexer();
-        classifier = new ContextQueryClassifier();
+        classifier = createClassifier();
     }
     
     
@@ -35,12 +35,21 @@ public class TestContextQueryClassifier
         return ner;
     }
 
+
+    private static ContextQueryClassifier createClassifier()
+    {
+        NerDictionary dic = new NerDictionaryHashMap();        
+        dic.load(new File("src/main/data/classifier/context"));
+        ContextQueryClassifier cc = new ContextQueryClassifier(dic);
+        return cc;
+    }
+
     
     private void classify(String text) throws Exception
     {
         List<String> lexTokens = lexer.parse(text);
         List<NerToken> nerTokens = ner.parse(lexTokens);
-        byte cc = classifier.classify(nerTokens);
+        byte cc = classifier.classify(lexTokens, nerTokens);
 
         System.out.println(text + "  -->  " + ContextQueryClass.toString(cc));        
     }

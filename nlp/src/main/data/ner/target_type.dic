@@ -19,3 +19,4 @@ satellite->T=11
 satellites->T=11|I=satellite
 moons->T=11|I=satellite
 
+rings->T=11|I=ring

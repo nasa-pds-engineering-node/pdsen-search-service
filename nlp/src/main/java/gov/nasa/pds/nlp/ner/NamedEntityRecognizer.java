@@ -70,13 +70,6 @@ public class NamedEntityRecognizer
         {
             String word = tokens.get(i);
             
-            // LID
-            if(word.startsWith("urn:nasa:pds:"))
-            {
-                results.add(new NerToken(word, NerTokenType.LID));
-                continue;
-            }
-
             // Dictionary lookup
             NerToken token = dic.get(word);            
             if(token == null)

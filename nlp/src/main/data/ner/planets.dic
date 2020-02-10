@@ -226,3 +226,6 @@ Weywot->T=1
 
 # Eris Moons
 Dysnomia->T=1
+
+# Rings
+Saturn Rings->T=1|I=s_rings
