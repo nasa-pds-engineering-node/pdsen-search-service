@@ -29,7 +29,9 @@ public class ContextSearchController
 
     @Autowired
     private NamedEntityRecognizer ner;
-
+    @Autowired
+    private ContextQueryClassifier queryClassifier;
+    
     
     @GetMapping(path = "/search/context")
     public void getContext(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
@@ -41,8 +43,7 @@ public class ContextSearchController
         PdsLexer lexer = new PdsLexer();
         List<String> lexTokens = lexer.parse(ctx.qParam);
         List<NerToken> nerTokens = ner.parse(lexTokens);
-        ContextQueryClassifier queryClassifier = new ContextQueryClassifier();
-        byte queryCategory = queryClassifier.classify(nerTokens);
+        byte queryCategory = queryClassifier.classify(lexTokens, nerTokens);
 
         // Run Solr Query
         QueryResponse qResp = null;
