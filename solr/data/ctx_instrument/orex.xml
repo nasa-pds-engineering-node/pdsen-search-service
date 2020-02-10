@@ -1,0 +1,56 @@
+<add>
+<doc>
+  <field name="id">ocams.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ocams.orex</field>
+  <field name="instrument_id">ocams</field>
+  <field name="title">OSIRIS-REx Camera Suite (OCAMS)</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+<doc>
+  <field name="id">ola.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ola.orex</field>
+  <field name="instrument_id">ola</field>
+  <field name="title">OSIRIS-REx Laser Altimeter (OLA)</field>
+  <field name="instrument_type">Altimeter</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+<doc>
+  <field name="id">otes.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:otes.orex</field>
+  <field name="instrument_id">otes</field>
+  <field name="title">OSIRIS-REx Thermal Emission Spectrometer (OTES)</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+<doc>
+  <field name="id">ovirs.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:ovirs.orex</field>
+  <field name="instrument_id">ovirs</field>
+  <field name="title">OSIRIS-REx Visible and Near InfraRed Spectrometer (OVIRS)</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+<doc>
+  <field name="id">rexis.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:rexis.orex</field>
+  <field name="instrument_id">rexis</field>
+  <field name="title">Regolith X-Ray Imaging Spectrometer (REXIS)</field>
+  <field name="instrument_type">Spectrometer</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+<doc>
+  <field name="id">tagcams.orex</field>
+  <field name="lid">urn:nasa:pds:context:instrument:tagcams.orex</field>
+  <field name="instrument_id">tagcams</field>
+  <field name="title">Touch-and-Go Camera Suite (TAGCAMS)</field>
+  <field name="instrument_type">Imager</field>
+  <field name="instrument_host_id">orex</field>
+  <field name="investigation_id">orex</field>
+</doc>
+</add>
