@@ -1,0 +1,12 @@
+radio->N=1
+radio science->T=1|I=Radio Science
+radar->T=1|I=Radio Science
+spectrometer->T=1|I=Spectroscopy
+spectrograph->T=1|I=Spectroscopy
+imaging->T=1|I=Imaging
+camera->T=1|I=Imaging
+imager->T=1|I=Imaging
+magnetometer->T=1|I=Magnetic Field
+particle->T=1|I=Particles
+dust->T=1|I=Dust
+accelerometer->T=1|I=Accelerometer

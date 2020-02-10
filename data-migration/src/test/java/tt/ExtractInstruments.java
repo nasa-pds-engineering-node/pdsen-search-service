@@ -58,7 +58,7 @@ public class ExtractInstruments
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         InstrumentParser parser = new InstrumentParser();
 
-        FileWriter writer = new FileWriter("/tmp/solr-docs.xml");
+        FileWriter writer = new FileWriter("/tmp/instruments.xml");
         writer.append("<add>\n");
         
         crawler.crawl((doc, path) -> 
@@ -86,6 +86,13 @@ public class ExtractInstruments
                 missionId = hostId;
             }
 
+            // The following missions were manually curated
+            if(missionId.equalsIgnoreCase("rosetta") 
+                    || missionId.equalsIgnoreCase("mex")
+                    || missionId.equalsIgnoreCase("vex")
+                    || missionId.equalsIgnoreCase("orex")) return;
+            
+            
             //debug(inst, hostId, missionId);
             writeSolrDoc(writer, inst, hostId, missionId);
         });
@@ -94,15 +101,6 @@ public class ExtractInstruments
         writer.close();
     }
 
-    
-    private static void debug(Instrument inst, String hostId, String missionId) throws Exception
-    {
-        String name = cleanName(inst.name);
-        
-        System.out.println(inst.shortLid + "|" + inst.id + "|" + name + "|" + inst.type 
-                + "|" + hostId + "|" + missionId);
-    }
-    
     
     private static void writeSolrDoc(Writer writer, Instrument inst, String hostId, String missionId) throws Exception
     {
@@ -114,7 +112,10 @@ public class ExtractInstruments
         SolrDocUtils.writeField(writer, "lid", inst.lid);
         
         SolrDocUtils.writeField(writer, "instrument_id", inst.id);
-        SolrDocUtils.writeField(writer, "instrument_name", name);
+
+        // Title
+        SolrDocUtils.writeField(writer, "title", name);
+
         SolrDocUtils.writeField(writer, "instrument_type", inst.type);
 
         String[] tokens = hostId.split(",");

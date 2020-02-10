@@ -2,6 +2,8 @@ package gov.nasa.pds.data.pds3.solr;
 
 import java.io.FileWriter;
 import java.io.Writer;
+import java.util.Collection;
+
 import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
 import gov.nasa.pds.data.util.xml.SolrDocUtils;
 
@@ -34,30 +36,31 @@ public class ProductCollectionWriterPds3
         SolrDocUtils.writeField(writer, "product_class", "Product_Data_Set_PDS3");
         
         SolrDocUtils.writeField(writer, "title", data.title);
-        writeDescription(data);
+        writeField("description", data.description);
         
         SolrDocUtils.writeField(writer, "collection_type", data.type);
         writeProcessingLevels(data);
         
         SolrDocUtils.writeField(writer, "purpose", data.purpose);
+        writeField("science_facets", data.scienceFacets);
         
-        writeInvestigations(data);
-        writeInstrumentHosts(data);
-        writeInstruments(data);
+        writeField("investigation_id", data.investigationIds);
+        writeField("instrument_host_id", data.instrumentHostIds);
+        writeField("instrument_id", data.instrumentIds);
         writeTargets(data);
 
         writer.append("</doc>\n");
     }
     
 
-    private void writeDescription(Pds3DataCollection data) throws Exception
+    private void writeField(String name, Collection<String> value) throws Exception
     {
-        if(data.description != null && !data.description.isEmpty())
+        if(value != null && !value.isEmpty())
         {
-            SolrDocUtils.writeField(writer, "description", data.description.toArray(new String[0]));
+            SolrDocUtils.writeField(writer, name, value.toArray(new String[0]));
         }
     }
-    
+
     
     private void writeProcessingLevels(Pds3DataCollection data) throws Exception
     {
@@ -70,30 +73,6 @@ public class ProductCollectionWriterPds3
         {
             SolrDocUtils.writeField(writer, "codmac_level", data.codmacLevels.toArray(new String[0]));
         }
-    }
-
-    
-    private void writeInvestigations(Pds3DataCollection data) throws Exception
-    {
-        if(data.investigationIds == null || data.investigationIds.isEmpty()) return;
-        
-        SolrDocUtils.writeField(writer, "investigation_id", data.investigationIds.toArray(new String[0]));
-    }
-
-
-    private void writeInstrumentHosts(Pds3DataCollection data) throws Exception
-    {
-        if(data.instrumentHostIds == null || data.instrumentHostIds.isEmpty()) return;
-        
-        SolrDocUtils.writeField(writer, "instrument_host_id", data.instrumentHostIds.toArray(new String[0]));
-    }
-
-    
-    private void writeInstruments(Pds3DataCollection data) throws Exception
-    {
-        if(data.instrumentIds == null || data.instrumentIds.isEmpty()) return;
-        
-        SolrDocUtils.writeField(writer, "instrument_id", data.instrumentIds.toArray(new String[0]));
     }
 
     

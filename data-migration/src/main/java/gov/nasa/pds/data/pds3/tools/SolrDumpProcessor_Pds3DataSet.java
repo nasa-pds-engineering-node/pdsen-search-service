@@ -54,7 +54,6 @@ public class SolrDumpProcessor_Pds3DataSet
             
             // Temporary
             ignoreFields.add("confidence_level_note");
-            ignoreFields.add("data_set_description");
             ignoreFields.add("archive_status");
             ignoreFields.add("external_reference_text");
             ignoreFields.add("pds_model_version");
@@ -69,7 +68,7 @@ public class SolrDumpProcessor_Pds3DataSet
             
             // Text normalization
             doNotCleanText = new HashSet<>();
-            doNotCleanText.add("data_set_description");
+            //doNotCleanText.add("data_set_description");
             doNotCleanText.add("confidence_level_note");
         }
 
@@ -96,6 +95,8 @@ public class SolrDumpProcessor_Pds3DataSet
             if(value.equalsIgnoreCase("null")) return;
             if(value.equalsIgnoreCase("unknown")) return;
             if(value.equalsIgnoreCase("unk")) return;
+            if(value.equalsIgnoreCase("not applicable")) return;
+            if(value.equalsIgnoreCase("n/a")) return;
             
             // Normalize spaces (remove end of lines and repeating spaces)
             if(!doNotCleanText.contains(name))
@@ -154,7 +155,7 @@ public class SolrDumpProcessor_Pds3DataSet
     
     public SolrDumpProcessor_Pds3DataSet() throws Exception
     {
-        dsp = new Pds3DataSetProcessor();    
+        dsp = new Pds3DataSetProcessor();
     }
         
     

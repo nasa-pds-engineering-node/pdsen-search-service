@@ -15,6 +15,7 @@ public class InstrumentParser
 {
     private XPathExpression xLid;
     private XPathExpression xVid;
+    private XPathExpression xTitle;
 
     private XPathExpression xName;
     private XPathExpression xType;
@@ -30,6 +31,7 @@ public class InstrumentParser
 
         xLid = XPathUtils.compileXPath(xpf, "//Identification_Area/logical_identifier");
         xVid = XPathUtils.compileXPath(xpf, "//Identification_Area/version_id");
+        xTitle = XPathUtils.compileXPath(xpf, "//Identification_Area/title");
         
         xName = XPathUtils.compileXPath(xpf, "//Instrument/name");
         xType = XPathUtils.compileXPath(xpf, "//Instrument/type");
@@ -49,8 +51,9 @@ public class InstrumentParser
         
         String strVid = XPathUtils.getStringValue(doc, xVid); 
         obj.vid = Float.parseFloat(strVid);
-
         obj.id = extractInstrumentId(obj.shortLid);
+
+        obj.title = StringUtils.normalizeSpace(XPathUtils.getStringValue(doc, xTitle));
         obj.name = StringUtils.normalizeSpace(XPathUtils.getStringValue(doc, xName));
         obj.type = XPathUtils.getStringValue(doc, xType);
         obj.description = XPathUtils.getStringValue(doc, xDescr);

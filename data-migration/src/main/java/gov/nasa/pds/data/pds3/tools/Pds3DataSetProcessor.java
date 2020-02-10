@@ -13,14 +13,17 @@ import gov.nasa.pds.data.util.MapUtils;
 
 public class Pds3DataSetProcessor
 {
-    Map<String, String> investMap;
-    Map<String, String> targetMap;
+    private Map<String, String> investMap;
+    private Map<String, String> targetMap;
+
+    private Pds3DataClassifier classifier;
     
     
     public Pds3DataSetProcessor() throws Exception
     {
         investMap = MapUtils.loadMap("src/main/data/pds3/invest_name2id.txt");
-        targetMap = MapUtils.loadMap("src/main/data/pds3/target_name2id.txt");
+        targetMap = MapUtils.loadMap("src/main/data/pds3/target_name2id.txt");                
+        classifier = new Pds3DataClassifier("src/main/data/pds3/classifier");
     }
     
 
@@ -51,10 +54,58 @@ public class Pds3DataSetProcessor
         processInstrumentHost(data, fields);
         processInstruments(data, fields);
         processTargets(data, fields);
+
+        classifyData(data, fields);
         
         return data; 
     }
 
+        
+    private void classifyData(Pds3DataCollection data, FieldMap fields)
+    {
+        classifyDataByInstrument(data, fields);
+    }
+    
+    
+    private void classifyDataByInstrument(Pds3DataCollection data, FieldMap fields)
+    {
+        if("spice_kernel".equals(data.collectionType) || data.instrumentIds.contains("SPICE"))
+        {
+            data.scienceFacets.add("Navigation");
+            data.scienceFacets.add("Observation Geometry");
+            return;
+        }
+        
+        // Instrument type
+        Set<String> types = fields.getValues("instrument_type");
+        if(types == null || types.isEmpty())
+        {
+            if(data.targetTypes != null && data.targetTypes.contains("dust"))
+            {
+                data.scienceFacets.add("Dust");
+            }
+            else
+            {
+                System.out.println("WARNING: Missing instrument type. (" + data.lid + ")");
+            }
+        }
+        else
+        {
+            for(String itype: types)
+            {
+                String cl = classifier.classifyInstrumentType(itype);
+                if(cl == null) 
+                {
+                    System.out.println("WARNING: Could not classify instrument type " + itype + " (" + data.lid + ")"); 
+                }
+                else
+                {
+                    data.scienceFacets.add(cl);
+                }
+            }
+        }
+    }
+    
     
     private void processDescription(Pds3DataCollection data, FieldMap fields)
     {
@@ -73,6 +124,14 @@ public class Pds3DataSetProcessor
             if(abstr.startsWith("Abstract ========")) abstr = abstr.substring(18);
             else if(abstr.startsWith("Abstract ")) abstr = abstr.substring(9);
             data.description.add(abstr);
+        }
+        
+        descr = fields.getFirstValue("data_set_description");
+        if(descr != null) 
+        {
+            if(descr.startsWith("Data Set Overview ================= ")) descr = descr.substring(36); 
+            if(descr.length() > 255) descr = descr.substring(0, 255);
+            data.description.add(descr);
         }
     }
     
@@ -97,7 +156,7 @@ public class Pds3DataSetProcessor
     
     private void processInstruments(Pds3DataCollection data, FieldMap fields)
     {
-        data.instrumentIds = fields.getValues("instrument_id");
+        data.instrumentIds = fields.getValues("instrument_id");        
     }
 
     

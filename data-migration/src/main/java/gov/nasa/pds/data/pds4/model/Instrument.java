@@ -8,6 +8,7 @@ public class Instrument
     public float vid;
 
     public String id;
+    public String title;
     public String name;
     public String type;
     public String description;

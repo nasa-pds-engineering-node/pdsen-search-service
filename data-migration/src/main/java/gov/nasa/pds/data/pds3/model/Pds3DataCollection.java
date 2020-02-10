@@ -2,6 +2,7 @@ package gov.nasa.pds.data.pds3.model;
 
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Pds3DataCollection
 {
@@ -15,7 +16,7 @@ public class Pds3DataCollection
 
     public Set<String> processingLevels;
     public Set<String> codmacLevels;
-    public String[] scienceFacets;
+    public Set<String> scienceFacets = new TreeSet<>();
     
     public String[] keywords;
     public String purpose;
