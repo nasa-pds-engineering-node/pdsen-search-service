@@ -70,7 +70,7 @@ public class Pds3DataSetProcessor
     
     private void classifyDataByInstrument(Pds3DataCollection data, FieldMap fields)
     {
-        if("spice_kernel".equals(data.collectionType) || data.instrumentIds.contains("SPICE"))
+        if("spice_kernel".equals(data.collectionType))
         {
             data.scienceFacets.add("Navigation");
             data.scienceFacets.add("Observation Geometry");
@@ -172,7 +172,11 @@ public class Pds3DataSetProcessor
     
     private void processInstruments(Pds3DataCollection data, FieldMap fields)
     {
-        data.instrumentIds = fields.getValues("instrument_id");        
+        data.instrumentIds = fields.getValues("instrument_id");
+        if(data.instrumentIds == null)
+        {
+            System.out.println("WARNING: Missing instrument id (" + data.lid + ")");
+        }
     }
 
     
@@ -279,7 +283,17 @@ public class Pds3DataSetProcessor
         for(String name: targetNames)
         {
             name = name.toLowerCase();
+            if("calibration".equalsIgnoreCase(name)) continue;
+            if("bias".equalsIgnoreCase(name)) continue;
+            if("dark".equalsIgnoreCase(name)) continue;
+            if("scat light".equalsIgnoreCase(name)) continue;            
+            
             String id = targetMap.get(name);
+            if(id == null)
+            {
+                System.out.println("WARNING: Unknown target name: " + name);
+                continue;
+            }
             
             String[] tuple = ParserUtils.getTargetTuple(id);
             if(tuple == null || tuple.length < 2 || tuple.length > 3)

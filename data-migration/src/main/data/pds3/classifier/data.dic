@@ -1,8 +1,10 @@
 accelerometer->T=1|I=Accelerometer
+altimeter->T=1|I=Altimetry
 
 radio->N=1
 radio science->T=1|I=Radio Science
 radar->T=1|I=Radio Science
+radiometer->T=1|I=Radio Science
 
 spectrometer->T=1|I=Spectroscopy
 spectrograph->T=1|I=Spectroscopy
@@ -10,6 +12,12 @@ spectrograph->T=1|I=Spectroscopy
 imaging->T=1|I=Imaging
 camera->T=1|I=Imaging
 imager->T=1|I=Imaging
+ccd->T=1|I=Imaging
+
+refracting->N=1
+reflecting->N=1
+refracting telescope->T=1|I=Imaging
+reflecting telescope->T=1|I=Imaging
 
 particle->T=1|I=Particles
 dust->T=1|I=Dust
@@ -19,6 +27,8 @@ magnetometer->T=1|I=Magnetic Field
 Magnetosphere->T=1|I=Magnetosphere
 Magnetospheric->T=1|I=Magnetosphere
 
+Meteorology->T=1|I=Meteorology
+
 Gravitational->N=1
 Gravitational Wave->T=1|I=Gravitational Waves
 Gravity->T=1|I=Gravity
@@ -26,3 +36,6 @@ Gravity->T=1|I=Gravity
 Surface->N=1
 Surface Science->N=1|T=1|I=Surface
 Surface Science Package->T=1|I=Surface
+
+occultations->T=1|I=Occultation
+occultation->T=1|I=Occultation

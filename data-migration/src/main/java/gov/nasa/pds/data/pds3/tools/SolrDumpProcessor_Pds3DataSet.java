@@ -24,12 +24,14 @@ public class SolrDumpProcessor_Pds3DataSet
         private Set<String> doNotCleanText;
 
         public int counter;
-
+        public String investigationFilter;
         
-        public CleanCB(Pds3DataSetProcessor dsp, String outPath) throws Exception
+        
+        public CleanCB(Pds3DataSetProcessor dsp, String outPath, String investigationFilter) throws Exception
         {
             this.dsp = dsp;
             this.writer = new ProductCollectionWriterPds3(outPath);
+            this.investigationFilter = investigationFilter;
             
             // Ignore fields
             ignoreFields = new HashSet<>();
@@ -130,7 +132,9 @@ public class SolrDumpProcessor_Pds3DataSet
             try
             {
                 Set<String> investigationIds = fields.getValues("investigation_id"); 
-                if(investigationIds == null || !investigationIds.contains("cassini")) return true;
+                if(investigationIds == null) return true;
+                
+                if(investigationFilter != null && !investigationIds.contains(investigationFilter)) return true;
 
                 Pds3DataCollection data = dsp.process(fields);
                 writer.write(data);
@@ -161,7 +165,12 @@ public class SolrDumpProcessor_Pds3DataSet
     
     public void processFile(String inPath, String outPath) throws Exception
     {
-        CleanCB cb = new CleanCB(dsp, outPath);
+        processFile(inPath, outPath, null);
+    }
+    
+    public void processFile(String inPath, String outPath, String investigationFilter) throws Exception
+    {
+        CleanCB cb = new CleanCB(dsp, outPath, investigationFilter);
         SolrDocParser parser = new SolrDocParser(inPath, cb);
         parser.parse();
         parser.close();

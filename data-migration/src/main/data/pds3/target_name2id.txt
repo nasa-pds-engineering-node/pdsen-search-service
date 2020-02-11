@@ -12,21 +12,31 @@ neptune|planet.neptune
 
 moon|satellite.earth.moon
 
+phobos|satellite.mars.phobos
+deimos|satellite.mars.deimos
+m1 phobos|satellite.mars.phobos
+m2 deimos|satellite.mars.deimos
+
 metis|satellite.jupiter.metis
 adrastea|satellite.jupiter.adrastea
 amalthea|satellite.jupiter.amalthea
+j5 amalthea|satellite.jupiter.amalthea
 thebe|satellite.jupiter.thebe
 io|satellite.jupiter.io
+j1 io|satellite.jupiter.io
 europa|satellite.jupiter.europa
+j2 europa|satellite.jupiter.europa
 ganymede|satellite.jupiter.ganymede
 callisto|satellite.jupiter.callisto
 themisto|satellite.jupiter.themisto
 leda|satellite.jupiter.leda
 himalia|satellite.jupiter.himalia
+j6 himalia|satellite.jupiter.himalia
 ersa|satellite.jupiter.ersa
 pandia|satellite.jupiter.pandia
 lysithea|satellite.jupiter.lysithea
 elara|satellite.jupiter.elara
+j7 elara|satellite.jupiter.elara
 dia|satellite.jupiter.dia
 carpo|satellite.jupiter.carpo
 valetudo|satellite.jupiter.valetudo
@@ -67,10 +77,11 @@ sinope|satellite.jupiter.sinope
 hegemone|satellite.jupiter.hegemone
 aoede|satellite.jupiter.aoede
 callirrhoe|satellite.jupiter.callirrhoe
+j17 callirrhoe|satellite.jupiter.callirrhoe
 cyllene|satellite.jupiter.cyllene
 kore|satellite.jupiter.kore
 
-
+j rings|ring.jupiter.j_rings
 s rings|ring.saturn.s_rings
 
 pan|satellite.saturn.pan
@@ -79,6 +90,7 @@ atlas|satellite.saturn.atlas
 prometheus|satellite.saturn.prometheus
 pandora|satellite.saturn.pandora
 epimetheus|satellite.saturn.epimetheus
+s11 epimetheus|satellite.saturn.epimetheus
 janus|satellite.saturn.janus
 aegaeon|satellite.saturn.aegaeon
 mimas|satellite.saturn.mimas
@@ -98,6 +110,7 @@ helene|satellite.saturn.helene
 rhea|satellite.saturn.rhea
 titan|satellite.saturn.titan
 hyperion|satellite.saturn.hyperion
+s7 hyperion|satellite.saturn.hyperion
 iapetus|satellite.saturn.iapetus
 kiviuq|satellite.saturn.kiviuq
 ijiraq|satellite.saturn.ijiraq
@@ -137,8 +150,29 @@ ymir|satellite.saturn.ymir
 loge|satellite.saturn.loge
 fornjot|satellite.saturn.fornjot
 
+charon|satellite.134340_pluto.charon
+styx|satellite.134340_pluto.styx
+nix|satellite.134340_pluto.nix
+kerberos|satellite.134340_pluto.kerberos
+hydra|satellite.134340_pluto.hydra
+
 1 ceres|dwarf_planet.1_ceres
 4 vesta|dwarf_planet.4_vesta
+pluto|dwarf_planet.134340_pluto
+136108 haumea|dwarf_planet.136108_haumea
+136472 makemake|dwarf_planet.136472_makemake
+
+21 lutetia|asteroid.21_lutetia
+243 ida|asteroid.243_ida
+253 mathilde|asteroid.253_mathilde
+mathilde|asteroid.253_mathilde
+433 eros|asteroid.433_eros
+eros|asteroid.433_eros
+2867 steins|asteroid.2867_steins
+25143 itokawa|asteroid.25143_itokawa
+132524 apl|asteroid.132524_apl
+
+10199 chariklo|centaur.10199_chariklo
 
 dust|dust.dust
 
@@ -149,8 +183,20 @@ solar wind|plasma_stream.solar_wind
 42 pegasi|star.42_pegasi
 epsilon geminorum|star.epsilon_geminorum
 hr 2290|star.hr_2290
+zeta cas|star.zeta_cas
+16 cyg b|star.16_cyg_b
+beta car|star.beta_car
+beta cen|star.beta_cen
+vega|star.alpha_lyr
+alpha lyr|star.alpha_lyr
+alpha sco|star.alpha_sco
 
 fomalhaut|star.fomalhaut
 spica|star.spica
 
 dark sky|sky.sky
+
+9p/tempel 1 (1867 g1)|comet.9p_tempel_1
+46p/wirtanen 1 (1948 a1)|comet.46p_wirtanen
+55p/tempel-tuttle 1 (1865 y1)|comet.55p_tempel-tuttle
+67p/churyumov-gerasimenko 1 (1969 r1)|comet.67p_churyumov-gerasimenko
