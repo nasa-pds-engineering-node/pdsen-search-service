@@ -64,6 +64,7 @@ public class Pds3DataSetProcessor
     private void classifyData(Pds3DataCollection data, FieldMap fields)
     {
         classifyDataByInstrument(data, fields);
+        classifyDataByDescription(data, fields);
     }
     
     
@@ -93,15 +94,30 @@ public class Pds3DataSetProcessor
         {
             for(String itype: types)
             {
-                String cl = classifier.classifyInstrumentType(itype);
-                if(cl == null) 
+                Set<String> keywords = classifier.extractKeywords(itype);
+                if(keywords == null) 
                 {
                     System.out.println("WARNING: Could not classify instrument type " + itype + " (" + data.lid + ")"); 
                 }
                 else
                 {
-                    data.scienceFacets.add(cl);
+                    data.scienceFacets.addAll(keywords);
                 }
+            }
+        }
+    }
+    
+
+    private void classifyDataByDescription(Pds3DataCollection data, FieldMap fields)
+    {
+        if(data.description == null) return;
+        
+        for(String text: data.description)
+        {
+            Set<String> keywords = classifier.extractKeywords(text);
+            if(keywords != null)
+            {
+                data.scienceFacets.addAll(keywords);
             }
         }
     }

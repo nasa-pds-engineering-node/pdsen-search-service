@@ -1,12 +1,28 @@
+accelerometer->T=1|I=Accelerometer
+
 radio->N=1
 radio science->T=1|I=Radio Science
 radar->T=1|I=Radio Science
+
 spectrometer->T=1|I=Spectroscopy
 spectrograph->T=1|I=Spectroscopy
+
 imaging->T=1|I=Imaging
 camera->T=1|I=Imaging
 imager->T=1|I=Imaging
-magnetometer->T=1|I=Magnetic Field
+
 particle->T=1|I=Particles
 dust->T=1|I=Dust
-accelerometer->T=1|I=Accelerometer
+plasma->T=1|I=Plasma
+
+magnetometer->T=1|I=Magnetic Field
+Magnetosphere->T=1|I=Magnetosphere
+Magnetospheric->T=1|I=Magnetosphere
+
+Gravitational->N=1
+Gravitational Wave->T=1|I=Gravitational Waves
+Gravity->T=1|I=Gravity
+
+Surface->N=1
+Surface Science->N=1|T=1|I=Surface
+Surface Science Package->T=1|I=Surface

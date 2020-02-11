@@ -2,6 +2,8 @@ package gov.nasa.pds.data.pds3.tools;
 
 import java.io.File;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import gov.nasa.pds.nlp.lex.PdsLexer;
 import gov.nasa.pds.nlp.ner.NamedEntityRecognizer;
@@ -24,10 +26,12 @@ public class Pds3DataClassifier
     }
 
     
-    public String classifyInstrumentType(String text)
+    public Set<String> extractKeywords(String text)
     {
         if(text == null) return null;
-     
+        
+        Set<String> keywords = new TreeSet<>();
+        
         try
         {
             List<String> lexTokens = lexer.parse(text);
@@ -37,7 +41,8 @@ public class Pds3DataClassifier
             {
                 if(token.getType() != 0)
                 {
-                    return token.getId();
+                    String keyword = token.getId();
+                    keywords.add(keyword);
                 }
             }
         }
@@ -45,7 +50,7 @@ public class Pds3DataClassifier
         {
             ex.printStackTrace();
         }
-                
-        return null;
+
+        return keywords.isEmpty() ? null : keywords;
     }
 }
