@@ -2,16 +2,16 @@ package gov.nasa.pds.data.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.HashMap;
 import java.util.Map;
+
 
 public class MapUtils
 {
-    public static Map<String, String> loadMap(String path) throws Exception
+    public static void loadMap(Map<String, String> map, String path) throws Exception
     {
-        BufferedReader rd = new BufferedReader(new FileReader(path));
+        if(map == null) return;
         
-        Map<String, String> map = new HashMap<>();
+        BufferedReader rd = new BufferedReader(new FileReader(path));
         
         String line;
         while((line = rd.readLine()) != null)
@@ -24,8 +24,6 @@ public class MapUtils
         }
         
         rd.close();
-        
-        return map;
     }    
 
 }

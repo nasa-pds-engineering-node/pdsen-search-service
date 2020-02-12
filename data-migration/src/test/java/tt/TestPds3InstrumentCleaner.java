@@ -3,6 +3,7 @@ package tt;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.Map;
 
 import gov.nasa.pds.data.pds3.tools.Pds3InstrumentCleaner;
@@ -17,7 +18,8 @@ public class TestPds3InstrumentCleaner
     public static void main(String[] args) throws Exception
     {
         // Read host id to mission id map
-        Map<String, String> host2mis = MapUtils.loadMap(HOST_2_MISSION_DIC);
+        Map<String, String> host2mis = new HashMap<>(100); 
+        MapUtils.loadMap(host2mis, HOST_2_MISSION_DIC);
 
         Pds3InstrumentCleaner.processFile("/tmp/instruments_pds3-0.xml", "/tmp/instruments_pds3-0.xml.clean", host2mis);
 
@@ -33,7 +35,8 @@ public class TestPds3InstrumentCleaner
             throw new IllegalArgumentException("Not a folder: " + folderPath);
         }
         
-        Map<String, String> host2mis = MapUtils.loadMap(HOST_2_MISSION_DIC);
+        Map<String, String> host2mis = new HashMap<>(100); 
+        MapUtils.loadMap(host2mis, HOST_2_MISSION_DIC);
                 
         Files.list(folder).filter(p -> 
             {

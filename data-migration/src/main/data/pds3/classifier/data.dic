@@ -1,24 +1,48 @@
 accelerometer->T=1|I=Accelerometer
 altimeter->T=1|I=Altimetry
 
+ABRADER->T=1|I=Rock Abrasion
+
+chromatograph->T=1|I=Chromatography
+
+Drill->T=1|I=Drill
+
+POLARIMETER->T=1|I=Polarimetry
+PHOTOPOLARIMETER->T=1|I=Polarimetry
+
 radio->N=1
 radio science->T=1|I=Radio Science
+RADIO TELESCOPE->T=1|I=Radio Science
+RADIO ARRAY->T=1|I=Radio Science
 radar->T=1|I=Radio Science
 radiometer->T=1|I=Radio Science
 
+RADIOMETER-SPECTROPHOTOMETER->T=1|I=Spectroscopy
+PHOTOMETER->T=1|I=Spectroscopy
 spectrometer->T=1|I=Spectroscopy
 spectrograph->T=1|I=Spectroscopy
+
+infrared->N=1|T=1|I=Infrared
+infrared interferometer->T=1|I=Infrared Spectroscopy
+
+isotope->N=1
+isotope ratio->N=1
+isotope ratio analyser->T=1|I=Mass Spectrometry
 
 imaging->T=1|I=Imaging
 camera->T=1|I=Imaging
 imager->T=1|I=Imaging
 ccd->T=1|I=Imaging
+Microscope->T=1|I=Imaging
 
 refracting->N=1
 reflecting->N=1
 refracting telescope->T=1|I=Imaging
 reflecting telescope->T=1|I=Imaging
 
+cosmic->N=1
+cosmic rays->T=1|I=Particles
+cosmic ray->T=1|I=Particles
 particle->T=1|I=Particles
 dust->T=1|I=Dust
 plasma->T=1|I=Plasma
@@ -39,3 +63,19 @@ Surface Science Package->T=1|I=Surface
 
 occultations->T=1|I=Occultation
 occultation->T=1|I=Occultation
+
+OPTICAL->N=1
+OPTICAL TELESCOPE->T=1|I=Optical Telescope
+
+permittivity->N=1
+permittivity probe->T=1|I=Permittivity Probe
+acoustic->N=1
+acoustic sensor->T=1|I=Acoustic Sensor
+penetrometer->T=1|I=Subsurface Science
+
+LIDAR->T=1|I=LIDAR
+
+XRD->T=1|I=X-ray Diffraction
+XRF->T=1|I=X-ray Fluorescence
+
+ultraviolet->T=1|I=Ultraviolet

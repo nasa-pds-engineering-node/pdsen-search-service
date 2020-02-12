@@ -1,6 +1,7 @@
 package gov.nasa.pds.data.pds3.tools;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -13,16 +14,16 @@ import gov.nasa.pds.data.util.MapUtils;
 
 public class Pds3DataSetProcessor
 {
-    private Map<String, String> investMap;
-    private Map<String, String> targetMap;
+    private Map<String, String> investMap = new HashMap<>(100);
+    private Map<String, String> targetMap = new HashMap<>(1000);
 
     private Pds3DataClassifier classifier;
     
     
     public Pds3DataSetProcessor() throws Exception
     {
-        investMap = MapUtils.loadMap("src/main/data/pds3/invest_name2id.txt");
-        targetMap = MapUtils.loadMap("src/main/data/pds3/target_name2id.txt");                
+        MapUtils.loadMap(investMap, "src/main/data/pds3/invest_name2id.txt");
+        MapUtils.loadMap(targetMap, "src/main/data/pds3/target_name2id.txt");
         classifier = new Pds3DataClassifier("src/main/data/pds3/classifier");
     }
     
@@ -209,7 +210,26 @@ public class Pds3DataSetProcessor
         
         // CODMAC levels separated by /
         String tmp = tokens[3];
-        if(datasetId.startsWith("CO-SR-UVIS-HSP")) tmp = tokens[4];
+        // Fix invalid data
+        if(datasetId.startsWith("CO-SR-UVIS-HSP") 
+                || datasetId.startsWith("MGS-M-MOC-NA/WA")
+                || datasetId.startsWith("MSL-M-CHEMCAM-")
+                || datasetId.startsWith("CH1-ORB-L-M3-")
+                || datasetId.startsWith("LCROSS-E/L-NSP1-FL-")
+                || datasetId.startsWith("LCROSS-X-NSP2-FL-")
+                || datasetId.startsWith("CH1-ORB-L-MRFFR-"))
+        {
+            tmp = tokens[4];
+        }
+        else if(datasetId.startsWith("NEAR-A-5-") 
+                || datasetId.startsWith("NEAR-MSI-6-")
+                || datasetId.startsWith("LP-L-6-")
+                || datasetId.startsWith("JNO-SS-3-")
+                || datasetId.startsWith("JNO-SW-3-")
+                || datasetId.startsWith("JNO-J-3-"))
+        {
+            tmp = tokens[2]; 
+        }
         
         tokens = tmp.split("/");
         
@@ -283,11 +303,6 @@ public class Pds3DataSetProcessor
         for(String name: targetNames)
         {
             name = name.toLowerCase();
-            if("calibration".equalsIgnoreCase(name)) continue;
-            if("bias".equalsIgnoreCase(name)) continue;
-            if("dark".equalsIgnoreCase(name)) continue;
-            if("scat light".equalsIgnoreCase(name)) continue;            
-            
             String id = targetMap.get(name);
             if(id == null)
             {

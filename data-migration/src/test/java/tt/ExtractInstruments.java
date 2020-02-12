@@ -2,6 +2,7 @@ package tt;
 
 import java.io.FileWriter;
 import java.io.Writer;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -53,7 +54,8 @@ public class ExtractInstruments
         Set<String> latestFiles = ExtractContextUtils.readLatestIndex(dir);
     
         // Read host id to mission id map
-        Map<String, String> host2mis = MapUtils.loadMap("src/main/data/host2mission.ids");
+        Map<String, String> host2mis = new HashMap<>(100);
+        MapUtils.loadMap(host2mis, "src/main/data/host2mission.ids");
         
         XmlDomCrawler crawler = new XmlDomCrawler(dir);
         InstrumentParser parser = new InstrumentParser();

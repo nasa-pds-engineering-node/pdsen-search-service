@@ -1,5 +1,6 @@
 package gov.nasa.pds.data.pds4.tools;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,17 +12,17 @@ import gov.nasa.pds.data.util.MapUtils;
 
 public class InvestigationProcessor
 {
-    private Map<String, String> name2id;
-    private Map<String, String> name2title;
-    private Map<String, String> missingTargets;
-    private Map<String, String> missingHosts;
+    private Map<String, String> name2id = new HashMap<>(100);
+    private Map<String, String> name2title = new HashMap<>(100);
+    private Map<String, String> missingTargets = new HashMap<>(100);
+    private Map<String, String> missingHosts = new HashMap<>(100);
     
     public InvestigationProcessor() throws Exception
     {
-        name2id = MapUtils.loadMap("src/main/data/pds3/invest_name2id.txt");
-        name2title = MapUtils.loadMap("src/main/data/pds3/invest_name2title.txt");
-        missingTargets = MapUtils.loadMap("src/main/data/invest_missing_targets.txt");
-        missingHosts = MapUtils.loadMap("src/main/data/invest_missing_hosts.txt");
+        MapUtils.loadMap(name2id, "src/main/data/pds3/invest_name2id.txt");
+        MapUtils.loadMap(name2title, "src/main/data/pds3/invest_name2title.txt");
+        MapUtils.loadMap(missingTargets, "src/main/data/invest_missing_targets.txt");
+        MapUtils.loadMap(missingHosts, "src/main/data/invest_missing_hosts.txt");
     }
 
     

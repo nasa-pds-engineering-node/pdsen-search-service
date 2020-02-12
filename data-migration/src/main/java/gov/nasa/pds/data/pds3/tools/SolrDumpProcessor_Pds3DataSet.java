@@ -133,6 +133,7 @@ public class SolrDumpProcessor_Pds3DataSet
             {
                 Set<String> investigationIds = fields.getValues("investigation_id"); 
                 if(investigationIds == null) return true;
+                if(investigationIds.size() == 1 && investigationIds.contains("ground_based")) return true;
                 
                 if(investigationFilter != null && !investigationIds.contains(investigationFilter)) return true;
 

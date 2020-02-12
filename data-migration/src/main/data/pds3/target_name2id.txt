@@ -157,46 +157,175 @@ kerberos|satellite.134340_pluto.kerberos
 hydra|satellite.134340_pluto.hydra
 
 1 ceres|dwarf_planet.1_ceres
+ceres|dwarf_planet.1_ceres
 4 vesta|dwarf_planet.4_vesta
 pluto|dwarf_planet.134340_pluto
 136108 haumea|dwarf_planet.136108_haumea
 136472 makemake|dwarf_planet.136472_makemake
 
+
+############# Asteroids #############
 21 lutetia|asteroid.21_lutetia
 243 ida|asteroid.243_ida
+ida|asteroid.243_ida
 253 mathilde|asteroid.253_mathilde
 mathilde|asteroid.253_mathilde
 433 eros|asteroid.433_eros
 eros|asteroid.433_eros
+951 gaspra|asteroid.951_gaspra
+gaspra|asteroid.951_gaspra
 2867 steins|asteroid.2867_steins
+3200 phaethon|asteroid.3200_phaethon
+4015 wilson-harrington|asteroid.4015_wilson-harrington
+4179 toutatis|asteroid.4179_toutatis
+asteroid 4197|asteroid.4197_morpheus
 25143 itokawa|asteroid.25143_itokawa
 132524 apl|asteroid.132524_apl
 
 10199 chariklo|centaur.10199_chariklo
 
+############# Comets #############
+1p/halley 1 (1682 q1)|comet.1p_halley
+halley|comet.1p_halley
+2p/encke 1 (1818 w1)|comet.2p_encke
+4p/faye 1 (1843 w1)|comet.4p_faye
+6p/d'arrest 1 (1851 m1)|comet.6p_darrest
+7p/ponns-winnecke 1 (1858 e1)|comet.7p_ponns-winnecke
+8p/tuttle 1 (1858 a1)|comet.8p_tuttle
+9p/tempel 1 (1867 g1)|comet.9p_tempel_1
+10p/tempel 2 (1873 n1)|comet.10p_tempel_2
+19p/borrelly 1 (1904 y2)|comet.19p_borrelly
+21p/giacobini-zinner 1 (1900 y1)|comet.21p_giacobini-zinner
+giacobini-zinner|comet.21p_giacobini-zinner
+22p/kopff 1 (1906 q1)|comet.22p_kopff
+23p/brorsen-metcalf 1 (1847 o1)|comet.23p_brorsen-metcalf
+24p/schaumasse 1 (1911 x1)|comet.24p_schaumasse
+26p/grigg-skjellerup 1 (1922 k1)|comet.26p_grigg-skjellerup
+27p/crommelin 1 (1928 w1)|comet.27p_crommelin
+29p/schwassmann-wachmann 1 (1927 v1)|comet.29p_schwassmann-wachmann_1
+38p/stephan-oterma 1 (1942 v1)|comet.38p_stephan-oterma
+45p/honda-mrkos-pajdusakova 1 (1948 x1)|comet.45p_honda-mrkos-pajdusakova
+46p/wirtanen 1 (1948 a1)|comet.46p_wirtanen
+49p/arend-rigaux 1 (1951 c2)|comet.49p_arend-rigaux
+55p/tempel-tuttle 1 (1865 y1)|comet.55p_tempel-tuttle
+67p/churyumov-gerasimenko 1 (1969 r1)|comet.67p_churyumov-gerasimenko
+81p/wild 2 (1978 a2)|comet.81p_wild_2
+97p/metcalf-brewington 1 (1906 v2)|comet.97p_metcalf-brewington
+98p/takamizawa 1 (1984 o1)|comet.98p_takamizawa
+103p/hartley 2 (1986 e2)|comet.103p_hartley_2
+109p/swift-tuttle 1 (1862 o1)|comet.109p_swift-tuttle
+125p/spacewatch 1 (1991 r2)|comet.125p_spacewatch
+126p/iras 1 (1983 m1)|comet.126p_iras
+140p/bowell-skiff 1 (1980 e1)|comet.140p_bowell-skiff
+141p/machholz 2 (1994 p1-a)|comet.141p_machholz_2
+
+c/ison (2012 s1)|comet.c2012_s1_ison
+c/hale-bopp (1995 o1)|comet.c1995_o1_hale-bopp
+c/hyakutake (1996 b2)|comet.c1996_b2_hyakutake
+c/linear (2002 t7)|comet.c2002_t7_linear
+c/tabur (1996 q1)|comet.c1996_q1_tabur
+
+c/austin (1989 x1)|comet.c1989_x1_austin
+c/bradfield (1987 p1)|comet.c1987_p1_bradfield
+c/hartley-good (1985 r1)|comet.c1985_r1_hartley-good
+c/ichimura (1987 w1)|comet.c1987_w1_ichimura
+c/levy-rudenko (1984 v1)|comet.c1984_v1_levy-rudenko
+c/mcnaught (1987 u3)|comet.c1987_u3_mcnaught
+c/nishikawa-takamizawa-tago (1987 b1)|comet.c1987_b1_nishikawa-takamizawa-tago
+c/okazaki-levy-rudenko (1989 q1)|comet.c1989_q1_okazaki-levy-rudenko
+c/wilson (1986 p1)|comet.c1986_p1_wilson
+c/yanaka (1989 a1)|comet.c1989_a1_yanaka
+c/zanotta-brewington (1991 y1)|comet.c1991_y1_zanotta-brewington
+p/levy 1 (1991 l3)|comet.c1991_l3_levy
+p/mcnaught-russell 1 (1994 x1)|comet.c1994_x1_mcnaught-russell
+
+c/austin (1982 m1)|comet.c1982_m1_austin
+c/bradfield (1979 y1)|comet.c1979_y1_bradfield
+c/cernis (1983 o1)|comet.c1983_o1_cernis
+c/garradd (2009 p1)|comet.c2009_p1_garradd
+c/iras-araki-alcock (1983 h1)|comet.c1983_h1_iras-araki-alcock
+c/meier (1980 v1)|comet.c1980_v1_meier
+c/panther (1980 y2)|comet.c1980_y2_panther
+c/seargent (1978 t1)|comet.c1978_t1_seargent
+c/suga-saigusa-fujikawa (1983 j1)|comet.c1983_j1_suga-saigusa-fujikawa
+
+
+c/shoemaker-levy (1991 t2)|comet.c1991_t2_shoemaker-levy
+#Shoemaker-Levy 9
+sl9|comet.sl9
+
 dust|dust.dust
 
+############# Stars #############
 star|star.star
 sun|sun.sun
 solar wind|plasma_stream.solar_wind
+
+16 cyg b|star.16_cyg_b
 20 cephei|star.20_cephei
 42 pegasi|star.42_pegasi
-epsilon geminorum|star.epsilon_geminorum
 hr 2290|star.hr_2290
-zeta cas|star.zeta_cas
-16 cyg b|star.16_cyg_b
-beta car|star.beta_car
-beta cen|star.beta_cen
-vega|star.alpha_lyr
+alioth|star.alioth
+alpha aur|star.alpha_aur
+alpha ori|star.alpha_ori
+alpha vir|star.alpha_vir
 alpha lyr|star.alpha_lyr
 alpha sco|star.alpha_sco
-
+altair|star.altair
+arcturus|star.arcturus
+achernar|star.achernar
+beta car|star.beta_car
+beta cen|star.beta_cen
+canopus|star.canopus
+epsilon centauri|star.epsilon_centauri
+epsilon geminorum|star.epsilon_geminorum
+eta carinae|star.eta_carinae
 fomalhaut|star.fomalhaut
+hat-p-4|star.hat-p-4
+hat-p-7|star.hat-p-7
+
+# m7|open_cluster.m7
+m7|star.m7
+mirzam|star.mirzam
+ob star|star.ob_star
+pleiades|star.pleiades
+rigel|star.rigel
+sirius|star.sirius
 spica|star.spica
+tres-2|star.tres-2
+tres-3|star.tres-3
 
-dark sky|sky.sky
+vega|star.alpha_lyr
+xo-2|star.xo-2
+xo-3|star.xo-3
+zeta cas|star.zeta_cas
 
-9p/tempel 1 (1867 g1)|comet.9p_tempel_1
-46p/wirtanen 1 (1948 a1)|comet.46p_wirtanen
-55p/tempel-tuttle 1 (1865 y1)|comet.55p_tempel-tuttle
-67p/churyumov-gerasimenko 1 (1969 r1)|comet.67p_churyumov-gerasimenko
+m 1|nebula.m_1
+m 31|nebula.m_31
+m 42|nebula.m_42
+m 78|nebula.m_78
+m 79|nebula.m_79
+
+
+##### TODO: FIX
+asteroid|asteroid.asteroid
+comet|comet.comet
+
+##### Calibration
+calibration|calibration.calibration
+bias|calibration.calibration
+dark|calibration.calibration
+scat light|calibration.calibration
+dark sky|calibration.calibration
+black sky|calibration.calibration
+sky|calibration.calibration
+cal target|calibration.calibration
+calimg|calibration.calibration
+space|calibration.calibration
+spacecraft deck|calibration.calibration
+starfield|calibration.calibration
+deep space|calibration.calibration
+responsivity|calibration.calibration
+internal source|calibration.calibration
+test image|calibration.calibration
+cal lamps|calibration.calibration
