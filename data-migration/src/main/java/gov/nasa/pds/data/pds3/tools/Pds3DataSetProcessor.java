@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
@@ -158,8 +159,23 @@ public class Pds3DataSetProcessor
         Set<String> ihIds = fields.getValues("instrument_host_id");
         if(ihIds == null)
         {
-            System.out.println("WARNING: No instrument host id for " + data.lid);
-            return;
+            String datasetId = fields.getFirstValue("identifier");
+            int idx = datasetId.indexOf(":data_set:data_set.");
+            datasetId = datasetId.substring(idx+19);
+            
+            String[] tokens = datasetId.split("-");
+            String id = tokens[0];
+            
+            if(id.equals("mex") || id.equals("gio") || id.equals("hp") || id.equals("hst") || id.equals("vg2"))
+            {
+                ihIds = new TreeSet<>();
+                ihIds.add(id);
+            }
+            else
+            {
+                System.out.println("WARNING: No instrument host id for " + data.lid);
+                return;
+            }
         }
         
         if(ihIds.size() > 1)
@@ -303,7 +319,7 @@ public class Pds3DataSetProcessor
         for(String name: targetNames)
         {
             name = name.toLowerCase();
-            String id = targetMap.get(name);
+            String id = (name.startsWith("c/soho ")) ? "comet.soho" : targetMap.get(name);
             if(id == null)
             {
                 System.out.println("WARNING: Unknown target name: " + name);

@@ -7,6 +7,8 @@ chromatograph->T=1|I=Chromatography
 
 Drill->T=1|I=Drill
 
+ELECTROSTATIC ANALYZER->T=1|I=
+
 POLARIMETER->T=1|I=Polarimetry
 PHOTOPOLARIMETER->T=1|I=Polarimetry
 

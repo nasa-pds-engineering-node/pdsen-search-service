@@ -5,6 +5,7 @@ mercury|planet.mercury
 venus|planet.venus
 earth|planet.earth
 mars|planet.mars
+urn:nasa:pds:context:target:planet.mars|planet.mars
 jupiter|planet.jupiter
 saturn|planet.saturn
 uranus|planet.uranus
@@ -13,8 +14,9 @@ neptune|planet.neptune
 moon|satellite.earth.moon
 
 phobos|satellite.mars.phobos
-deimos|satellite.mars.deimos
 m1 phobos|satellite.mars.phobos
+urn:nasa:pds:context:target:satellite.phobos|satellite.mars.phobos
+deimos|satellite.mars.deimos
 m2 deimos|satellite.mars.deimos
 
 metis|satellite.jupiter.metis
@@ -150,6 +152,22 @@ ymir|satellite.saturn.ymir
 loge|satellite.saturn.loge
 fornjot|satellite.saturn.fornjot
 
+triton|satellite.neptune.triton
+nereid|satellite.neptune.nereid
+naiad|satellite.neptune.naiad
+thalassa|satellite.neptune.thalassa
+despina|satellite.neptune.despina
+galatea|satellite.neptune.galatea
+larissa|satellite.neptune.larissa
+n7 larissa|satellite.neptune.larissa
+proteus|satellite.neptune.proteus
+n8 proteus|satellite.neptune.proteus
+halimede|satellite.neptune.halimede
+psamathe|satellite.neptune.psamathe
+sao|satellite.neptune.sao
+laomedeia|satellite.neptune.laomedeia
+neso|satellite.neptune.neso
+
 charon|satellite.134340_pluto.charon
 styx|satellite.134340_pluto.styx
 nix|satellite.134340_pluto.nix
@@ -249,10 +267,14 @@ c/panther (1980 y2)|comet.c1980_y2_panther
 c/seargent (1978 t1)|comet.c1978_t1_seargent
 c/suga-saigusa-fujikawa (1983 j1)|comet.c1983_j1_suga-saigusa-fujikawa
 
-
 c/shoemaker-levy (1991 t2)|comet.c1991_t2_shoemaker-levy
 #Shoemaker-Levy 9
 sl9|comet.sl9
+
+c/soho|comet.soho
+
+
+eta-aquarid|meteoroid_stream.eta-aquarid
 
 dust|dust.dust
 
@@ -261,24 +283,38 @@ star|star.star
 sun|sun.sun
 solar wind|plasma_stream.solar_wind
 
+16 cyg a|star.16_cyg_a
 16 cyg b|star.16_cyg_b
 20 cephei|star.20_cephei
+31 leo|star.31_leo
 42 pegasi|star.42_pegasi
+58 aql|star.58_aql
 hr 2290|star.hr_2290
+hd 22859|star.hd_22859
+hd 28099|star.hd_28099
+hd 43607|star.hd_43607
+hd 60753|star.hd_60753
+hd 79447|star.hd_79447
+gj 436|star.gj_436
+
 alioth|star.alioth
 alpha aur|star.alpha_aur
+alpha/beta crv|star.alpha-beta_crv
 alpha ori|star.alpha_ori
 alpha vir|star.alpha_vir
 alpha lyr|star.alpha_lyr
 alpha sco|star.alpha_sco
 altair|star.altair
-arcturus|star.arcturus
 achernar|star.achernar
+arcturus|star.arcturus
+area 98|star.area_98
 beta car|star.beta_car
 beta cen|star.beta_cen
+beta tau|star.beta_tau
 canopus|star.canopus
 epsilon centauri|star.epsilon_centauri
 epsilon geminorum|star.epsilon_geminorum
+eps aqr|star.eps_aqr
 eta carinae|star.eta_carinae
 fomalhaut|star.fomalhaut
 hat-p-4|star.hat-p-4
@@ -287,15 +323,18 @@ hat-p-7|star.hat-p-7
 # m7|open_cluster.m7
 m7|star.m7
 mirzam|star.mirzam
+moa-2009-blg-266|star.moa-2009-blg-266
 ob star|star.ob_star
 pleiades|star.pleiades
 rigel|star.rigel
 sirius|star.sirius
 spica|star.spica
+tau sco|star.tau_sco
 tres-2|star.tres-2
 tres-3|star.tres-3
 
 vega|star.alpha_lyr
+wasp-3|star.wasp-3
 xo-2|star.xo-2
 xo-3|star.xo-3
 zeta cas|star.zeta_cas
@@ -303,8 +342,11 @@ zeta cas|star.zeta_cas
 m 1|nebula.m_1
 m 31|nebula.m_31
 m 42|nebula.m_42
+m42|nebula.m_42
 m 78|nebula.m_78
 m 79|nebula.m_79
+emission nebula|nebula.emission_nebula
+reflection nebula|nebula.reflection_nebula
 
 
 ##### TODO: FIX
@@ -329,3 +371,5 @@ responsivity|calibration.calibration
 internal source|calibration.calibration
 test image|calibration.calibration
 cal lamps|calibration.calibration
+flat field|calibration.calibration
+ff lamp|calibration.calibration
