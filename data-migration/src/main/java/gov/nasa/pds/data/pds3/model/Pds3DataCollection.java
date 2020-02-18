@@ -26,7 +26,10 @@ public class Pds3DataCollection
     // References
     public Set<String> investigationIds;
     public Set<String> instrumentHostIds;
+    
     public Set<String> instrumentIds;
+    public Set<String> instrumentTypes;
+    
     public Set<String> targetNames;
     public Set<String> targetTypes;
 }

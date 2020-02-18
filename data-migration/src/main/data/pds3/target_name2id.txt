@@ -2,6 +2,7 @@ planetary system|planetary_system.solar_system
 solar system|planetary_system.solar_system
 
 mercury|planet.mercury
+urn:nasa:pds:context:target:planet.mercury|planet.mercury
 venus|planet.venus
 earth|planet.earth
 mars|planet.mars
@@ -11,7 +12,13 @@ saturn|planet.saturn
 uranus|planet.uranus
 neptune|planet.neptune
 
+j rings|ring.jupiter.j_rings
+s rings|ring.saturn.s_rings
+n rings|ring.neptune.n_rings
+u rings|ring.uranus.u_rings
+
 moon|satellite.earth.moon
+urn:nasa:pds:context:target:satellite.moon|satellite.earth.moon
 
 phobos|satellite.mars.phobos
 m1 phobos|satellite.mars.phobos
@@ -83,9 +90,6 @@ j17 callirrhoe|satellite.jupiter.callirrhoe
 cyllene|satellite.jupiter.cyllene
 kore|satellite.jupiter.kore
 
-j rings|ring.jupiter.j_rings
-s rings|ring.saturn.s_rings
-
 pan|satellite.saturn.pan
 daphnis|satellite.saturn.daphnis
 atlas|satellite.saturn.atlas
@@ -109,6 +113,7 @@ polydeuces|satellite.saturn.polydeuces
 dione|satellite.saturn.dione
 s4 dione|satellite.saturn.dione
 helene|satellite.saturn.helene
+dione b|satellite.saturn.helene
 rhea|satellite.saturn.rhea
 titan|satellite.saturn.titan
 hyperion|satellite.saturn.hyperion
@@ -168,6 +173,24 @@ sao|satellite.neptune.sao
 laomedeia|satellite.neptune.laomedeia
 neso|satellite.neptune.neso
 
+ariel|satellite.uranus.ariel
+umbriel|satellite.uranus.umbriel
+titania|satellite.uranus.titania
+oberon|satellite.uranus.oberon
+miranda|satellite.uranus.miranda
+cordelia|satellite.uranus.cordelia
+ophelia|satellite.uranus.ophelia
+bianca|satellite.uranus.bianca
+cressida|satellite.uranus.cressida
+desdemona|satellite.uranus.desdemona
+juliet|satellite.uranus.juliet
+portia|satellite.uranus.portia
+rosalind|satellite.uranus.rosalind
+cupid|satellite.uranus.cupid
+belinda|satellite.uranus.belinda
+perdita|satellite.uranus.perdita
+puck|satellite.uranus.puck
+
 charon|satellite.134340_pluto.charon
 styx|satellite.134340_pluto.styx
 nix|satellite.134340_pluto.nix
@@ -197,6 +220,7 @@ gaspra|asteroid.951_gaspra
 4015 wilson-harrington|asteroid.4015_wilson-harrington
 4179 toutatis|asteroid.4179_toutatis
 asteroid 4197|asteroid.4197_morpheus
+5535 annefrank|asteroid.5535_annefrank
 25143 itokawa|asteroid.25143_itokawa
 132524 apl|asteroid.132524_apl
 
@@ -211,6 +235,7 @@ halley|comet.1p_halley
 7p/ponns-winnecke 1 (1858 e1)|comet.7p_ponns-winnecke
 8p/tuttle 1 (1858 a1)|comet.8p_tuttle
 9p/tempel 1 (1867 g1)|comet.9p_tempel_1
+9p/tempel 1 1867 g1|comet.9p_tempel_1
 10p/tempel 2 (1873 n1)|comet.10p_tempel_2
 19p/borrelly 1 (1904 y2)|comet.19p_borrelly
 21p/giacobini-zinner 1 (1900 y1)|comet.21p_giacobini-zinner
@@ -224,9 +249,11 @@ giacobini-zinner|comet.21p_giacobini-zinner
 38p/stephan-oterma 1 (1942 v1)|comet.38p_stephan-oterma
 45p/honda-mrkos-pajdusakova 1 (1948 x1)|comet.45p_honda-mrkos-pajdusakova
 46p/wirtanen 1 (1948 a1)|comet.46p_wirtanen
+46p/wirtanen|comet.46p_wirtanen
 49p/arend-rigaux 1 (1951 c2)|comet.49p_arend-rigaux
 55p/tempel-tuttle 1 (1865 y1)|comet.55p_tempel-tuttle
 67p/churyumov-gerasimenko 1 (1969 r1)|comet.67p_churyumov-gerasimenko
+67p/churyumov-gerasimenko 1 1969 r1|comet.67p_churyumov-gerasimenko
 81p/wild 2 (1978 a2)|comet.81p_wild_2
 97p/metcalf-brewington 1 (1906 v2)|comet.97p_metcalf-brewington
 98p/takamizawa 1 (1984 o1)|comet.98p_takamizawa
@@ -241,6 +268,7 @@ c/ison (2012 s1)|comet.c2012_s1_ison
 c/hale-bopp (1995 o1)|comet.c1995_o1_hale-bopp
 c/hyakutake (1996 b2)|comet.c1996_b2_hyakutake
 c/linear (2002 t7)|comet.c2002_t7_linear
+c/linear 2002 t7|comet.c2002_t7_linear
 c/tabur (1996 q1)|comet.c1996_q1_tabur
 
 c/austin (1989 x1)|comet.c1989_x1_austin
@@ -273,15 +301,17 @@ sl9|comet.sl9
 
 c/soho|comet.soho
 
-
 eta-aquarid|meteoroid_stream.eta-aquarid
 
 dust|dust.dust
+interplanetary dust|dust.dust
 
 ############# Stars #############
 star|star.star
 sun|sun.sun
+urn:nasa:pds:context:target:sun.sun|sun.sun
 solar wind|plasma_stream.solar_wind
+plasma|plasma_stream.solar_wind
 
 16 cyg a|star.16_cyg_a
 16 cyg b|star.16_cyg_b
@@ -300,7 +330,10 @@ gj 436|star.gj_436
 alioth|star.alioth
 alpha aur|star.alpha_aur
 alpha/beta crv|star.alpha-beta_crv
+alpha cas|star.alpha_cas
+alpha cen|star.alpha_cen
 alpha ori|star.alpha_ori
+alpha pav|star.alpha_pav
 alpha vir|star.alpha_vir
 alpha lyr|star.alpha_lyr
 alpha sco|star.alpha_sco
@@ -308,13 +341,17 @@ altair|star.altair
 achernar|star.achernar
 arcturus|star.arcturus
 area 98|star.area_98
+
 beta car|star.beta_car
 beta cen|star.beta_cen
+beta cma|star.beta_cma
+beta hyi|star.beta_hyi
 beta tau|star.beta_tau
 canopus|star.canopus
 epsilon centauri|star.epsilon_centauri
 epsilon geminorum|star.epsilon_geminorum
 eps aqr|star.eps_aqr
+eta boo|star.eta_boo
 eta carinae|star.eta_carinae
 fomalhaut|star.fomalhaut
 hat-p-4|star.hat-p-4
@@ -325,8 +362,11 @@ m7|star.m7
 mirzam|star.mirzam
 moa-2009-blg-266|star.moa-2009-blg-266
 ob star|star.ob_star
+orion|star.orion
 pleiades|star.pleiades
 rigel|star.rigel
+scorpius|star.scorpius
+sigma sgr|star.sigma_sgr
 sirius|star.sirius
 spica|star.spica
 tau sco|star.tau_sco
@@ -338,6 +378,7 @@ wasp-3|star.wasp-3
 xo-2|star.xo-2
 xo-3|star.xo-3
 zeta cas|star.zeta_cas
+zeta oph|star.zeta_oph
 
 m 1|nebula.m_1
 m 31|nebula.m_31
@@ -356,6 +397,7 @@ comet|comet.comet
 ##### Calibration
 calibration|calibration.calibration
 bias|calibration.calibration
+urn:nasa:pds:context:target:calibration.bias|calibration.calibration
 dark|calibration.calibration
 scat light|calibration.calibration
 dark sky|calibration.calibration
@@ -373,3 +415,6 @@ test image|calibration.calibration
 cal lamps|calibration.calibration
 flat field|calibration.calibration
 ff lamp|calibration.calibration
+plaque|calibration.calibration
+urn:nasa:pds:context:target:calibration.non science|calibration.calibration
+urn:nasa:pds:context:target:calibration.dark sky|calibration.calibration

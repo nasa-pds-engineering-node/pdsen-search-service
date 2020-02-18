@@ -1,0 +1,86 @@
+aspera-3.mex|Particle Detector,Plasma
+hrsc.mex|Camera
+mrs.mex|Radio Science
+marsis.mex|Radio Science,Subsurface,Ionosphere
+omega.mex|Imaging Spectrometer
+pfs.mex|Infrared Spectrometer
+spicam.mex|Infrared Spectrometer,Ultraviolet Spectrometer
+
+did.gio|Dust
+gre.gio|Radio Science
+hmc.gio|Camera
+ims.gio|Mass Spectrometer
+jpa.gio|Spectrometer,Plasma
+mag.gio|Magnetometer
+nms.gio|Mass Spectrometer
+ope.gio|Photometer
+pia.gio|Dust
+
+dtwg.hp|Navigation
+dwe.hp|Atmospheric Sciences,Radio Science
+gcms.hp|Gas Chromatograph,Mass Spectrometer
+ssp.hp|Atmospheric Science,Surface Science
+disr.hp|Imager,Visible Spectrometer,Infrared Spectrometer,Violet Photometer,Atmospheric Sciences
+hasi.hp|Atmospheric Sciences
+
+pos.vg1|Navigation
+pos.vg2|Navigation
+
+lir.vco|Infrared Camera
+
+alice.ro|Ultraviolet Spectrometer
+consert.ro|Radio Science
+cosima.ro|Mass Spectrometer
+giada.ro|Dust
+midas.ro|Dust
+miro.ro|Radiometer,Spectrometer
+navcam.ro|Navigation Camera
+osiwac.ro|Camera
+osinac.ro|Camera
+rosina.ro|Mass Spectrometer
+rpcmag.ro|Magnetometer,Plasma
+rpcica.ro|Plasma
+rpcies.ro|Plasma
+rpclap.ro|Plasma
+rpcmip.ro|Plasma
+rsi.ro|Radio Science
+virtis.ro|Visible Spectrometer,Infrared Spectrometer,Imaging Spectrometer
+
+apxs.rl|X-ray Spectrometer,Alpha Particle Spectrometer
+civa.rl|Imaging Spectrometer,Infrared Spectrometer
+consert.ro|Radio Science
+cosac.rl|Mass Spectrometer,Gas Chromatograph
+mupus.rl|Surface Science,Subsurface Science
+ptolemy.rl|Mass Spectrometer
+rolis.rl|Camera
+sd2.rl|Drill,Surface Science
+sesame.rl|Dust,Surface Science
+
+aspera4.vex|Mass Spectrometer,Plasma
+mag.vex|Magnetometer
+spicav.vex|Infrared Spectrometer,Imaging Spectrometer
+spicav-soir.vex|Infrared Spectrometer,Occultation
+virtis.vex|Visible Spectrometer,Infrared Spectrometer,Imaging Spectrometer
+vmc.vex|Camera
+vra.vex|Radio Science
+
+amie.s1|Camera
+dcixs.s1|X-ray Spectrometer
+sir.s1|Infrared Spectrometer
+spede.s1|Dust,Plasma
+xsm.s1|X-ray solar monitor
+
+chemin.msl|X-ray Diffraction,X-ray Fluorescence
+
+phebus.bc|Ultraviolet Spectrometer
+berm.bc|Spectrometer
+isa.bc|Accelerometer,Radio Science
+mpo-mag.bc|Magnetometer
+mixs.bc|Imaging Spectrometer,X-ray Spectrometer
+sixs.bc|X-ray Spectrometer,Particle Spectrometer
+
+nomad.em16|Spectrometer
+dreams.em16|Atmospheric Sciences
+acs.em16|Atmospheric Sciences,Chemistry,Spectrometer
+cassis.em16|Camera
+frend.em16|Neutron Detector

@@ -1,10 +1,10 @@
 package gov.nasa.pds.data.pds3.tools;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 import gov.nasa.pds.data.pds3.model.Pds3DataCollection;
@@ -17,7 +17,8 @@ public class Pds3DataSetProcessor
 {
     private Map<String, String> investMap = new HashMap<>(100);
     private Map<String, String> targetMap = new HashMap<>(1000);
-
+    private Map<String, String> instrMap = new HashMap<>(100);
+    
     private Pds3DataClassifier classifier;
     
     
@@ -25,6 +26,7 @@ public class Pds3DataSetProcessor
     {
         MapUtils.loadMap(investMap, "src/main/data/pds3/invest_name2id.txt");
         MapUtils.loadMap(targetMap, "src/main/data/pds3/target_name2id.txt");
+        MapUtils.loadMap(instrMap, "src/main/data/pds3/instr_id2type.txt");
         classifier = new Pds3DataClassifier("src/main/data/pds3/classifier");
     }
     
@@ -42,7 +44,6 @@ public class Pds3DataSetProcessor
         data.lid = fields.getFirstValue("identifier");
         data.vid = fields.getFirstValue("version_id");
         data.datasetId = fields.getFirstValue("data_set_id");
-        
         data.title = fields.getFirstValue("title");
         
         processDescription(data, fields);
@@ -80,31 +81,18 @@ public class Pds3DataSetProcessor
         }
         
         // Instrument type
-        Set<String> types = fields.getValues("instrument_type");
-        if(types == null || types.isEmpty())
+        if(data.instrumentTypes == null) return;
+
+        for(String itype: data.instrumentTypes)
         {
-            if(data.targetTypes != null && data.targetTypes.contains("dust"))
+            Set<String> keywords = classifier.extractKeywords(itype);
+            if(keywords == null) 
             {
-                data.scienceFacets.add("Dust");
+                System.out.println("WARNING: Could not classify instrument type " + itype + " (" + data.lid + ")"); 
             }
             else
             {
-                System.out.println("WARNING: Missing instrument type. (" + data.lid + ")");
-            }
-        }
-        else
-        {
-            for(String itype: types)
-            {
-                Set<String> keywords = classifier.extractKeywords(itype);
-                if(keywords == null) 
-                {
-                    System.out.println("WARNING: Could not classify instrument type " + itype + " (" + data.lid + ")"); 
-                }
-                else
-                {
-                    data.scienceFacets.addAll(keywords);
-                }
+                data.scienceFacets.addAll(keywords);
             }
         }
     }
@@ -159,17 +147,36 @@ public class Pds3DataSetProcessor
         Set<String> ihIds = fields.getValues("instrument_host_id");
         if(ihIds == null)
         {
-            String datasetId = fields.getFirstValue("identifier");
-            int idx = datasetId.indexOf(":data_set:data_set.");
-            datasetId = datasetId.substring(idx+19);
+            String id;
             
-            String[] tokens = datasetId.split("-");
-            String id = tokens[0];
+            if(data.investigationIds.contains("bepicolombo"))
+            {
+                id = "BC";
+            }
+            else if(data.investigationIds.contains("exomars"))
+            {
+                id = "EM16";
+            }
+            else
+            {
+                String[] tokens = data.datasetId.split("-");
+                id = tokens[0];
+            }
             
-            if(id.equals("mex") || id.equals("gio") || id.equals("hp") || id.equals("hst") || id.equals("vg2"))
+            if(id.equals("MEX") || id.equals("VEX")
+                    || id.equals("GIO") || id.equals("HP") 
+                    || id.equals("HST") || id.equals("VG2") 
+                    || id.equals("RO") || id.equals("RL")
+                    || id.equals("S1") || id.equals("BC") || id.equals("EM16"))
             {
                 ihIds = new TreeSet<>();
                 ihIds.add(id);
+            }
+            else if(id.equals("RO/RL"))
+            {
+                ihIds = new TreeSet<>();
+                ihIds.add("RO");
+                ihIds.add("RL");
             }
             else
             {
@@ -177,23 +184,73 @@ public class Pds3DataSetProcessor
                 return;
             }
         }
-        
+
+        /*
         if(ihIds.size() > 1)
         {
             System.out.println("WARNING: Multiple instrument host ids for " + data.lid);
         }
+        */
         
         data.instrumentHostIds = ihIds;
     }
 
-    
+
+    // !!! Call this method after setting instrument host ids !!!
     private void processInstruments(Pds3DataCollection data, FieldMap fields)
     {
+        // Instrument IDs
         data.instrumentIds = fields.getValues("instrument_id");
         if(data.instrumentIds == null)
         {
-            System.out.println("WARNING: Missing instrument id (" + data.lid + ")");
+            data.instrumentIds = fields.getValues("instrument_name");
+            if(data.instrumentIds == null)
+            {
+                System.out.println("WARNING: Missing instrument id/name (" + data.lid + ")");
+                return;
+            }
         }
+        
+        // Instrument Types
+        // Lookup in dictionary first
+        data.instrumentTypes = getInstrumentTypes(data.instrumentHostIds, data.instrumentIds);
+        
+        // Not in dictionary. Get from data set.
+        if(data.instrumentTypes == null)
+        {
+            data.instrumentTypes = fields.getValues("instrument_type");
+        }
+        
+        // Missing instrument types.
+        if(data.instrumentTypes == null && !data.instrumentIds.contains("SPICE"))
+        {
+            System.out.println("WARNING: Missing instrument type (" + data.lid + ")");
+        }
+    }
+
+    
+    private Set<String> getInstrumentTypes(Set<String> hostIds, Set<String> instrIds)
+    {
+        if(hostIds == null || instrIds == null) return null;
+        
+        Set<String> set = new TreeSet<>();
+        
+        for(String hostId: hostIds)
+        {
+            for(String instrId: instrIds)
+            {
+                String key = instrId + "." + hostId;
+                key = key.toLowerCase();
+                String types = instrMap.get(key);
+                if(types != null)
+                {
+                    String[] tokens = types.split(",");
+                    Collections.addAll(set, tokens);
+                }
+            }
+        }
+        
+        return set.size() == 0 ? null : set;
     }
 
     
@@ -212,37 +269,36 @@ public class Pds3DataSetProcessor
     
     private void extractProcessingLevels(Pds3DataCollection data, FieldMap fields)
     {
-        String datasetId = fields.getFirstValue("data_set_id");
-        
         data.processingLevels = new TreeSet<>();
         data.codmacLevels = new TreeSet<>();
         
-        String[] tokens = (datasetId.indexOf('-') > 0) ? datasetId.split("-") : datasetId.split("_");
+        String[] tokens = (data.datasetId.indexOf('-') > 0) ? data.datasetId.split("-") : data.datasetId.split("_");
         if(tokens.length < 4)
         {
-            System.out.println("WARNING: Could not extract CODMAC level from data_set_id " + datasetId);
+            System.out.println("WARNING: Could not extract CODMAC level from data_set_id " + data.datasetId);
             return;
         }
         
         // CODMAC levels separated by /
         String tmp = tokens[3];
         // Fix invalid data
-        if(datasetId.startsWith("CO-SR-UVIS-HSP") 
-                || datasetId.startsWith("MGS-M-MOC-NA/WA")
-                || datasetId.startsWith("MSL-M-CHEMCAM-")
-                || datasetId.startsWith("CH1-ORB-L-M3-")
-                || datasetId.startsWith("LCROSS-E/L-NSP1-FL-")
-                || datasetId.startsWith("LCROSS-X-NSP2-FL-")
-                || datasetId.startsWith("CH1-ORB-L-MRFFR-"))
+        if(data.datasetId.startsWith("CO-SR-UVIS-HSP") 
+                || data.datasetId.startsWith("MGS-M-MOC-NA/WA")
+                || data.datasetId.startsWith("MSL-M-CHEMCAM-")
+                || data.datasetId.startsWith("CH1-ORB-L-M3-")
+                || data.datasetId.startsWith("LCROSS-E/L-NSP1-FL-")
+                || data.datasetId.startsWith("LCROSS-X-NSP2-FL-")
+                || data.datasetId.startsWith("CH1-ORB-L-MRFFR-")
+                || data.datasetId.startsWith("ULY-J-COSPIN-"))
         {
             tmp = tokens[4];
         }
-        else if(datasetId.startsWith("NEAR-A-5-") 
-                || datasetId.startsWith("NEAR-MSI-6-")
-                || datasetId.startsWith("LP-L-6-")
-                || datasetId.startsWith("JNO-SS-3-")
-                || datasetId.startsWith("JNO-SW-3-")
-                || datasetId.startsWith("JNO-J-3-"))
+        else if(data.datasetId.startsWith("NEAR-A-5-") 
+                || data.datasetId.startsWith("NEAR-MSI-6-")
+                || data.datasetId.startsWith("LP-L-6-")
+                || data.datasetId.startsWith("JNO-SS-3-")
+                || data.datasetId.startsWith("JNO-SW-3-")
+                || data.datasetId.startsWith("JNO-J-3-"))
         {
             tmp = tokens[2]; 
         }
@@ -255,7 +311,7 @@ public class Pds3DataSetProcessor
             if(pds4Level == null)
             {
                 System.out.println("WARNING: Invalid CODMAC level: " + codmacLevel 
-                        + " (data_set_id: " + datasetId + ")");
+                        + " (data_set_id: " + data.datasetId + ")");
             }
             else
             {
@@ -268,8 +324,7 @@ public class Pds3DataSetProcessor
     
     private void extractPurpose(Pds3DataCollection data, FieldMap fields)
     {
-        String datasetId = fields.getFirstValue("data_set_id");
-        String[] tokens = datasetId.split("-");
+        String[] tokens = data.datasetId.split("-");
         if(tokens.length > 1 && "CAL".equals(tokens[1]))
         {
             data.purpose = "Calibration";

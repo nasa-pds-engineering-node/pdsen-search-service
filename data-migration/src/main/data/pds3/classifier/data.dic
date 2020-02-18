@@ -1,13 +1,41 @@
+Atmospheric->N=1
+Atmospheric Science->T=1|I=Atmospheric Science
+Atmospheric Sciences->T=1|I=Atmospheric Science
+
 accelerometer->T=1|I=Accelerometer
 altimeter->T=1|I=Altimetry
 
 ABRADER->T=1|I=Rock Abrasion
+
+BETA->N=1
+BETA DETECTOR->T=1|I=Particles
+Neutron->N=1
+Neutron detector->T=1|I=Particles
 
 chromatograph->T=1|I=Chromatography
 
 Drill->T=1|I=Drill
 
 ELECTROSTATIC ANALYZER->T=1|I=
+
+Gravitational->N=1
+Gravitational Wave->T=1|I=Gravitational Waves
+Gravity->T=1|I=Gravity
+
+infrared->N=1|T=1|I=Infrared
+infrared interferometer->T=1|I=Infrared Spectroscopy
+
+Ionosphere->T=1|I=Ionosphere
+
+isotope->N=1
+isotope ratio->N=1
+isotope ratio analyser->T=1|I=Mass Spectrometry
+
+imaging->T=1|I=Imaging
+camera->T=1|I=Imaging
+imager->T=1|I=Imaging
+ccd->T=1|I=Imaging
+Microscope->T=1|I=Imaging
 
 POLARIMETER->T=1|I=Polarimetry
 PHOTOPOLARIMETER->T=1|I=Polarimetry
@@ -24,19 +52,6 @@ PHOTOMETER->T=1|I=Spectroscopy
 spectrometer->T=1|I=Spectroscopy
 spectrograph->T=1|I=Spectroscopy
 
-infrared->N=1|T=1|I=Infrared
-infrared interferometer->T=1|I=Infrared Spectroscopy
-
-isotope->N=1
-isotope ratio->N=1
-isotope ratio analyser->T=1|I=Mass Spectrometry
-
-imaging->T=1|I=Imaging
-camera->T=1|I=Imaging
-imager->T=1|I=Imaging
-ccd->T=1|I=Imaging
-Microscope->T=1|I=Imaging
-
 refracting->N=1
 reflecting->N=1
 refracting telescope->T=1|I=Imaging
@@ -50,18 +65,19 @@ dust->T=1|I=Dust
 plasma->T=1|I=Plasma
 
 magnetometer->T=1|I=Magnetic Field
+FLUXGATE->T=1|I=Magnetic Field
 Magnetosphere->T=1|I=Magnetosphere
 Magnetospheric->T=1|I=Magnetosphere
 
 Meteorology->T=1|I=Meteorology
 
-Gravitational->N=1
-Gravitational Wave->T=1|I=Gravitational Waves
-Gravity->T=1|I=Gravity
+Navigation->T=1|I=Navigation
 
 Surface->N=1
 Surface Science->N=1|T=1|I=Surface
 Surface Science Package->T=1|I=Surface
+
+Subsurface->T=1|I=Subsurface
 
 occultations->T=1|I=Occultation
 occultation->T=1|I=Occultation
@@ -77,7 +93,8 @@ penetrometer->T=1|I=Subsurface Science
 
 LIDAR->T=1|I=LIDAR
 
-XRD->T=1|I=X-ray Diffraction
-XRF->T=1|I=X-ray Fluorescence
+x-ray->N=1|T=1|I=X-ray
+X-ray Diffraction->T=1|I=X-ray Diffraction
+X-ray Fluorescence->T=1|I=X-ray Fluorescence
 
 ultraviolet->T=1|I=Ultraviolet

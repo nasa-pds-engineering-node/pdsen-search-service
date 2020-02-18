@@ -119,7 +119,8 @@ Tethys->T=1
 Telesto->T=1
 Calypso->T=1
 Polydeuces->T=1
-Dione->T=1
+Dione->T=1|N=1
+Dione B->T=1|I=helene
 Helene->T=1
 Rhea->T=1
 Titan->T=1

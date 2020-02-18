@@ -140,7 +140,7 @@ public class SolrDumpProcessor_Pds3DataSet
                 Pds3DataCollection data = dsp.process(fields);
                 writer.write(data);
                 
-                counter++;                
+                counter++;
             }
             catch(Exception ex)
             {
