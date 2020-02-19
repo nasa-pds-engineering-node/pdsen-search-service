@@ -84,3 +84,8 @@ dreams.em16|Atmospheric Sciences
 acs.em16|Atmospheric Sciences,Chemistry,Spectrometer
 cassis.em16|Camera
 frend.em16|Neutron Detector
+
+hrd.co|Dust 
+
+rscn.rsn|Radio Science
+amvis.amon|Amateur Visual Observations

@@ -13,7 +13,7 @@ public class TestPds3DataDumpProcessor
     public static void main(String[] args) throws Exception
     {
         SolrDumpProcessor_Pds3DataSet processor = new SolrDumpProcessor_Pds3DataSet();
-        processor.processFile("/tmp/pds3-ds-10.xml", "/tmp/ds10.xml", null);
+        processor.processFile("/tmp/pds3-ds-1.xml", "/tmp/ds1.xml", null);
 
         //crawl("/tmp");
     }

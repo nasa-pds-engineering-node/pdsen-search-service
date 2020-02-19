@@ -7,10 +7,41 @@ altimeter->T=1|I=Altimetry
 
 ABRADER->T=1|I=Rock Abrasion
 
+Amateur->N=1
+Amateur Visual->N=1
+Amateur Visual Observations->T=1|I=Amateur Visual Observations
+
+attitude->N=1
+ATTITUDE CONTROL->N=1
+ATTITUDE CONTROL SYSTEM->T=1|I=Navigation
+attitude data->T=1|I=Navigation
+ephemeris->N=1
+ephemeris data->T=1|I=Navigation
+Trajectory->N=1
+Trajectory data->T=1|I=Navigation
+
 BETA->N=1
 BETA DETECTOR->T=1|I=Particles
 Neutron->N=1
 Neutron detector->T=1|I=Particles
+ELECTRON->N=1
+ELECTRON REFLECTOMETER->T=1|I=Particles
+
+GAMMA->N=1
+GAMMA RAY->N=1
+GAMMA RAY DETECTOR->T=1|I=Spectroscopy
+
+GEOTHERMAL->N=1
+GEOTHERMAL HEAT->N=1
+GEOTHERMAL HEAT FLOW->N=1
+GEOTHERMAL HEAT FLOW PROBE->T=1|I=Surface
+
+SOIL->N=1
+SOIL STRENGTH->N=1
+SOIL STRENGTH ANALYZER->T=1|I=Surface
+
+FARADAY->N=1
+FARADAY CUP->T=1|I=Particles
 
 chromatograph->T=1|I=Chromatography
 
@@ -73,11 +104,16 @@ Meteorology->T=1|I=Meteorology
 
 Navigation->T=1|I=Navigation
 
+SPECTROMETRIC->N=1
+SPECTROMETRIC CORONAGRAPH->T=1|I=Imaging
+
 Surface->N=1
 Surface Science->N=1|T=1|I=Surface
 Surface Science Package->T=1|I=Surface
 
 Subsurface->T=1|I=Subsurface
+
+THERMOMETER->T=1|I=Thermometer
 
 occultations->T=1|I=Occultation
 occultation->T=1|I=Occultation
