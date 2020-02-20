@@ -4,6 +4,5 @@
   <url>http://localhost:8983/solr</url>
   <collections>
     <collection id="data" name="data" />
-    <collection id="tagger" name="names" requestHandler="/tag" />
   </collections>
 </solr>

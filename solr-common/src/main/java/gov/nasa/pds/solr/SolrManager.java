@@ -1,10 +1,12 @@
-package gov.nasa.pds.search.solr.util;
+package gov.nasa.pds.solr;
+
+import java.io.Closeable;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
-import gov.nasa.pds.search.cfg.SolrConfiguration;
-import gov.nasa.pds.search.util.CloseUtils;
+import gov.nasa.pds.solr.cfg.SolrConfiguration;
+
 
 /**
  * A singleton to cache Solr connections.
@@ -49,7 +51,7 @@ public class SolrManager
     public static void destroy()
     {
         if(instance == null) return;
-        CloseUtils.safeClose(instance.getSolrClient());
+        safeClose(instance.getSolrClient());
     }
     
     /**
@@ -59,5 +61,20 @@ public class SolrManager
     public SolrClient getSolrClient()
     {
         return solrClient;
+    }
+    
+
+    private static void safeClose(Closeable cl)
+    {
+        if(cl == null) return;
+        
+        try
+        {
+            cl.close();
+        }
+        catch(Exception ex)
+        {
+            // Ignore
+        }
     }
 }

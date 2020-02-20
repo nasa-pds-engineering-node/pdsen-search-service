@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
 import gov.nasa.pds.search.solr.QueryResponseJsonWriter;
-import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.solr.PdsApiQueryBuilder;
 import gov.nasa.pds.search.util.NameMapper;
 import gov.nasa.pds.search.util.RequestParameters;
+import gov.nasa.pds.solr.SolrManager;
+import gov.nasa.pds.solr.cfg.SolrCollectionConfiguration;
 
 
 @RestController

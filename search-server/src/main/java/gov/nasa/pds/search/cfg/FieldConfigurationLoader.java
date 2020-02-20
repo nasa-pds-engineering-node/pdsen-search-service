@@ -28,22 +28,24 @@ public class FieldConfigurationLoader
     }
     
     
-    public static void load(SearchServerConfiguration cfg) throws Exception
+    public static FieldConfiguration load(File configDir) throws Exception
     {
-        File fieldMapFile = new File(cfg.getConfigDirectory(), "fields.xml");
+        File fieldMapFile = new File(configDir, "fields.xml");
         LOG.info("Reading configuration from " + fieldMapFile.getAbsolutePath());
         if(!fieldMapFile.exists())
         {
             LOG.info("File doesn't exist.");
-            return;
+            return null;
         }        
 
         Document doc = XmlDomUtils.readXml(fieldMapFile.getAbsolutePath());
-        FieldConfiguration fieldCfg = cfg.getFieldConfiguration();
+        FieldConfiguration fieldCfg = new FieldConfiguration();
 
         loadFieldMap(fieldCfg, doc);
         loadDefaultFields(fieldCfg, doc);
         loadSearchFields(fieldCfg, doc);
+        
+        return fieldCfg;
     }
 
     

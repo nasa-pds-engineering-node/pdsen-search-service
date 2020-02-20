@@ -9,8 +9,8 @@ import org.apache.solr.client.solrj.response.QueryResponse;
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.search.solr.query.SolrQueryUtils;
 import gov.nasa.pds.search.solr.query.bld.DataQueryBuilder;
-import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.util.RequestParameters;
+import gov.nasa.pds.solr.SolrManager;
 
 
 public class DataQueryRunner

@@ -1,20 +1,15 @@
 package tt;
 
 import java.io.PrintWriter;
-import java.util.List;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.response.FacetField;
-import org.apache.solr.client.solrj.response.FacetField.Count;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocument;
-import org.apache.solr.common.SolrDocumentList;
 
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
-import gov.nasa.pds.search.cfg.SolrConfiguration;
 import gov.nasa.pds.search.solr.QueryResponseJsonWriter;
-import gov.nasa.pds.search.solr.util.SolrManager;
+import gov.nasa.pds.solr.SolrManager;
+import gov.nasa.pds.solr.cfg.SolrConfiguration;
 
 
 public class TestSolrManager

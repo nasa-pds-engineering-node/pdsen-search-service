@@ -2,6 +2,8 @@ package gov.nasa.pds.search.cfg;
 
 import java.io.File;
 
+import gov.nasa.pds.solr.cfg.SolrConfiguration;
+
 /**
  * PDS search server configuration.
  * @author karpenko
@@ -19,8 +21,6 @@ public class SearchServerConfiguration
     public SearchServerConfiguration(File configDir)
     {
         this.configDir = configDir;
-        solrConfig = new SolrConfiguration();
-        fieldConfig = new FieldConfiguration();
     }
 
     
@@ -42,7 +42,13 @@ public class SearchServerConfiguration
     {
         return solrConfig;
     }
+
     
+    public void setSolrConfiguration(SolrConfiguration cfg)
+    {
+        this.solrConfig = cfg;
+    }
+
 
     /**
      * Get field configuration 
@@ -51,6 +57,12 @@ public class SearchServerConfiguration
     public FieldConfiguration getFieldConfiguration()
     {
         return fieldConfig;
+    }
+
+    
+    public void setFieldConfiguration(FieldConfiguration cfg)
+    {
+        this.fieldConfig = cfg;
     }
 
 }

@@ -3,8 +3,8 @@ package tt;
 import gov.nasa.pds.search.cfg.ConfigurationLoader;
 import gov.nasa.pds.search.cfg.FieldConfiguration;
 import gov.nasa.pds.search.cfg.SearchServerConfiguration;
-import gov.nasa.pds.search.cfg.SolrCollectionConfiguration;
-import gov.nasa.pds.search.cfg.SolrConfiguration;
+import gov.nasa.pds.solr.cfg.SolrCollectionConfiguration;
+import gov.nasa.pds.solr.cfg.SolrConfiguration;
 
 
 public class TestConfigurationLoader

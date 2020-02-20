@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.cfg;
+package gov.nasa.pds.solr.cfg;
 
 import java.util.HashMap;
 import java.util.Map;

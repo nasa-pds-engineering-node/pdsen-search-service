@@ -2,6 +2,8 @@ package gov.nasa.pds.search.cfg;
 
 import java.io.File;
 
+import gov.nasa.pds.solr.cfg.SolrConfigurationLoader;
+
 
 /**
  * Loads PDS search server configuration from a location provided in either 
@@ -36,9 +38,8 @@ public class ConfigurationLoader
         }
         
         SearchServerConfiguration cfg = new SearchServerConfiguration(configDir);
-        
-        SolrConfigurationLoader.load(cfg);
-        FieldConfigurationLoader.load(cfg);
+        cfg.setSolrConfiguration(SolrConfigurationLoader.load(configDir));
+        cfg.setFieldConfiguration(FieldConfigurationLoader.load(configDir));        
         
         return cfg;
     }

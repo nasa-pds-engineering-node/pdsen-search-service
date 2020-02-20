@@ -33,6 +33,11 @@
         </dependency>
         <dependency>
             <groupId>gov.nasa.pds</groupId>
+            <artifactId>pds-solr-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>gov.nasa.pds</groupId>
             <artifactId>pds-nlp</artifactId>
             <version>1.0</version>
         </dependency>

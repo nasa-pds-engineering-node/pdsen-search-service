@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.cfg;
+package gov.nasa.pds.solr.cfg;
 
 import java.io.File;
 
@@ -11,8 +11,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import gov.nasa.pds.search.util.XPathUtils;
-import gov.nasa.pds.search.util.XmlDomUtils;
+import gov.nasa.pds.solr.util.XPathUtils;
+import gov.nasa.pds.solr.util.XmlDomUtils;
+
 
 public class SolrConfigurationLoader
 {
@@ -21,13 +22,14 @@ public class SolrConfigurationLoader
     private SolrConfigurationLoader()
     {        
     }
+
     
-    public static void load(SearchServerConfiguration cfg) throws Exception
+    public static SolrConfiguration load(File configDir) throws Exception
     {
-        SolrConfiguration solrCfg = cfg.getSolrConfiguration();
+        SolrConfiguration solrCfg = new SolrConfiguration();
         XPathFactory xpf = XPathFactory.newInstance();
         
-        File solrCfgFile = new File(cfg.getConfigDirectory(), "solr.xml");
+        File solrCfgFile = new File(configDir, "solr.xml");
         LOG.info("Reading configuration from " + solrCfgFile.getAbsolutePath());
         if(!solrCfgFile.exists())
         {
@@ -75,6 +77,8 @@ public class SolrConfigurationLoader
 
             solrCfg.addCollectionConfiguration(id, cconf);
         }
+        
+        return solrCfg;
     }
 
 }

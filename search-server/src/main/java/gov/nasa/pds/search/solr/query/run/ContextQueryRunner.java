@@ -11,8 +11,8 @@ import gov.nasa.pds.search.solr.query.SolrQueryUtils;
 import gov.nasa.pds.search.solr.query.bld.InstrumentQueryBuilder;
 import gov.nasa.pds.search.solr.query.bld.InvestigationQueryBuilder;
 import gov.nasa.pds.search.solr.query.bld.TargetQueryBuilder;
-import gov.nasa.pds.search.solr.util.SolrManager;
 import gov.nasa.pds.search.util.RequestParameters;
+import gov.nasa.pds.solr.SolrManager;
 
 
 public class ContextQueryRunner
