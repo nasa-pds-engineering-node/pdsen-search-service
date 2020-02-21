@@ -37,7 +37,7 @@ public class SearchContext
         if(qParam == null || qParam.isEmpty())
         {
             httpResp.setStatus(400);
-            respWriter.error("Missing query parameter (q=...)");
+            respWriter.error(400, "Missing query parameter (q=...)");
             return false;
         }
         
@@ -50,7 +50,7 @@ public class SearchContext
         if(qResp == null)
         {
             httpResp.setStatus(400);
-            respWriter.error("Invalid query");
+            respWriter.error(400, "Invalid query");
             return false;
         }
         

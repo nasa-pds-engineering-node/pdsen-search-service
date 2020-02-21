@@ -61,7 +61,7 @@ public class APIController
         if(query == null)
         {
             httpResp.setStatus(400);
-            respWriter.error("Missing query parameter(s)");
+            respWriter.error(400, "Missing query parameter(s)");
             return;
         }
         

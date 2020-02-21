@@ -1,0 +1,8 @@
+{
+  "filters": {
+    "investigation" : "MRO",
+    "target" : "Mars",
+    "science_facets" : [ "Spectroscopy", "Particles" ]
+  },
+  "rows" : 10
+}

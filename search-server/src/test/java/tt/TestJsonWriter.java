@@ -12,7 +12,7 @@ import gov.nasa.pds.solr.SolrManager;
 import gov.nasa.pds.solr.cfg.SolrConfiguration;
 
 
-public class TestSolrManager
+public class TestJsonWriter
 {
 
     public static void main(String[] args) throws Exception

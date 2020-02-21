@@ -30,7 +30,7 @@ public class DataSearchController
 
     
     @GetMapping(path = "/search/data")
-    public void getName(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
+    public void getData(HttpServletRequest httpReq, HttpServletResponse httpResp) throws Exception
     {
         SearchContext ctx = new SearchContext(httpReq, httpResp);
         if(!ctx.validateAndContinue()) return;
@@ -41,7 +41,19 @@ public class DataSearchController
         List<NerToken> nerTokens = ner.parse(lexTokens);
 
         // Run Solr query
-        QueryResponse qResp = DataQueryRunner.runDataQuery(nerTokens, ctx.reqParams);
+        QueryResponse qResp = null;
+        try
+        {
+            qResp = DataQueryRunner.runDataQuery(nerTokens, ctx.reqParams);
+        }
+        catch(Exception ex)
+        {
+            LOG.error(ex.toString());
+            httpResp.setStatus(500);
+            ctx.respWriter.error(500, "Server error (Solr)");
+            return;
+        }
+        
         if(!ctx.validateAndContinue(qResp)) return;
 
         // Write documents

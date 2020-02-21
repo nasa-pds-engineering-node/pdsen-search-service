@@ -96,7 +96,7 @@ public class QueryResponseJsonWriter
      * @param msg
      * @throws IOException
      */
-    public void error(String msg) throws IOException
+    public void error(int status, String msg) throws IOException
     {
         jgen.writeStartObject(); // Root
         
@@ -104,7 +104,8 @@ public class QueryResponseJsonWriter
         jgen.writeStartObject();
         {
             jgen.writeStringField("status", "error");
-            jgen.writeStringField("errorText", msg);
+            jgen.writeNumberField("status_code", status);
+            jgen.writeStringField("error_message", msg);
         }
         jgen.writeEndObject();
         
