@@ -22,7 +22,10 @@ public class TestSolrManager
 
         String strQuery = "investigation_id:maven";
         
-        SolrQuery query = new SolrQuery(strQuery);
+        SolrQuery query = new SolrQuery("*:*");
+        query.addFilterQuery(strQuery);
+        query.addFilterQuery("title:\"electron density\"");
+        
         query.add("rows", "5");
         query.add("fl", "title,id");
         

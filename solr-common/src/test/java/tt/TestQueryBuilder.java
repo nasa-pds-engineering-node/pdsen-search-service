@@ -3,7 +3,8 @@ package tt;
 import java.util.Arrays;
 import java.util.List;
 
-import gov.nasa.pds.search.solr.util.LuceneQueryBuilder;
+import gov.nasa.pds.solr.query.LuceneQueryBuilder;
+
 
 public class TestQueryBuilder
 {

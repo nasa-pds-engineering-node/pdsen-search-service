@@ -1,4 +1,4 @@
-package gov.nasa.pds.search.solr.util;
+package gov.nasa.pds.solr.util;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrRequest;

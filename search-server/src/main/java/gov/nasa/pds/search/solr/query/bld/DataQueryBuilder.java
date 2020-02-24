@@ -7,8 +7,9 @@ import org.apache.solr.client.solrj.SolrQuery;
 
 import gov.nasa.pds.nlp.ner.NerToken;
 import gov.nasa.pds.nlp.ner.NerTokenType;
-import gov.nasa.pds.search.solr.util.LuceneQueryBuilder;
 import gov.nasa.pds.search.util.FieldMap;
+import gov.nasa.pds.solr.query.LuceneQueryBuilder;
+
 
 public class DataQueryBuilder
 {

@@ -229,4 +229,7 @@ Weywot->T=1
 Dysnomia->T=1
 
 # Rings
+Jupiter Rings->T=1|I=j_rings
 Saturn Rings->T=1|I=s_rings
+Uranus Rings->T=1|I=u_rings
+Neptune Rings->T=1|I=n_rings
