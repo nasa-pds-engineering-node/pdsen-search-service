@@ -8,6 +8,7 @@
   <field name="instrument_host_id">ody</field>
   <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/odyssey/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.apollo_12</field>
@@ -19,6 +20,7 @@
   <field name="instrument_host_id">a12a</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/apollo/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.apollo_14</field>
@@ -30,6 +32,7 @@
   <field name="instrument_host_id">a14a</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/apollo/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.apollo_15</field>
@@ -42,6 +45,7 @@
   <field name="instrument_host_id">a15l</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/apollo/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.apollo_16</field>
@@ -53,6 +57,7 @@
   <field name="instrument_host_id">a16l</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/apollo/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.apollo_17</field>
@@ -65,6 +70,7 @@
   <field name="instrument_host_id">a17l</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/apollo/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.bopps</field>
@@ -161,6 +167,7 @@
   <field name="target_type">satellite</field>
   <field name="target_type">star</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini/Cassini.html</field>
 </doc>
 <doc>
   <field name="id">mission.chandrayaan-1</field>
@@ -171,6 +178,7 @@
   <field name="instrument_host_id">ch1-orb</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/chandrayaan1/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.comet_sl9-jupiter_collision</field>
@@ -244,6 +252,7 @@
   <field name="instrument_host_id">clem1</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/clementine/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.epoxi</field>
@@ -306,6 +315,7 @@
   <field name="instrument_host_id">gio</field>
   <field name="target_id">1p_halley</field>
   <field name="target_type">comet</field>
+  <field name="resource_url">https://sci.esa.int/web/giotto</field>
 </doc>
 <doc>
   <field name="id">mission.giotto_extended_mission</field>
@@ -316,6 +326,7 @@
   <field name="instrument_host_id">gio</field>
   <field name="target_id">26p_grigg-skjellerup</field>
   <field name="target_type">comet</field>
+  <field name="resource_url">https://sci.esa.int/web/giotto</field>
 </doc>
 <doc>
   <field name="id">mission.gravity_recovery_and_interior_laboratory</field>
@@ -327,6 +338,7 @@
   <field name="instrument_host_id">grail-b</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/grail/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.hayabusa</field>
@@ -430,6 +442,7 @@
   <field name="target_type">asteroid</field>
   <field name="target_type">comet</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">https://sci.esa.int/web/rosetta</field>
 </doc>
 <doc>
   <field name="id">mission.iue</field>
@@ -441,6 +454,7 @@
   <field name="instrument_host_id">iue</field>
   <field name="target_id">jupiter</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">https://sci.esa.int/web/iue</field>
 </doc>
 <doc>
   <field name="id">mission.juno</field>
@@ -464,6 +478,7 @@
   <field name="target_type">planetary_system</field>
   <field name="target_type">plasma_stream</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/JUNO/juno.html</field>
 </doc>
 <doc>
   <field name="id">mission.ladee</field>
@@ -474,6 +489,7 @@
   <field name="instrument_host_id">ladee</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/LADEE/mainr.html</field>
 </doc>
 <doc>
   <field name="id">mission.lunar_crater_observation_and_sensing_satellite</field>
@@ -484,6 +500,7 @@
   <field name="instrument_host_id">lcross</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/lcross/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.lunar_prospector</field>
@@ -494,6 +511,7 @@
   <field name="instrument_host_id">lp</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/lunarp/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.lunar_reconnaissance_orbiter</field>
@@ -504,6 +522,7 @@
   <field name="instrument_host_id">lro</field>
   <field name="target_id">moon</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/lro/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.magellan</field>
@@ -514,6 +533,7 @@
   <field name="instrument_host_id">mgn</field>
   <field name="target_id">venus</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/magellan/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mariner69</field>
@@ -559,6 +579,7 @@
   <field name="instrument_host_id">mer2</field>
   <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/mer/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mars_express</field>
@@ -571,6 +592,8 @@
   <field name="target_id">solar_wind</field>
   <field name="target_type">planet</field>
   <field name="target_type">plasma_stream</field>
+  <field name="resource_url">https://sci.esa.int/web/mars-express</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/mars_express/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mars_global_surveyor</field>
@@ -585,6 +608,7 @@
   <field name="target_type">planet</field>
   <field name="target_type">satellite</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/mgs/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mars_observer</field>
@@ -611,6 +635,7 @@
   <field name="target_type">planet</field>
   <field name="target_type">satellite</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/mpf/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mars_reconnaissance_orbiter</field>
@@ -621,6 +646,7 @@
   <field name="instrument_host_id">mro</field>
   <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/mro/default.htm</field>
 </doc>
 <doc>
   <field name="id">mission.mars_science_laboratory</field>
@@ -631,6 +657,7 @@
   <field name="instrument_host_id">msl</field>
   <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/msl/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.maven</field>
@@ -641,6 +668,7 @@
   <field name="instrument_host_id">maven</field>
   <field name="target_id">mars</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/MAVEN/maven_main.html</field>
 </doc>
 <doc>
   <field name="id">mission.messenger</field>
@@ -653,6 +681,7 @@
   <field name="target_id">mercury</field>
   <field name="target_id">venus</field>
   <field name="target_type">planet</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/messenger/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.midcourse_space_experiment</field>
@@ -708,6 +737,7 @@
   <field name="target_type">planet</field>
   <field name="target_type">plasma_stream</field>
   <field name="target_type">satellite</field>
+  <field name="resource_url">http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/NewHorizons/NH_Jupiter.html</field>
 </doc>
 <doc>
   <field name="id">mission.next</field>
@@ -895,6 +925,7 @@
   <field name="instrument_host_id">soho</field>
   <field name="target_id">sun</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">https://sci.esa.int/web/soho</field>
 </doc>
 <doc>
   <field name="id">mission.stardust</field>
@@ -929,6 +960,7 @@
   <field name="target_id">sun</field>
   <field name="target_type">planet</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">https://sci.esa.int/web/ulysses</field>
 </doc>
 <doc>
   <field name="id">mission.vega_1</field>
@@ -971,6 +1003,7 @@
   <field name="target_id">venus</field>
   <field name="target_type">planet</field>
   <field name="target_type">plasma_stream</field>
+  <field name="resource_url">https://sci.esa.int/web/venus-express</field>
 </doc>
 <doc>
   <field name="id">mission.viking</field>
@@ -989,6 +1022,7 @@
   <field name="target_type">planet</field>
   <field name="target_type">satellite</field>
   <field name="target_type">sun</field>
+  <field name="resource_url">http://pds-geosciences.wustl.edu/missions/vlander/index.htm</field>
 </doc>
 <doc>
   <field name="id">mission.voyager</field>
@@ -1052,5 +1086,16 @@
   <field name="target_type">satellite</field>
   <field name="target_type">star</field>
   <field name="target_type">sun</field>
+</doc>
+<doc>
+  <field name="id">mission.smart</field>
+  <field name="title">SMART-1</field>
+  <field name="investigation_type">Mission</field>
+  <field name="lid">urn:nasa:pds:context:investigation:mission.smart</field>
+  <field name="investigation_id">smart</field>
+  <field name="instrument_host_id">s1</field>
+  <field name="target">moon</field>
+  <field name="target_type">satellite</field>
+  <field name="resource_url">https://sci.esa.int/web/smart-1</field>
 </doc>
 </add>

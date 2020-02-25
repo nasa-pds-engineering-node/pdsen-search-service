@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.util.TextUtils;
 
 import gov.nasa.pds.data.pds3.model.Pds3Resource;
 import gov.nasa.pds.data.pds4.parser.ParserUtils;

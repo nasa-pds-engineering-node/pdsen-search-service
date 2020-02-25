@@ -16,6 +16,8 @@
     <field name="target_id" type="lowercase" indexed="true" stored="true" multiValued="true" />
     <field name="target_type" type="lowercase" indexed="true" stored="true" multiValued="true" />
 
+    <field name="resource_url" type="string" indexed="false" stored="true" multiValued="true" />
+
     <!-- System fields -->
     <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false" />
     <field name="timestamp" type="pdate" indexed="true" stored="true" default="NOW" multiValued="false"/>
