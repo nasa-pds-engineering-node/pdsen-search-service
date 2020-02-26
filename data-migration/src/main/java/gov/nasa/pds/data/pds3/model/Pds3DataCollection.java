@@ -16,9 +16,10 @@ public class Pds3DataCollection
 
     public Set<String> processingLevels;
     public Set<String> codmacLevels;
-    public Set<String> scienceFacets = new TreeSet<>();
     
-    public String[] keywords;
+    public Set<String> scienceFacets = new TreeSet<>();
+    public Set<String> keywords = new TreeSet<>();
+    
     public String purpose;
     
     public String collectionType;

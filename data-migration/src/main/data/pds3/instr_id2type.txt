@@ -25,6 +25,7 @@ hasi.hp|Atmospheric Sciences
 
 pos.vg1|Navigation
 pos.vg2|Navigation
+pos.go|Navigation
 
 lir.vco|Infrared Camera
 
@@ -89,3 +90,9 @@ hrd.co|Dust
 
 rscn.rsn|Radio Science
 amvis.amon|Amateur Visual Observations
+
+ccig.a14a|Surface Science
+ccig.a15a|Surface Science
+
+com.lp|Navigation
+eng.lp|Engineering

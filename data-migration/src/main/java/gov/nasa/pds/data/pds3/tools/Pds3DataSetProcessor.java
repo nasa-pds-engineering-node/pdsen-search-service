@@ -19,7 +19,8 @@ public class Pds3DataSetProcessor
     private Map<String, String> targetMap = new HashMap<>(1000);
     private Map<String, String> instrMap = new HashMap<>(100);
     
-    private Pds3DataClassifier classifier;
+    private Pds3DataClassifier scienceFacetsClassifier;
+    private Pds3DataClassifier keywordsClassifier;    
     
     
     public Pds3DataSetProcessor() throws Exception
@@ -27,7 +28,8 @@ public class Pds3DataSetProcessor
         MapUtils.loadMap(investMap, "src/main/data/pds3/invest_name2id.txt");
         MapUtils.loadMap(targetMap, "src/main/data/pds3/target_name2id.txt");
         MapUtils.loadMap(instrMap, "src/main/data/pds3/instr_id2type.txt");
-        classifier = new Pds3DataClassifier("src/main/data/pds3/classifier");
+        scienceFacetsClassifier = new Pds3DataClassifier("src/main/data/pds3/classifier/science_facets.dic");
+        keywordsClassifier = new Pds3DataClassifier("src/main/data/pds3/classifier/keywords.dic");
     }
     
 
@@ -85,14 +87,10 @@ public class Pds3DataSetProcessor
 
         for(String itype: data.instrumentTypes)
         {
-            Set<String> keywords = classifier.extractKeywords(itype);
-            if(keywords == null) 
+            boolean found = scienceFacetsClassifier.extractKeywords(data.scienceFacets, itype);
+            if(!found) 
             {
                 System.out.println("WARNING: Could not classify instrument type " + itype + " (" + data.lid + ")"); 
-            }
-            else
-            {
-                data.scienceFacets.addAll(keywords);
             }
         }
     }
@@ -102,14 +100,32 @@ public class Pds3DataSetProcessor
     {
         if(data.description == null) return;
         
-        for(String text: data.description)
-        {
-            Set<String> keywords = classifier.extractKeywords(text);
-            if(keywords != null)
-            {
-                data.scienceFacets.addAll(keywords);
-            }
-        }
+        // Science facets
+        String text = fields.getFirstValue("data_set_terse_description");
+        scienceFacetsClassifier.extractKeywords(data.scienceFacets, text);
+
+        text = fields.getFirstValue("description");
+        scienceFacetsClassifier.extractKeywords(data.scienceFacets, text);
+
+        text = fields.getFirstValue("abstract_text");
+        scienceFacetsClassifier.extractKeywords(data.scienceFacets, text);
+        
+        text = fields.getFirstValue("data_set_description");
+        if(text != null && text.length() > 500) text = text.substring(0, 500);
+        scienceFacetsClassifier.extractKeywords(data.scienceFacets, text);        
+        
+        // Generic Keywords
+        text = fields.getFirstValue("data_set_terse_description");
+        keywordsClassifier.extractKeywords(data.keywords, text);
+        
+        text = fields.getFirstValue("description");
+        keywordsClassifier.extractKeywords(data.keywords, text);
+        
+        text = fields.getFirstValue("abstract_text");
+        keywordsClassifier.extractKeywords(data.keywords, text);
+        
+        text = fields.getFirstValue("data_set_description");
+        keywordsClassifier.extractKeywords(data.keywords, text);
     }
     
     
@@ -136,7 +152,6 @@ public class Pds3DataSetProcessor
         if(descr != null) 
         {
             if(descr.startsWith("Data Set Overview ================= ")) descr = descr.substring(36); 
-            if(descr.length() > 255) descr = descr.substring(0, 255);
             data.description.add(descr);
         }
     }

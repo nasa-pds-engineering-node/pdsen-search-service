@@ -116,7 +116,11 @@ public class SolrDumpProcessor_Pds3DataSet
                 }
                 else
                 {
-                    fields.addValue("investigation_id", id.toLowerCase());
+                    String[] tokens = id.split(",");
+                    for(String token: tokens)
+                    {
+                        fields.addValue("investigation_id", token.toLowerCase());
+                    }
                 }
                 
                 return;

@@ -43,6 +43,7 @@ public class ProductCollectionWriterPds3
         
         SolrDocUtils.writeField(writer, "purpose", data.purpose);
         writeField("science_facets", data.scienceFacets);
+        writeField("keyword_facets", data.keywords);
         
         writeField("investigation_id", data.investigationIds);
         writeField("instrument_host_id", data.instrumentHostIds);

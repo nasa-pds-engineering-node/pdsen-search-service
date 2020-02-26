@@ -19,6 +19,7 @@ ephemeris->N=1
 ephemeris data->T=1|I=Navigation
 Trajectory->N=1
 Trajectory data->T=1|I=Navigation
+Engineering->T=1|I=Navigation
 
 BETA->N=1
 BETA DETECTOR->T=1|I=Particles

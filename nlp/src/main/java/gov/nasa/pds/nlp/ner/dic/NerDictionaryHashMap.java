@@ -84,16 +84,24 @@ public class NerDictionaryHashMap implements NerDictionary
     
     
     @Override
-    public void load(File dir)
+    public void load(File file)
     {
-        if(!dir.isDirectory())
+        if(file.isDirectory())
         {
-            throw new IllegalArgumentException("Not a directory: " + dir);
+            loadDir(file);
         }
-
+        else
+        {
+            loadFile(file);
+        }
+    }
+    
+    
+    private void loadDir(File file)
+    {
         try
         {
-            Files.walk(dir.toPath()).filter(p -> p.toString().endsWith(".dic")).forEach(p -> 
+            Files.walk(file.toPath()).filter(p -> p.toString().endsWith(".dic")).forEach(p -> 
             {
                 loadFile(p.toFile());
             });

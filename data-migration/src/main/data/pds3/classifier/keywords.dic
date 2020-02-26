@@ -1,0 +1,98 @@
+#### Elements, Chemistry
+
+magnesium->T=2
+aluminum->T=2
+silicon->T=2
+argon->T=2
+carbon->T=2
+iron->T=2
+indium->T=2
+antimonide->T=2
+nitrogen->T=2
+
+isotope->T=2|N=1
+isotope ratios->T=2|I=isotope ratio
+isotope ratio->T=2
+
+
+#### Particles
+
+ion->T=3
+electron->T=3
+
+alpha-to-proton->N=1
+alpha-to-proton ratio->T=3
+
+plasma->T=3
+proton->T=3|N=1
+proton density->T=3
+
+
+####
+
+abundances->T=1|I=abundance
+abundance->T=1
+
+Atmosphere->T=1
+outgassing->T=1
+
+bursts->T=1|I=burst
+burst->T=1
+
+
+charge->T=1
+composition->T=1
+concentration->T=1
+current->T=1
+
+digitized->N=1
+digitized plots->T=1
+
+density->T=1
+
+Faraday->N=1
+Faraday cup->T=1
+
+gas->T=1
+housekeeping->T=1
+
+impacts->T=1|I=impact
+impact->T=1
+
+lunar->N=1
+lunar atmosphere->T=1
+
+Mass->N=1
+Mass Spectrometers->T=1|I=Mass Spectrometer
+Mass Spectrometer->T=1
+
+mass ratios->T=1|I=mass ratio
+mass ratio->T=1
+
+glass->T=1
+
+plots->T=1
+
+solar->N=1
+solar wind->T=1
+
+sunrise->T=1
+sunset->T=1
+
+Spectrometer->T=1
+
+
+thermal->N=1
+thermal speed->T=1
+temperature->T=1
+
+
+
+####################
+
+parameters->T=1|I=parameter
+parameter->T=1
+
+tables->T=1|I=table
+table->T=1
+
