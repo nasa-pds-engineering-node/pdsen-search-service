@@ -13,11 +13,11 @@ PDS metadata is stored in Apache Solr server.
 ### Form-Based Query API
 Current implementation of API server uses HTTP query parameters to specify search criteria.
 For example,
-```html
+```
 http://<host>/<api_url>?mission=LRO&instrument=LROC
 ```
 API server parses HTTP parameters and creates corresponding Solr query:
-```html
+```
 mission:LRO AND instrument:LROC
 ```
 The form-based API is very simple, but has limited support for logical expressions and other 
@@ -27,7 +27,7 @@ advanced Solr query language features. Also it is tightly coupled with HTTP prot
 A parser generator, sometimes also called a "compiler compiler", is an application which generates a parser.
 It takes a grammar as input and automatically generates source code
 that can parse a stream of characters using the grammar.
-A grammar is usually defined in Backus-Naur Form (BNF) notation. 
+A grammar is usually defined in Extended Backus-Naur Form (EBNF) notation. 
 
 <img src="parser-gen1.png" style="width:30em;"/>
 
@@ -40,6 +40,15 @@ into a language that search back-ends understand.
 ## JavaCC and ANTLR
 There are multiple open source parser generators for different programming languages.
 The most popular Java implementations are JavaCC and ANTLR.
+
+&nbsp;|ANTLR|JavaCC
+--|--|--
+Supported languages|Java, C++, C#, Python, JavaScript, Go, PHP|Java, C++
+Grammar file|EBNF|EBNF + embedded Java code
+Requires runtime library|Yes|No
+Generates parse tree|Yes|Requeres complex configuration of JJTree library
+Installation|Binary files, easy|Source only. Links to binary files are broken. Had to compile with Maven and fix scripts.
+Example projects|PDS3 label parser|Apache Lucene query parser
 
 
 ## ANTLR Example
@@ -113,4 +122,9 @@ public class TestAntlr1
 ```
 
 ## Summary
+* Parser generators can be used to support custom query languages in PDS API Server.
+* Grammar definition requires knowledge of EBNF notation and could take some time to learn.
+* Translators (regular Java / C++ / etc. code) are required to convert 
+custom query language parse tree to standard query languages supported by Lucene / Elasticsearch / SQL databases.
+* Different parser generator libraries have incompatible APIs and EBNF dialects.
 
